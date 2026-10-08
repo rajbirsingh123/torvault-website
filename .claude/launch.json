@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "torvault-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8791", "--directory", "legacy-static-site"],
+      "port": 8791
+    },
+    {
+      "name": "torvault-nextjs",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["node_modules/.bin/next", "dev", ".", "-p", "3001"],
+      "port": 3001,
+      "autoPort": true
+    }
+  ]
+}
