@@ -89,7 +89,7 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">Overview</span>
@@ -128,7 +128,7 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <div className="spec-head">
             <div>
@@ -207,7 +207,7 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal
             className="section-head"

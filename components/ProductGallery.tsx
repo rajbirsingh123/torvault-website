@@ -6,6 +6,14 @@ import { useEffect, useRef, useState } from "react";
 import { SERIES_CONTENT, SERIES_LIST, type SafeSeries } from "@/lib/safes";
 import { PHOTO_FINISHES, getFinishImages, type PhotoFinish } from "@/lib/gallery";
 
+// per-series overrides for the homepage grid tile image, where a series
+// has its own hero shot instead of the shared graphite/black finish photos
+const TILE_IMAGE_OVERRIDE: Partial<Record<SafeSeries, string>> = {
+  "fire-burglary": "/products/tl30-hero.jpg",
+  tl15: "/products/tl-black-hero-v2.jpg",
+  tl30: "/products/tl-black-hero-v2.jpg",
+};
+
 type Colorway = PhotoFinish;
 const COLORWAYS: Record<Colorway, { label: string; swatch: string; images: { src: string; alt: string }[] }> =
   Object.fromEntries(
@@ -21,7 +29,7 @@ export default function ProductGallery() {
 
   function openQuickView(series: SafeSeries, trigger: HTMLElement) {
     triggerRef.current = trigger;
-    setColorway("graphite");
+    setColorway(series === "fire-burglary" ? "black" : "graphite");
     setActiveImage(0);
     setOpenSeries(series);
   }
@@ -36,27 +44,47 @@ export default function ProductGallery() {
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     closeRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [openSeries]);
+
+  // finishes don't all have the same shot count (black has one fewer than
+  // graphite) — jumping to a shorter gallery while viewing a later photo
+  // would otherwise index past the end, so snap back to the first shot
+  useEffect(() => {
+    setActiveImage(0);
+  }, [colorway]);
+
+  useEffect(() => {
+    if (!openSeries) return;
+    const len = COLORWAYS[colorway].images.length;
 
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") close();
-      if (e.key === "ArrowRight") setActiveImage((i) => (i + 1) % 5);
-      if (e.key === "ArrowLeft") setActiveImage((i) => (i + 4) % 5);
+      if (e.key === "ArrowRight") setActiveImage((i) => (i + 1) % len);
+      if (e.key === "ArrowLeft") setActiveImage((i) => (i - 1 + len) % len);
     }
     window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = prevOverflow;
-      window.removeEventListener("keydown", onKey);
-    };
+    return () => window.removeEventListener("keydown", onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [openSeries]);
+  }, [openSeries, colorway]);
 
   const active = openSeries ? SERIES_CONTENT[openSeries] : null;
   const gallery = COLORWAYS[colorway].images;
+  // clamp synchronously at render time — switching finish can shrink the
+  // gallery (black has one fewer shot than graphite), and that must never
+  // leave activeImage pointing past the end before the reset effect runs
+  const safeActiveImage = Math.min(activeImage, gallery.length - 1);
+  // the Fire & Burglary line only ships in black — no finish choice to offer
+  const availableFinishes = (Object.keys(COLORWAYS) as Colorway[]).filter(
+    (key) => openSeries !== "fire-burglary" || key === "black"
+  );
 
   return (
     <>
       <div className="qv-grid">
-        {SERIES_LIST.map((series, index) => {
+        {SERIES_LIST.map((series) => {
           const content = SERIES_CONTENT[series];
           return (
             <button
@@ -67,17 +95,18 @@ export default function ProductGallery() {
               aria-haspopup="dialog"
             >
               <span className="qv-tile-media">
-                <span className="qv-tile-badge">{content.badge}</span>
-                <span className="qv-tile-index" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
+                <span className={series === "tl15" || series === "tl30" ? "qv-tile-media-inset padded" : "qv-tile-media-inset"}>
+                  <Image
+                    src={
+                      TILE_IMAGE_OVERRIDE[series] ??
+                      COLORWAYS[series === "fire-burglary" ? "black" : "graphite"].images[0].src
+                    }
+                    alt={content.imageAlt}
+                    fill
+                    sizes="(max-width: 860px) 100vw, 33vw"
+                    style={{ objectFit: series === "tl15" || series === "tl30" ? "contain" : "cover" }}
+                  />
                 </span>
-                <Image
-                  src={COLORWAYS.graphite.images[0].src}
-                  alt={content.imageAlt}
-                  fill
-                  sizes="(max-width: 860px) 100vw, 33vw"
-                  style={{ objectFit: "cover" }}
-                />
                 <span className="qv-tile-hover">
                   <span className="qv-tile-hover-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -129,9 +158,9 @@ export default function ProductGallery() {
             <div className="qv-media-col">
               <div className="qv-media-main">
                 <Image
-                  key={gallery[activeImage].src}
-                  src={gallery[activeImage].src}
-                  alt={gallery[activeImage].alt}
+                  key={gallery[safeActiveImage].src}
+                  src={gallery[safeActiveImage].src}
+                  alt={gallery[safeActiveImage].alt}
                   fill
                   sizes="(max-width: 860px) 100vw, 46vw"
                   style={{ objectFit: "cover" }}
@@ -141,7 +170,7 @@ export default function ProductGallery() {
                   type="button"
                   className="qv-media-nav prev"
                   aria-label="Previous image"
-                  onClick={() => setActiveImage((i) => (i + 4) % 5)}
+                  onClick={() => setActiveImage((i) => (i - 1 + gallery.length) % gallery.length)}
                 >
                   &#8249;
                 </button>
@@ -149,7 +178,7 @@ export default function ProductGallery() {
                   type="button"
                   className="qv-media-nav next"
                   aria-label="Next image"
-                  onClick={() => setActiveImage((i) => (i + 1) % 5)}
+                  onClick={() => setActiveImage((i) => (i + 1) % gallery.length)}
                 >
                   &#8250;
                 </button>
@@ -160,30 +189,32 @@ export default function ProductGallery() {
                     key={img.src}
                     type="button"
                     role="tab"
-                    aria-selected={activeImage === i}
-                    className={`qv-thumb${activeImage === i ? " active" : ""}`}
+                    aria-selected={safeActiveImage === i}
+                    className={`qv-thumb${safeActiveImage === i ? " active" : ""}`}
                     onClick={() => setActiveImage(i)}
                   >
                     <Image src={img.src} alt="" fill sizes="80px" style={{ objectFit: "cover" }} />
                   </button>
                 ))}
               </div>
-              <div className="qv-colorways" role="radiogroup" aria-label="Finish">
-                {(Object.keys(COLORWAYS) as Colorway[]).map((key) => (
-                  <button
-                    key={key}
-                    type="button"
-                    role="radio"
-                    aria-checked={colorway === key}
-                    className={`qv-swatch${colorway === key ? " active" : ""}`}
-                    style={{ "--swatch": COLORWAYS[key].swatch } as React.CSSProperties}
-                    onClick={() => setColorway(key)}
-                  >
-                    <span className="qv-swatch-dot" aria-hidden="true" />
-                    {COLORWAYS[key].label}
-                  </button>
-                ))}
-              </div>
+              {availableFinishes.length > 1 && (
+                <div className="qv-colorways" role="radiogroup" aria-label="Finish">
+                  {availableFinishes.map((key) => (
+                    <button
+                      key={key}
+                      type="button"
+                      role="radio"
+                      aria-checked={colorway === key}
+                      className={`qv-swatch${colorway === key ? " active" : ""}`}
+                      style={{ "--swatch": COLORWAYS[key].swatch } as React.CSSProperties}
+                      onClick={() => setColorway(key)}
+                    >
+                      <span className="qv-swatch-dot" aria-hidden="true" />
+                      {COLORWAYS[key].label}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="qv-info-col">

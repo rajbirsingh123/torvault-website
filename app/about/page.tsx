@@ -71,7 +71,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">Timeline</span>
@@ -142,9 +142,9 @@ export default function AboutPage() {
               <div>
                 <h4>Documented UL Testing</h4>
                 <p>
-                  Every product line is built and verified against UL 72, UL
-                  RSC, and UL TL testing methodology before it ships &mdash;
-                  see the{" "}
+                  Every product line is built and verified against factory
+                  fire testing and UL TL testing methodology before it ships
+                  &mdash; see the{" "}
                   <Link href="/certified-standard" style={{ textDecoration: "underline" }}>
                     full breakdown
                   </Link>
@@ -179,7 +179,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <div className="callout" style={{ maxWidth: 820 }}>
             <strong>Backed by Security Lock &amp; Safe Inc.</strong> &mdash;

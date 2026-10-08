@@ -11,7 +11,7 @@ import { SERIES_CONTENT, SERIES_LIST, modelsBySeries, seriesSizeRange } from "@/
 export const metadata: Metadata = {
   title: "Safe Products | Fire & Burglary, TL-15, TL-30 — Torvault",
   description:
-    "Compare Torvault's three UL-rated safe product lines: Fire & Burglary (UL 72 / RSC), TL-15 High Security, and TL-30 High Security — specs, construction, and who each line is built for.",
+    "Compare Torvault's three safe product lines: Fire & Burglary (factory fire-tested), TL-15 High Security, and TL-30 High Security — specs, construction, and who each line is built for.",
   alternates: { canonical: "/products" },
   openGraph: {
     type: "website",
@@ -105,7 +105,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">Side by Side</span>
@@ -141,7 +141,7 @@ export default function ProductsPage() {
                       Fire &amp; Burglary
                     </Link>
                   </th>
-                  <td>UL RSC (B&#8209;rate)</td>
+                  <td>Factory Fire Tested</td>
                   <td>5 min, all sides</td>
                   <td>1&#8211;Hr @ 350&deg;F</td>
                   <td>12 ga steel</td>

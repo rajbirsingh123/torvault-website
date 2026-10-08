@@ -40,7 +40,7 @@ export default function FindADealerPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap about-grid">
           <Reveal className="about-copy">
             <span className="eyebrow" style={{ color: "var(--brass-600)" }}>

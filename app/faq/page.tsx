@@ -53,7 +53,7 @@ const generalFaqs: FaqEntry[] = [
     answer: (
       <>
         No safe is truly fireproof &mdash; the correct term is{" "}
-        <em>fire-resistant</em> or <em>fire-rated</em>. A UL 72 rating like
+        <em>fire-resistant</em> or <em>fire-rated</em>. A rating like
         &ldquo;1&#8211;Hr / 350&deg;F&rdquo; means the interior stayed below
         350&deg;F for one hour inside a furnace that can reach 1,700&deg;F
         outside the safe &mdash; not that the contents are immune to fire
@@ -84,27 +84,15 @@ const ratingFaqs: FaqEntry[] = [
     ),
   },
   {
-    question: "What’s the difference between UL RSC and UL TL‑15?",
-    answer: (
-      <>
-        RSC (Residential Security Container) is tested for 5 minutes net
-        working time against common hand tools, on all sides. TL&#8209;15
-        triples the working time to 15 minutes, adds power drills and
-        pressure-applying devices to the tool kit, but is only tested
-        against the door. RSC is Torvault&rsquo;s Fire &amp; Burglary line;
-        TL&#8209;15 is the next tier up.
-      </>
-    ),
-  },
-  {
     question: "Does a higher burglary rating mean better fire protection?",
     answer: (
       <>
-        No &mdash; burglary ratings (RSC, TL&#8209;15, TL&#8209;30) and fire
-        ratings (UL 72 Class 350/150/125) are tested completely
-        independently. A high burglary rating says nothing about fire
-        performance and vice versa. If you need both, confirm the safe
-        carries a documented rating for each, not just one.
+        No &mdash; burglary ratings (Fire &amp; Burglary, TL&#8209;15,
+        TL&#8209;30) and fire ratings (measured in hours and maximum interior
+        temperature) are tested completely independently. A high burglary
+        rating says nothing about fire performance and vice versa. If you
+        need both, confirm the safe carries a documented rating for each, not
+        just one.
       </>
     ),
   },

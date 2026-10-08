@@ -35,7 +35,7 @@ export default function ManufacturingPage() {
 
       <ManufacturingStory />
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">Quality Commitments</span>
@@ -112,7 +112,7 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal
             className="section-head"

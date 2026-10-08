@@ -832,26 +832,22 @@
   }
 
   /* ---------- TRUST BAR ---------- */
-  .trust-bar { background: var(--card); border-bottom: 1px solid var(--border); padding: 40px 0; }
-  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  @media (max-width: 860px) { .trust-grid { grid-template-columns: repeat(2, 1fr); } }
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 18px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--text);
-    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  .trust-bar { padding: 40px 0; }
+  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  @media (max-width: 860px) { .trust-grid { grid-template-columns: 1fr; } }
+  .neural-btn.trust-pill {
+    width: 100%;
+    height: auto;
+    min-height: 54px;
+    padding: 12px 20px;
+    font-size: 13px;
+    color: #ffffff;
+    text-shadow: none;
   }
-  .trust-item:hover { box-shadow: var(--shadow-soft); transform: translateY(-2px); border-color: rgba(255, 255, 255, 0.22); }
+  .neural-btn.trust-pill .neural-btn-label { gap: 10px; }
   .trust-item-icon {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -860,7 +856,7 @@
     background: linear-gradient(135deg, var(--navy-700), var(--navy-950));
     color: var(--brass-300);
   }
-  .trust-item-icon svg { width: 18px; height: 18px; }
+  .trust-item-icon svg { width: 16px; height: 16px; }
 
   /* ---------- ABOUT ---------- */
   .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
@@ -1119,10 +1115,11 @@
   .cat-cta:hover { color: var(--brass-600); }
 
   /* ---------- PRODUCT QUICK-VIEW GALLERY (home page) ---------- */
+  #products .wrap { max-width: 1360px; }
   .qv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 28px;
   }
   @media (max-width: 860px) { .qv-grid { grid-template-columns: 1fr; } }
 
@@ -1149,10 +1146,12 @@
   }
   .qv-tile-media {
     position: relative;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
     background: var(--surface);
     overflow: hidden;
   }
+  .qv-tile-media-inset { position: absolute; inset: 0; }
+  .qv-tile-media-inset.padded { inset: 28px; }
   .qv-tile-media img { transition: transform 0.5s ease; }
   .qv-tile:hover .qv-tile-media img { transform: scale(1.06); }
   .qv-tile-badge {
@@ -1218,22 +1217,22 @@
   .qv-tile-hover-icon { display: inline-flex; width: 16px; height: 16px; }
   .qv-tile-hover-icon svg { width: 100%; height: 100%; }
   .qv-tile-body {
-    padding: 22px 26px 26px;
+    padding: 28px 30px 32px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     flex: 1;
   }
-  .qv-tile-rating { font-size: 12px; font-weight: 600; color: var(--navy-700); }
-  .qv-tile-title { font-size: 22px; }
+  .qv-tile-rating { font-size: 13px; font-weight: 600; color: var(--navy-700); }
+  .qv-tile-title { font-size: 26px; }
   .qv-tile-specs {
     margin-top: auto;
-    padding-top: 16px;
+    padding-top: 18px;
     border-top: 1px solid var(--border);
     display: grid;
-    gap: 8px;
+    gap: 10px;
   }
-  .qv-tile-spec-row { display: flex; justify-content: space-between; font-size: 12.5px; }
+  .qv-tile-spec-row { display: flex; justify-content: space-between; font-size: 13.5px; }
   .qv-tile-spec-row span:first-child { color: var(--text-muted); }
   .qv-tile-spec-row span:last-child { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
 
@@ -1675,12 +1674,9 @@
 
   /* dealer / cta band */
   .dealer {
-    background: var(--surface);
     color: var(--text);
     position: relative;
     overflow: hidden;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
   }
   .dealer::before {
     content: "";
@@ -2287,7 +2283,7 @@
     padding: 14px 42px 14px 16px;
     border-radius: var(--radius-md);
     border: 1px solid rgba(11, 29, 58, 0.14);
-    background: var(--surface);
+    background: #ffffff;
     color: var(--navy-950);
     font-size: 14.5px;
     font-family: inherit;
@@ -2309,7 +2305,7 @@
   }
   @media (max-width: 640px) { .pdp-size-stats { grid-template-columns: repeat(2, 1fr); } }
   .pdp-size-stats .cell {
-    background: var(--surface);
+    background: #ffffff;
     border: 1px solid rgba(11, 29, 58, 0.08);
     border-radius: var(--radius-md);
     padding: 14px 16px;
@@ -2405,14 +2401,6 @@
   /* ---------- TESTIMONIALS (review notebook) ---------- */
   .notebook {
     position: relative;
-    background:
-      repeating-linear-gradient(
-        0deg,
-        transparent 0,
-        transparent 27px,
-        rgba(11, 29, 58, 0.05) 28px
-      ),
-      var(--surface);
   }
   .notebook-grid {
     display: grid;
@@ -2977,7 +2965,6 @@
   /* ---------- STORY STRIP (three-pillar feature cards) ---------- */
   .story-strip {
     padding: 88px 0;
-    border-bottom: 1px solid var(--border);
   }
   .story-strip .story-grid { margin-top: 44px; }
   .story-grid {
@@ -2992,16 +2979,15 @@
     position: relative;
     overflow: hidden;
     background: var(--card);
-    border: 1px solid var(--border);
+    border: 1px solid transparent;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
     padding: 36px 32px 32px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .story-item:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-lift);
-    border-color: rgba(255, 255, 255, 0.22);
   }
   .story-icon {
     position: relative;
@@ -3053,6 +3039,12 @@
   /* six chapters instead of three — give each one proportionally the same
      scroll room the homepage's three-chapter version gets */
   .build-story.manufacturing-story { height: 620vh; }
+  /* the 10-phase cinematic sequence gets its own taller scroll track than
+     the old 3-chapter version, so each camera beat gets real scroll room
+     (higher specificity than the plain/mobile .build-story rules above,
+     so this wins either way) */
+  .build-story.product-showcase { height: 460vh; }
+  @media (max-width: 640px) { .build-story.product-showcase { height: 560vh; } }
   .build-pin {
     position: sticky;
     top: 0;
@@ -3089,6 +3081,30 @@
     position: relative;
     z-index: 2;
     height: 100%;
+  }
+  /* static single-block copy for the product showcase — same type scale as
+     .build-chapter, just without the absolute-stacked multi-chapter fade */
+  .showcase-copy {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 440px;
+  }
+  .showcase-copy .eyebrow { margin-bottom: 20px; }
+  .showcase-copy h3 {
+    color: #ffffff;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.08;
+  }
+  .showcase-copy p {
+    color: rgba(238, 241, 246, 0.78);
+    margin-top: 16px;
+    font-size: 15.5px;
+    max-width: 46ch;
   }
   .build-chapter {
     position: absolute;

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Torvault Safe Company | Fire & High-Security Safes, Canada",
   description:
-    "Torvault engineers UL-rated fire and burglary safes — from UL 72 fire protection to UL TL-30 tool resistance — for Canadian businesses and dealers.",
+    "Torvault engineers UL-rated fire and burglary safes — from factory fire-tested protection to UL TL-30 tool resistance — for Canadian businesses and dealers.",
   icons: { icon: "/icon-blue.png" },
 };
 
@@ -46,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${jakarta.variable} ${caveat.variable}`}>
-      <body className="theme-light">
+      <body>
         <Topbar />
         <Header />
         {children}

@@ -6,13 +6,13 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Certified Standard | UL Fire & Burglary Ratings Explained — Torvault",
   description:
-    "What UL RSC, TL-15, TL-30, and UL 72 fire ratings actually mean — testing methodology, tools used, net working time, and why insurers rely on them.",
+    "What TL-15, TL-30, and factory fire ratings actually mean — testing methodology, tools used, net working time, and why insurers rely on them.",
   alternates: { canonical: "/certified-standard" },
   openGraph: {
     type: "website",
     title: "Certified Standard | UL Fire & Burglary Ratings Explained",
     description:
-      "What UL RSC, TL-15, TL-30, and UL 72 fire ratings actually mean, and how UL testing works.",
+      "What TL-15, TL-30, and factory fire ratings actually mean, and how UL testing works.",
     images: ["/safe-tl30.jpg"],
   },
   twitter: { card: "summary_large_image" },
@@ -50,19 +50,20 @@ export default function CertifiedStandardPage() {
           </Reveal>
 
           <div className="term-grid">
-            <div className="term-card" id="rsc">
+            <div className="term-card" id="entry">
               <span className="term-label">Entry Level</span>
-              <h3>UL RSC</h3>
+              <h3>Factory Fire Tested</h3>
               <p>
-                Residential Security Container &mdash; the baseline UL
-                burglary classification, and the rating behind
-                Torvault&rsquo;s Fire &amp; Burglary line.
+                Torvault&rsquo;s Fire &amp; Burglary line&rsquo;s baseline
+                burglary resistance, verified in-house against common
+                mechanical tools &mdash; not a UL-certified classification
+                like TL&#8209;15 or TL&#8209;30.
               </p>
               <ul>
                 <li>5 minutes net working time</li>
                 <li>Tested on all sides, not just the door</li>
                 <li>Common mechanical hand tools only</li>
-                <li>Combination or key lock, UL-listed</li>
+                <li>Combination or keypad lock</li>
               </ul>
             </div>
             <div className="term-card" id="tl-15">
@@ -98,14 +99,14 @@ export default function CertifiedStandardPage() {
         </div>
       </section>
 
-      <section id="fire" style={{ background: "var(--surface)" }}>
+      <section id="fire">
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">UL 72 Fire Endurance</span>
+            <span className="eyebrow">Fire Endurance Testing</span>
             <h2>What survives a 1,700&deg;F furnace.</h2>
             <p>
-              UL 72 is the standard fire-resistance test for record and
-              data protection equipment. A locked safe is placed inside an
+              Fire endurance testing is the standard methodology for record
+              and data protection equipment. A locked safe is placed inside an
               industrial furnace that follows a controlled
               time-temperature curve reaching up to 1,700&deg;F, while
               sensors continuously log the internal temperature. The safe
@@ -194,7 +195,7 @@ export default function CertifiedStandardPage() {
               <tbody>
                 <tr>
                   <th scope="row">Fire &amp; Burglary</th>
-                  <td>UL RSC (B&#8209;rate)</td>
+                  <td>Factory Fire Tested</td>
                   <td>5 min, all sides</td>
                   <td>Common hand tools</td>
                   <td>1&#8211;Hr @ 350&deg;F</td>
@@ -225,7 +226,7 @@ export default function CertifiedStandardPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap" style={{ maxWidth: 820 }}>
           <div className="callout">
             <strong>Why it matters for insurance:</strong> Most commercial

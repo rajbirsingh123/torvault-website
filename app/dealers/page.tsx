@@ -164,7 +164,7 @@ export default function DealersPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">How It Works</span>

@@ -78,11 +78,11 @@ export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
     badge: "Entry Line",
     image: "/safe-fire-burglary.jpg",
     imageAlt: "Torvault Fire & Burglary safe, navy blue steel body with digital keypad",
-    chips: ["UL 72 Fire Rated", "UL RSC Body"],
+    chips: ["Factory Fire Tested", "Reinforced Steel Body"],
     metaDescription:
-      "Torvault Fire & Burglary safes: UL 72 fire-tested, UL RSC burglary-rated, 11 sizes built to order. Spec sheets and dealer quotes available.",
+      "Torvault Fire & Burglary safes: factory fire-tested, reinforced burglary-resistant body, 11 sizes built to order. Spec sheets and dealer quotes available.",
     intro: [
-      "Torvault's entry line pairs a UL 72 fire-tested body with an RSC (Residential Security Container) burglary rating — the baseline UL burglary classification, tested against common mechanical tools across a net working time of five minutes on every side. It's built for operations where document and cash protection matter more than resisting a determined, tooled attack.",
+      "Torvault's entry line pairs a factory fire-tested body with a reinforced burglary-resistant construction, tested against common mechanical tools across a net working time of five minutes on every side. It's built for operations where document and cash protection matter more than resisting a determined, tooled attack.",
       "A single-wall 12-gauge steel body wraps a UL Class 350 fire chamber, holding internal temperature below 350°F — the threshold at which paper begins to char — for a full hour inside a fire that can reach 1,700°F outside the safe.",
     ],
     specCells: [
@@ -90,7 +90,7 @@ export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
       { v: "12 ga steel", k: "Body Construction" },
       { v: "Single-wall", k: "Door Type" },
       { v: "Dial or keypad", k: "Locking" },
-      { v: "UL RSC", k: "Burglary Rating" },
+      { v: "Forced-Entry Tested", k: "Burglary Rating" },
       { v: "5 min, all sides", k: "Net Working Time" },
     ],
     bestFor:
@@ -158,7 +158,7 @@ export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
     metaDescription:
       "Torvault TL-30 High Security safes: 30-minute six-side UL rating, 1.5-inch solid steel body, 10 sizes built to order. Spec sheets and dealer quotes available.",
     intro: [
-      "TL-30 raises the net working time to 30 minutes and adds abrasive cutting wheels and power saws to the tool list — and unlike RSC or TL-15, the rating applies to every side of the body, not just the door. It's Torvault's flagship line, built for operations where a breach anywhere on the box is an unacceptable outcome.",
+      "TL-30 raises the net working time to 30 minutes and adds abrasive cutting wheels and power saws to the tool list — and unlike the Fire & Burglary or TL-15 lines, the rating applies to every side of the body, not just the door. It's Torvault's flagship line, built for operations where a breach anywhere on the box is an unacceptable outcome.",
       "A 1.5-inch solid steel body carries a composite hardplate across all six sides, a 3.25-inch door, and four-way spring-loaded relocking bolts. The combination is the standard specification for cash-in-transit depots, large jewelers, and high-volume cash rooms.",
     ],
     specCells: [

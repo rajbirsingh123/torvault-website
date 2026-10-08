@@ -37,7 +37,6 @@ const PHOTO_GALLERY: Record<PhotoFinish, GalleryImage[]> = {
     { src: "/products/black/01-torvault-black-front-closed.jpg", alt: "Torvault safe, black finish, door closed" },
     { src: "/products/black/02-torvault-black-front-open.jpg", alt: "Torvault safe, black finish, door open showing interior shelf" },
     { src: "/products/black/03-torvault-black-angled-view.jpg", alt: "Torvault safe, black finish, angled three-quarter view" },
-    { src: "/products/black/04-torvault-black-rear-side.jpg", alt: "Torvault safe, black finish, rear and side panel view" },
     { src: "/products/black/05-torvault-black-interior-detail.jpg", alt: "Torvault safe, black finish, interior boltwork detail" },
   ],
 };

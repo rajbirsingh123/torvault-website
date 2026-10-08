@@ -12,6 +12,7 @@ import Reveal from "@/components/Reveal";
 import CertSeal from "@/components/CertSeal";
 import Button from "@/components/Button";
 import NeuralButton from "@/components/NeuralButton";
+import NeuralBorder from "@/components/NeuralBorder";
 
 type CertOrbitItem =
   | { type: "seal"; glyph: string; k: string; v: string }
@@ -115,7 +116,7 @@ const STORY_PILLARS: StoryPillar[] = [
 export const metadata: Metadata = {
   title: "Torvault Safe Company | Fire & High-Security Safes, Canada",
   description:
-    "Torvault engineers UL-rated fire and burglary safes — from UL 72 fire protection to UL TL-30 tool resistance — for Canadian businesses and dealers.",
+    "Torvault engineers UL-rated fire and burglary safes — from factory fire-tested protection to UL TL-30 tool resistance — for Canadian businesses and dealers.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -145,33 +146,77 @@ const homeFaqs = [
     ),
   },
   {
-    question: "How is Torvault different from Toronto Safes?",
+    question: "What's the difference between TL-15 and TL-30 safes?",
     answer: (
       <>
-        Toronto Safes is a retail provider, selling directly to homes and
-        businesses across the GTA since 1987. Torvault is a new
-        manufacturing brand from the same parent company, Security Lock &amp;
-        Safe Inc. &mdash; built to supply independent safe dealers across
-        Canada at wholesale, not to sell direct to consumers.
+        The number is net working time &mdash; how long the UL-rated door and
+        boltwork resist a professional attack with common tools. TL&#8209;15
+        holds for 15 minutes, TL&#8209;30 for 30, with a thicker 1.5&Prime;
+        solid steel body and hardplate across all six sides. Higher-value
+        contents and higher insurance limits generally call for TL&#8209;30.
+        Compare specs on our{" "}
+        <Link href="/products" style={{ textDecoration: "underline" }}>
+          Products page
+        </Link>
+        .
       </>
     ),
   },
   {
-    question: "How do I become an authorized Torvault dealer?",
+    question: "Where can I buy a Torvault safe?",
     answer: (
       <>
-        Email{" "}
-        <a
-          href="mailto:dealers@torvaultsafe.com"
-          style={{ textDecoration: "underline" }}
-        >
-          dealers@torvaultsafe.com
-        </a>{" "}
-        with your business name and region, or visit our{" "}
-        <Link href="/dealers" style={{ textDecoration: "underline" }}>
-          Dealer Program page
+        Torvault sells exclusively through authorized dealers across
+        Canada &mdash; we don&rsquo;t sell direct to consumers. Use our{" "}
+        <Link href="/find-a-dealer" style={{ textDecoration: "underline" }}>
+          Find a Dealer
         </Link>{" "}
-        for full details on territory, pricing, and the application process.
+        page to locate one near you, or see our{" "}
+        <Link href="/dealers" style={{ textDecoration: "underline" }}>
+          Dealer Program
+        </Link>{" "}
+        if you&rsquo;re a retailer interested in carrying the line.
+      </>
+    ),
+  },
+  {
+    question: "How long will my documents survive in a fire?",
+    answer: (
+      <>
+        Our Fire &amp; Burglary line carries a UL Class 350 rating: the
+        interior stays below 350&deg;F &mdash; the temperature paper starts
+        to char &mdash; for a full hour, even while the fire outside reaches
+        up to 1,700&deg;F. That hour is tested, not estimated; it&rsquo;s the
+        same net-working-time methodology UL uses across every rating we
+        carry.
+      </>
+    ),
+  },
+  {
+    question: "Do insurance companies recognize Torvault's ratings?",
+    answer: (
+      <>
+        Yes. Our TL&#8209;15 and TL&#8209;30 security ratings are
+        independently tested by UL, not self-certified in-house &mdash; the
+        standard insurers reference when setting coverage limits for cash,
+        firearms, and documents. Our Fire &amp; Burglary line is factory
+        fire-tested. Ask your insurer which rating your policy requires
+        before choosing a model.
+      </>
+    ),
+  },
+  {
+    question: "What sizes and capacities are available?",
+    answer: (
+      <>
+        Each of our three lines spans a wide range, from compact
+        home-and-office models up to large commercial vaults, so capacity
+        scales with the rating you need rather than forcing a single body
+        size. Browse interior dimensions and weight for every model on the{" "}
+        <Link href="/products" style={{ textDecoration: "underline" }}>
+          Products page
+        </Link>
+        .
       </>
     ),
   },
@@ -184,27 +229,22 @@ export default function HomePage() {
         <HeroVideo />
         <div className="wrap hero-grid">
           <span className="eyebrow hero-kicker">
-            Torvault Safe Company &middot; Canadian High-Security Safes
+            Torvault Safe Company
           </span>
           <h1 className="hero-headline">
             <span className="word-mask">
               <span className="word" style={{ "--wi": 0 } as React.CSSProperties}>
-                Modern,
+                Security
               </span>
             </span>{" "}
             <span className="word-mask">
               <span className="word" style={{ "--wi": 1 } as React.CSSProperties}>
-                reliable,
+                without
               </span>
             </span>{" "}
             <span className="word-mask">
               <span className="word" style={{ "--wi": 2 } as React.CSSProperties}>
-                independently
-              </span>
-            </span>{" "}
-            <span className="word-mask">
-              <span className="word" style={{ "--wi": 3 } as React.CSSProperties}>
-                tested.
+                compromise.
               </span>
             </span>
           </h1>
@@ -224,9 +264,6 @@ export default function HomePage() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </NeuralButton>
-            <NeuralButton href="/dealers" accent="ice">
-              Dealer Inquiries
-            </NeuralButton>
           </div>
         </div>
         <span className="hero-scroll-cue" aria-hidden="true">
@@ -236,34 +273,24 @@ export default function HomePage() {
 
       <section className="trust-bar">
         <div className="wrap trust-grid">
-          <div className="trust-item">
+          <NeuralButton accent="ice" className="trust-pill">
             <span className="trust-item-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
               </svg>
             </span>
-            <span>UL &amp; ULC Tested Standards</span>
-          </div>
-          <div className="trust-item">
+            <span>UL &amp; ENL43 Tested Standards</span>
+          </NeuralButton>
+          <NeuralButton accent="ice" className="trust-pill">
             <span className="trust-item-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <circle cx="12" cy="8" r="5.5" />
                 <path d="M8.5 12.5L7 21l5-2.5 5 2.5-1.5-8.5" />
               </svg>
             </span>
-            <span>Backed by 39 Years of Security Expertise</span>
-          </div>
-          <div className="trust-item">
-            <span className="trust-item-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M1 4h13v11H1zM14 8h4l4 4v3h-8z" />
-                <circle cx="6" cy="18" r="1.8" />
-                <circle cx="17" cy="18" r="1.8" />
-              </svg>
-            </span>
-            <span>Now Onboarding Canadian Dealers</span>
-          </div>
-          <div className="trust-item">
+            <span>Backed by 40 Years of Security Expertise</span>
+          </NeuralButton>
+          <NeuralButton accent="ice" className="trust-pill">
             <span className="trust-item-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M4 13v-1a8 8 0 0116 0v1" />
@@ -272,8 +299,8 @@ export default function HomePage() {
                 <path d="M20 19v1a3 3 0 01-3 3h-3" />
               </svg>
             </span>
-            <span>Engineered for the Canadian Climate</span>
-          </div>
+            <span>Engineered for the Toughest Environment</span>
+          </NeuralButton>
         </div>
       </section>
 
@@ -291,6 +318,7 @@ export default function HomePage() {
           <div className="story-grid">
             {STORY_PILLARS.map((pillar, i) => (
               <Reveal as="article" className="story-item" delay={i * 120} key={pillar.title}>
+                <NeuralBorder accent="ice" radius={24} />
                 <span className="story-icon">{pillar.icon}</span>
                 <h3>{pillar.title}</h3>
                 <p>{pillar.body}</p>
@@ -306,10 +334,9 @@ export default function HomePage() {
             <span className="eyebrow">Products</span>
             <h2>Three lines. One standard.</h2>
             <p>
-              Torvault launches in Canada with three purpose-built
-              product lines, each engineered around a specific threat &mdash;
-              fire, forced entry, or both &mdash; rather than a one-size body
-              with a bigger price tag.
+              Three purpose-built product lines, each engineered around a
+              specific threat &mdash; fire, forced entry, or both &mdash;
+              rather than a one-size body with a bigger price tag.
             </p>
           </Reveal>
 
@@ -319,7 +346,7 @@ export default function HomePage() {
 
       <BuildStory />
 
-      <section style={{ background: "var(--surface)" }}>
+      <section>
         <div className="wrap">
           <Reveal
             className="section-head"
@@ -330,11 +357,11 @@ export default function HomePage() {
             </span>
             <h2>Specification, not a marketing tier.</h2>
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Every Torvault safe is built to a documented UL testing
-              standard &mdash; RSC, TL&#8209;15, or TL&#8209;30 &mdash;
-              verified against independent, tool-by-tool testing rather than
-              an in-house label. Our Certified Standard page breaks down
-              exactly what each rating means, how UL testing works, and why
+              Every Torvault safe is built to a documented testing standard
+              &mdash; factory fire testing on Fire &amp; Burglary, or
+              independent UL testing on TL&#8209;15 and TL&#8209;30 &mdash;
+              not an in-house label alone. Our Certified Standard page breaks
+              down exactly what each rating means, how testing works, and why
               insurers use it to set coverage limits.
             </p>
           </Reveal>
@@ -406,9 +433,8 @@ export default function HomePage() {
             </span>
             <h2>Trusted since 1987.</h2>
             <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Torvault is a new manufacturing brand from Security Lock &amp;
-              Safe Inc. &mdash; the same parent company behind Toronto
-              Safes, rated 4.5 stars across 48 Google reviews.
+              Torvault is backed by Security Lock &amp; Safe Inc. &mdash; 40
+              years in the Canadian safe industry through Toronto Safes.
             </p>
           </Reveal>
 
@@ -422,17 +448,6 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-
-          <p style={{ textAlign: "center", marginTop: 36 }}>
-            <a
-              className="cat-cta"
-              href="https://www.google.com/maps/place/?q=place_id:ChIJ5TUrYaMvK4gRFIZT3vaOY2Q"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read all 48 reviews on Google &rarr;
-            </a>
-          </p>
         </div>
       </section>
 
@@ -445,17 +460,21 @@ export default function HomePage() {
             >
               Stay Updated
             </span>
-            <h2>Get dealer program updates.</h2>
+            <h2>Get updates from Torvault.</h2>
             <p>
-              Be first to know when new territories open, specification
-              sheets are finalized, and pricing goes live.
+              Be the first to know about new safe models, security tips, and
+              special offers &mdash; straight from Torvault.
             </p>
             <NewsletterForm />
             <p className="form-note">
               By entering your phone number, you agree to receive marketing
               messages from Torvault Safe Company at the number provided.
               Consent is not a condition of purchase. Message and data rates
-              may apply. Reply HELP for help or STOP to cancel.
+              may apply. Reply HELP for help or STOP to cancel. See our{" "}
+              <Link href="/terms" style={{ textDecoration: "underline" }}>
+                Terms &amp; Conditions
+              </Link>{" "}
+              for details.
             </p>
           </Reveal>
         </div>
