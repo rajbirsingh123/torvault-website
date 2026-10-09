@@ -16,7 +16,17 @@ export const NAV_LINKS: NavLink[] = [
   { href: "/certified-standard", label: "Certified Standard" },
   { href: "/about", label: "About" },
   { href: "/manufacturing", label: "Manufacturing" },
-  { href: "/faq", label: "FAQ" },
+  {
+    label: "Support",
+    children: [
+      { href: "/blog", label: "Blog" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/support", label: "Help Center" },
+      { href: "/contact", label: "Contact Support" },
+      { href: "/blog/choosing-the-right-safe-size", label: "Size & Capacity Guides" },
+      { href: "/blog/what-to-expect-at-delivery", label: "Shipping & Installation" },
+    ],
+  },
   {
     label: "Where To Buy",
     children: [

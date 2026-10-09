@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import Link from "next/link";
 import { buildSafeRig } from "./safeModel";
+import NeuralBorder from "./NeuralBorder";
 
 type Chapter = {
   eyebrow: string;
@@ -273,7 +274,8 @@ export default function AboutStory() {
               <p>{c.body}</p>
               {c.cta && (
                 <Link className="btn btn-ghost about-story-chapter-cta" href={c.cta.href}>
-                  {c.cta.label} &rarr;
+                  <NeuralBorder accent="ice" />
+                  <span className="neural-btn-label">{c.cta.label} &rarr;</span>
                 </Link>
               )}
             </div>

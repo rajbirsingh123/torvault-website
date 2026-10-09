@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import NeuralBorder from "@/components/NeuralBorder";
 import { searchProductsGrouped } from "@/lib/search-index";
 
 function SearchIcon() {
@@ -21,6 +22,7 @@ export default function ProductSearch() {
   return (
     <div className="product-search">
       <div className="product-search-field">
+        <NeuralBorder accent="gold" radius={16} />
         <SearchIcon />
         <input
           type="text"

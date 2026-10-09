@@ -22,10 +22,9 @@ export default function CertifiedStandardPage() {
   return (
     <main>
       <PageHero crumb="Certified Standard" eyebrow="Certified Standard" title="Every rating, explained.">
-        UL ratings aren&rsquo;t a marketing tier &mdash; they&rsquo;re the
-        result of an independent lab physically attacking a safe with real
-        tools and a stopwatch. Here&rsquo;s exactly what each classification
-        on a Torvault spec plate means.
+        UL ratings aren&rsquo;t marketing &mdash; they&rsquo;re independently
+        tested with real tools and a stopwatch. Here&rsquo;s what each
+        classification on a Torvault spec plate means.
       </PageHero>
 
       <section>
@@ -51,7 +50,7 @@ export default function CertifiedStandardPage() {
 
           <div className="term-grid">
             <div className="term-card" id="entry">
-              <span className="term-label">Entry Level</span>
+              <span className="term-label">Medium Level</span>
               <h3>Factory Fire Tested</h3>
               <p>
                 Torvault&rsquo;s Fire &amp; Burglary line&rsquo;s baseline
@@ -67,7 +66,7 @@ export default function CertifiedStandardPage() {
               </ul>
             </div>
             <div className="term-card" id="tl-15">
-              <span className="term-label">Mid Tier</span>
+              <span className="term-label">High Security</span>
               <h3>UL TL&#8209;15</h3>
               <p>
                 Tool-resistant, 15-minute rating &mdash; the standard behind
@@ -81,7 +80,7 @@ export default function CertifiedStandardPage() {
               </ul>
             </div>
             <div className="term-card" id="tl-30">
-              <span className="term-label">High Security</span>
+              <span className="term-label">Maximum Security</span>
               <h3>UL TL&#8209;30</h3>
               <p>
                 The rating behind Torvault&rsquo;s flagship line &mdash;
@@ -236,24 +235,6 @@ export default function CertifiedStandardPage() {
             container versus $50,000+ behind a UL TL&#8209;30 body. Before
             specifying a safe for a client, confirm the rating their
             insurer actually requires, not just what fits the budget.
-          </div>
-          <div style={{ marginTop: 28 }}>
-            <span className="eyebrow" style={{ color: "var(--brass-600)" }}>
-              Beyond TL&#8209;30
-            </span>
-            <p style={{ marginTop: 8, fontSize: "14.5px", maxWidth: "70ch" }}>
-              UL&rsquo;s burglary scale continues past TL&#8209;30 for
-              specialized applications &mdash; TRTL ratings add torch
-              resistance, and TRTL/TXTL variants extend net working time to
-              60 minutes for vault-class applications. Torvault&rsquo;s
-              current three product lines cover the range Canadian dealers
-              request most; higher-tier vault doors are available on
-              request through our{" "}
-              <Link href="/dealers" style={{ textDecoration: "underline" }}>
-                dealer program
-              </Link>
-              .
-            </p>
           </div>
         </div>
       </section>

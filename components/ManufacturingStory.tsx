@@ -256,8 +256,8 @@ export default function ManufacturingStory() {
       bodyMat.opacity = opacity;
       doorMat.opacity = opacity;
       if (heat >= blueprint) {
-        bodyMat.emissive.setHex(0xff6a2a);
-        doorMat.emissive.setHex(0xff6a2a);
+        bodyMat.emissive.setHex(0xbfe0ff);
+        doorMat.emissive.setHex(0xbfe0ff);
         bodyMat.emissiveIntensity = heat * 0.3;
         doorMat.emissiveIntensity = heat * 0.3;
       } else {

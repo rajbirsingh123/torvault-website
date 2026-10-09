@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { buildSafeRig } from "./safeModel";
+import NeuralBorder from "./NeuralBorder";
 
 type Chapter = {
   eyebrow: string;
@@ -51,7 +52,6 @@ export default function BuildStory({ ctaHref = "/manufacturing" }: { ctaHref?: s
   const sectionRef = useRef<HTMLDivElement>(null);
   const canvasHostRef = useRef<HTMLDivElement>(null);
   const chapterRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const railRefs = useRef<Array<HTMLDivElement | null>>([]);
   const CHAPTERS = buildChapters(ctaHref ?? undefined);
 
   useEffect(() => {
@@ -134,7 +134,7 @@ export default function BuildStory({ ctaHref = "/manufacturing" }: { ctaHref?: s
 
     // ---- camera keyframes: Manufacturing → Assembly → Open/Interior
     const camPos = [
-      new THREE.Vector3(3.3, 1.2, 4.6),
+      new THREE.Vector3(0, 0.35, 5.7),
       new THREE.Vector3(0.35, 0.35, 4.0),
       new THREE.Vector3(-1.75, 0.85, 2.9),
     ];
@@ -169,19 +169,11 @@ export default function BuildStory({ ctaHref = "/manufacturing" }: { ctaHref?: s
     let rafId = 0;
     let destroyed = false;
     const start = performance.now();
-    let lastChapter = -1;
 
     function syncCopy(p: number) {
       // clamp to n-1 so the last chapter settles into its window and stays
       // there through p=1, instead of sailing past it and fading back out
       const chapterFloat = Math.min(p * CHAPTERS.length, CHAPTERS.length - 1);
-      const active = Math.min(CHAPTERS.length - 1, Math.floor(chapterFloat));
-      if (active !== lastChapter) {
-        lastChapter = active;
-        railRefs.current.forEach((el, i) => {
-          if (el) el.classList.toggle("active", i === active);
-        });
-      }
       chapterRefs.current.forEach((el, i) => {
         if (!el) return;
         const local = chapterFloat - i;
@@ -272,23 +264,10 @@ export default function BuildStory({ ctaHref = "/manufacturing" }: { ctaHref?: s
               <p>{c.body}</p>
               {c.cta && (
                 <a className="btn btn-ghost build-chapter-cta" href={c.cta.href}>
-                  {c.cta.label} &rarr;
+                  <NeuralBorder accent="ice" />
+                  <span className="neural-btn-label">{c.cta.label} &rarr;</span>
                 </a>
               )}
-            </div>
-          ))}
-        </div>
-        <div className="build-rail" aria-hidden="true">
-          {CHAPTERS.map((c, i) => (
-            <div
-              className="build-rail-dot"
-              key={c.eyebrow}
-              ref={(el) => {
-                railRefs.current[i] = el;
-              }}
-            >
-              <span className="ln" />
-              {String(i + 1).padStart(2, "0")}
             </div>
           ))}
         </div>

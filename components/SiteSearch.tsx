@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import NeuralBorder from "@/components/NeuralBorder";
 import { searchSite, type SearchItem } from "@/lib/search-index";
 
 function SearchIcon() {
@@ -59,6 +60,7 @@ export default function SiteSearch() {
         <div className="search-overlay" role="dialog" aria-modal="true" aria-label="Site search">
           <div className="search-backdrop" onClick={() => setOpen(false)} />
           <div className="search-panel">
+            <NeuralBorder accent="gold" radius={24} />
             <div className="search-field">
               <SearchIcon />
               <input

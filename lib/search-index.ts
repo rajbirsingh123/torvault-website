@@ -1,4 +1,5 @@
 import { SAFE_MODELS, SERIES_CONTENT, SERIES_LIST } from "@/lib/safes";
+import { BLOG_POSTS } from "@/lib/blog";
 
 export type SearchItem = {
   title: string;
@@ -39,6 +40,24 @@ const PAGES: SearchItem[] = [
     keywords: "faq questions answers help",
   },
   {
+    title: "The Vault (Blog)",
+    description: "Guides on UL ratings, fire protection, sizing, and installation.",
+    href: "/blog",
+    keywords: "blog the vault guides articles news",
+  },
+  {
+    title: "Help Center",
+    description: "FAQs, sizing and installation guides, and how to reach support.",
+    href: "/support",
+    keywords: "help center support help desk assistance",
+  },
+  {
+    title: "Contact Support",
+    description: "General inquiries, dealer-program questions, and quote requests.",
+    href: "/contact",
+    keywords: "contact support email phone reach us get in touch",
+  },
+  {
     title: "Find a Dealer",
     description: "Locate an authorized Torvault dealer near you.",
     href: "/find-a-dealer",
@@ -76,7 +95,14 @@ const MODEL_ITEMS: ModelSearchItem[] = SAFE_MODELS.map((model) => {
   };
 });
 
-export const SEARCH_INDEX: SearchItem[] = [...PAGES, ...SERIES_ITEMS, ...MODEL_ITEMS];
+const BLOG_ITEMS: SearchItem[] = BLOG_POSTS.map((post) => ({
+  title: post.title,
+  description: post.excerpt,
+  href: `/blog/${post.slug}`,
+  keywords: `blog guide article ${post.category} ${post.title}`,
+}));
+
+export const SEARCH_INDEX: SearchItem[] = [...PAGES, ...SERIES_ITEMS, ...MODEL_ITEMS, ...BLOG_ITEMS];
 
 function matchItems<T extends SearchItem>(items: T[], query: string, limit: number): T[] {
   const q = query.trim().toLowerCase();

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import Button from "@/components/Button";
 import { dims, type SafeModel } from "@/lib/safes";
 
 export default function ProductBuyBox({
@@ -72,12 +72,12 @@ export default function ProductBuyBox({
       </div>
 
       <div className="pdp-cta-row">
-        <a className="btn btn-primary" href={quoteHref}>
+        <Button href={quoteHref} variant="primary">
           Request a Quote — {model.model}
-        </a>
-        <Link className="btn btn-ghost" href="/find-a-dealer">
+        </Button>
+        <Button href="/find-a-dealer" variant="outline">
           Find a Dealer
-        </Link>
+        </Button>
       </div>
 
       <ul className="pdp-trust-row">

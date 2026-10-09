@@ -211,7 +211,7 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
   // ---- materials
   const bodyMat = new THREE.MeshPhysicalMaterial({
     color: 0x16233f,
-    emissive: 0xff6a2a,
+    emissive: 0xbfe0ff,
     emissiveIntensity: 0,
     metalness: 0.85,
     roughness: 0.32,
@@ -220,7 +220,7 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
   });
   const doorMat = new THREE.MeshPhysicalMaterial({
     color: 0x0f1d38,
-    emissive: 0xff6a2a,
+    emissive: 0xbfe0ff,
     emissiveIntensity: 0,
     metalness: 0.86,
     roughness: 0.26,
@@ -247,6 +247,18 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
     metalness: 0.9,
     roughness: 0.24,
   });
+  // the handle: bright polished chrome/stainless — distinct from the
+  // brand-blue accent trim used elsewhere. Without an environment map, a
+  // fully mirror-smooth metal reads as near-black except for pinpoint
+  // highlights, so roughness is kept high enough to spread the scene's
+  // lights across the curved arms instead of crushing them to black
+  const handleMat = new THREE.MeshPhysicalMaterial({
+    color: 0xe7ecf2,
+    metalness: 0.75,
+    roughness: 0.2,
+    clearcoat: 0.6,
+    clearcoatRoughness: 0.15,
+  });
   const keypadMat = new THREE.MeshStandardMaterial({
     color: 0x090e18,
     metalness: 0.2,
@@ -263,7 +275,7 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
   const logoMat = new THREE.MeshStandardMaterial({ map: logoTexture, metalness: 0.35, roughness: 0.5 });
   const gunBarrelMat = new THREE.MeshStandardMaterial({ color: 0x3a4357, metalness: 0.75, roughness: 0.32 });
   const gunStockMat = new THREE.MeshStandardMaterial({ color: 0x241c15, metalness: 0.1, roughness: 0.75 });
-  const seamMat = new THREE.MeshBasicMaterial({ color: 0xffb366, transparent: true, opacity: 0 });
+  const seamMat = new THREE.MeshBasicMaterial({ color: 0xbfe0ff, transparent: true, opacity: 0 });
 
   // ---- the safe
   const bodyW = 2.0;
@@ -310,14 +322,17 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
   bezel(bezelT, bodyH - 2 * wallT - bezelT * 2, -(bodyW / 2 - wallT - bezelT / 2), 0);
   bezel(bezelT, bodyH - 2 * wallT - bezelT * 2, bodyW / 2 - wallT - bezelT / 2, 0);
 
+  // sit proud of the body's front face (like the bezel above) instead of
+  // flush with it — flush coplanar faces z-fight and shimmer as the
+  // camera moves
   const cornerGeo = new THREE.BoxGeometry(0.032, bodyH - 0.04, 0.032);
   [-bodyW / 2 + 0.016, bodyW / 2 - 0.016].forEach((cx) => {
     const corner = new THREE.Mesh(cornerGeo, accentMetal);
-    corner.position.set(cx, 0, bodyD / 2 - 0.016);
+    corner.position.set(cx, 0, bezelZ);
     rig.add(corner);
   });
   const topTrim = new THREE.Mesh(new THREE.BoxGeometry(bodyW - 0.02, 0.016, 0.032), accentMetal);
-  topTrim.position.set(0, bodyH / 2 - 0.016, bodyD / 2 - 0.016);
+  topTrim.position.set(0, bodyH / 2 - 0.016, bezelZ);
   rig.add(topTrim);
 
   // interior shelf (left two-thirds) carrying banded cash stacks, plus an
@@ -417,24 +432,40 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
   trim.position.set(doorW / 2 + 0.02, 0, doorT + 0.01);
   doorPivot.add(trim);
 
-  // the wheel: assembles into place (scales up) during BuildStory's stage
-  // 1→2 — callers that want it already mounted should set scale to 1
+  // the handle: a tri-spoke "spider" grip (central hub boss + three bent,
+  // rounded-tip arms at 120°) — the handle style used on real high-security
+  // vault doors, rather than a generic six-spoke wheel. Assembles into
+  // place (scales up) during BuildStory's stage 1→2 — callers that want it
+  // already mounted should set scale to 1
   const wheel = new THREE.Group();
   wheel.position.set(doorW * 0.62, 0.05, doorT + 0.08);
   wheel.scale.setScalar(0.001);
   doorPivot.add(wheel);
-  const hub = new THREE.Mesh(new THREE.SphereGeometry(0.1, 24, 24), accentMetal);
+  const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.078, 0.082, 0.09, 24), handleMat);
+  hub.rotation.x = Math.PI / 2;
   wheel.add(hub);
-  const wheelRim = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.032, 12, 40), accentMetal);
-  wheel.add(wheelRim);
-  const spokeGeo = new THREE.BoxGeometry(0.034, 0.3, 0.034);
-  for (let i = 0; i < 6; i++) {
-    const spoke = new THREE.Mesh(spokeGeo, steelBolt);
-    spoke.position.y = 0.15;
+  const hubCap = new THREE.Mesh(new THREE.SphereGeometry(0.078, 20, 20), handleMat);
+  hubCap.position.z = 0.045;
+  wheel.add(hubCap);
+  // each arm bows forward off the door face before tapering back in,
+  // ending in a rounded cap — built once as a curve and reused for all
+  // three arms, just rotated 120° apart
+  const armCurve = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(0.065, 0, 0.015),
+    new THREE.Vector3(0.18, 0, 0.1),
+    new THREE.Vector3(0.33, 0, 0.045),
+  ]);
+  const armGeo = new THREE.TubeGeometry(armCurve, 16, 0.025, 10, false);
+  const armTip = armCurve.getPoint(1);
+  for (let i = 0; i < 3; i++) {
     const holder = new THREE.Group();
-    holder.rotation.z = (i / 6) * Math.PI * 2;
-    holder.add(spoke);
+    holder.rotation.z = (i / 3) * Math.PI * 2;
     wheel.add(holder);
+    const arm = new THREE.Mesh(armGeo, handleMat);
+    holder.add(arm);
+    const tip = new THREE.Mesh(new THREE.SphereGeometry(0.027, 14, 14), handleMat);
+    tip.position.copy(armTip);
+    holder.add(tip);
   }
 
   // the combination dial — cast into the door, always visible; only its
@@ -480,6 +511,39 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
   keypad.position.set(doorW * 0.62, 0.78, doorT + 0.015);
   keypad.scale.setScalar(0.001);
   doorPivot.add(keypad);
+
+  // the button grid cast into the keypad face — three columns of raised
+  // keys (1–9, then */0/enter on the bottom row), the layout real
+  // electronic-lock keypads use. Children of the keypad mesh so they
+  // assemble and scale in together with it.
+  const keyMat = new THREE.MeshPhysicalMaterial({
+    color: 0xd7dde6,
+    metalness: 0.85,
+    roughness: 0.22,
+    clearcoat: 0.6,
+    clearcoatRoughness: 0.18,
+  });
+  const keyEnterMat = new THREE.MeshPhysicalMaterial({
+    color: 0x7fe6a8,
+    emissive: 0x2fe07a,
+    emissiveIntensity: 0.55,
+    metalness: 0.6,
+    roughness: 0.2,
+    clearcoat: 0.6,
+    clearcoatRoughness: 0.18,
+  });
+  const keyGeo = new THREE.CylinderGeometry(0.021, 0.021, 0.014, 20);
+  const keyColX = [-0.055, 0, 0.055];
+  const keyRowY = [0.105, 0.035, -0.035, -0.105];
+  keyRowY.forEach((y, row) => {
+    keyColX.forEach((x, col) => {
+      const isEnter = row === 3 && col === 2;
+      const key = new THREE.Mesh(keyGeo, isEnter ? keyEnterMat : keyMat);
+      key.rotation.x = Math.PI / 2;
+      key.position.set(x, y, 0.017);
+      keypad.add(key);
+    });
+  });
 
   // composite hardplate, bonded over the lock and boltwork before the wheel,
   // keypad, and bolts are fitted — invisible (scale 0, opacity 0) until a
@@ -544,7 +608,10 @@ export function buildSafeRig(scene: THREE.Scene): SafeRig {
       interiorMat,
       steelBolt,
       accentMetal,
+      handleMat,
       keypadMat,
+      keyMat,
+      keyEnterMat,
       cashMatA,
       cashMatB,
       cashBandMat,

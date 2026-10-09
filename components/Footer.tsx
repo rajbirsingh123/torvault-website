@@ -95,10 +95,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>&copy; 2026 Torvault Safe Company. All rights reserved.</span>
-          <span>
-            Concept site &mdash; specifications illustrative pending final
-            product certification.
-          </span>
+          <span>Torvault Safe Company. &mdash; Security without compromise</span>
         </div>
       </div>
     </footer>

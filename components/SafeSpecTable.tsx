@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { dims, type SafeModel } from "@/lib/safes";
+import { dims, quoteHref, type SafeModel } from "@/lib/safes";
 
 type SortKey = "model" | "outsideH" | "weight" | "capacity";
 type SortDir = "asc" | "desc";
@@ -56,14 +56,6 @@ export default function SafeSpecTable({
     );
   }
 
-  function quoteHref(model: string) {
-    const subject = encodeURIComponent(`Torvault ${model} — Spec Sheet & Quote Request`);
-    const body = encodeURIComponent(
-      `Hi Torvault team,\n\nPlease send pricing and availability for the ${model} (${seriesLabel} series).\n\nBusiness name:\nRegion:\n`
-    );
-    return `mailto:Sales@TorontoSafes.ca?subject=${subject}&body=${body}`;
-  }
-
   return (
     <div className="table-wrap spec-table-wrap">
       <table className="spec-table">
@@ -86,7 +78,7 @@ export default function SafeSpecTable({
               <td>{m.weight.toLocaleString()} lbs</td>
               <td>{m.capacity.toFixed(2)} ft&sup3;</td>
               <td>
-                <a className="spec-quote-link" href={quoteHref(m.model)}>
+                <a className="spec-quote-link" href={quoteHref(m.model, seriesLabel)}>
                   Request Quote &rarr;
                 </a>
               </td>

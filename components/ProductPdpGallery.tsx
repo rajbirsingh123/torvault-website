@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { FINISHES, getFinishDef, getFinishImages, type Finish } from "@/lib/gallery";
+import { FINISHES, getFinishImages, type Finish } from "@/lib/gallery";
 import FavoriteButton from "@/components/FavoriteButton";
 
 export default function ProductPdpGallery({ slug, label }: { slug: string; label: string }) {
@@ -12,8 +12,6 @@ export default function ProductPdpGallery({ slug, label }: { slug: string; label
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
   const mainRef = useRef<HTMLDivElement>(null);
   const images = getFinishImages(finish);
-  const finishDef = getFinishDef(finish);
-  const isTinted = finishDef.mode === "tint";
 
   function selectFinish(next: Finish) {
     setFinish(next);
@@ -33,7 +31,7 @@ export default function ProductPdpGallery({ slug, label }: { slug: string; label
     <div className="pdp-gallery">
       <div
         ref={mainRef}
-        className={`pdp-gallery-main${isTinted ? " is-tinted" : ""}`}
+        className="pdp-gallery-main"
         onMouseEnter={() => setZoomed(true)}
         onMouseLeave={() => setZoomed(false)}
         onMouseMove={handleMouseMove}
@@ -50,7 +48,6 @@ export default function ProductPdpGallery({ slug, label }: { slug: string; label
             style={{ objectFit: "cover" }}
             priority
           />
-          {isTinted && <span className="pdp-gallery-tint" style={{ background: finishDef.tint }} aria-hidden="true" />}
         </div>
         <button
           type="button"
@@ -78,11 +75,10 @@ export default function ProductPdpGallery({ slug, label }: { slug: string; label
             role="tab"
             aria-selected={activeImage === i}
             aria-label={`Photo ${i + 1} of ${images.length}`}
-            className={`pdp-gallery-thumb${activeImage === i ? " active" : ""}${isTinted ? " is-tinted" : ""}`}
+            className={`pdp-gallery-thumb${activeImage === i ? " active" : ""}`}
             onClick={() => setActiveImage(i)}
           >
             <Image src={img.src} alt="" fill sizes="80px" style={{ objectFit: "cover" }} />
-            {isTinted && <span className="pdp-gallery-tint" style={{ background: finishDef.tint }} aria-hidden="true" />}
           </button>
         ))}
       </div>

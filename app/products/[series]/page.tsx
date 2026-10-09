@@ -4,8 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import TiltCard from "@/components/TiltCard";
-import SafeSpecTable from "@/components/SafeSpecTable";
+import FaqAccordion from "@/components/FaqAccordion";
+import ModelLineup from "@/components/ModelLineup";
 import ProductBuyBox from "@/components/ProductBuyBox";
+import Button from "@/components/Button";
 import ProductPdpGallery from "@/components/ProductPdpGallery";
 import {
   SERIES_CONTENT,
@@ -57,8 +59,25 @@ export default async function ProductDetailPage({
   const range = seriesSizeRange(content.series);
   const otherSeries = SERIES_LIST.filter((s) => s !== content.series);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="pdp-crumb-bar">
         <div className="wrap breadcrumb">
           <Link href="/">Home</Link>
@@ -152,7 +171,7 @@ export default async function ProductDetailPage({
               </span>
             </div>
           </div>
-          <SafeSpecTable models={models} seriesLabel={content.label} />
+          <ModelLineup models={models} seriesLabel={content.label} />
         </div>
       </section>
 
@@ -207,6 +226,16 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
+      <section id="faq">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <span className="eyebrow">FAQ</span>
+            <h2>Questions about the {content.label} line.</h2>
+          </Reveal>
+          <FaqAccordion items={content.faqs} />
+        </div>
+      </section>
+
       <section>
         <div className="wrap">
           <Reveal
@@ -223,13 +252,9 @@ export default async function ProductDetailPage({
             </p>
           </Reveal>
           <div style={{ textAlign: "center" }}>
-            <Link
-              className="btn btn-primary"
-              style={{ background: "var(--navy-950)", color: "#fff" }}
-              href="/dealers"
-            >
+            <Button href="/dealers" variant="primary">
               Request Dealer Package
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

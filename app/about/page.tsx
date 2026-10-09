@@ -3,17 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import AboutMediaScroll from "@/components/AboutMediaScroll";
+import { BLOG_POSTS, formatBlogDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "About Torvault | A New Line, Backed by 39 Years of Security Experience",
+  title: "About Torvault | Backed by 39 Years of Security Experience",
   description:
-    "Torvault is a new high-security safe manufacturing brand from Security Lock & Safe Inc., operators of Toronto Safes and GTA safe experts since 1987.",
+    "Torvault is a high-security safe manufacturing brand from Security Lock & Safe Inc., operators of Toronto Safes and GTA safe experts since 1987.",
   alternates: { canonical: "/about" },
   openGraph: {
     type: "website",
     title: "About Torvault Safe Company",
     description:
-      "A new high-security safe manufacturing brand backed by 39 years of Canadian security industry experience.",
+      "A high-security safe manufacturing brand backed by 39 years of Canadian security industry experience.",
     images: ["/safe-tl30.jpg"],
   },
   twitter: { card: "summary_large_image" },
@@ -22,22 +24,16 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <PageHero crumb="About" eyebrow="About Torvault" title="A new line, backed by decades of experience.">
-        Torvault is a new high-security safe brand entering the Canadian
-        market in 2026 &mdash; built by the team behind Security Lock &amp;
-        Safe Inc., a GTA safe and vault door provider since 1987.
+      <PageHero crumb="About" eyebrow="About Torvault" title="Toughest brand, backed by decades of experience.">
+        Torvault is a high-security safe brand built by the team behind
+        Security Lock &amp; Safe Inc., a GTA safe and vault door provider
+        since 1987.
       </PageHero>
 
       <section>
         <div className="wrap about-grid">
           <div className="about-media">
-            <Image
-              src="/safe-tl30.jpg"
-              alt="Torvault TL-30 High Security safe, navy blue steel body with chrome locking wheel"
-              width={900}
-              height={506}
-              style={{ width: "100%", height: "auto" }}
-            />
+            <AboutMediaScroll />
           </div>
           <div className="about-copy">
             <span className="eyebrow" style={{ color: "var(--brass-600)" }}>
@@ -45,27 +41,24 @@ export default function AboutPage() {
             </span>
             <h2>Why we built Torvault.</h2>
             <p>
-              Security Lock &amp; Safe Inc. has spent 39 years selling,
-              servicing, and installing safes and vault doors across the
-              Greater Toronto Area under the Toronto Safes name &mdash;
-              working with homes, retail chains, and institutional clients
-              including government offices, hospitals, and law enforcement
-              agencies.
-            </p>
-            <p>
-              That work gave us a direct view into a gap in the Canadian
-              market: independent safe dealers outside our own retail
-              footprint had few UL-certified options that weren&rsquo;t
-              either imported at retail markup or sold direct-to-consumer by
-              the manufacturer, competing with the dealers who were supposed
-              to sell it.
-            </p>
-            <p>
-              Torvault is our answer &mdash; a manufacturing brand, not a
-              retail one. We engineer to UL testing methodology, manufacture
-              at scale in Vietnam, and sell exclusively through independent
-              Canadian dealers at wholesale pricing with territory
+              Built on decades of experience in physical security, Torvault
+              was created to raise the standard for high-security
               protection.
+            </p>
+            <p>
+              Our foundation goes back to 1987 through Security Lock &amp;
+              Safe Inc., where decades of hands-on experience protecting
+              businesses, valuables, and critical assets shaped our
+              approach.
+            </p>
+            <p>
+              Torvault carries that legacy forward into a new generation of
+              high-security safes, combining robust construction, advanced
+              locking systems, and thoughtful engineering.
+            </p>
+            <p>
+              We believe security should never be compromised, and every
+              Torvault safe is designed around that principle.
             </p>
           </div>
         </div>
@@ -121,61 +114,42 @@ export default function AboutPage() {
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">How We&rsquo;re Different</span>
-            <h2>Built for the dealer channel.</h2>
+            <span className="eyebrow">The Vault</span>
+            <h2>Guides from the Torvault team.</h2>
           </Reveal>
-          <ul className="about-list" style={{ maxWidth: 900 }}>
-            <li>
-              <span className="num">01</span>
-              <div>
-                <h4>Dealer-First Model</h4>
-                <p>
-                  Wholesale pricing and territory protection built for
-                  independent safe and security dealers, not
-                  direct-to-consumer retail. Torvault never sells direct
-                  &mdash; every unit moves through an authorized dealer.
-                </p>
-              </div>
-            </li>
-            <li>
-              <span className="num">02</span>
-              <div>
-                <h4>Documented UL Testing</h4>
-                <p>
-                  Every product line is built and verified against factory
-                  fire testing and UL TL testing methodology before it ships
-                  &mdash; see the{" "}
-                  <Link href="/certified-standard" style={{ textDecoration: "underline" }}>
-                    full breakdown
-                  </Link>
-                  .
-                </p>
-              </div>
-            </li>
-            <li>
-              <span className="num">03</span>
-              <div>
-                <h4>Direct Import Pricing</h4>
-                <p>
-                  Manufactured at scale in Vietnam and imported directly
-                  &mdash; no middle-market distributor markup passed on to
-                  your customers.
-                </p>
-              </div>
-            </li>
-            <li>
-              <span className="num">04</span>
-              <div>
-                <h4>39 Years of Industry Backing</h4>
-                <p>
-                  Supported by Security Lock &amp; Safe Inc.&rsquo;s decades
-                  of sales, service, and delivery experience in the Canadian
-                  safe market &mdash; we know what dealers actually need
-                  from a supplier.
-                </p>
-              </div>
-            </li>
-          </ul>
+          <div className="blog-grid">
+            {BLOG_POSTS.slice(0, 3).map((post, i) => (
+              <Reveal as="article" className="blog-card" delay={i * 80} key={post.slug}>
+                <Link href={`/blog/${post.slug}`} className="blog-card-link" aria-label={post.title}>
+                  <span className="blog-card-media">
+                    <Image
+                      src={post.thumbnail}
+                      alt={post.thumbnailAlt}
+                      fill
+                      sizes="(max-width: 860px) 100vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </span>
+                  <span className="blog-card-body">
+                    <span className="blog-card-meta">
+                      <span className="blog-card-category">{post.category}</span>
+                      <span>{formatBlogDate(post.date)}</span>
+                    </span>
+                    <h2>{post.title}</h2>
+                    <p>{post.excerpt}</p>
+                    <span className="blog-card-cta" aria-hidden="true">
+                      Read the Guide &rarr;
+                    </span>
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+          <p style={{ textAlign: "center", marginTop: 36 }}>
+            <Link className="cat-cta" href="/blog">
+              View All Posts &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 

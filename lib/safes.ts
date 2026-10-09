@@ -55,6 +55,8 @@ export const SAFE_MODELS: SafeModel[] = [
 
 export type SpecCell = { v: string; k: string };
 
+export type FaqItem = { question: string; answer: string };
+
 export type SeriesContent = {
   series: SafeSeries;
   slug: string;
@@ -68,6 +70,7 @@ export type SeriesContent = {
   specCells: SpecCell[];
   bestFor: string;
   features: string[];
+  faqs: FaqItem[];
 };
 
 export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
@@ -76,8 +79,8 @@ export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
     slug: "fire-burglary",
     label: "Fire & Burglary",
     badge: "Entry Line",
-    image: "/safe-fire-burglary.jpg",
-    imageAlt: "Torvault Fire & Burglary safe, navy blue steel body with digital keypad",
+    image: "/products/graphite/01-torvault-front-closed.jpg",
+    imageAlt: "Torvault Fire & Burglary safe, graphite finish, door closed",
     chips: ["Factory Fire Tested", "Reinforced Steel Body"],
     metaDescription:
       "Torvault Fire & Burglary safes: factory fire-tested, reinforced burglary-resistant body, 11 sizes built to order. Spec sheets and dealer quotes available.",
@@ -107,14 +110,46 @@ export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
       "European RAL standard paint with a 5-layer coating for enhanced durability and a professional finish.",
       "Key lock, combination lock, and electronic lock options available to meet your specific security needs.",
     ],
+    faqs: [
+      {
+        question: "How long does a Torvault Fire & Burglary safe protect documents in a fire?",
+        answer:
+          "The Fire & Burglary line carries a UL Class 350 rating: the interior stays below 350°F — the temperature paper starts to char — for a full hour, even while a surrounding fire reaches up to 1,700°F. That hour is independently tested, not an in-house estimate.",
+      },
+      {
+        question: "Is the Fire & Burglary line rated for burglary resistance, or just fire?",
+        answer:
+          "Both. On top of its UL Class 350 fire rating, every Fire & Burglary body is forced-entry tested against common mechanical tools — prybars, hammers, punches — for a five-minute net working time on all sides. It isn't tested to the same tool list as TL-15 or TL-30, which is why Torvault treats it as the entry line rather than a high-security line.",
+      },
+      {
+        question: "What's the difference between the Fire & Burglary line and TL-15?",
+        answer:
+          "Fire & Burglary is fire-first: a single-wall 12-gauge steel body built around a UL Class 350 fire chamber, with forced-entry resistance as a secondary feature. TL-15 is burglary-first: a 1-inch solid steel body with composite hardplate, UL-rated to resist a professional attack with power tools for 15 minutes, with fire protection available as an add-on rather than built in.",
+      },
+      {
+        question: "What size Fire & Burglary safe do I need?",
+        answer:
+          "It depends on what you're storing and how much floor space you have. The line spans 11 sizes from the compact BF-914 up to the BF-6831 commercial vault — use the size finder and side-by-side diagram on this page to compare interior capacity and footprint against your own dimensions before requesting a quote.",
+      },
+      {
+        question: "Can I get a Fire & Burglary safe with a dial lock instead of a digital keypad?",
+        answer:
+          "Yes. Torvault offers key lock, combination (dial) lock, and electronic keypad options across the Fire & Burglary line, so you can match your preference or any compliance requirement that specifies a mechanical lock.",
+      },
+      {
+        question: "Is a Fire & Burglary safe enough for a home office, or do I need TL-15?",
+        answer:
+          "For home offices, retail back-rooms, and small-business petty cash or document storage, Fire & Burglary is Torvault's recommended fit — it prioritizes fire protection where forced-entry risk is limited. If you're storing higher-value inventory or need a documented forced-entry standard for insurance purposes, step up to TL-15.",
+      },
+    ],
   },
   tl15: {
     series: "tl15",
     slug: "tl15",
     label: "TL-15 High Security",
     badge: "Most Requested",
-    image: "/safe-tl15.jpg",
-    imageAlt: "Torvault TL-15 High Security safe, navy blue steel body with dial lock and white trim",
+    image: "/products/tl-black-hero-v2.jpg",
+    imageAlt: "Torvault TL-15 High Security safe, black finish, angled view of the steel body and locking wheel",
     chips: ["UL TL-15", "Composite Hardplate"],
     metaDescription:
       "Torvault TL-15 High Security safes: 15-minute UL-rated door, composite hardplate, 10 sizes built to order. Spec sheets and dealer quotes available.",
@@ -146,14 +181,46 @@ export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
       "European RAL standard paint with a 5-layer coating for enhanced durability and an elegant finish.",
       "Key lock, combination lock, and electronic lock options available to meet your specific security requirements.",
     ],
+    faqs: [
+      {
+        question: "What does the TL-15 rating actually mean?",
+        answer:
+          "TL-15 means the door has withstood a 15-minute net working time attack by a professional safe technician using common hand tools, power drills, punches, hammers, and pressure-applying devices — the clock only runs while a tool is actively working the safe, not for the full time an attacker spends on site. It's an independent UL rating, not a self-certified marketing tier.",
+      },
+      {
+        question: "What's the difference between TL-15 and TL-30?",
+        answer:
+          "TL-15 rates the door alone for a 15-minute net working time against hand and power tools. TL-30 doubles that to 30 minutes, adds abrasive cutting wheels and power saws to the attack tool list, and — unlike TL-15 — rates all six sides of the body, not just the door. TL-30 also steps up from a 1-inch to a 1.5-inch solid steel body.",
+      },
+      {
+        question: "Does a TL-15 safe include fire protection?",
+        answer:
+          "Fire protection is available as an add-on rather than built into the base TL-15 specification, which is focused on forced-entry resistance. If fire protection is a requirement alongside burglary resistance, confirm the fire add-on when requesting your quote, or compare it against Torvault's Fire & Burglary line.",
+      },
+      {
+        question: "Is TL-15 sufficient for a pharmacy storing controlled substances?",
+        answer:
+          "Yes — TL-15 is the rating most Canadian pharmacies, bank branches, and jewelry counters are built to for daytime, high-access storage. It gives you a documented forced-entry standard that insurers and regulators recognize, without the six-side TL-30 specification that cash-in-transit and high-volume operations typically require.",
+      },
+      {
+        question: "How thick is the steel body on a TL-15 safe?",
+        answer:
+          "The TL-15 body is 1-inch solid steel, backed by a composite hardplate over the lock and boltwork, with two-way spring-loaded relocking bolts that jam the mechanism if the primary lock is attacked directly.",
+      },
+      {
+        question: "Can TL-15 safes be anchored to the floor?",
+        answer:
+          "Yes. TL-15 units ship with pre-drilled anchoring holes for secure installation to a concrete floor, which prevents the entire safe from being removed rather than attacked in place — a common failure point insurers check for.",
+      },
+    ],
   },
   tl30: {
     series: "tl30",
     slug: "tl30",
     label: "TL-30 High Security",
     badge: "Flagship",
-    image: "/safe-tl30.jpg",
-    imageAlt: "Torvault TL-30 High Security flagship vault safe, navy blue steel body with chrome locking wheel",
+    image: "/products/tl-black-hero-v2.jpg",
+    imageAlt: "Torvault TL-30 High Security flagship vault safe, black finish, angled view of the steel body and locking wheel",
     chips: ["UL TL-30", "Six-Side Resistance"],
     metaDescription:
       "Torvault TL-30 High Security safes: 30-minute six-side UL rating, 1.5-inch solid steel body, 10 sizes built to order. Spec sheets and dealer quotes available.",
@@ -185,6 +252,38 @@ export const SERIES_CONTENT: Record<SafeSeries, SeriesContent> = {
       "European RAL standard paint with a 5-layer coating for enhanced durability and an elegant finish.",
       "Key lock, combination lock, and electronic lock options available to meet your specific security requirements.",
     ],
+    faqs: [
+      {
+        question: "What makes TL-30 different from TL-15?",
+        answer:
+          "TL-30 doubles the net working time to 30 minutes, adds abrasive cutting wheels and power saws to the attack tool list, and rates all six sides of the body instead of just the door. The steel body also steps up from 1 inch to 1.5 inches solid, with a 3.25-inch door and four-way relocking bolts instead of two-way.",
+      },
+      {
+        question: "Why does TL-30 rate all six sides instead of just the door?",
+        answer:
+          "A reinforced door on an otherwise standard body only protects against an attack where the attacker chooses to go through the front. TL-30's composite hardplate and 1.5-inch solid steel extend across all six sides specifically so there's no weaker side to target — the standard cash-in-transit depots and high-volume jewelers require.",
+      },
+      {
+        question: "Does a TL-30 safe include fire protection?",
+        answer:
+          "Yes — Torvault's TL-30 line includes 2-hour fire protection in addition to its six-side, 30-minute burglary rating, so you're not choosing between fire and forced-entry resistance.",
+      },
+      {
+        question: "Who typically needs a TL-30 safe?",
+        answer:
+          "TL-30 is built for cash-in-transit depots, high-volume jewelers, and evidence or valuables rooms where a breach anywhere on the box — not just through the door — is an unacceptable outcome. If your risk is limited to daytime counter access, TL-15 is usually the better-value fit.",
+      },
+      {
+        question: "What does 'net working time' mean for a TL-30 rating?",
+        answer:
+          "Net working time is the cumulative time a tool is actively cutting, drilling, or prying on the safe during UL testing — time spent repositioning, swapping tools, or pausing doesn't count. A 30-minute TL-30 rating means the safe withstood 30 real minutes of tool-on-metal attack time, independently verified by UL.",
+      },
+      {
+        question: "Can TL-30 safes be bolted down for extra security?",
+        answer:
+          "Yes. TL-30 units ship with pre-drilled anchoring holes for secure installation to a concrete floor, preventing the whole unit from being removed and attacked somewhere else — a requirement many insurers attach to high-value coverage limits.",
+      },
+    ],
   },
 };
 
@@ -194,7 +293,7 @@ export function modelsBySeries(series: SafeSeries): SafeModel[] {
   return SAFE_MODELS.filter((m) => m.series === series);
 }
 
-function fmtIn(n: number): string {
+export function fmtIn(n: number): string {
   return `${Number.isInteger(n) ? n : n.toFixed(2).replace(/0$/, "")}″`;
 }
 
@@ -205,4 +304,12 @@ export function dims(h: number, w: number, d: number): string {
 export function seriesSizeRange(series: SafeSeries): { min: number; max: number } {
   const weights = modelsBySeries(series).map((m) => m.weight);
   return { min: Math.min(...weights), max: Math.max(...weights) };
+}
+
+export function quoteHref(model: string, seriesLabel: string): string {
+  const subject = encodeURIComponent(`Torvault ${model} — Spec Sheet & Quote Request`);
+  const body = encodeURIComponent(
+    `Hi Torvault team,\n\nPlease send pricing and availability for the ${model} (${seriesLabel} series).\n\nBusiness name:\nRegion:\n`
+  );
+  return `mailto:Sales@TorontoSafes.ca?subject=${subject}&body=${body}`;
 }
