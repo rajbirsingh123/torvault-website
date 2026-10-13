@@ -1,7 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer>
       <div className="wrap">
@@ -12,54 +15,49 @@ export default function Footer() {
               alt="Torvault Safe Company"
               height={26}
               width={170}
-              style={{ height: 26, width: "auto" }}
+              style={{ width: "auto" }}
             />
-            <p>
-              High-security fire and burglary safes, engineered for the
-              Canadian market and manufactured in Vietnam.
-            </p>
+            <p>{t("tagline")}</p>
           </div>
           <div className="footer-col">
-            <h4>Products</h4>
+            <h4>{t("productsHeading")}</h4>
             <ul>
               <li>
-                <Link href="/products/fire-burglary">
-                  Fire &amp; Burglary
-                </Link>
+                <Link href="/products/fire-burglary">{t("fireBurglary")}</Link>
               </li>
               <li>
-                <Link href="/products/tl15">TL&#8209;15 High Security</Link>
+                <Link href="/products/tl15">{t("tl15")}</Link>
               </li>
               <li>
-                <Link href="/products/tl30">TL&#8209;30 High Security</Link>
+                <Link href="/products/tl30">{t("tl30")}</Link>
               </li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Company</h4>
+            <h4>{t("companyHeading")}</h4>
             <ul>
               <li>
-                <Link href="/about">About Torvault</Link>
+                <Link href="/about">{t("aboutTorvault")}</Link>
               </li>
               <li>
-                <Link href="/manufacturing">Manufacturing</Link>
+                <Link href="/manufacturing">{t("manufacturing")}</Link>
               </li>
               <li>
-                <Link href="/certified-standard">Certified Standard</Link>
+                <Link href="/certified-standard">{t("certifiedStandard")}</Link>
               </li>
               <li>
-                <Link href="/find-a-dealer">Find a Dealer</Link>
+                <Link href="/find-a-dealer">{t("findADealer")}</Link>
               </li>
               <li>
-                <Link href="/dealers">Become a Dealer</Link>
+                <Link href="/dealers">{t("becomeADealer")}</Link>
               </li>
               <li>
-                <Link href="/faq">FAQ</Link>
+                <Link href="/faq">{t("faq")}</Link>
               </li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Contact</h4>
+            <h4>{t("contactHeading")}</h4>
             <ul>
               <li>
                 <a href="mailto:dealers@torvaultsafe.com">
@@ -77,25 +75,25 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Backed By</h4>
+            <h4>{t("backedByHeading")}</h4>
             <ul>
               <li style={{ color: "var(--text-muted)", fontSize: "13.5px" }}>
-                Security Lock &amp; Safe Inc.
+                {t("securityLockSafe")}
               </li>
               <li>
                 <a href="https://torontosafes.ca/" target="_blank" rel="noopener">
-                  Toronto Safes &rarr;
+                  {t("torontoSafes")}
                 </a>
               </li>
               <li style={{ color: "var(--text-muted)", fontSize: "13.5px" }}>
-                Serving the GTA since 1987
+                {t("servingGta")}
               </li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>&copy; 2026 Torvault Safe Company. All rights reserved.</span>
-          <span>Torvault Safe Company. &mdash; Security without compromise</span>
+          <span>{t("copyright")}</span>
+          <span>{t("motto")}</span>
         </div>
       </div>
     </footer>

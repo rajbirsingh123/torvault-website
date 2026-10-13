@@ -62,30 +62,36 @@ export function useElectricBorder(
       const sideLen = Math.max(0, h - 2 * inset - 2 * r);
       const arcLen = (Math.PI / 2) * r;
       const total = 2 * topLen + 2 * sideLen + 4 * arcLen || 1;
+      // r === 0 collapses every arc segment to a single corner point — guard
+      // the `/r` divisions below rather than let floating-point rounding
+      // occasionally let a near-zero `d` slip past a zero-length `arcLen`
+      // and produce a non-finite theta (NaN x/y fed to the canvas API).
+      const hasArc = r > 0;
       let d = (((f % 1) + 1) % 1) * total;
       if (d < topLen) return { x: inset + r + d, y: inset };
       d -= topLen;
-      if (d < arcLen) {
+      if (hasArc && d < arcLen) {
         const theta = -Math.PI / 2 + d / r;
         return { x: w - inset - r + r * Math.cos(theta), y: inset + r + r * Math.sin(theta) };
       }
       d -= arcLen;
       if (d < sideLen) return { x: w - inset, y: inset + r + d };
       d -= sideLen;
-      if (d < arcLen) {
+      if (hasArc && d < arcLen) {
         const theta = d / r;
         return { x: w - inset - r + r * Math.cos(theta), y: h - inset - r + r * Math.sin(theta) };
       }
       d -= arcLen;
       if (d < topLen) return { x: w - inset - r - d, y: h - inset };
       d -= topLen;
-      if (d < arcLen) {
+      if (hasArc && d < arcLen) {
         const theta = Math.PI / 2 + d / r;
         return { x: inset + r + r * Math.cos(theta), y: h - inset - r + r * Math.sin(theta) };
       }
       d -= arcLen;
       if (d < sideLen) return { x: inset, y: h - inset - r - d };
       d -= sideLen;
+      if (!hasArc) return { x: inset, y: inset };
       const theta = Math.PI + d / r;
       return { x: inset + r + r * Math.cos(theta), y: inset + r + r * Math.sin(theta) };
     }
@@ -148,6 +154,10 @@ export function useElectricBorder(
           }
           const k = 1 - age / s.life;
           const { x, y } = pointAtFraction(s.pos);
+          if (!Number.isFinite(x) || !Number.isFinite(y)) {
+            sparks.splice(i, 1);
+            continue;
+          }
           ctx!.save();
           ctx!.globalAlpha = k;
           const grad = ctx!.createRadialGradient(x, y, 0, x, y, 10);

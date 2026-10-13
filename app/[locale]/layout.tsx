@@ -1,10 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans, Caveat } from "next/font/google";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/SeoJsonLd";
 import { SITE_URL } from "@/lib/nav";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,18 +43,31 @@ export const viewport: Viewport = {
   themeColor: "#0b1d3a",
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+
   return (
-    <html lang="en" className={`${inter.variable} ${jakarta.variable} ${caveat.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${jakarta.variable} ${caveat.variable}`}>
       <body>
-        <Topbar />
-        <Header />
-        {children}
-        <Footer />
+        <OrganizationJsonLd />
+        <WebSiteJsonLd locale={locale} />
+        <NextIntlClientProvider>
+          <Topbar />
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

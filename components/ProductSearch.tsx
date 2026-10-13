@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import NeuralBorder from "@/components/NeuralBorder";
 import { searchProductsGrouped } from "@/lib/search-index";
 

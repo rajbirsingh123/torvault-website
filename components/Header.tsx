@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { NAV_LINKS } from "@/lib/nav";
-import { SERIES_LIST, SERIES_CONTENT, modelsBySeries } from "@/lib/safes";
+import { SERIES_LIST, modelsBySeries } from "@/lib/safes";
+import { getSeriesContent } from "@/lib/safes-i18n";
 import SiteSearch from "@/components/SiteSearch";
 import FavoritesPanel from "@/components/FavoritesPanel";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 function ChevronIcon() {
   return (
@@ -18,6 +20,8 @@ function ChevronIcon() {
 }
 
 export default function Header() {
+  const t = useTranslations("nav");
+  const tp = useTranslations("products");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
@@ -63,13 +67,13 @@ export default function Header() {
             alt="Torvault Safe Company"
             height={30}
             width={196}
-            style={{ height: 30, width: "auto" }}
+            style={{ width: "auto" }}
             priority
           />
         </Link>
         <ul className="nav-links" ref={navRef}>
           {NAV_LINKS.map((link) => {
-            const key = link.href ?? link.label;
+            const key = link.href ?? link.labelKey;
 
             if (link.mega) {
               return (
@@ -79,12 +83,12 @@ export default function Header() {
                     className="nav-dropdown-trigger"
                     aria-current={isActive(link.href!) ? "page" : undefined}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                     <ChevronIcon />
                   </Link>
-                  <div className="nav-dropdown-menu mega" role="menu" aria-label="Products">
+                  <div className="nav-dropdown-menu mega" role="menu" aria-label={t("products")}>
                     {SERIES_LIST.map((series) => {
-                      const content = SERIES_CONTENT[series];
+                      const content = getSeriesContent(tp, series);
                       const models = modelsBySeries(series);
                       return (
                         <div className="nav-mega-col" key={series}>
@@ -102,7 +106,7 @@ export default function Header() {
                               className="nav-mega-size-link"
                             >
                               {m.model}
-                              <span className="nav-mega-size-meta">{m.weight.toLocaleString()} lbs</span>
+                              <span className="nav-mega-size-meta">{m.weight.toLocaleString()} {t("lbs")}</span>
                             </Link>
                           ))}
                         </div>
@@ -120,7 +124,7 @@ export default function Header() {
                     href={link.href!}
                     aria-current={isActive(link.href!) ? "page" : undefined}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </Link>
                 </li>
               );
@@ -142,7 +146,7 @@ export default function Header() {
                     setDesktopDropdown((prev) => (prev === key ? null : key))
                   }
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                   <ChevronIcon />
                 </button>
                 <ul className="nav-dropdown-menu">
@@ -153,7 +157,7 @@ export default function Header() {
                         href={child.href}
                         aria-current={isActive(child.href) ? "page" : undefined}
                       >
-                        {child.label}
+                        {t(child.labelKey)}
                       </Link>
                     </li>
                   ))}
@@ -164,10 +168,11 @@ export default function Header() {
         </ul>
         <SiteSearch />
         <FavoritesPanel />
+        <LanguageSwitcher />
         <button
           type="button"
           className="nav-toggle"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? t("closeMenu") : t("openMenu")}
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((prev) => !prev)}
@@ -197,7 +202,7 @@ export default function Header() {
       <nav className="mobile-menu" id="mobile-menu">
         <ul className="wrap">
           {NAV_LINKS.map((link) => {
-            const key = link.href ?? link.label;
+            const key = link.href ?? link.labelKey;
 
             if (link.mega) {
               return (
@@ -207,14 +212,14 @@ export default function Header() {
                       href={link.href!}
                       aria-current={isActive(link.href!) ? "page" : undefined}
                     >
-                      {link.label}
+                      {t(link.labelKey)}
                     </Link>
                     <button
                       type="button"
                       className={`mobile-dropdown-trigger-icon${mobileDropdown === key ? " is-open" : ""}`}
                       aria-haspopup="true"
                       aria-expanded={mobileDropdown === key}
-                      aria-label={`Toggle ${link.label} sizes`}
+                      aria-label={`Toggle ${t(link.labelKey)} sizes`}
                       onClick={() =>
                         setMobileDropdown((prev) => (prev === key ? null : key))
                       }
@@ -225,7 +230,7 @@ export default function Header() {
                   {mobileDropdown === key && (
                     <div className="mobile-submenu mobile-submenu-mega">
                       {SERIES_LIST.map((series) => {
-                        const content = SERIES_CONTENT[series];
+                        const content = getSeriesContent(tp, series);
                         const models = modelsBySeries(series);
                         return (
                           <div className="mobile-mega-group" key={series}>
@@ -241,7 +246,7 @@ export default function Header() {
                                 <li key={m.model}>
                                   <Link href={`/products/${content.slug}?model=${m.model}`}>
                                     {m.model}
-                                    <span>{m.weight.toLocaleString()} lbs</span>
+                                    <span>{m.weight.toLocaleString()} {t("lbs")}</span>
                                   </Link>
                                 </li>
                               ))}
@@ -262,7 +267,7 @@ export default function Header() {
                     href={link.href!}
                     aria-current={isActive(link.href!) ? "page" : undefined}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </Link>
                 </li>
               );
@@ -281,7 +286,7 @@ export default function Header() {
                     setMobileDropdown((prev) => (prev === key ? null : key))
                   }
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                   <ChevronIcon />
                 </button>
                 {mobileDropdown === key && (
@@ -292,7 +297,7 @@ export default function Header() {
                           href={child.href}
                           aria-current={isActive(child.href) ? "page" : undefined}
                         >
-                          {child.label}
+                          {t(child.labelKey)}
                         </Link>
                       </li>
                     ))}

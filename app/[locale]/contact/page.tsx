@@ -1,42 +1,50 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { getTranslations, getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
+import { BreadcrumbJsonLd } from "@/components/SeoJsonLd";
 
-export const metadata: Metadata = {
-  title: "Contact Support | Torvault Safe Company",
-  description:
-    "Reach Torvault for general inquiries, dealer-program questions, or product quotes — or find an authorized dealer for pricing and installation in your region.",
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    type: "website",
-    title: "Contact Torvault Support",
-    description: "General inquiries, dealer-program questions, and quote requests.",
-    images: ["/hero-safe.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contactPage" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/contact",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/hero-safe.jpg",
+  });
+}
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const t = await getTranslations("contactPage");
+  const tc = await getTranslations("productsCommon");
+  const locale = await getLocale();
   return (
     <main>
-      <PageHero crumb="Contact" eyebrow="Contact Support" title="Get in touch.">
-        Torvault sells exclusively through authorized Canadian dealers, so
-        we&rsquo;ve laid out exactly who to reach below &mdash; whether
-        you&rsquo;re a dealer, a business researching a purchase, or looking
-        for help with a safe you already own.
+      <BreadcrumbJsonLd
+        locale={locale as Locale}
+        homeLabel={tc("home")}
+        trail={[{ name: t("hero.eyebrow"), path: null }]}
+      />
+      <PageHero crumb={t("hero.crumb")} eyebrow={t("hero.eyebrow")} title={t("hero.title")}>
+        {t("hero.body")}
       </PageHero>
 
       <section>
         <div className="wrap">
           <div className="contact-grid">
             <Reveal className="contact-card">
-              <h3>General Inquiries</h3>
-              <p>
-                Questions about Torvault, our product lines, or anything not
-                covered in the Help Center.
-              </p>
+              <h3>{t("cards.generalTitle")}</h3>
+              <p>{t("cards.generalBody")}</p>
               <div className="contact-card-links">
                 <a href="mailto:info@torvaultsafe.com">info@torvaultsafe.com</a>
                 <a href="tel:+18778875620">1-877-887-5620</a>
@@ -44,43 +52,31 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal className="contact-card" delay={60}>
-              <h3>Become a Dealer</h3>
-              <p>
-                Apply to carry Torvault at wholesale with territory
-                protection, or ask about the dealer program.
-              </p>
+              <h3>{t("cards.dealerTitle")}</h3>
+              <p>{t("cards.dealerBody")}</p>
               <div className="contact-card-links">
                 <a href="mailto:dealers@torvaultsafe.com?subject=Torvault%20Dealer%20Inquiry">
                   dealers@torvaultsafe.com
                 </a>
-                <Link href="/dealers">Dealer Program details &rarr;</Link>
+                <Link href="/dealers">{t("cards.dealerLink")}</Link>
               </div>
             </Reveal>
 
             <Reveal className="contact-card" delay={120}>
-              <h3>Pricing &amp; Quote Requests</h3>
-              <p>
-                Torvault doesn&rsquo;t publish pricing or sell direct &mdash;
-                every quote runs through an authorized dealer who can speak
-                to delivery and installation for your space.
-              </p>
+              <h3>{t("cards.quoteTitle")}</h3>
+              <p>{t("cards.quoteBody")}</p>
               <div className="contact-card-links">
-                <Link href="/find-a-dealer">Find a Dealer near you &rarr;</Link>
+                <Link href="/find-a-dealer">{t("cards.quoteLink")}</Link>
               </div>
             </Reveal>
 
             <Reveal className="contact-card" delay={180}>
-              <h3>Already a Toronto Safes Customer?</h3>
-              <p>
-                Torvault is manufactured by the team behind Toronto Safes,
-                Security Lock &amp; Safe Inc.&rsquo;s retail arm in the GTA
-                since 1987. Existing sales and service inquiries go directly
-                to Toronto Safes.
-              </p>
+              <h3>{t("cards.existingTitle")}</h3>
+              <p>{t("cards.existingBody")}</p>
               <div className="contact-card-links">
                 <a href="mailto:Sales@TorontoSafes.ca">Sales@TorontoSafes.ca</a>
                 <a href="https://torontosafes.ca/" target="_blank" rel="noopener">
-                  torontosafes.ca &rarr;
+                  {t("cards.existingLink")}
                 </a>
               </div>
             </Reveal>
@@ -95,9 +91,9 @@ export default function ContactPage() {
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Contact Us
+              {t("formSection.eyebrow")}
             </span>
-            <h2>Leave your message and we&rsquo;ll get back to you shortly.</h2>
+            <h2>{t("formSection.heading")}</h2>
           </Reveal>
           <ContactForm />
         </div>
@@ -106,12 +102,11 @@ export default function ContactPage() {
       <section>
         <div className="wrap">
           <Reveal className="callout" style={{ maxWidth: 820, marginLeft: "auto", marginRight: "auto" }}>
-            <strong>Looking for answers first?</strong> Most questions on
-            ratings, sizing, and installation are already covered in our{" "}
+            <strong>{t("callout.strong")}</strong> {t("callout.bodyPre")}{" "}
             <Link href="/support" style={{ textDecoration: "underline" }}>
-              Help Center
+              {t("callout.helpCenter")}
             </Link>{" "}
-            and{" "}
+            {t("callout.and")}{" "}
             <Link href="/faq" style={{ textDecoration: "underline" }}>
               FAQ
             </Link>

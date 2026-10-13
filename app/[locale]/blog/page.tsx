@@ -1,38 +1,51 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations, getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
-import { BLOG_POSTS, formatBlogDate } from "@/lib/blog";
+import { formatBlogDate } from "@/lib/blog";
+import { getAllBlogPosts } from "@/lib/blog-i18n";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
+import { BreadcrumbJsonLd } from "@/components/SeoJsonLd";
 
-export const metadata: Metadata = {
-  title: "The Vault | Torvault Safe Company Blog",
-  description:
-    "Guides on UL security ratings, fire protection, sizing, and installation — written by the team behind Torvault's dealer-first line of high-security safes.",
-  alternates: { canonical: "/blog" },
-  openGraph: {
-    type: "website",
-    title: "The Vault | Torvault Safe Company Blog",
-    description:
-      "Guides on UL security ratings, fire protection, sizing, and installation from Torvault Safe Company.",
-    images: ["/blog/ul-security-ratings.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/blog",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/blog/ul-security-ratings.jpg",
+  });
+}
 
-export default function BlogIndexPage() {
+export default async function BlogIndexPage() {
+  const t = await getTranslations("blog");
+  const tc = await getTranslations("productsCommon");
+  const locale = await getLocale();
+  const posts = getAllBlogPosts(t);
   return (
     <main>
-      <PageHero crumb="Blog" eyebrow="The Vault" title="Guides from the Torvault team.">
-        Security ratings, fire protection, sizing, and installation &mdash;
-        written by the same team that has sold, serviced, and installed
-        safes across the GTA since 1987.
+      <BreadcrumbJsonLd
+        locale={locale as Locale}
+        homeLabel={tc("home")}
+        trail={[{ name: t("hero.eyebrow"), path: null }]}
+      />
+      <PageHero crumb={t("hero.crumb")} eyebrow={t("hero.eyebrow")} title={t("hero.title")}>
+        {t("hero.body")}
       </PageHero>
 
       <section>
         <div className="wrap">
           <div className="blog-grid">
-            {BLOG_POSTS.map((post, i) => (
+            {posts.map((post, i) => (
               <Reveal as="article" className="blog-card" delay={i * 80} key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="blog-card-link" aria-label={post.title}>
                   <span className="blog-card-media">
@@ -52,7 +65,7 @@ export default function BlogIndexPage() {
                     <h2>{post.title}</h2>
                     <p>{post.excerpt}</p>
                     <span className="blog-card-cta" aria-hidden="true">
-                      Read the Guide &rarr;
+                      {t("readTheGuide")}
                     </span>
                   </span>
                 </Link>

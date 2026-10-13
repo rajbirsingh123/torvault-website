@@ -1,97 +1,108 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { getTranslations, getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
+import { BreadcrumbJsonLd } from "@/components/SeoJsonLd";
 
-export const metadata: Metadata = {
-  title: "Certified Standard | UL Fire & Burglary Ratings Explained — Torvault",
-  description:
-    "What TL-15, TL-30, and factory fire ratings actually mean — testing methodology, tools used, net working time, and why insurers rely on them.",
-  alternates: { canonical: "/certified-standard" },
-  openGraph: {
-    type: "website",
-    title: "Certified Standard | UL Fire & Burglary Ratings Explained",
-    description:
-      "What TL-15, TL-30, and factory fire ratings actually mean, and how UL testing works.",
-    images: ["/safe-tl30.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "certifiedStandard" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/certified-standard",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/safe-tl30.jpg",
+  });
+}
 
-export default function CertifiedStandardPage() {
+export default async function CertifiedStandardPage() {
+  const t = await getTranslations("certifiedStandard");
+  const tc = await getTranslations("productsCommon");
+  const locale = await getLocale();
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { q: `What is ${t("terms.entryTitle")}?`, a: t("terms.entryBody") },
+      { q: `What is ${t("terms.tl15Title")}?`, a: t("terms.tl15Body") },
+      { q: `What is ${t("terms.tl30Title")}?`, a: t("terms.tl30Body") },
+      { q: t("ulTesting.heading"), a: `${t("ulTesting.bodyPre")} ${t("ulTesting.bodyStrong")}${t("ulTesting.bodyPost")}` },
+      { q: t("fireTesting.heading"), a: t("fireTesting.body") },
+    ].map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+
   return (
     <main>
-      <PageHero crumb="Certified Standard" eyebrow="Certified Standard" title="Every rating, explained.">
-        UL ratings aren&rsquo;t marketing &mdash; they&rsquo;re independently
-        tested with real tools and a stopwatch. Here&rsquo;s what each
-        classification on a Torvault spec plate means.
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <BreadcrumbJsonLd
+        locale={locale as Locale}
+        homeLabel={tc("home")}
+        trail={[{ name: t("hero.eyebrow"), path: null }]}
+      />
+      <PageHero crumb={t("hero.crumb")} eyebrow={t("hero.eyebrow")} title={t("hero.title")}>
+        {t("hero.body")}
       </PageHero>
 
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">How UL Testing Works</span>
-            <h2>Net working time, not wall-clock time.</h2>
+            <span className="eyebrow">{t("ulTesting.eyebrow")}</span>
+            <h2>{t("ulTesting.heading")}</h2>
             <p>
-              Underwriters Laboratories (UL) certifies safes by having
-              trained technicians &mdash; effectively professional
-              safecrackers &mdash; attack a production unit with a defined
-              kit of tools. The result is measured in{" "}
-              <strong style={{ color: "var(--text)" }}>
-                net working time
-              </strong>
-              : the clock only runs while a tool is actively working the
-              safe, and stops the instant it&rsquo;s removed. A safe
-              doesn&rsquo;t pass by surviving an hour in a workshop &mdash;
-              it passes by resisting a fixed amount of continuous, focused
-              attack.
+              {t("ulTesting.bodyPre")}{" "}
+              <strong style={{ color: "var(--text)" }}>{t("ulTesting.bodyStrong")}</strong>
+              {t("ulTesting.bodyPost")}
             </p>
           </Reveal>
 
           <div className="term-grid">
             <div className="term-card" id="entry">
-              <span className="term-label">Medium Level</span>
-              <h3>Factory Fire Tested</h3>
-              <p>
-                Torvault&rsquo;s Fire &amp; Burglary line&rsquo;s baseline
-                burglary resistance, verified in-house against common
-                mechanical tools &mdash; not a UL-certified classification
-                like TL&#8209;15 or TL&#8209;30.
-              </p>
+              <span className="term-label">{t("terms.entryLabel")}</span>
+              <h3>{t("terms.entryTitle")}</h3>
+              <p>{t("terms.entryBody")}</p>
               <ul>
-                <li>5 minutes net working time</li>
-                <li>Tested on all sides, not just the door</li>
-                <li>Common mechanical hand tools only</li>
-                <li>Combination or keypad lock</li>
+                <li>{t("terms.entryLi1")}</li>
+                <li>{t("terms.entryLi2")}</li>
+                <li>{t("terms.entryLi3")}</li>
+                <li>{t("terms.entryLi4")}</li>
               </ul>
             </div>
             <div className="term-card" id="tl-15">
-              <span className="term-label">High Security</span>
-              <h3>UL TL&#8209;15</h3>
-              <p>
-                Tool-resistant, 15-minute rating &mdash; the standard behind
-                most Canadian bank branches and pharmacy safes.
-              </p>
+              <span className="term-label">{t("terms.tl15Label")}</span>
+              <h3>{t("terms.tl15Title")}</h3>
+              <p>{t("terms.tl15Body")}</p>
               <ul>
-                <li>15 minutes net working time, door only</li>
-                <li>Hand tools, drills, punches, hammers</li>
-                <li>Pressure-applying devices permitted</li>
-                <li>Up to 200 lbs / freestanding not required</li>
+                <li>{t("terms.tl15Li1")}</li>
+                <li>{t("terms.tl15Li2")}</li>
+                <li>{t("terms.tl15Li3")}</li>
+                <li>{t("terms.tl15Li4")}</li>
               </ul>
             </div>
             <div className="term-card" id="tl-30">
-              <span className="term-label">Maximum Security</span>
-              <h3>UL TL&#8209;30</h3>
-              <p>
-                The rating behind Torvault&rsquo;s flagship line &mdash;
-                same tool kit as TL&#8209;15, plus power tools, on all six
-                sides.
-              </p>
+              <span className="term-label">{t("terms.tl30Label")}</span>
+              <h3>{t("terms.tl30Title")}</h3>
+              <p>{t("terms.tl30Body")}</p>
               <ul>
-                <li>30 minutes net working time</li>
-                <li>Tested on the body, not just the door</li>
-                <li>Adds abrasive cutting wheels &amp; power saws</li>
-                <li>High-speed carbide drills, cutting torches</li>
+                <li>{t("terms.tl30Li1")}</li>
+                <li>{t("terms.tl30Li2")}</li>
+                <li>{t("terms.tl30Li3")}</li>
+                <li>{t("terms.tl30Li4")}</li>
               </ul>
             </div>
           </div>
@@ -101,17 +112,9 @@ export default function CertifiedStandardPage() {
       <section id="fire">
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Fire Endurance Testing</span>
-            <h2>What survives a 1,700&deg;F furnace.</h2>
-            <p>
-              Fire endurance testing is the standard methodology for record
-              and data protection equipment. A locked safe is placed inside an
-              industrial furnace that follows a controlled
-              time-temperature curve reaching up to 1,700&deg;F, while
-              sensors continuously log the internal temperature. The safe
-              fails the instant the interior exceeds its class threshold
-              &mdash; anywhere inside the chamber.
-            </p>
+            <span className="eyebrow">{t("fireTesting.eyebrow")}</span>
+            <h2>{t("fireTesting.heading")}</h2>
+            <p>{t("fireTesting.body")}</p>
           </Reveal>
           <div className="icon-grid">
             <div className="icon-item">
@@ -120,12 +123,8 @@ export default function CertifiedStandardPage() {
                   <path d="M12 2c2 4-2 5-2 8a2 2 0 004 0c1 2 0 4-2 6-3-1-5-4-5-7 0-3 2-5 5-7z" />
                 </svg>
               </span>
-              <h4>Class 350</h4>
-              <p>
-                Interior stays below 350&deg;F &mdash; the temperature at
-                which paper begins to char. The standard for document and
-                cash protection.
-              </p>
+              <h4>{t("fireTesting.class350Title")}</h4>
+              <p>{t("fireTesting.class350Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -133,11 +132,8 @@ export default function CertifiedStandardPage() {
                   <path d="M12 2c2 4-2 5-2 8a2 2 0 004 0c1 2 0 4-2 6-3-1-5-4-5-7 0-3 2-5 5-7z" />
                 </svg>
               </span>
-              <h4>Class 150</h4>
-              <p>
-                Interior stays below 150&deg;F &mdash; required for
-                microfilm and other heat-sensitive media.
-              </p>
+              <h4>{t("fireTesting.class150Title")}</h4>
+              <p>{t("fireTesting.class150Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -145,11 +141,8 @@ export default function CertifiedStandardPage() {
                   <path d="M12 2c2 4-2 5-2 8a2 2 0 004 0c1 2 0 4-2 6-3-1-5-4-5-7 0-3 2-5 5-7z" />
                 </svg>
               </span>
-              <h4>Class 125</h4>
-              <p>
-                Interior stays below 125&deg;F &mdash; the tightest
-                tolerance, for digital media, hard drives, and backup tape.
-              </p>
+              <h4>{t("fireTesting.class125Title")}</h4>
+              <p>{t("fireTesting.class125Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -158,14 +151,11 @@ export default function CertifiedStandardPage() {
                   <path d="M12 7v5l3 3" />
                 </svg>
               </span>
-              <h4>Duration (&ldquo;&#8211;Hr&rdquo;)</h4>
+              <h4>{t("fireTesting.durationTitle")}</h4>
               <p>
-                Paired with the class, e.g.{" "}
-                <strong style={{ color: "var(--text)" }}>
-                  1&#8211;Hr / 350&deg;F
-                </strong>{" "}
-                &mdash; how long the safe holds its class rating inside the
-                furnace.
+                {t("fireTesting.durationBodyPre")}{" "}
+                <strong style={{ color: "var(--text)" }}>{t("fireTesting.durationBodyStrong")}</strong>{" "}
+                {t("fireTesting.durationBodyPost")}
               </p>
             </div>
           </div>
@@ -175,49 +165,49 @@ export default function CertifiedStandardPage() {
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Side by Side</span>
-            <h2>Every product line, one table.</h2>
+            <span className="eyebrow">{t("table.eyebrow")}</span>
+            <h2>{t("table.heading")}</h2>
           </Reveal>
           <div className="table-wrap">
             <table>
               <thead>
                 <tr>
-                  <th scope="col">Product Line</th>
-                  <th scope="col">Rating</th>
-                  <th scope="col">Net Working Time</th>
-                  <th scope="col">Tools Resisted</th>
-                  <th scope="col">Fire Endurance</th>
-                  <th scope="col">Steel Body</th>
-                  <th scope="col">Typical Use</th>
+                  <th scope="col">{t("table.colProductLine")}</th>
+                  <th scope="col">{t("table.colRating")}</th>
+                  <th scope="col">{t("table.colNetWorkingTime")}</th>
+                  <th scope="col">{t("table.colToolsResisted")}</th>
+                  <th scope="col">{t("table.colFireEndurance")}</th>
+                  <th scope="col">{t("table.colSteelBody")}</th>
+                  <th scope="col">{t("table.colTypicalUse")}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Fire &amp; Burglary</th>
-                  <td>Factory Fire Tested</td>
-                  <td>5 min, all sides</td>
-                  <td>Common hand tools</td>
+                  <th scope="row">{t("table.fireBurglaryRow")}</th>
+                  <td>{t("terms.entryTitle")}</td>
+                  <td>{t("terms.entryLi1")}</td>
+                  <td>{t("table.fireBurglaryTools")}</td>
                   <td>1&#8211;Hr @ 350&deg;F</td>
                   <td>12 ga steel</td>
-                  <td>Home &amp; retail offices</td>
+                  <td>{t("table.fireBurglaryUse")}</td>
                 </tr>
                 <tr>
                   <th scope="row">TL&#8209;15</th>
-                  <td>UL TL&#8209;15</td>
-                  <td>15 min, door only</td>
-                  <td>+ Drills, punches, hammers</td>
-                  <td>&mdash;</td>
+                  <td>{t("terms.tl15Title")}</td>
+                  <td>{t("terms.tl15Li1")}</td>
+                  <td>{t("table.tl15Tools")}</td>
+                  <td>2&#8211;Hr @ 350&deg;F</td>
                   <td>1&Prime; solid steel</td>
-                  <td>Bank branches, pharmacies</td>
+                  <td>{t("table.tl15Use")}</td>
                 </tr>
                 <tr>
                   <th scope="row">TL&#8209;30</th>
-                  <td>UL TL&#8209;30</td>
-                  <td>30 min, six sides</td>
-                  <td>+ Cutting wheels, saws, torches</td>
-                  <td>&mdash;</td>
+                  <td>{t("terms.tl30Title")}</td>
+                  <td>{t("terms.tl30Li1")}</td>
+                  <td>{t("table.tl30Tools")}</td>
+                  <td>2&#8211;Hr @ 350&deg;F</td>
                   <td>1.5&Prime; solid steel</td>
-                  <td>CIT depots, jewelers</td>
+                  <td>{t("table.tl30Use")}</td>
                 </tr>
               </tbody>
             </table>
@@ -228,13 +218,7 @@ export default function CertifiedStandardPage() {
       <section>
         <div className="wrap" style={{ maxWidth: 820 }}>
           <div className="callout">
-            <strong>Why it matters for insurance:</strong> Most commercial
-            property and cash-in-transit policies in Canada set coverage
-            limits directly against a safe&rsquo;s UL rating &mdash; a
-            policy might cap cash coverage at $2,500 in an unrated
-            container versus $50,000+ behind a UL TL&#8209;30 body. Before
-            specifying a safe for a client, confirm the rating their
-            insurer actually requires, not just what fits the budget.
+            <strong>{t("insuranceCallout.strong")}</strong> {t("insuranceCallout.body")}
           </div>
         </div>
       </section>
@@ -246,9 +230,9 @@ export default function CertifiedStandardPage() {
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Next Step
+              {t("nextStep.eyebrow")}
             </span>
-            <h2>See the rating on the safe.</h2>
+            <h2>{t("nextStep.heading")}</h2>
           </Reveal>
           <div
             style={{
@@ -264,14 +248,14 @@ export default function CertifiedStandardPage() {
               style={{ background: "var(--navy-950)", color: "#fff" }}
               href="/products"
             >
-              View Products
+              {t("nextStep.productsCta")}
             </Link>
             <Link
               className="btn"
               style={{ border: "1px solid var(--border)", color: "var(--text)" }}
               href="/faq"
             >
-              Read the FAQ
+              {t("nextStep.faqCta")}
             </Link>
           </div>
         </div>

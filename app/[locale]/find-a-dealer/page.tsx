@@ -1,35 +1,82 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import DealerLocator from "@/components/DealerLocator";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
+import { dealers } from "@/lib/dealers";
 
-export const metadata: Metadata = {
-  title: "Find a Dealer | Torvault Safe Company",
-  description:
-    "Find an authorized Torvault safe dealer near you in Canada — showrooms, locksmith services, and delivery & installation.",
-  alternates: { canonical: "/find-a-dealer" },
-  openGraph: {
-    type: "website",
-    title: "Find a Torvault Dealer",
-    description:
-      "Find an authorized Torvault safe dealer near you in Canada.",
-    images: ["/hero-safe.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "findADealerPage" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/find-a-dealer",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/hero-safe.jpg",
+  });
+}
 
-export default function FindADealerPage() {
+export default async function FindADealerPage() {
+  const t = await getTranslations("findADealerPage");
+
+  // Real, published listing data for the one dealer currently onboarded
+  // (Toronto Safes) — geographic/local-business signal for map and local
+  // search surfaces, built only from facts already shown on this page.
+  const dealerSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: dealers.map((dealer, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "HardwareStore",
+        name: dealer.name,
+        description: dealer.description,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: dealer.address,
+          addressLocality: dealer.city,
+          addressRegion: dealer.province,
+          postalCode: dealer.postalCode,
+          addressCountry: "CA",
+        },
+        geo: { "@type": "GeoCoordinates", latitude: dealer.lat, longitude: dealer.lon },
+        telephone: dealer.phone,
+        email: dealer.email,
+        url: dealer.website,
+        ...(dealer.rating !== undefined && dealer.reviewCount !== undefined
+          ? {
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: dealer.rating,
+                reviewCount: dealer.reviewCount,
+              },
+            }
+          : {}),
+      },
+    })),
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dealerSchema) }}
+      />
       <PageHero
-        crumb="Find a Dealer"
-        eyebrow="Where to Buy"
-        title="Find a Torvault dealer near you."
+        crumb={t("hero.crumb")}
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
       >
-        Torvault sells exclusively through authorized dealers &mdash; never
-        direct to consumers. Search below for a showroom, locksmith, or
-        delivery partner in your area.
+        {t("hero.body")}
       </PageHero>
 
       <section>
@@ -44,37 +91,28 @@ export default function FindADealerPage() {
         <div className="wrap about-grid">
           <Reveal className="about-copy">
             <span className="eyebrow" style={{ color: "var(--brass-600)" }}>
-              Not in Your Area Yet?
+              {t("notInArea.eyebrow")}
             </span>
-            <h2>We&rsquo;re opening new territories now.</h2>
-            <p>
-              Torvault is in its first round of Canadian dealer onboarding.
-              If there&rsquo;s no authorized dealer near you yet, you can
-              still get certified specification sheets and be notified the
-              moment a dealer opens in your territory.
-            </p>
+            <h2>{t("notInArea.heading")}</h2>
+            <p>{t("notInArea.body")}</p>
             <p>
               <Link className="cat-cta" href="/dealers">
-                Explore the Dealer Program &rarr;
+                {t("notInArea.cta")}
               </Link>
             </p>
           </Reveal>
           <Reveal className="about-copy" delay={100}>
             <span className="eyebrow" style={{ color: "var(--brass-600)" }}>
-              Are You a Retailer or Locksmith?
+              {t("areYouRetailer.eyebrow")}
             </span>
-            <h2>Carry a certified line, not a marketing tier.</h2>
-            <p>
-              Independent dealers get wholesale pricing, territory
-              protection, and zero direct-to-consumer competition from
-              Torvault. Join the first intake round of Canadian dealers.
-            </p>
+            <h2>{t("areYouRetailer.heading")}</h2>
+            <p>{t("areYouRetailer.body")}</p>
             <p>
               <a
                 className="cat-cta"
                 href="mailto:dealers@torvaultsafe.com?subject=Torvault%20Dealer%20Inquiry"
               >
-                Apply to Become a Dealer &rarr;
+                {t("areYouRetailer.cta")}
               </a>
             </p>
           </Reveal>

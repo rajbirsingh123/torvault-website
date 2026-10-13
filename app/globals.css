@@ -123,12 +123,16 @@
   .nav-links {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 32px;
     list-style: none;
     margin: 0;
     padding: 0;
   }
+  .nav-links > li { flex-shrink: 0; }
   .nav-links a {
+    display: inline-block;
+    white-space: nowrap;
     color: var(--nav-text);
     text-decoration: none;
     font-size: 14px;
@@ -146,6 +150,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    white-space: nowrap;
     background: none;
     border: none;
     padding: 0;
@@ -338,6 +343,56 @@
     line-height: 16px;
     text-align: center;
   }
+
+  /* ---------- LANGUAGE SWITCHER ---------- */
+  .lang-switcher { position: relative; flex-shrink: 0; }
+  .lang-switcher-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 38px;
+    padding: 0 12px 0 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--nav-text);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .lang-switcher-trigger svg { width: 16px; height: 16px; }
+  .lang-switcher-trigger:hover { color: var(--navy-700); border-color: var(--navy-700); }
+  .lang-switcher-current { font-size: 11.5px; font-weight: 700; letter-spacing: 0.04em; }
+  .lang-switcher-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 30;
+    min-width: 160px;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background: var(--nav-bg);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+  .lang-switcher-menu li { margin: 0; padding: 0; list-style: none; }
+  .lang-switcher-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--nav-text);
+    background: transparent;
+    cursor: pointer;
+  }
+  .lang-switcher-option:hover { background: rgba(47, 127, 224, 0.1); }
+  .lang-switcher-option.active { color: var(--brass-600); background: rgba(79, 151, 238, 0.12); }
 
   .favorites-panel-title {
     flex: 1;
@@ -2832,6 +2887,19 @@
     border: 1px solid var(--border);
     box-shadow: var(--shadow-lift);
   }
+  .blog-post-video {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 40px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lift);
+    background: var(--surface);
+  }
+  .blog-post-video video { width: 100%; height: 100%; display: block; object-fit: cover; }
   .blog-post-body { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
   .blog-post-body p { font-size: 16px; line-height: 1.75; color: var(--text-muted); }
   .blog-post-cta { max-width: 680px; margin: 40px auto 0; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
@@ -2922,8 +2990,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: #ffffff;
-    border: 1px solid rgba(11, 29, 58, 0.14);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 999px;
     padding: 12px 18px;
     box-shadow: var(--shadow-soft);
@@ -2933,7 +3001,7 @@
     border-color: var(--navy-700);
     box-shadow: 0 0 0 3px rgba(47, 127, 224, 0.15);
   }
-  .locator-search-field svg { width: 18px; height: 18px; flex-shrink: 0; color: rgba(11, 29, 58, 0.4); }
+  .locator-search-field svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--text-muted); }
   .locator-search {
     flex: 1;
     min-width: 0;
@@ -2941,11 +3009,11 @@
     border: none;
     padding: 0;
     font-size: 14.5px;
-    color: var(--navy-950);
+    color: var(--text);
     font-family: inherit;
   }
   .locator-search:focus-visible { outline: none; }
-  .locator-search::placeholder { color: rgba(11, 29, 58, 0.4); }
+  .locator-search::placeholder { color: var(--text-muted); opacity: 0.8; }
   .locator-search-clear {
     display: inline-flex;
     align-items: center;
@@ -2955,12 +3023,12 @@
     border-radius: 50%;
     border: none;
     background: none;
-    color: rgba(11, 29, 58, 0.4);
+    color: var(--text-muted);
     cursor: pointer;
     flex-shrink: 0;
   }
   .locator-search-clear svg { width: 14px; height: 14px; }
-  .locator-search-clear:hover { color: var(--navy-950); }
+  .locator-search-clear:hover { color: var(--text); }
   .locator-suggestions {
     position: absolute;
     top: calc(100% + 8px);
@@ -2970,8 +3038,8 @@
     list-style: none;
     margin: 0;
     padding: 6px;
-    background: #ffffff;
-    border: 1px solid rgba(11, 29, 58, 0.1);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lift);
     max-height: 260px;
@@ -2987,12 +3055,13 @@
     background: none;
     border-radius: 10px;
     font-size: 13.5px;
-    color: var(--navy-950);
+    color: var(--text);
     text-align: left;
     cursor: pointer;
   }
-  .locator-suggestions li button svg { width: 15px; height: 15px; flex-shrink: 0; color: rgba(11, 29, 58, 0.4); }
-  .locator-suggestions li button:hover { background: rgba(11, 29, 58, 0.05); }
+  .locator-suggestions li button svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--text-muted); }
+  .locator-suggestions li button:hover { background: rgba(255, 255, 255, 0.06); }
+  body.theme-light .locator-suggestions li button:hover { background: rgba(11, 29, 58, 0.05); }
   .locator-suggestions-status {
     position: absolute;
     top: calc(100% + 8px);
@@ -3000,25 +3069,25 @@
     right: 0;
     z-index: 20;
     padding: 12px 16px;
-    background: #ffffff;
-    border: 1px solid rgba(11, 29, 58, 0.1);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lift);
     font-size: 13px;
-    color: rgba(11, 29, 58, 0.55);
+    color: var(--text-muted);
   }
   .locator-use-location {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 12px 18px;
-    background: #ffffff;
-    border: 1px solid rgba(11, 29, 58, 0.14);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 999px;
     box-shadow: var(--shadow-soft);
     font-size: 13.5px;
     font-weight: 600;
-    color: var(--navy-950);
+    color: var(--text);
     cursor: pointer;
     white-space: nowrap;
     transition: border-color 0.2s ease, color 0.2s ease;
@@ -3088,9 +3157,25 @@
     background: var(--card);
   }
   @media (max-width: 900px) { .dealer-map { position: static; height: 360px; } }
-  .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--navy-950); color: #eef1f6; }
-  .leaflet-popup-content { font-size: 13px; line-height: 1.5; margin: 10px 12px; }
-  .leaflet-popup-content strong { color: #fff; }
+  .dealer-map-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13.5px;
+  }
+  .dealer-map-placeholder code {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
+  .dealer-map iframe { display: block; }
   .dealer-card {
     display: flex;
     gap: 16px;
@@ -3133,6 +3218,25 @@
     border-radius: 999px;
     white-space: nowrap;
   }
+  .dealer-card-google {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .dealer-card-google > span:not(:last-child)::after { content: "·"; margin-left: 8px; color: var(--border); }
+  .dealer-card-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .dealer-card-rating svg { width: 13px; height: 13px; color: var(--brass-500); }
+  .dealer-card-services { font-size: 12.5px; color: var(--text-muted); margin-bottom: 12px; }
   .dealer-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
   .dealer-tag {
     font-size: 10.5px;

@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import Button from "@/components/Button";
-import { BLOG_POSTS, getBlogPost, formatBlogDate } from "@/lib/blog";
+import { BLOG_POSTS_STRUCTURAL, formatBlogDate } from "@/lib/blog";
+import { getBlogPost, getAllBlogPosts } from "@/lib/blog-i18n";
+import { buildMetadata, canonicalFor } from "@/lib/seo";
+import { SITE_URL } from "@/lib/nav";
+import type { Locale } from "@/i18n/routing";
 
-type Params = { slug: string };
+type Params = { slug: string; locale: string };
 
 export function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({ slug: post.slug }));
+  return BLOG_POSTS_STRUCTURAL.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -17,22 +22,20 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const post = getBlogPost(slug);
+  const { slug, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
+  const post = getBlogPost(t, slug);
   if (!post) return {};
 
-  return {
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: `/blog/${post.slug}`,
     title: `${post.title} | The Vault, Torvault Safe Company`,
     description: post.excerpt,
-    alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: {
-      type: "article",
-      title: post.title,
-      description: post.excerpt,
-      images: [post.thumbnail],
-    },
-    twitter: { card: "summary_large_image" },
-  };
+    image: post.thumbnail,
+    type: "article",
+    publishedTime: post.date,
+  });
 }
 
 export default async function BlogPostPage({
@@ -40,21 +43,44 @@ export default async function BlogPostPage({
 }: {
   params: Promise<Params>;
 }) {
-  const { slug } = await params;
-  const post = getBlogPost(slug);
+  const { slug, locale } = await params;
+  const t = await getTranslations("blog");
+  const tc = await getTranslations("productsCommon");
+  const post = getBlogPost(t, slug);
   if (!post) notFound();
 
-  const more = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const more = getAllBlogPosts(t)
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 3);
+
+  const pageUrl = canonicalFor(locale as Locale, `/blog/${post.slug}`);
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
-    image: [post.thumbnail],
+    image: [`${SITE_URL}${post.thumbnail}`],
     datePublished: post.date,
-    author: { "@type": "Organization", name: "Torvault Safe Company" },
-    publisher: { "@type": "Organization", name: "Torvault Safe Company" },
+    dateModified: post.date,
+    inLanguage: locale,
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+    author: { "@type": "Organization", name: "Torvault Safe Company", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "Torvault Safe Company",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon-blue.png` },
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: tc("home"), item: canonicalFor(locale as Locale, "/") },
+      { "@type": "ListItem", position: 2, name: "The Vault", item: canonicalFor(locale as Locale, "/blog") },
+      { "@type": "ListItem", position: 3, name: post.title, item: pageUrl },
+    ],
   };
 
   return (
@@ -62,6 +88,10 @@ export default async function BlogPostPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="pdp-crumb-bar">
@@ -84,16 +114,28 @@ export default async function BlogPostPage({
             </span>
           </Reveal>
 
-          <div className="blog-post-media">
-            <Image
-              src={post.thumbnail}
-              alt={post.thumbnailAlt}
-              fill
-              sizes="(max-width: 900px) 100vw, 900px"
-              style={{ objectFit: "cover" }}
-              priority
-            />
-          </div>
+          {post.video ? (
+            <div className="blog-post-video">
+              <video
+                src={post.video.src}
+                poster={post.video.poster}
+                controls
+                playsInline
+                preload="metadata"
+              />
+            </div>
+          ) : (
+            <div className="blog-post-media">
+              <Image
+                src={post.thumbnail}
+                alt={post.thumbnailAlt}
+                fill
+                sizes="(max-width: 900px) 100vw, 900px"
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
+          )}
 
           <div className="blog-post-body">
             {post.body.map((paragraph, i) => (
@@ -116,8 +158,8 @@ export default async function BlogPostPage({
         <section>
           <div className="wrap">
             <Reveal className="section-head">
-              <span className="eyebrow">Keep Reading</span>
-              <h2>More from The Vault.</h2>
+              <span className="eyebrow">{t("keepReadingEyebrow")}</span>
+              <h2>{t("keepReadingHeading")}</h2>
             </Reveal>
             <div className="blog-grid">
               {more.map((p, i) => (
@@ -140,7 +182,7 @@ export default async function BlogPostPage({
                       <h2>{p.title}</h2>
                       <p>{p.excerpt}</p>
                       <span className="blog-card-cta" aria-hidden="true">
-                        Read the Guide &rarr;
+                        {t("readTheGuide")}
                       </span>
                     </span>
                   </Link>

@@ -1,72 +1,72 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { getTranslations, getLocale } from "next-intl/server";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import DealerApplicationForm from "@/components/DealerApplicationForm";
 import CountUp from "@/components/CountUp";
 import StepCarousel from "@/components/StepCarousel";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
+import { BreadcrumbJsonLd } from "@/components/SeoJsonLd";
 
-const ONBOARDING_STEPS: { num: string; title: string; body: ReactNode }[] = [
-  {
-    num: "01",
-    title: "Inquire",
-    body: (
-      <>
-        Email{" "}
-        <a href="mailto:dealers@torvaultsafe.com" style={{ textDecoration: "underline" }}>
-          dealers@torvaultsafe.com
-        </a>{" "}
-        or submit the form below with your business name and region.
-      </>
-    ),
-  },
-  {
-    num: "02",
-    title: "Territory & Fit Review",
-    body: "We confirm territory availability and walk through which product lines fit your typical client base.",
-  },
-  {
-    num: "03",
-    title: "Dealer Agreement",
-    body: "Wholesale pricing, territory terms, and lead-time commitments are set out in your dealer agreement.",
-  },
-  {
-    num: "04",
-    title: "Onboarding & First Order",
-    body: "You receive certified spec sheets, marketing assets, and your first order timeline.",
-  },
-];
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "dealersPage" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/dealers",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/safe-tl30.jpg",
+  });
+}
 
-export const metadata: Metadata = {
-  title: "Become a Dealer | Torvault Safe Company",
-  description:
-    "Torvault is onboarding its first Canadian dealer territories — wholesale pricing, territory protection, and a UL-tested line with no direct-to-consumer competition.",
-  alternates: { canonical: "/dealers" },
-  openGraph: {
-    type: "website",
-    title: "Torvault Dealer Program",
-    description:
-      "Wholesale pricing, territory protection, and a UL-tested safe line for independent Canadian dealers.",
-    images: ["/safe-tl30.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+export default async function DealersPage() {
+  const t = await getTranslations("dealersPage");
+  const tc = await getTranslations("productsCommon");
+  const locale = await getLocale();
 
-export default function DealersPage() {
+  const ONBOARDING_STEPS: { num: string; title: string; body: ReactNode }[] = [
+    {
+      num: "01",
+      title: t("steps.step1Title"),
+      body: (
+        <>
+          {t("steps.step1BodyPre")}{" "}
+          <a href="mailto:dealers@torvaultsafe.com" style={{ textDecoration: "underline" }}>
+            dealers@torvaultsafe.com
+          </a>{" "}
+          {t("steps.step1BodyPost")}
+        </>
+      ),
+    },
+    { num: "02", title: t("steps.step2Title"), body: t("steps.step2Body") },
+    { num: "03", title: t("steps.step3Title"), body: t("steps.step3Body") },
+    { num: "04", title: t("steps.step4Title"), body: t("steps.step4Body") },
+  ];
+
   return (
     <main>
-      <PageHero crumb="Dealers" eyebrow="Dealer Program" title="Now onboarding Canadian dealers.">
-        Torvault is opening its first dealer territories across Canada
-        &mdash; wholesale pricing, territory protection, and a UL-tested
-        line with zero direct-to-consumer competition from us.
+      <BreadcrumbJsonLd
+        locale={locale as Locale}
+        homeLabel={tc("home")}
+        trail={[{ name: t("hero.eyebrow"), path: null }]}
+      />
+      <PageHero crumb={t("hero.crumb")} eyebrow={t("hero.eyebrow")} title={t("hero.title")}>
+        {t("hero.body")}
       </PageHero>
 
       <div className="wrap" style={{ marginTop: -28, marginBottom: 28 }}>
         <p style={{ fontSize: 13.5 }}>
-          Looking to buy a Torvault safe, not sell one?{" "}
+          {t("lookingToBuyPre")}{" "}
           <Link href="/find-a-dealer" style={{ textDecoration: "underline" }}>
-            Find an authorized dealer near you &rarr;
+            {t("lookingToBuyLink")}
           </Link>
         </p>
       </div>
@@ -74,13 +74,9 @@ export default function DealersPage() {
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Program Benefits</span>
-            <h2>Built to protect your margin.</h2>
-            <p>
-              Torvault exists because independent dealers deserve a
-              certified supplier that doesn&rsquo;t compete with them at
-              retail. Every part of the program is built around that.
-            </p>
+            <span className="eyebrow">{t("benefits.eyebrow")}</span>
+            <h2>{t("benefits.heading")}</h2>
+            <p>{t("benefits.body")}</p>
           </Reveal>
           <div className="icon-grid">
             <div className="icon-item">
@@ -90,11 +86,8 @@ export default function DealersPage() {
                   <path d="M5 10v10h14V10" />
                 </svg>
               </span>
-              <h4>Territory Protection</h4>
-              <p>
-                Onboarded dealers get defined regional territory &mdash;
-                details confirmed during application review.
-              </p>
+              <h4>{t("benefits.item1Title")}</h4>
+              <p>{t("benefits.item1Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -102,11 +95,8 @@ export default function DealersPage() {
                   <path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
                 </svg>
               </span>
-              <h4>Wholesale Pricing</h4>
-              <p>
-                Direct-import pricing from our Vietnam production facility
-                &mdash; no middle-market distributor markup.
-              </p>
+              <h4>{t("benefits.item2Title")}</h4>
+              <p>{t("benefits.item2Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -116,11 +106,8 @@ export default function DealersPage() {
                   <circle cx="17" cy="18" r="1.8" />
                 </svg>
               </span>
-              <h4>Zero Direct-to-Consumer Competition</h4>
-              <p>
-                Torvault sells exclusively through dealers. We never list
-                pricing publicly or sell direct.
-              </p>
+              <h4>{t("benefits.item3Title")}</h4>
+              <p>{t("benefits.item3Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -128,11 +115,8 @@ export default function DealersPage() {
                   <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
                 </svg>
               </span>
-              <h4>Certified Spec Sheets</h4>
-              <p>
-                UL-methodology documentation for every product line, ready to
-                hand to a client or insurer.
-              </p>
+              <h4>{t("benefits.item4Title")}</h4>
+              <p>{t("benefits.item4Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -141,11 +125,8 @@ export default function DealersPage() {
                   <path d="M8.5 12.5L7 21l5-2.5 5 2.5-1.5-8.5" />
                 </svg>
               </span>
-              <h4>39 Years of Industry Support</h4>
-              <p>
-                Backed by Security Lock &amp; Safe Inc.&rsquo;s decades of
-                sales, service, and delivery experience.
-              </p>
+              <h4>{t("benefits.item5Title")}</h4>
+              <p>{t("benefits.item5Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -154,11 +135,8 @@ export default function DealersPage() {
                   <path d="M8 2v4M16 2v4M3 10h18" />
                 </svg>
               </span>
-              <h4>Early Territory Intake</h4>
-              <p>
-                First-round dealers get priority on lead time and inventory
-                as the line ramps to full production.
-              </p>
+              <h4>{t("benefits.item6Title")}</h4>
+              <p>{t("benefits.item6Body")}</p>
             </div>
           </div>
         </div>
@@ -167,8 +145,8 @@ export default function DealersPage() {
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">How It Works</span>
-            <h2>Four steps to onboarding.</h2>
+            <span className="eyebrow">{t("steps.eyebrow")}</span>
+            <h2>{t("steps.heading")}</h2>
           </Reveal>
           <StepCarousel steps={ONBOARDING_STEPS} />
         </div>
@@ -177,35 +155,32 @@ export default function DealersPage() {
       <section id="dealer" className="dealer">
         <div className="wrap dealer-grid">
           <div>
-            <span className="eyebrow">Launch Snapshot</span>
-            <h2>First intake round, open now.</h2>
-            <p>
-              Territory and specification sheets are available now for the
-              first round of Canadian dealer onboarding.
-            </p>
+            <span className="eyebrow">{t("snapshot.eyebrow")}</span>
+            <h2>{t("snapshot.heading")}</h2>
+            <p>{t("snapshot.body")}</p>
             <a
               className="btn btn-primary"
               href="mailto:dealers@torvaultsafe.com?subject=Torvault%20Dealer%20Inquiry"
             >
-              Request Dealer Package
+              {t("snapshot.cta")}
             </a>
           </div>
           <div className="dealer-stats">
             <div className="dealer-stat">
               <div className="num"><CountUp value="3" /></div>
-              <div className="lbl">Product lines at launch</div>
+              <div className="lbl">{t("snapshot.stat1Label")}</div>
             </div>
             <div className="dealer-stat">
               <div className="num"><CountUp value={"TL‑30"} /></div>
-              <div className="lbl">Top burglary rating</div>
+              <div className="lbl">{t("snapshot.stat2Label")}</div>
             </div>
             <div className="dealer-stat">
               <div className="num"><CountUp value="CA" /></div>
-              <div className="lbl">Canadian dealer focus</div>
+              <div className="lbl">{t("snapshot.stat3Label")}</div>
             </div>
             <div className="dealer-stat">
               <div className="num"><CountUp value="01" /></div>
-              <div className="lbl">Territory intake round</div>
+              <div className="lbl">{t("snapshot.stat4Label")}</div>
             </div>
           </div>
         </div>
@@ -218,20 +193,14 @@ export default function DealersPage() {
               className="eyebrow"
               style={{ justifyContent: "center", color: "var(--brass-600)" }}
             >
-              Get In Touch
+              {t("cta.eyebrow")}
             </span>
-            <h2>Tell us about your business.</h2>
-            <p>
-              Send your business name, region, and a note on your current
-              product line &mdash; we&rsquo;ll follow up with territory
-              availability and a spec package.
-            </p>
+            <h2>{t("cta.heading")}</h2>
+            <p>{t("cta.body")}</p>
             <DealerApplicationForm />
             <p className="form-note">
-              By submitting, you agree to be contacted by Torvault Safe
-              Company regarding dealer onboarding. See our{" "}
-              <Link href="/faq">FAQ</Link> for more on the application
-              process.
+              {t("cta.formNotePre")}{" "}
+              <Link href="/faq">{t("cta.formNoteLink")}</Link> {t("cta.formNotePost")}
             </p>
           </div>
         </div>

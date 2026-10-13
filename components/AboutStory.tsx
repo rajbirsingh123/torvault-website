@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { buildSafeRig } from "./safeModel";
 import NeuralBorder from "./NeuralBorder";
 
@@ -14,39 +15,21 @@ type Chapter = {
   cta?: { label: string; href: string };
 };
 
-const CHAPTERS: Chapter[] = [
-  {
-    eyebrow: "About Torvault",
-    title: "Built on strength, driven by expertise.",
-    body: "With experience dating back to 1987, we deliver high-security safes for homeowners, retailers, businesses, government agencies, institutions, law enforcement, and the military — every safe built for uncompromising quality and lasting peace of mind.",
-    side: "left",
-  },
-  {
-    eyebrow: "01 — Our Purpose",
-    title: "Strength. Experience. Confidence.",
-    body: "Torvault was founded with a clear purpose: helping people protect what matters most. Backed by decades of industry expertise, we bring practical knowledge to a new generation of residential and commercial safes.",
-    side: "right",
-  },
-  {
-    eyebrow: "02 — Who We Serve",
-    title: "Protection for every setting.",
-    body: "From personal valuables and important documents to cash, inventory, and sensitive materials — we serve homeowners, retailers, commercial and industrial businesses, government agencies, institutions, law enforcement, and military clients.",
-    side: "left",
-  },
-  {
-    eyebrow: "03 — Our Expertise",
-    title: "Experience behind every recommendation.",
-    body: "Security ratings, fire protection, lock options, and everyday access all influence the right choice. Our team helps customers understand these differences so they can make informed decisions with confidence.",
-    side: "right",
-  },
-  {
-    eyebrow: "04 — Beyond The Sale",
-    title: "Support that outlasts the purchase.",
-    body: "From product selection and installation planning to ongoing service, we're committed to helping customers get lasting value from their purchase — earning trust through knowledgeable people and reliable protection.",
-    side: "left",
-    cta: { label: "Read Our Full Story", href: "/about" },
-  },
-];
+function buildChapters(t: ReturnType<typeof useTranslations>): Chapter[] {
+  return [
+    { eyebrow: t("ch1Eyebrow"), title: t("ch1Title"), body: t("ch1Body"), side: "left" },
+    { eyebrow: t("ch2Eyebrow"), title: t("ch2Title"), body: t("ch2Body"), side: "right" },
+    { eyebrow: t("ch3Eyebrow"), title: t("ch3Title"), body: t("ch3Body"), side: "left" },
+    { eyebrow: t("ch4Eyebrow"), title: t("ch4Title"), body: t("ch4Body"), side: "right" },
+    {
+      eyebrow: t("ch5Eyebrow"),
+      title: t("ch5Title"),
+      body: t("ch5Body"),
+      side: "left",
+      cta: { label: t("ch5Cta"), href: "/about" },
+    },
+  ];
+}
 
 const clamp01 = (x: number) => Math.min(1, Math.max(0, x));
 const smoothstep = (a: number, b: number, x: number) => {
@@ -65,6 +48,8 @@ const smoothstep = (a: number, b: number, x: number) => {
  * built, it's about what it's for.
  */
 export default function AboutStory() {
+  const t = useTranslations("aboutStory");
+  const CHAPTERS = buildChapters(t);
   const sectionRef = useRef<HTMLElement>(null);
   const canvasHostRef = useRef<HTMLDivElement>(null);
   const chapterRefs = useRef<Array<HTMLDivElement | null>>([]);

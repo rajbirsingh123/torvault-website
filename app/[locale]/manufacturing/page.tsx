@@ -1,36 +1,46 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { getTranslations, getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/PageHero";
 import ManufacturingStory from "@/components/ManufacturingStory";
 import Reveal from "@/components/Reveal";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
+import { BreadcrumbJsonLd } from "@/components/SeoJsonLd";
 
-export const metadata: Metadata = {
-  title: "Manufacturing | How Torvault Safes Are Built — Torvault",
-  description:
-    "From steel forming to compliance testing: how Torvault engineers and manufactures UL-rated fire and burglary safes for the Canadian market.",
-  alternates: { canonical: "/manufacturing" },
-  openGraph: {
-    type: "website",
-    title: "How Torvault Safes Are Manufactured",
-    description:
-      "Design, steel forming, hardplate lamination, and compliance testing — the Torvault manufacturing process.",
-    images: ["/hero-safe.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "manufacturing" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/manufacturing",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/hero-safe.jpg",
+  });
+}
 
-export default function ManufacturingPage() {
+export default async function ManufacturingPage() {
+  const t = await getTranslations("manufacturing");
+  const tc = await getTranslations("productsCommon");
+  const locale = await getLocale();
   return (
     <main>
+      <BreadcrumbJsonLd
+        locale={locale as Locale}
+        homeLabel={tc("home")}
+        trail={[{ name: t("hero.eyebrow"), path: null }]}
+      />
       <PageHero
-        crumb="Manufacturing"
-        eyebrow="Manufacturing"
-        title="Designed for Canada. Built to reach it."
+        crumb={t("hero.crumb")}
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
       >
-        Torvault safes are engineered to Canadian security and fire-testing
-        conventions, then manufactured at scale in Vietnam &mdash; giving
-        Canadian dealers a certified alternative at a materially different
-        price point than domestic-only production.
+        {t("hero.body")}
       </PageHero>
 
       <ManufacturingStory />
@@ -38,8 +48,8 @@ export default function ManufacturingPage() {
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Quality Commitments</span>
-            <h2>What we won&rsquo;t compromise on.</h2>
+            <span className="eyebrow">{t("commitments.eyebrow")}</span>
+            <h2>{t("commitments.heading")}</h2>
           </Reveal>
           <div className="icon-grid">
             <div className="icon-item">
@@ -48,11 +58,8 @@ export default function ManufacturingPage() {
                   <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
                 </svg>
               </span>
-              <h4>UL Methodology First</h4>
-              <p>
-                Ratings are engineered targets from day one, not
-                retrofitted claims after production.
-              </p>
+              <h4>{t("commitments.item1Title")}</h4>
+              <p>{t("commitments.item1Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -61,12 +68,8 @@ export default function ManufacturingPage() {
                   <circle cx="12" cy="12" r="9" />
                 </svg>
               </span>
-              <h4>Documented QA at Every Stage</h4>
-              <p>
-                Steel gauge, weld integrity, hardplate placement, and lock
-                function are checked before a unit moves to the next
-                stage.
-              </p>
+              <h4>{t("commitments.item2Title")}</h4>
+              <p>{t("commitments.item2Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -77,11 +80,8 @@ export default function ManufacturingPage() {
                   <path d="M20 19v1a3 3 0 01-3 3h-3" />
                 </svg>
               </span>
-              <h4>Engineered for Canadian Climate</h4>
-              <p>
-                Finish and hardware are specified for the humidity and
-                temperature range Canadian dealers actually install into.
-              </p>
+              <h4>{t("commitments.item3Title")}</h4>
+              <p>{t("commitments.item3Body")}</p>
             </div>
             <div className="icon-item">
               <span className="ico">
@@ -90,11 +90,8 @@ export default function ManufacturingPage() {
                   <path d="M8.5 12.5L7 21l5-2.5 5 2.5-1.5-8.5" />
                 </svg>
               </span>
-              <h4>39 Years of Field Feedback</h4>
-              <p>
-                Built by the same team that services and installs safes
-                daily &mdash; not a factory guessing what dealers need.
-              </p>
+              <h4>{t("commitments.item4Title")}</h4>
+              <p>{t("commitments.item4Body")}</p>
             </div>
           </div>
         </div>
@@ -103,11 +100,7 @@ export default function ManufacturingPage() {
       <section>
         <div className="wrap">
           <div className="callout" style={{ maxWidth: 820, margin: "0 auto" }}>
-            <strong>Direct import, no middle-market markup.</strong> Torvault
-            manufactures at scale in Vietnam and imports directly to Canada
-            &mdash; the same route that lets us price at wholesale for
-            dealers without compromising on UL testing methodology or
-            steel specification.
+            <strong>{t("callout.strong")}</strong> {t("callout.body")}
           </div>
         </div>
       </section>
@@ -119,9 +112,9 @@ export default function ManufacturingPage() {
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Next Step
+              {t("nextStep.eyebrow")}
             </span>
-            <h2>See what each rating actually resists.</h2>
+            <h2>{t("nextStep.heading")}</h2>
           </Reveal>
           <div
             style={{
@@ -137,14 +130,14 @@ export default function ManufacturingPage() {
               style={{ background: "var(--navy-950)", color: "#fff" }}
               href="/certified-standard"
             >
-              Certified Standard
+              {t("nextStep.certifiedCta")}
             </Link>
             <Link
               className="btn"
               style={{ border: "1px solid var(--border)", color: "var(--text)" }}
               href="/products"
             >
-              View Products
+              {t("nextStep.productsCta")}
             </Link>
           </div>
         </div>

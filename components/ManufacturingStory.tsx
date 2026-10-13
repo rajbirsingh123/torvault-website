@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { useTranslations } from "next-intl";
 import { buildSafeRig } from "./safeModel";
 
 type Chapter = {
@@ -10,38 +11,16 @@ type Chapter = {
   body: string;
 };
 
-const CHAPTERS: Chapter[] = [
-  {
-    eyebrow: "01 — Design & Engineering",
-    title: "Specified before a single unit is tooled.",
-    body: "Body, door, and locking geometry are specified against UL 72 and UL TL testing methodology before a single unit is tooled — every product line is designed to a target rating, not adapted after the fact.",
-  },
-  {
-    eyebrow: "02 — Steel Forming & Body Construction",
-    title: "Cut, formed, and welded.",
-    body: "Solid steel plate is cut, formed, and welded into the body and door blank at the thickness specified for each product line — from 12-gauge RSC bodies to 1.5″ solid TL‑30 construction.",
-  },
-  {
-    eyebrow: "03 — Hardplate Lamination",
-    title: "Bonded over the lock and boltwork.",
-    body: "Composite hardplate is bonded over the lock and boltwork — and across all six sides on TL‑30 units — to defeat drilling and cutting attacks during UL-methodology testing.",
-  },
-  {
-    eyebrow: "04 — Relocker & Locking System Assembly",
-    title: "Fitted and function-tested.",
-    body: "Spring-loaded relocking bolts, boltwork, and the electronic or mechanical locking mechanism are fitted and function-tested before the door is hung.",
-  },
-  {
-    eyebrow: "05 — Compliance & Import Testing",
-    title: "Verified against the rated standard.",
-    body: "Each product line is verified against its rated standard — fire endurance, forced-entry resistance, and lock function — before Canadian distribution begins.",
-  },
-  {
-    eyebrow: "06 — Import & Dealer Distribution",
-    title: "Shipped sealed. Sold through dealers only.",
-    body: "Finished units are imported directly to Canada and shipped to authorized dealer territories — no middle-market distributor step, and no direct-to-consumer sale.",
-  },
-];
+function buildChapters(t: ReturnType<typeof useTranslations>): Chapter[] {
+  return [
+    { eyebrow: t("ch1Eyebrow"), title: t("ch1Title"), body: t("ch1Body") },
+    { eyebrow: t("ch2Eyebrow"), title: t("ch2Title"), body: t("ch2Body") },
+    { eyebrow: t("ch3Eyebrow"), title: t("ch3Title"), body: t("ch3Body") },
+    { eyebrow: t("ch4Eyebrow"), title: t("ch4Title"), body: t("ch4Body") },
+    { eyebrow: t("ch5Eyebrow"), title: t("ch5Title"), body: t("ch5Body") },
+    { eyebrow: t("ch6Eyebrow"), title: t("ch6Title"), body: t("ch6Body") },
+  ];
+}
 
 const STEPS = [0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1];
 
@@ -72,6 +51,8 @@ const stageWeight = (p: number, k: number) => {
  * shipped, sealed unit, not a reveal.
  */
 export default function ManufacturingStory() {
+  const t = useTranslations("manufacturingStory");
+  const CHAPTERS = buildChapters(t);
   const sectionRef = useRef<HTMLDivElement>(null);
   const canvasHostRef = useRef<HTMLDivElement>(null);
   const chapterRefs = useRef<Array<HTMLDivElement | null>>([]);

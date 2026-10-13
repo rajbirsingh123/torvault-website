@@ -1,0 +1,1032 @@
+{
+  "nav": {
+    "products": "Products",
+    "certifiedStandard": "Certified Standard",
+    "about": "About",
+    "manufacturing": "Manufacturing",
+    "support": "Support",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "helpCenter": "Help Center",
+    "contactSupport": "Contact Support",
+    "sizeGuides": "Size & Capacity Guides",
+    "shippingInstallation": "Shipping & Installation",
+    "whereToBuy": "Where To Buy",
+    "findADealer": "Find a Dealer",
+    "becomeADealer": "Become a Dealer",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "searchSite": "Search the site",
+    "viewFavorites": "View favorites",
+    "lbs": "lbs"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "ariaLabel": "Choose language"
+  },
+  "footer": {
+    "tagline": "High-security fire and burglary safes, engineered for the Canadian market and manufactured in Vietnam.",
+    "productsHeading": "Products",
+    "fireBurglary": "Fire & Burglary",
+    "tl15": "TL-15 High Security",
+    "tl30": "TL-30 High Security",
+    "companyHeading": "Company",
+    "aboutTorvault": "About Torvault",
+    "manufacturing": "Manufacturing",
+    "certifiedStandard": "Certified Standard",
+    "findADealer": "Find a Dealer",
+    "becomeADealer": "Become a Dealer",
+    "faq": "FAQ",
+    "contactHeading": "Contact",
+    "backedByHeading": "Backed By",
+    "securityLockSafe": "Security Lock & Safe Inc.",
+    "torontoSafes": "Toronto Safes →",
+    "servingGta": "Serving the GTA since 1987",
+    "copyright": "© 2026 Torvault Safe Company. All rights reserved.",
+    "motto": "Torvault Safe Company. — Security without compromise"
+  },
+  "common": {
+    "viewFullSpecification": "View Full Specification",
+    "talkToDealerTeam": "Talk to the Dealer Team",
+    "getDirections": "Get Directions",
+    "applyToBecomeDealer": "Apply to Become a Dealer",
+    "compareProductLines": "Compare Torvault Product Lines",
+    "quickView": "Quick View",
+    "bestForLabel": "Best for:"
+  },
+  "products": {
+    "fireBurglary": {
+      "label": "Fire & Burglary",
+      "badge": "Entry Line",
+      "chips": [
+        "Factory Fire Tested",
+        "Reinforced Steel Body"
+      ],
+      "metaDescription": "Torvault Fire & Burglary safes: factory fire-tested, reinforced burglary-resistant body, 11 sizes built to order. Spec sheets and dealer quotes available.",
+      "intro": [
+        "Torvault's entry line pairs a factory fire-tested body with a reinforced burglary-resistant construction, tested against common mechanical tools across a net working time of five minutes on every side. It's built for operations where document and cash protection matter more than resisting a determined, tooled attack.",
+        "A single-wall 12-gauge steel body wraps a UL Class 350 fire chamber, holding internal temperature below 350°F — the threshold at which paper begins to char — for a full hour inside a fire that can reach 1,700°F outside the safe."
+      ],
+      "specCells": [
+        {
+          "v": "1–Hr / 350°F",
+          "k": "Fire Rating"
+        },
+        {
+          "v": "12 ga steel",
+          "k": "Body Construction"
+        },
+        {
+          "v": "Single-wall",
+          "k": "Door Type"
+        },
+        {
+          "v": "Dial or keypad",
+          "k": "Locking"
+        },
+        {
+          "v": "Forced-Entry Tested",
+          "k": "Burglary Rating"
+        },
+        {
+          "v": "5 min, all sides",
+          "k": "Net Working Time"
+        }
+      ],
+      "bestFor": "home offices, retail back-rooms, and small-business petty cash or document storage where fire protection is the priority and forced-entry risk is limited.",
+      "features": [
+        "Euro Grade I security, certified to EN 1143-1 European standards for maximum burglary resistance.",
+        "Manufactured under the ISO 9001:2015 quality management system.",
+        "Built for burglary resistance with advanced security features to safeguard your valuables.",
+        "60-minute fire protection for added safety.",
+        "Advanced four-directional live bolt-works.",
+        "Precision-engineered European locking system secures the door in all directions — up, down, left, and right — for maximum protection.",
+        "25mm heavy-duty stainless steel bolts designed to withstand direct cutting attempts, reinforcing resistance against forced entry.",
+        "Multi-layered construction: advanced composite barrier materials enhance burglary resistance and structural durability.",
+        "European RAL standard paint with a 5-layer coating for enhanced durability and a professional finish.",
+        "Key lock, combination lock, and electronic lock options available to meet your specific security needs."
+      ],
+      "faqs": [
+        {
+          "question": "How long does a Torvault Fire & Burglary safe protect documents in a fire?",
+          "answer": "The Fire & Burglary line carries a UL Class 350 rating: the interior stays below 350°F — the temperature paper starts to char — for a full hour, even while a surrounding fire reaches up to 1,700°F. That hour is independently tested, not an in-house estimate."
+        },
+        {
+          "question": "Is the Fire & Burglary line rated for burglary resistance, or just fire?",
+          "answer": "Both. On top of its UL Class 350 fire rating, every Fire & Burglary body is forced-entry tested against common mechanical tools — prybars, hammers, punches — for a five-minute net working time on all sides. It isn't tested to the same tool list as TL-15 or TL-30, which is why Torvault treats it as the entry line rather than a high-security line."
+        },
+        {
+          "question": "What's the difference between the Fire & Burglary line and TL-15?",
+          "answer": "Fire & Burglary is fire-first: a single-wall 12-gauge steel body built around a UL Class 350 fire chamber, with forced-entry resistance as a secondary feature. TL-15 is burglary-first: a 1-inch solid steel body with composite hardplate, UL-rated to resist a professional attack with power tools for 15 minutes, with fire protection available as an add-on rather than built in."
+        },
+        {
+          "question": "What size Fire & Burglary safe do I need?",
+          "answer": "It depends on what you're storing and how much floor space you have. The line spans 11 sizes from the compact BF-914 up to the BF-6831 commercial vault — use the size finder and side-by-side diagram on this page to compare interior capacity and footprint against your own dimensions before requesting a quote."
+        },
+        {
+          "question": "Can I get a Fire & Burglary safe with a dial lock instead of a digital keypad?",
+          "answer": "Yes. Torvault offers key lock, combination (dial) lock, and electronic keypad options across the Fire & Burglary line, so you can match your preference or any compliance requirement that specifies a mechanical lock."
+        },
+        {
+          "question": "Is a Fire & Burglary safe enough for a home office, or do I need TL-15?",
+          "answer": "For home offices, retail back-rooms, and small-business petty cash or document storage, Fire & Burglary is Torvault's recommended fit — it prioritizes fire protection where forced-entry risk is limited. If you're storing higher-value inventory or need a documented forced-entry standard for insurance purposes, step up to TL-15."
+        }
+      ]
+    },
+    "tl15": {
+      "label": "TL-15 High Security",
+      "badge": "Most Requested",
+      "chips": [
+        "UL TL-15",
+        "Composite Hardplate"
+      ],
+      "metaDescription": "Torvault TL-15 High Security safes: 15-minute UL-rated door, composite hardplate, 10 sizes built to order. Spec sheets and dealer quotes available.",
+      "intro": [
+        "The TL-15 rating means the door has withstood a 15-minute net working time attack by a professional safe technician using common hand tools, power drills, punches, hammers, and pressure-applying devices — the clock only runs while a tool is actually working the safe. It's the rating most Canadian bank branches, pharmacies, and jewelry counters are built to.",
+        "A 1-inch solid steel body is backed by a composite hardplate over the lock and boltwork, with two-way spring-loaded relocking bolts that jam the mechanism if the primary lock is attacked directly."
+      ],
+      "specCells": [
+        {
+          "v": "15 min, door",
+          "k": "Net Working Time"
+        },
+        {
+          "v": "1″ solid",
+          "k": "Steel Body"
+        },
+        {
+          "v": "Composite",
+          "k": "Hardplate"
+        },
+        {
+          "v": "2-way",
+          "k": "Relocking Bolts"
+        },
+        {
+          "v": "UL Type 1",
+          "k": "Electronic Lock"
+        },
+        {
+          "v": "Optional",
+          "k": "Fire Add-On"
+        }
+      ],
+      "bestFor": "bank branches, pharmacies holding controlled substances, and jewelry counters that need a documented forced-entry standard for daytime, high-access storage.",
+      "features": [
+        "Built to the highest security standards under the ISO 9001:2015 quality management system.",
+        "Designed for maximum burglary resistance in commercial and high-risk environments.",
+        "2-hour fire protection for added safety.",
+        "Advanced four-directional live bolt-works.",
+        "Precision-engineered European locking system secures the door in all directions — up, down, left, and right — for maximum protection.",
+        "30mm heavy-duty rotational stainless steel bolts designed to withstand direct cutting attempts, reinforcing resistance against forced entry.",
+        "High-security composite construction ensures structural durability and burglary resistance.",
+        "Tempered-glass relocking system triggers an automatic relocker if the safe is tampered with.",
+        "Reinforced manganese steel plate protects the lock and bolt-works against drilling and forced access.",
+        "Pre-drilled anchoring holes allow secure installation to concrete floors, preventing unauthorized removal.",
+        "European RAL standard paint with a 5-layer coating for enhanced durability and an elegant finish.",
+        "Key lock, combination lock, and electronic lock options available to meet your specific security requirements."
+      ],
+      "faqs": [
+        {
+          "question": "What does the TL-15 rating actually mean?",
+          "answer": "TL-15 means the door has withstood a 15-minute net working time attack by a professional safe technician using common hand tools, power drills, punches, hammers, and pressure-applying devices — the clock only runs while a tool is actively working the safe, not for the full time an attacker spends on site. It's an independent UL rating, not a self-certified marketing tier."
+        },
+        {
+          "question": "What's the difference between TL-15 and TL-30?",
+          "answer": "TL-15 rates the door alone for a 15-minute net working time against hand and power tools. TL-30 doubles that to 30 minutes, adds abrasive cutting wheels and power saws to the attack tool list, and — unlike TL-15 — rates all six sides of the body, not just the door. TL-30 also steps up from a 1-inch to a 1.5-inch solid steel body."
+        },
+        {
+          "question": "Does a TL-15 safe include fire protection?",
+          "answer": "Fire protection is available as an add-on rather than built into the base TL-15 specification, which is focused on forced-entry resistance. If fire protection is a requirement alongside burglary resistance, confirm the fire add-on when requesting your quote, or compare it against Torvault's Fire & Burglary line."
+        },
+        {
+          "question": "Is TL-15 sufficient for a pharmacy storing controlled substances?",
+          "answer": "Yes — TL-15 is the rating most Canadian pharmacies, bank branches, and jewelry counters are built to for daytime, high-access storage. It gives you a documented forced-entry standard that insurers and regulators recognize, without the six-side TL-30 specification that cash-in-transit and high-volume operations typically require."
+        },
+        {
+          "question": "How thick is the steel body on a TL-15 safe?",
+          "answer": "The TL-15 body is 1-inch solid steel, backed by a composite hardplate over the lock and boltwork, with two-way spring-loaded relocking bolts that jam the mechanism if the primary lock is attacked directly."
+        },
+        {
+          "question": "Can TL-15 safes be anchored to the floor?",
+          "answer": "Yes. TL-15 units ship with pre-drilled anchoring holes for secure installation to a concrete floor, which prevents the entire safe from being removed rather than attacked in place — a common failure point insurers check for."
+        }
+      ]
+    },
+    "tl30": {
+      "label": "TL-30 High Security",
+      "badge": "Flagship",
+      "chips": [
+        "UL TL-30",
+        "Six-Side Resistance"
+      ],
+      "metaDescription": "Torvault TL-30 High Security safes: 30-minute six-side UL rating, 1.5-inch solid steel body, 10 sizes built to order. Spec sheets and dealer quotes available.",
+      "intro": [
+        "TL-30 raises the net working time to 30 minutes and adds abrasive cutting wheels and power saws to the tool list — and unlike the Fire & Burglary or TL-15 lines, the rating applies to every side of the body, not just the door. It's Torvault's flagship line, built for operations where a breach anywhere on the box is an unacceptable outcome.",
+        "A 1.5-inch solid steel body carries a composite hardplate across all six sides, a 3.25-inch door, and four-way spring-loaded relocking bolts. The combination is the standard specification for cash-in-transit depots, large jewelers, and high-volume cash rooms."
+      ],
+      "specCells": [
+        {
+          "v": "30 min, 6 sides",
+          "k": "Net Working Time"
+        },
+        {
+          "v": "1.5″ solid",
+          "k": "Steel Body"
+        },
+        {
+          "v": "3.25″",
+          "k": "Door Thickness"
+        },
+        {
+          "v": "4-way",
+          "k": "Relocking Bolts"
+        },
+        {
+          "v": "UL Type 1",
+          "k": "Electronic Lock"
+        },
+        {
+          "v": "Included",
+          "k": "Torch Resistance"
+        }
+      ],
+      "bestFor": "cash-in-transit depots, high-volume jewelers, and evidence or valuables rooms that require a six-side rating rather than a reinforced door on an otherwise standard body.",
+      "features": [
+        "Built to the highest security standards under the ISO 9001:2015 quality management system.",
+        "Designed for maximum burglary resistance in commercial and high-risk environments.",
+        "2-hour fire protection for added safety.",
+        "Advanced four-directional live bolt-works extended across all six sides of the body.",
+        "Precision-engineered European locking system secures the door in all directions — up, down, left, and right — for maximum protection.",
+        "30mm heavy-duty rotational stainless steel bolts designed to withstand direct cutting attempts, reinforcing resistance against forced entry.",
+        "High-security composite construction spans all six sides for structural durability and burglary resistance.",
+        "Tempered-glass relocking system triggers an automatic relocker if the safe is tampered with.",
+        "Reinforced manganese steel plate protects the lock and bolt-works against drilling and forced access.",
+        "Pre-drilled anchoring holes allow secure installation to concrete floors, preventing unauthorized removal.",
+        "European RAL standard paint with a 5-layer coating for enhanced durability and an elegant finish.",
+        "Key lock, combination lock, and electronic lock options available to meet your specific security requirements."
+      ],
+      "faqs": [
+        {
+          "question": "What makes TL-30 different from TL-15?",
+          "answer": "TL-30 doubles the net working time to 30 minutes, adds abrasive cutting wheels and power saws to the attack tool list, and rates all six sides of the body instead of just the door. The steel body also steps up from 1 inch to 1.5 inches solid, with a 3.25-inch door and four-way relocking bolts instead of two-way."
+        },
+        {
+          "question": "Why does TL-30 rate all six sides instead of just the door?",
+          "answer": "A reinforced door on an otherwise standard body only protects against an attack where the attacker chooses to go through the front. TL-30's composite hardplate and 1.5-inch solid steel extend across all six sides specifically so there's no weaker side to target — the standard cash-in-transit depots and high-volume jewelers require."
+        },
+        {
+          "question": "Does a TL-30 safe include fire protection?",
+          "answer": "Yes — Torvault's TL-30 line includes 2-hour fire protection in addition to its six-side, 30-minute burglary rating, so you're not choosing between fire and forced-entry resistance."
+        },
+        {
+          "question": "Who typically needs a TL-30 safe?",
+          "answer": "TL-30 is built for cash-in-transit depots, high-volume jewelers, and evidence or valuables rooms where a breach anywhere on the box — not just through the door — is an unacceptable outcome. If your risk is limited to daytime counter access, TL-15 is usually the better-value fit."
+        },
+        {
+          "question": "What does 'net working time' mean for a TL-30 rating?",
+          "answer": "Net working time is the cumulative time a tool is actively cutting, drilling, or prying on the safe during UL testing — time spent repositioning, swapping tools, or pausing doesn't count. A 30-minute TL-30 rating means the safe withstood 30 real minutes of tool-on-metal attack time, independently verified by UL."
+        },
+        {
+          "question": "Can TL-30 safes be bolted down for extra security?",
+          "answer": "Yes. TL-30 units ship with pre-drilled anchoring holes for secure installation to a concrete floor, preventing the whole unit from being removed and attacked somewhere else — a requirement many insurers attach to high-value coverage limits."
+        }
+      ]
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Torvault Safe Company",
+      "word1": "Security",
+      "word2": "without",
+      "word3": "compromise.",
+      "viewProducts": "View Products",
+      "scroll": "Scroll"
+    },
+    "trustBar": {
+      "item1": "UL & ENL43 Tested Standards",
+      "item2": "Backed by 40 Years of Security Expertise",
+      "item3": "Engineered for the Toughest Environment"
+    },
+    "story": {
+      "eyebrow": "Engineering",
+      "heading": "Engineered against the threats that matter.",
+      "body": "Fire protection, forced-entry resistance, and independent verification aren't options on a Torvault safe — they're the baseline every product line is built from.",
+      "pillar1Title": "Fire-Rated Core",
+      "pillar1Body": "Gypsum composite fill engineered to hold an internal 350°F ceiling well past the rated hour, so documents and drives survive what the building doesn't.",
+      "pillar2Title": "Forced-Entry Resistance",
+      "pillar2Body": "Composite hardplate, relocking bolts, and solid steel bodies built to resist prybars, drills, and saws for a documented net working time — not a marketing tier.",
+      "pillar3Title": "Independently Tested",
+      "pillar3Body": "Every rating is UL & ULC verified, tool-by-tool, by a third party — the same standard insurers use to set coverage limits."
+    },
+    "productsSection": {
+      "eyebrow": "Products",
+      "heading": "Three lines. One standard.",
+      "body": "Three purpose-built product lines, each engineered around a specific threat — fire, forced entry, or both — rather than a one-size body with a bigger price tag."
+    },
+    "certOrbit": {
+      "ulListedK": "UL Listed",
+      "ulListedV": "Security Rated",
+      "graphiteFinishK": "Graphite Finish",
+      "tl15K": "TL‑15",
+      "tl15V": "Burglary Resistant",
+      "blackFinishK": "Black Finish",
+      "tl30K": "TL‑30",
+      "tl30V": "Burglary Resistant",
+      "interiorViewK": "Interior View",
+      "interiorViewV": "Shelf + Boltwork",
+      "en1143K": "EN 1143‑1",
+      "en1143V": "Resistance Grade III",
+      "boltworkDetailK": "Boltwork Detail",
+      "boltworkDetailV": "3‑Point Locking"
+    },
+    "certified": {
+      "eyebrow": "Certified Standard",
+      "heading": "Specification, not a marketing tier.",
+      "body": "Every Torvault safe is built to a documented testing standard — factory fire testing on Fire & Burglary, or independent UL testing on TL‑15 and TL‑30 — not an in-house label alone. Our Certified Standard page breaks down exactly what each rating means, how testing works, and why insurers use it to set coverage limits.",
+      "cta": "Read the Full Certified Standard Guide"
+    },
+    "faqSection": {
+      "eyebrow": "FAQ",
+      "heading": "Frequently asked questions.",
+      "viewAll": "View All FAQs →",
+      "q1": "What does a UL security rating actually mean?",
+      "a1": "UL (Underwriters Laboratories) independently tests safes against real tools — prybars, drills, saws — for a set net working time. A TL‑15 safe resists a professional attack with common tools for 15 minutes; TL‑30 for 30. It's the same standard insurers use to set coverage limits. See our {certifiedStandardLink} for the full breakdown.",
+      "a1LinkText": "Certified Standard guide",
+      "q2": "What's the difference between TL-15 and TL-30 safes?",
+      "a2": "The number is net working time — how long the UL-rated door and boltwork resist a professional attack with common tools. TL‑15 holds for 15 minutes, TL‑30 for 30, with a thicker 1.5″ solid steel body and hardplate across all six sides. Higher-value contents and higher insurance limits generally call for TL‑30. Compare specs on our {productsLink}.",
+      "a2LinkText": "Products page",
+      "q3": "Where can I buy a Torvault safe?",
+      "a3": "Torvault sells exclusively through authorized dealers across Canada — we don't sell direct to consumers. Use our {findDealerLink} page to locate one near you, or see our {dealerProgramLink} if you're a retailer interested in carrying the line.",
+      "a3LinkText1": "Find a Dealer",
+      "a3LinkText2": "Dealer Program",
+      "q4": "How long will my documents survive in a fire?",
+      "a4": "Our Fire & Burglary line carries a UL Class 350 rating: the interior stays below 350°F — the temperature paper starts to char — for a full hour, even while the fire outside reaches up to 1,700°F. That hour is tested, not estimated; it's the same net-working-time methodology UL uses across every rating we carry.",
+      "q5": "Do insurance companies recognize Torvault's ratings?",
+      "a5": "Yes. Our TL‑15 and TL‑30 security ratings are independently tested by UL, not self-certified in-house — the standard insurers reference when setting coverage limits for cash, firearms, and documents. Our Fire & Burglary line is factory fire-tested. Ask your insurer which rating your policy requires before choosing a model.",
+      "q6": "What sizes and capacities are available?",
+      "a6": "Each of our three lines spans a wide range, from compact home-and-office models up to large commercial vaults, so capacity scales with the rating you need rather than forcing a single body size. Browse interior dimensions and weight for every model on the {productsLink}."
+    },
+    "testimonials": {
+      "eyebrow": "Customer Reviews",
+      "heading": "Trusted since 1987.",
+      "body": "Torvault is backed by Security Lock & Safe Inc. — 40 years in the Canadian safe industry through Toronto Safes.",
+      "googleReview": "Google Review",
+      "quote1": "Knowledgeable, punctual, and an overall delight to deal with.",
+      "when1": "10 months ago",
+      "quote2": "One of the most friendly, customer-service-oriented staff.",
+      "when2": "5 years ago",
+      "quote3": "Kelly and the team are phenomenal.",
+      "when3": "2 years ago"
+    },
+    "newsletter": {
+      "eyebrow": "Stay Updated",
+      "heading": "Get updates from Torvault.",
+      "body": "Be the first to know about new safe models, security tips, and special offers — straight from Torvault.",
+      "formNote": "By entering your phone number, you agree to receive marketing messages from Torvault Safe Company at the number provided. Consent is not a condition of purchase. Message and data rates may apply. Reply HELP for help or STOP to cancel. See our {termsLink} for details.",
+      "termsLinkText": "Terms & Conditions"
+    },
+    "meta": {
+      "title": "Torvault Safe Company | Fire & High-Security Safes, Canada",
+      "description": "Torvault engineers UL-rated fire and burglary safes — from factory fire-tested protection to UL TL-30 tool resistance — for Canadian businesses and dealers."
+    }
+  },
+  "blog": {
+    "readTimeSuffix": "min read",
+    "keepReadingEyebrow": "Keep Reading",
+    "keepReadingHeading": "More from The Vault.",
+    "readTheGuide": "Read the Guide →",
+    "posts": {
+      "understanding-ul-security-ratings": {
+        "title": "Understanding UL Security Ratings: What TL-15 and TL-30 Actually Mean",
+        "category": "Security Ratings",
+        "excerpt": "TL-15 and TL-30 aren't marketing tiers — they're independently tested minutes of resistance against real tools. Here's what the numbers actually measure.",
+        "body": [
+          "A \"TL-15\" or \"TL-30\" label gets thrown around a lot in the safe industry, but the number itself is the entire specification — it's a net working time, the number of minutes UL verified the door withstands a professional attack using a defined list of tools before it's considered breached.",
+          "Net working time only counts the minutes a tool is actually cutting, drilling, or prying — not the total time an attacker spends on site repositioning, swapping tools, or taking breaks. A TL-15 rating means 15 real minutes of tool-on-metal contact; TL-30 means 30. That distinction matters, because it's a much harder bar to clear than it sounds.",
+          "The rating also specifies the tool list. TL-15 testing uses common hand and power tools — drills, punches, hammers, pressure-applying devices. TL-30 adds abrasive cutting wheels and power saws to that list, which is why stepping up a tier requires a meaningfully thicker steel body, not just a thicker door.",
+          "One detail that trips people up: unless a line is explicitly rated for six sides, the UL rating applies to the door only. Torvault's Fire & Burglary and TL-15 lines rate the door; TL-30 is tested and rated across all six sides of the body, which is the standard cash-in-transit depots and high-volume jewelers typically require.",
+          "None of this is self-certified. UL is an independent third party, and it's the same standard insurers reference when setting coverage limits — which is exactly why the rating on the spec sheet matters more than the finish on the door."
+        ]
+      },
+      "fire-rated-vs-fireproof": {
+        "title": "Fire-Rated vs. \"Fireproof\": What Your Safe's Rating Really Protects",
+        "category": "Fire Protection",
+        "excerpt": "No safe is truly fireproof. Here's what a UL Class 350 rating actually guarantees — and how to match it to your real fire-department response time.",
+        "body": [
+          "\"Fireproof\" isn't a real engineering term, and no reputable manufacturer should use it without a footnote. The correct term is fire-resistant or fire-rated, and the difference isn't semantic — it describes exactly what the rating promises and what it doesn't.",
+          "A UL Class 350 rating means the interior of the safe stayed below 350°F — the temperature at which paper begins to char — for a documented period, typically one hour, while the surrounding fire reached temperatures up to 1,700°F. It's a thermal insulation guarantee for a fixed duration, not an indefinite one.",
+          "That duration is the number that actually matters when you're choosing a safe. If your building is in an area with a 10-minute average fire-department response time, a 1-hour rating gives you enormous margin. If you're protecting server backups, film, or anything with a lower char/damage threshold than paper, you need to check the specific interior temperature the manufacturer tested to, not just assume \"fireproof\" covers it.",
+          "It's also worth knowing that fire ratings and burglary ratings are tested completely independently. A safe with an excellent forced-entry rating says nothing about its fire performance, and vice versa — confirm both are documented if you need both, rather than assuming one implies the other."
+        ]
+      },
+      "choosing-the-right-safe-size": {
+        "title": "How to Choose the Right Safe Size for Your Business",
+        "category": "Buying Guide",
+        "excerpt": "Buying too small means outgrowing it in a year; too large wastes floor space and budget. Here's how to size a safe against what you actually need to store.",
+        "body": [
+          "Sizing a safe by outside dimensions is the most common mistake we see — a model's outside footprint tells you whether it fits in your space, but it's the inside dimensions that determine whether your actual contents fit, and the two numbers can differ by several inches on every axis once you account for wall and door thickness.",
+          "Start from what you're storing, not from a size you've seen before. Measure the tallest document box, the widest ledger, the longest firearm case — whatever the largest single item is — and add a margin for the fact that a shelf, a cash tray, or a second item will usually share the space.",
+          "Then work backward from your floor. Check the per-square-foot load rating of the level the safe sits on, especially above ground floor, since a loaded TL-30 unit can weigh well over a thousand pounds. A safe that's structurally wrong for the floor it sits on is a problem no rating solves.",
+          "It's also worth sizing one tier up from your current needs rather than an exact fit, since cash, inventory, or documents tend to grow and a safe is not a purchase most businesses repeat every year. That said, there's a real cost to over-buying — a six-figure vault for a petty-cash drawer just moves the inefficiency from your shelf to your floor plan.",
+          "If you're working through this for a specific Torvault line, the size finder on each product page lets you enter what needs to fit and how much room you have, and it'll filter the lineup down to the models that actually work — and recommend the smallest one that does."
+        ]
+      },
+      "anchoring-and-installation-basics": {
+        "title": "Where to Install Your Safe: Anchoring, Placement, and Floor Load",
+        "category": "Installation",
+        "excerpt": "A safe that isn't anchored can be removed and attacked somewhere else entirely. Here's what dealers check before a unit ever gets bolted down.",
+        "body": [
+          "A UL rating describes how a safe resists attack while it stays in place. It says nothing about what happens if an attacker simply removes the whole unit and works on it somewhere quiet — which is why anchoring isn't an optional accessory, it's part of the security model.",
+          "Most Torvault lines ship with pre-drilled anchoring holes specifically for this reason, meant to be bolted into a concrete floor rather than wood subfloor or a mounting pad. Concrete is the baseline most insurers and dealers check for, because it resists the safe being pried free along with the anchors.",
+          "Placement matters almost as much as anchoring. A safe visible from a storefront window advertises what's behind the door; one blocked by inventory or positioned away from a rear exit removes both the temptation and the easy extraction route. Weight is a factor here too — know your floor's load rating before deciding where a safe this heavy sits, particularly on any level above grade.",
+          "Finally, think about access during installation, not just after. A safe that clears the doorway but not the hallway turn is a surprisingly common and expensive mistake — confirm clearances for the full delivery path, not just the final resting spot, before a unit ships."
+        ]
+      },
+      "why-torvault-sells-through-dealers": {
+        "title": "Why Torvault Sells Through Dealers Only — And Why That's Better for You",
+        "category": "Our Approach",
+        "excerpt": "No direct-to-consumer listings, no competing with the people who install and service your safe. Here's the thinking behind Torvault's dealer-first model.",
+        "body": [
+          "Torvault doesn't sell direct to consumers, and that's a deliberate choice rather than a limitation of a smaller brand. Every unit moves through an authorized Canadian dealer — the same people who will deliver, install, anchor, and service it for the life of the safe.",
+          "The alternative is common in this industry: a manufacturer sells online at retail pricing while also supplying the same dealers who are expected to compete with that listing. It undercuts the independent dealer network on price while leaving them responsible for the service relationship, which is a bad deal for everyone except the manufacturer.",
+          "Selling wholesale-only with territory protection means a dealer who takes on Torvault isn't competing against their own supplier. It also means the person selling you a Torvault safe has actually handled one, can speak to installation and anchoring specifics for your space, and has a direct line back to the manufacturer if something needs attention after the sale.",
+          "This model is backed by Security Lock & Safe Inc.'s nearly four decades running Toronto Safes — so the dealer program isn't a new idea being tested for the first time, it's the same service relationship the team has run in the GTA since 1987, extended to independent dealers across the rest of Canada."
+        ]
+      },
+      "what-to-expect-at-delivery": {
+        "title": "What to Expect When Your Torvault Safe Is Delivered",
+        "category": "Shipping & Installation",
+        "excerpt": "Delivery day for a several-hundred-pound safe looks different from a standard parcel drop. Here's what your dealer handles, and what to confirm before the truck arrives.",
+        "body": [
+          "A Torvault safe doesn't arrive the way a parcel does. Every unit ships to your authorized dealer first, not directly to your door — the dealer coordinates delivery, confirms the final placement with you, and handles the install, so the first time you see the safe it's already positioned and ready to anchor.",
+          "Before a delivery date is scheduled, your dealer will walk through the access path with you: doorway widths, hallway turns, stairs, and elevator dimensions if applicable. This matters more than it sounds — a safe that clears the front door but not a tight hallway turn is one of the most common and expensive delivery surprises, and it's entirely avoidable by confirming clearances against the model's outside dimensions ahead of time.",
+          "Larger units — particularly TL-30 models and anything in the 1,000+ lb range — often require professional riggers or specialized equipment to move safely. Your dealer arranges this as part of the delivery, so you're not left managing equipment rental or liability on your own.",
+          "Once the safe is in its final position, installation includes anchoring it to the floor through the pre-drilled mounting holes built into the body — not an optional add-on, but part of a correctly completed install. Your dealer will confirm the floor can support the unit's weight before anchoring, especially on any level above grade.",
+          "Because Torvault sells wholesale through dealers rather than listing shipping costs online, delivery and installation pricing is quoted alongside the unit itself — ask your dealer to include it up front so there are no surprises between quote and delivery day."
+        ]
+      }
+    },
+    "meta": {
+      "title": "The Vault | Torvault Safe Company Blog",
+      "description": "Guides on UL security ratings, fire protection, sizing, and installation — written by the team behind Torvault's dealer-first line of high-security safes."
+    },
+    "hero": {
+      "crumb": "Blog",
+      "eyebrow": "The Vault",
+      "title": "Guides from the Torvault team.",
+      "body": "Security ratings, fire protection, sizing, and installation — written by the same team that has sold, serviced, and installed safes across the GTA since 1987."
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About Torvault | Backed by 39 Years of Security Experience",
+      "description": "Torvault is a high-security safe manufacturing brand from Security Lock & Safe Inc., operators of Toronto Safes and GTA safe experts since 1987."
+    },
+    "hero": {
+      "crumb": "About",
+      "eyebrow": "About Torvault",
+      "title": "Toughest brand, backed by decades of experience.",
+      "body": "Torvault is a high-security safe brand built by the team behind Security Lock & Safe Inc., a GTA safe and vault door provider since 1987."
+    },
+    "story": {
+      "eyebrow": "Our Story",
+      "heading": "Why we built Torvault.",
+      "p1": "Built on decades of experience in physical security, Torvault was created to raise the standard for high-security protection.",
+      "p2": "Our foundation goes back to 1987 through Security Lock & Safe Inc., where decades of hands-on experience protecting businesses, valuables, and critical assets shaped our approach.",
+      "p3": "Torvault carries that legacy forward into a new generation of high-security safes, combining robust construction, advanced locking systems, and thoughtful engineering.",
+      "p4": "We believe security should never be compromised, and every Torvault safe is designed around that principle."
+    },
+    "timeline": {
+      "eyebrow": "Timeline",
+      "heading": "From a Concord locksmith counter to a national line.",
+      "item1Year": "1987",
+      "item1Title": "Security Lock & Safe Inc. founded",
+      "item1Body": "Established in Concord, Ontario, offering safe sales, service, and commercial locksmithing to the Greater Toronto Area.",
+      "item2Year": "1987–2025",
+      "item2Title": "Toronto Safes grows into a trusted regional name",
+      "item2Body": "Nearly four decades supplying and installing safes and vault doors for residential, retail, industrial, and institutional clients — including government, hospital, and law enforcement accounts — plus emergency lockout and locksmithing services across the GTA.",
+      "item3Year": "2026",
+      "item3Title": "Torvault launches",
+      "item3Body": "The same team enters manufacturing with a dealer-first, UL-tested line built for independent Canadian safe dealers — not for direct-to-consumer retail."
+    },
+    "guides": {
+      "eyebrow": "The Vault",
+      "heading": "Guides from the Torvault team.",
+      "viewAll": "View All Posts →"
+    },
+    "callout": {
+      "strong": "Backed by Security Lock & Safe Inc.",
+      "body": "— based in Concord, Ontario, and operating as Toronto Safes since 1987, serving residential, commercial, industrial, and institutional clients across the GTA with safe sales, delivery, installation, vault doors, commercial locksmithing, and emergency lockout service.",
+      "link": "Visit Toronto Safes →"
+    },
+    "nextStep": {
+      "eyebrow": "Next Step",
+      "heading": "See how the safes are made.",
+      "manufacturingCta": "Manufacturing Process",
+      "dealerCta": "Become a Dealer"
+    }
+  },
+  "manufacturing": {
+    "meta": {
+      "title": "Manufacturing | How Torvault Safes Are Built — Torvault",
+      "description": "From steel forming to compliance testing: how Torvault engineers and manufactures UL-rated fire and burglary safes for the Canadian market."
+    },
+    "hero": {
+      "crumb": "Manufacturing",
+      "eyebrow": "Manufacturing",
+      "title": "Designed for Canada. Built to reach it.",
+      "body": "Torvault safes are engineered to Canadian security and fire-testing conventions, then manufactured at scale in Vietnam — giving Canadian dealers a certified alternative at a materially different price point than domestic-only production."
+    },
+    "commitments": {
+      "eyebrow": "Quality Commitments",
+      "heading": "What we won't compromise on.",
+      "item1Title": "UL Methodology First",
+      "item1Body": "Ratings are engineered targets from day one, not retrofitted claims after production.",
+      "item2Title": "Documented QA at Every Stage",
+      "item2Body": "Steel gauge, weld integrity, hardplate placement, and lock function are checked before a unit moves to the next stage.",
+      "item3Title": "Engineered for Canadian Climate",
+      "item3Body": "Finish and hardware are specified for the humidity and temperature range Canadian dealers actually install into.",
+      "item4Title": "39 Years of Field Feedback",
+      "item4Body": "Built by the same team that services and installs safes daily — not a factory guessing what dealers need."
+    },
+    "callout": {
+      "strong": "Direct import, no middle-market markup.",
+      "body": "Torvault manufactures at scale in Vietnam and imports directly to Canada — the same route that lets us price at wholesale for dealers without compromising on UL testing methodology or steel specification."
+    },
+    "nextStep": {
+      "eyebrow": "Next Step",
+      "heading": "See what each rating actually resists.",
+      "certifiedCta": "Certified Standard",
+      "productsCta": "View Products"
+    }
+  },
+  "certifiedStandard": {
+    "meta": {
+      "title": "Certified Standard | UL Fire & Burglary Ratings Explained — Torvault",
+      "description": "What TL-15, TL-30, and factory fire ratings actually mean — testing methodology, tools used, net working time, and why insurers rely on them."
+    },
+    "hero": {
+      "crumb": "Certified Standard",
+      "eyebrow": "Certified Standard",
+      "title": "Every rating, explained.",
+      "body": "UL ratings aren't marketing — they're independently tested with real tools and a stopwatch. Here's what each classification on a Torvault spec plate means."
+    },
+    "ulTesting": {
+      "eyebrow": "How UL Testing Works",
+      "heading": "Net working time, not wall-clock time.",
+      "bodyPre": "Underwriters Laboratories (UL) certifies safes by having trained technicians — effectively professional safecrackers — attack a production unit with a defined kit of tools. The result is measured in",
+      "bodyStrong": "net working time",
+      "bodyPost": ": the clock only runs while a tool is actively working the safe, and stops the instant it's removed. A safe doesn't pass by surviving an hour in a workshop — it passes by resisting a fixed amount of continuous, focused attack."
+    },
+    "terms": {
+      "entryLabel": "Medium Level",
+      "entryTitle": "Factory Fire Tested",
+      "entryBody": "Torvault's Fire & Burglary line's baseline burglary resistance, verified in-house against common mechanical tools — not a UL-certified classification like TL‑15 or TL‑30.",
+      "entryLi1": "5 minutes net working time",
+      "entryLi2": "Tested on all sides, not just the door",
+      "entryLi3": "Common mechanical hand tools only",
+      "entryLi4": "Combination or keypad lock",
+      "tl15Label": "High Security",
+      "tl15Title": "UL TL‑15",
+      "tl15Body": "Tool-resistant, 15-minute rating — the standard behind most Canadian bank branches and pharmacy safes.",
+      "tl15Li1": "15 minutes net working time, door only",
+      "tl15Li2": "Hand tools, drills, punches, hammers",
+      "tl15Li3": "Pressure-applying devices permitted",
+      "tl15Li4": "Up to 200 lbs / freestanding not required",
+      "tl30Label": "Maximum Security",
+      "tl30Title": "UL TL‑30",
+      "tl30Body": "The rating behind Torvault's flagship line — same tool kit as TL‑15, plus power tools, on all six sides.",
+      "tl30Li1": "30 minutes net working time",
+      "tl30Li2": "Tested on the body, not just the door",
+      "tl30Li3": "Adds abrasive cutting wheels & power saws",
+      "tl30Li4": "High-speed carbide drills, cutting torches"
+    },
+    "fireTesting": {
+      "eyebrow": "Fire Endurance Testing",
+      "heading": "What survives a 1,700°F furnace.",
+      "body": "Fire endurance testing is the standard methodology for record and data protection equipment. A locked safe is placed inside an industrial furnace that follows a controlled time-temperature curve reaching up to 1,700°F, while sensors continuously log the internal temperature. The safe fails the instant the interior exceeds its class threshold — anywhere inside the chamber.",
+      "class350Title": "Class 350",
+      "class350Body": "Interior stays below 350°F — the temperature at which paper begins to char. The standard for document and cash protection.",
+      "class150Title": "Class 150",
+      "class150Body": "Interior stays below 150°F — required for microfilm and other heat-sensitive media.",
+      "class125Title": "Class 125",
+      "class125Body": "Interior stays below 125°F — the tightest tolerance, for digital media, hard drives, and backup tape.",
+      "durationTitle": "Duration (\"–Hr\")",
+      "durationBodyPre": "Paired with the class, e.g.",
+      "durationBodyStrong": "1–Hr / 350°F",
+      "durationBodyPost": "— how long the safe holds its class rating inside the furnace."
+    },
+    "table": {
+      "eyebrow": "Side by Side",
+      "heading": "Every product line, one table.",
+      "colProductLine": "Product Line",
+      "colRating": "Rating",
+      "colNetWorkingTime": "Net Working Time",
+      "colToolsResisted": "Tools Resisted",
+      "colFireEndurance": "Fire Endurance",
+      "colSteelBody": "Steel Body",
+      "colTypicalUse": "Typical Use",
+      "fireBurglaryRow": "Fire & Burglary",
+      "fireBurglaryTools": "Common hand tools",
+      "fireBurglaryUse": "Home & retail offices",
+      "tl15Tools": "+ Drills, punches, hammers",
+      "tl15Use": "Bank branches, pharmacies",
+      "tl30Tools": "+ Cutting wheels, saws, torches",
+      "tl30Use": "CIT depots, jewelers"
+    },
+    "insuranceCallout": {
+      "strong": "Why it matters for insurance:",
+      "body": "Most commercial property and cash-in-transit policies in Canada set coverage limits directly against a safe's UL rating — a policy might cap cash coverage at $2,500 in an unrated container versus $50,000+ behind a UL TL‑30 body. Before specifying a safe for a client, confirm the rating their insurer actually requires, not just what fits the budget."
+    },
+    "nextStep": {
+      "eyebrow": "Next Step",
+      "heading": "See the rating on the safe.",
+      "productsCta": "View Products",
+      "faqCta": "Read the FAQ"
+    }
+  },
+  "faqPage": {
+    "meta": {
+      "title": "FAQ | Torvault Safe Company",
+      "description": "Answers on UL safe ratings, fire vs. burglary protection, Torvault's dealer-only model, lead times, and how to become an authorized dealer."
+    },
+    "hero": {
+      "crumb": "FAQ",
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions.",
+      "bodyPre": "Ratings, sourcing, ordering, and how the dealer program works — if your question isn't here, email"
+    },
+    "groupGeneral": "General",
+    "groupRatings": "Ratings & Certification",
+    "groupOrdering": "Ordering & Dealers",
+    "general": {
+      "q1": "Is Torvault a currently certified, shipping product line?",
+      "a1": "Torvault is a new brand launching in 2026. Specifications shown across this site reflect our engineering targets and are illustrative pending final UL certification and production — we're upfront about that rather than implying certifications we don't yet hold. Confirmed dealers receive current certification status as part of onboarding.",
+      "q2": "How is Torvault different from Toronto Safes?",
+      "a2": "Toronto Safes is a retail provider, selling directly to homes and businesses across the GTA since 1987. Torvault is a new manufacturing brand from the same parent company, Security Lock & Safe Inc. — built to supply independent safe dealers across Canada at wholesale, not to sell direct to consumers. See the full story on our {aboutLink}.",
+      "a2LinkText": "About page",
+      "q3": "Is a “fireproof” safe actually fireproof?",
+      "a3Pre": "No safe is truly fireproof — the correct term is",
+      "a3Em1": "fire-resistant",
+      "a3Mid": "or",
+      "a3Em2": "fire-rated",
+      "a3Post": ". A rating like “1–Hr / 350°F” means the interior stayed below 350°F for one hour inside a furnace that can reach 1,700°F outside the safe — not that the contents are immune to fire indefinitely. Match the duration rating to your realistic fire-department response time."
+    },
+    "ratings": {
+      "q1": "What does a UL security rating actually mean?",
+      "a1": "UL (Underwriters Laboratories) independently tests safes against real tools — prybars, drills, saws, cutting torches — for a set net working time (the clock only runs while a tool is actively working the safe). A TL‑15 safe resists a professional attack with common tools for 15 minutes; TL‑30 for 30, on every side. It's the same standard insurers use to set coverage limits. Full breakdown on our {certifiedStandardLink}.",
+      "a1LinkText": "Certified Standard page",
+      "q2": "Does a higher burglary rating mean better fire protection?",
+      "a2": "No — burglary ratings (Fire & Burglary, TL‑15, TL‑30) and fire ratings (measured in hours and maximum interior temperature) are tested completely independently. A high burglary rating says nothing about fire performance and vice versa. If you need both, confirm the safe carries a documented rating for each, not just one."
+    },
+    "ordering": {
+      "q1": "Do you sell direct to consumers?",
+      "a1": "No. Torvault sells exclusively through authorized Canadian dealers. If you're a homeowner or business looking to buy a safe directly, contact our sister company {torontoSafesLink} or ask us for a dealer referral in your region.",
+      "q2": "What are the lead times for Canadian delivery?",
+      "a2": "Torvault is in its first territory intake round for 2026. Confirmed dealers receive lead-time and inventory commitments as part of onboarding — request the dealer package on our {dealerProgramLink} for current timelines.",
+      "a2LinkText": "Dealer Program page",
+      "q3": "How do I become an authorized Torvault dealer?",
+      "a3": "Email {email} with your business name and region, or see the full application process on our {dealerProgramLink}. We'll send certified specification sheets, wholesale pricing, and territory availability.",
+      "q4": "Is territory exclusive to one dealer?",
+      "a4": "Territory protection is part of the dealer program — details and current availability by region are provided during onboarding, since Torvault is still in its first intake round. Reach out early to secure your area."
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contact Support | Torvault Safe Company",
+      "description": "Reach Torvault for general inquiries, dealer-program questions, or product quotes — or find an authorized dealer for pricing and installation in your region."
+    },
+    "hero": {
+      "crumb": "Contact",
+      "eyebrow": "Contact Support",
+      "title": "Get in touch.",
+      "body": "Torvault sells exclusively through authorized Canadian dealers, so we've laid out exactly who to reach below — whether you're a dealer, a business researching a purchase, or looking for help with a safe you already own."
+    },
+    "cards": {
+      "generalTitle": "General Inquiries",
+      "generalBody": "Questions about Torvault, our product lines, or anything not covered in the Help Center.",
+      "dealerTitle": "Become a Dealer",
+      "dealerBody": "Apply to carry Torvault at wholesale with territory protection, or ask about the dealer program.",
+      "dealerLink": "Dealer Program details →",
+      "quoteTitle": "Pricing & Quote Requests",
+      "quoteBody": "Torvault doesn't publish pricing or sell direct — every quote runs through an authorized dealer who can speak to delivery and installation for your space.",
+      "quoteLink": "Find a Dealer near you →",
+      "existingTitle": "Already a Toronto Safes Customer?",
+      "existingBody": "Torvault is manufactured by the team behind Toronto Safes, Security Lock & Safe Inc.'s retail arm in the GTA since 1987. Existing sales and service inquiries go directly to Toronto Safes.",
+      "existingLink": "torontosafes.ca →"
+    },
+    "formSection": {
+      "eyebrow": "Contact Us",
+      "heading": "Leave your message and we'll get back to you shortly."
+    },
+    "callout": {
+      "strong": "Looking for answers first?",
+      "bodyPre": "Most questions on ratings, sizing, and installation are already covered in our",
+      "helpCenter": "Help Center",
+      "and": "and"
+    }
+  },
+  "termsPage": {
+    "meta": {
+      "title": "Terms & Conditions | Torvault Safe Company",
+      "description": "Terms and conditions for using torvaultsafe.com and for email and SMS marketing communications from Torvault Safe Company."
+    },
+    "hero": {
+      "crumb": "Terms & Conditions",
+      "eyebrow": "Legal",
+      "title": "Terms & Conditions.",
+      "bodyPre": "Last updated October 2026. Questions? Email"
+    },
+    "s1Title": "1. Overview",
+    "s1Body": "These terms govern your use of torvaultsafe.com and any email or SMS communications you opt into from Torvault Safe Company (“Torvault,” “we,” “us”), a brand of Security Lock & Safe Inc. By submitting the sign-up form on this site, you agree to the terms below.",
+    "s2Title": "2. Site content",
+    "s2BodyPre": "Specifications, images, and pricing on this site are provided for general information and are subject to change without notice. Torvault sells exclusively through authorized Canadian dealers; nothing on this site constitutes a direct offer of sale to consumers. See our",
+    "s2DealerProgram": "Dealer Program",
+    "s2And": "and",
+    "s2FindDealer": "Find a Dealer",
+    "s2Post": "pages for current dealer information.",
+    "s3Title": "3. Email marketing consent",
+    "s3Body": "If you provide your email address, you consent to receive marketing messages from Torvault, including product updates, dealer program news, and promotions. You may withdraw consent at any time using the unsubscribe link included in every email, or by emailing",
+    "s4Title": "4. SMS marketing consent",
+    "s4BodyPre": "If you provide your phone number, you agree to receive recurring marketing text messages from Torvault Safe Company at the number provided, sent using an automated system. Consent to receive texts is not a condition of any purchase. Message frequency varies. Message and data rates may apply. Reply",
+    "s4Help": "HELP",
+    "s4ForHelpOr": "for help or",
+    "s4Stop": "STOP",
+    "s4Post": "to cancel at any time; after you text STOP, we will send a final confirming message and send you no further messages.",
+    "s5Title": "5. Privacy",
+    "s5Body": "We use the contact information you provide only to send the communications you've opted into and to respond to your inquiries. We do not sell your personal information to third parties. You may request access to, correction of, or deletion of your information at any time by emailing",
+    "s6Title": "6. Changes to these terms",
+    "s6Body": "We may update these terms from time to time; the “last updated” date above reflects the most recent revision. Continued use of this site or continued opt-in to our communications after a change constitutes acceptance of the updated terms.",
+    "s7Title": "7. Contact",
+    "s7BodyPre": "Security Lock & Safe Inc., operating as Torvault Safe Company. Email",
+    "s7Or": "or call"
+  },
+  "supportPage": {
+    "meta": {
+      "title": "Help Center | Torvault Safe Company",
+      "description": "Find answers on UL ratings, sizing, shipping and installation, or get in touch with Torvault support and our authorized dealer network."
+    },
+    "hero": {
+      "crumb": "Help Center",
+      "eyebrow": "Help Center",
+      "title": "How can we help?",
+      "bodyPre": "Ratings, sizing, shipping, and installation — find it below, or",
+      "contactLink": "contact support",
+      "bodyPost": "directly."
+    },
+    "topics": {
+      "faqTitle": "Frequently Asked Questions",
+      "faqBody": "Answers on UL ratings, the dealer-only model, fire protection, and lead times.",
+      "sizeTitle": "Size & Capacity Guides",
+      "sizeBody": "How to size a safe against what you actually need to store — plus our interactive size finder.",
+      "shippingTitle": "Shipping & Installation",
+      "shippingBody": "What to expect on delivery day, access-path planning, and how anchoring works.",
+      "vaultTitle": "The Vault — Guides & Articles",
+      "vaultBody": "The full library of Torvault guides on ratings, fire protection, and buying the right safe.",
+      "dealerTitle": "Find a Dealer",
+      "dealerBody": "Locate an authorized Torvault dealer for pricing, delivery, and installation in your region.",
+      "contactTitle": "Contact Support",
+      "contactBody": "General inquiries, dealer-program questions, and how to reach the right team."
+    },
+    "stillNeedHelp": {
+      "eyebrow": "Still Need Help?",
+      "heading": "Talk to a person, not a ticket queue.",
+      "body": "Torvault is backed by Security Lock & Safe Inc. — the same team that has answered the phone for Toronto Safes customers since 1987.",
+      "cta": "Contact Support →"
+    }
+  },
+  "dealersPage": {
+    "meta": {
+      "title": "Become a Dealer | Torvault Safe Company",
+      "description": "Torvault is onboarding its first Canadian dealer territories — wholesale pricing, territory protection, and a UL-tested line with no direct-to-consumer competition."
+    },
+    "hero": {
+      "crumb": "Dealers",
+      "eyebrow": "Dealer Program",
+      "title": "Now onboarding Canadian dealers.",
+      "body": "Torvault is opening its first dealer territories across Canada — wholesale pricing, territory protection, and a UL-tested line with zero direct-to-consumer competition from us."
+    },
+    "lookingToBuyPre": "Looking to buy a Torvault safe, not sell one?",
+    "lookingToBuyLink": "Find an authorized dealer near you →",
+    "benefits": {
+      "eyebrow": "Program Benefits",
+      "heading": "Built to protect your margin.",
+      "body": "Torvault exists because independent dealers deserve a certified supplier that doesn't compete with them at retail. Every part of the program is built around that.",
+      "item1Title": "Territory Protection",
+      "item1Body": "Onboarded dealers get defined regional territory — details confirmed during application review.",
+      "item2Title": "Wholesale Pricing",
+      "item2Body": "Direct-import pricing from our Vietnam production facility — no middle-market distributor markup.",
+      "item3Title": "Zero Direct-to-Consumer Competition",
+      "item3Body": "Torvault sells exclusively through dealers. We never list pricing publicly or sell direct.",
+      "item4Title": "Certified Spec Sheets",
+      "item4Body": "UL-methodology documentation for every product line, ready to hand to a client or insurer.",
+      "item5Title": "39 Years of Industry Support",
+      "item5Body": "Backed by Security Lock & Safe Inc.'s decades of sales, service, and delivery experience.",
+      "item6Title": "Early Territory Intake",
+      "item6Body": "First-round dealers get priority on lead time and inventory as the line ramps to full production."
+    },
+    "steps": {
+      "eyebrow": "How It Works",
+      "heading": "Four steps to onboarding.",
+      "step1Title": "Inquire",
+      "step1BodyPre": "Email",
+      "step1BodyPost": "or submit the form below with your business name and region.",
+      "step2Title": "Territory & Fit Review",
+      "step2Body": "We confirm territory availability and walk through which product lines fit your typical client base.",
+      "step3Title": "Dealer Agreement",
+      "step3Body": "Wholesale pricing, territory terms, and lead-time commitments are set out in your dealer agreement.",
+      "step4Title": "Onboarding & First Order",
+      "step4Body": "You receive certified spec sheets, marketing assets, and your first order timeline."
+    },
+    "snapshot": {
+      "eyebrow": "Launch Snapshot",
+      "heading": "First intake round, open now.",
+      "body": "Territory and specification sheets are available now for the first round of Canadian dealer onboarding.",
+      "cta": "Request Dealer Package",
+      "stat1Label": "Product lines at launch",
+      "stat2Label": "Top burglary rating",
+      "stat3Label": "Canadian dealer focus",
+      "stat4Label": "Territory intake round"
+    },
+    "cta": {
+      "eyebrow": "Get In Touch",
+      "heading": "Tell us about your business.",
+      "body": "Send your business name, region, and a note on your current product line — we'll follow up with territory availability and a spec package.",
+      "formNotePre": "By submitting, you agree to be contacted by Torvault Safe Company regarding dealer onboarding. See our",
+      "formNoteLink": "FAQ",
+      "formNotePost": "for more on the application process."
+    }
+  },
+  "productsCommon": {
+    "home": "Home",
+    "notSureEyebrow": "Not Sure Which Line Fits?",
+    "notSureHeading": "Talk to a Torvault dealer specialist.",
+    "notSureBody": "Territory and specification sheets are available now for the first round of Canadian dealer onboarding.",
+    "requestDealerPackage": "Request Dealer Package"
+  },
+  "productsPage": {
+    "hero": {
+      "crumb": "Products",
+      "eyebrow": "Products",
+      "title": "Three lines. One documented standard.",
+      "body": "Torvault launches in Canada with three purpose-built product lines, each engineered around a specific threat — fire, forced entry, or both — and verified against UL testing methodology rather than an in-house marketing tier."
+    },
+    "sideBySide": {
+      "eyebrow": "Side by Side",
+      "heading": "Compare the product lines.",
+      "bodyPre": "Every rating below is a documented UL classification — not a marketing tier. Full testing methodology is broken down on the",
+      "certifiedStandardLinkText": "Certified Standard",
+      "bodyPost": "page."
+    },
+    "table": {
+      "colProductLine": "Product Line",
+      "colRating": "Rating",
+      "colNetWorkingTime": "Net Working Time",
+      "colFireEndurance": "Fire Endurance",
+      "colSteelBody": "Steel Body",
+      "colDoor": "Door",
+      "colRelocking": "Relocking",
+      "colTypicalUse": "Typical Use",
+      "row1Rating": "Factory Fire Tested",
+      "row1Net": "5 min, all sides",
+      "row1Steel": "12 ga steel",
+      "row1Door": "Single-wall, dial lock",
+      "row1Use": "Home & retail offices",
+      "row2Rating": "UL TL‑15",
+      "row2Net": "15 min, door only",
+      "row2Steel": "1″ solid steel",
+      "row2Door": "Composite hardplate",
+      "row2Relocking": "2‑way spring bolt",
+      "row2Use": "Bank branches, pharmacies",
+      "row3Rating": "UL TL‑30",
+      "row3Net": "30 min, six sides",
+      "row3Steel": "1.5″ solid steel",
+      "row3Door": "Composite plate, 6 sides",
+      "row3Relocking": "4‑way spring bolt",
+      "row3Use": "CIT depots, jewelers"
+    },
+    "viewProductFullSpecs": "View Product & Full Specs →",
+    "sizesLabel": "Sizes",
+    "viewProductDetailsAria": "View {label} product details",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Frequently asked questions.",
+    "meta": {
+      "title": "Safe Products | Fire & Burglary, TL-15, TL-30 — Torvault",
+      "description": "Compare Torvault's three safe product lines: Fire & Burglary (factory fire-tested), TL-15 High Security, and TL-30 High Security — specs, construction, and who each line is built for."
+    }
+  },
+  "productDetailPage": {
+    "overviewEyebrow": "Overview",
+    "overviewHeading": "Built to a documented standard.",
+    "keyFeaturesEyebrow": "Key Features",
+    "keyFeaturesHeading": "What comes standard.",
+    "fullLineupEyebrow": "Full Model Lineup",
+    "sizesBuiltToOrder": "{count} sizes, built to order.",
+    "sortDescription": "Sort by size or weight below, or request a quote on any model — every {label} unit ships in the dimensions listed.",
+    "modelsLabel": "models",
+    "lbsRangeLabel": "lbs range",
+    "exploreLineEyebrow": "Explore the Line",
+    "exploreLineHeading": "Compare other product types.",
+    "viewProduct": "View Product →",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Questions about the {label} line."
+  },
+  "findADealerPage": {
+    "meta": {
+      "title": "Find a Dealer | Torvault Safe Company",
+      "description": "Find an authorized Torvault safe dealer near you in Canada — showrooms, locksmith services, and delivery & installation."
+    },
+    "hero": {
+      "crumb": "Find a Dealer",
+      "eyebrow": "Where to Buy",
+      "title": "Find a Torvault dealer near you.",
+      "body": "Torvault sells exclusively through authorized dealers — never direct to consumers. Search below for a showroom, locksmith, or delivery partner in your area."
+    },
+    "notInArea": {
+      "eyebrow": "Not in Your Area Yet?",
+      "heading": "We're opening new territories now.",
+      "body": "Torvault is in its first round of Canadian dealer onboarding. If there's no authorized dealer near you yet, you can still get certified specification sheets and be notified the moment a dealer opens in your territory.",
+      "cta": "Explore the Dealer Program →"
+    },
+    "areYouRetailer": {
+      "eyebrow": "Are You a Retailer or Locksmith?",
+      "heading": "Carry a certified line, not a marketing tier.",
+      "body": "Independent dealers get wholesale pricing, territory protection, and zero direct-to-consumer competition from Torvault. Join the first intake round of Canadian dealers.",
+      "cta": "Apply to Become a Dealer →"
+    }
+  },
+  "dealerLocator": {
+    "searchPlaceholder": "Search by city, province, or postal code",
+    "searchAriaLabel": "Search for a Torvault dealer by location",
+    "useMyLocation": "Use My Location",
+    "locating": "Locating…",
+    "locationUnavailable": "Location services aren't available in this browser.",
+    "locationFailed": "We couldn't access your location. Try searching a city or postal code instead.",
+    "yourLocation": "Your location",
+    "clearSearch": "Clear search",
+    "emptyTitle": "No Torvault dealers match those filters yet.",
+    "emptyBody": "We're onboarding our first round of Canadian dealers right now — this list will grow as new territories open. If you're a retailer or locksmith interested in carrying Torvault, we'd like to hear from you.",
+    "emptyCta": "Apply to Become a Dealer",
+    "showroom": "Showroom",
+    "locksmithServices": "Locksmith Services",
+    "deliveryInstallation": "Delivery & Installation"
+  },
+  "buildStory": {
+    "ch1Eyebrow": "01 — Manufacturing",
+    "ch1Title": "Cut, formed, and welded.",
+    "ch1Body": "Every Torvault body starts as solid cold-rolled steel plate — cut, formed, and welded on our production line to the thickness specified for each line, from 12-gauge RSC bodies to 1.5″ solid TL‑30 construction.",
+    "ch2Eyebrow": "02 — Assembly",
+    "ch2Title": "Hardplate, bolts, and the wheel.",
+    "ch2Body": "Composite hardplate is bonded over the boltwork, then the relocking bolts, dial, and locking wheel are fitted and function-tested before the door is ever hung.",
+    "ch3Eyebrow": "03 — Opening",
+    "ch3Title": "Built to hold. Engineered to last.",
+    "ch3Body": "Every weld and every bolt is checked before a unit ships — and inspected again once it's hung, so the door opens exactly as specified.",
+    "ch3Cta": "See the Full Manufacturing Process"
+  },
+  "aboutStory": {
+    "ch1Eyebrow": "About Torvault",
+    "ch1Title": "Built on strength, driven by expertise.",
+    "ch1Body": "With experience dating back to 1987, we deliver high-security safes for homeowners, retailers, businesses, government agencies, institutions, law enforcement, and the military — every safe built for uncompromising quality and lasting peace of mind.",
+    "ch2Eyebrow": "01 — Our Purpose",
+    "ch2Title": "Strength. Experience. Confidence.",
+    "ch2Body": "Torvault was founded with a clear purpose: helping people protect what matters most. Backed by decades of industry expertise, we bring practical knowledge to a new generation of residential and commercial safes.",
+    "ch3Eyebrow": "02 — Who We Serve",
+    "ch3Title": "Protection for every setting.",
+    "ch3Body": "From personal valuables and important documents to cash, inventory, and sensitive materials — we serve homeowners, retailers, commercial and industrial businesses, government agencies, institutions, law enforcement, and military clients.",
+    "ch4Eyebrow": "03 — Our Expertise",
+    "ch4Title": "Experience behind every recommendation.",
+    "ch4Body": "Security ratings, fire protection, lock options, and everyday access all influence the right choice. Our team helps customers understand these differences so they can make informed decisions with confidence.",
+    "ch5Eyebrow": "04 — Beyond The Sale",
+    "ch5Title": "Support that outlasts the purchase.",
+    "ch5Body": "From product selection and installation planning to ongoing service, we're committed to helping customers get lasting value from their purchase — earning trust through knowledgeable people and reliable protection.",
+    "ch5Cta": "Read Our Full Story"
+  },
+  "manufacturingStory": {
+    "ch1Eyebrow": "01 — Design & Engineering",
+    "ch1Title": "Specified before a single unit is tooled.",
+    "ch1Body": "Body, door, and locking geometry are specified against UL 72 and UL TL testing methodology before a single unit is tooled — every product line is designed to a target rating, not adapted after the fact.",
+    "ch2Eyebrow": "02 — Steel Forming & Body Construction",
+    "ch2Title": "Cut, formed, and welded.",
+    "ch2Body": "Solid steel plate is cut, formed, and welded into the body and door blank at the thickness specified for each product line — from 12-gauge RSC bodies to 1.5″ solid TL‑30 construction.",
+    "ch3Eyebrow": "03 — Hardplate Lamination",
+    "ch3Title": "Bonded over the lock and boltwork.",
+    "ch3Body": "Composite hardplate is bonded over the lock and boltwork — and across all six sides on TL‑30 units — to defeat drilling and cutting attacks during UL-methodology testing.",
+    "ch4Eyebrow": "04 — Relocker & Locking System Assembly",
+    "ch4Title": "Fitted and function-tested.",
+    "ch4Body": "Spring-loaded relocking bolts, boltwork, and the electronic or mechanical locking mechanism are fitted and function-tested before the door is hung.",
+    "ch5Eyebrow": "05 — Compliance & Import Testing",
+    "ch5Title": "Verified against the rated standard.",
+    "ch5Body": "Each product line is verified against its rated standard — fire endurance, forced-entry resistance, and lock function — before Canadian distribution begins.",
+    "ch6Eyebrow": "06 — Import & Dealer Distribution",
+    "ch6Title": "Shipped sealed. Sold through dealers only.",
+    "ch6Body": "Finished units are imported directly to Canada and shipped to authorized dealer territories — no middle-market distributor step, and no direct-to-consumer sale."
+  },
+  "favorites": {
+    "favorites": "Favorites",
+    "viewFavorites": "View favorites",
+    "closeFavorites": "Close favorites",
+    "emptyState": "No favorites yet. Tap the heart on any product to save it here.",
+    "removeFromFavorites": "Remove {label} from favorites"
+  }
+}

@@ -89,7 +89,7 @@ export default function ProductBuyBox({
           </span>
           <span>
             <span className="t">UL-Documented Rating</span>
-            <span className="s">Independently tested, not a marketing tier</span>
+            <span className="s">Independently tested, Every rating is UL or EN verified</span>
           </span>
         </li>
         <li className="pdp-trust-item">

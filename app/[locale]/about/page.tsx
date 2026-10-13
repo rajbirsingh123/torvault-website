@@ -1,33 +1,48 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations, getLocale } from "next-intl/server";
+import { BreadcrumbJsonLd } from "@/components/SeoJsonLd";
+import { Link } from "@/i18n/navigation";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import AboutMediaScroll from "@/components/AboutMediaScroll";
-import { BLOG_POSTS, formatBlogDate } from "@/lib/blog";
+import { formatBlogDate } from "@/lib/blog";
+import { getAllBlogPosts } from "@/lib/blog-i18n";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "About Torvault | Backed by 39 Years of Security Experience",
-  description:
-    "Torvault is a high-security safe manufacturing brand from Security Lock & Safe Inc., operators of Toronto Safes and GTA safe experts since 1987.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    type: "website",
-    title: "About Torvault Safe Company",
-    description:
-      "A high-security safe manufacturing brand backed by 39 years of Canadian security industry experience.",
-    images: ["/safe-tl30.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/about",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/safe-tl30.jpg",
+  });
+}
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations("about");
+  const tBlog = await getTranslations("blog");
+  const tc = await getTranslations("productsCommon");
+  const locale = await getLocale();
+  const posts = getAllBlogPosts(tBlog).slice(0, 3);
+
   return (
     <main>
-      <PageHero crumb="About" eyebrow="About Torvault" title="Toughest brand, backed by decades of experience.">
-        Torvault is a high-security safe brand built by the team behind
-        Security Lock &amp; Safe Inc., a GTA safe and vault door provider
-        since 1987.
+      <BreadcrumbJsonLd
+        locale={locale as Locale}
+        homeLabel={tc("home")}
+        trail={[{ name: t("hero.eyebrow"), path: null }]}
+      />
+      <PageHero crumb={t("hero.crumb")} eyebrow={t("hero.eyebrow")} title={t("hero.title")}>
+        {t("hero.body")}
       </PageHero>
 
       <section>
@@ -37,29 +52,13 @@ export default function AboutPage() {
           </div>
           <div className="about-copy">
             <span className="eyebrow" style={{ color: "var(--brass-600)" }}>
-              Our Story
+              {t("story.eyebrow")}
             </span>
-            <h2>Why we built Torvault.</h2>
-            <p>
-              Built on decades of experience in physical security, Torvault
-              was created to raise the standard for high-security
-              protection.
-            </p>
-            <p>
-              Our foundation goes back to 1987 through Security Lock &amp;
-              Safe Inc., where decades of hands-on experience protecting
-              businesses, valuables, and critical assets shaped our
-              approach.
-            </p>
-            <p>
-              Torvault carries that legacy forward into a new generation of
-              high-security safes, combining robust construction, advanced
-              locking systems, and thoughtful engineering.
-            </p>
-            <p>
-              We believe security should never be compromised, and every
-              Torvault safe is designed around that principle.
-            </p>
+            <h2>{t("story.heading")}</h2>
+            <p>{t("story.p1")}</p>
+            <p>{t("story.p2")}</p>
+            <p>{t("story.p3")}</p>
+            <p>{t("story.p4")}</p>
           </div>
         </div>
       </section>
@@ -67,44 +66,29 @@ export default function AboutPage() {
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Timeline</span>
-            <h2>From a Concord locksmith counter to a national line.</h2>
+            <span className="eyebrow">{t("timeline.eyebrow")}</span>
+            <h2>{t("timeline.heading")}</h2>
           </Reveal>
           <div className="timeline">
             <div className="timeline-item">
-              <span className="timeline-year">1987</span>
+              <span className="timeline-year">{t("timeline.item1Year")}</span>
               <div>
-                <h3>Security Lock &amp; Safe Inc. founded</h3>
-                <p>
-                  Established in Concord, Ontario, offering safe sales,
-                  service, and commercial locksmithing to the Greater
-                  Toronto Area.
-                </p>
+                <h3>{t("timeline.item1Title")}</h3>
+                <p>{t("timeline.item1Body")}</p>
               </div>
             </div>
             <div className="timeline-item">
-              <span className="timeline-year">1987&#8211;2025</span>
+              <span className="timeline-year">{t("timeline.item2Year")}</span>
               <div>
-                <h3>Toronto Safes grows into a trusted regional name</h3>
-                <p>
-                  Nearly four decades supplying and installing safes and
-                  vault doors for residential, retail, industrial, and
-                  institutional clients &mdash; including government,
-                  hospital, and law enforcement accounts &mdash; plus
-                  emergency lockout and locksmithing services across the
-                  GTA.
-                </p>
+                <h3>{t("timeline.item2Title")}</h3>
+                <p>{t("timeline.item2Body")}</p>
               </div>
             </div>
             <div className="timeline-item">
-              <span className="timeline-year">2026</span>
+              <span className="timeline-year">{t("timeline.item3Year")}</span>
               <div>
-                <h3>Torvault launches</h3>
-                <p>
-                  The same team enters manufacturing with a dealer-first,
-                  UL-tested line built for independent Canadian safe dealers
-                  &mdash; not for direct-to-consumer retail.
-                </p>
+                <h3>{t("timeline.item3Title")}</h3>
+                <p>{t("timeline.item3Body")}</p>
               </div>
             </div>
           </div>
@@ -114,11 +98,11 @@ export default function AboutPage() {
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">The Vault</span>
-            <h2>Guides from the Torvault team.</h2>
+            <span className="eyebrow">{t("guides.eyebrow")}</span>
+            <h2>{t("guides.heading")}</h2>
           </Reveal>
           <div className="blog-grid">
-            {BLOG_POSTS.slice(0, 3).map((post, i) => (
+            {posts.map((post, i) => (
               <Reveal as="article" className="blog-card" delay={i * 80} key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="blog-card-link" aria-label={post.title}>
                   <span className="blog-card-media">
@@ -138,7 +122,7 @@ export default function AboutPage() {
                     <h2>{post.title}</h2>
                     <p>{post.excerpt}</p>
                     <span className="blog-card-cta" aria-hidden="true">
-                      Read the Guide &rarr;
+                      {tBlog("readTheGuide")}
                     </span>
                   </span>
                 </Link>
@@ -147,7 +131,7 @@ export default function AboutPage() {
           </div>
           <p style={{ textAlign: "center", marginTop: 36 }}>
             <Link className="cat-cta" href="/blog">
-              View All Posts &rarr;
+              {t("guides.viewAll")}
             </Link>
           </p>
         </div>
@@ -156,19 +140,14 @@ export default function AboutPage() {
       <section>
         <div className="wrap">
           <div className="callout" style={{ maxWidth: 820 }}>
-            <strong>Backed by Security Lock &amp; Safe Inc.</strong> &mdash;
-            based in Concord, Ontario, and operating as Toronto Safes since
-            1987, serving residential, commercial, industrial, and
-            institutional clients across the GTA with safe sales, delivery,
-            installation, vault doors, commercial locksmithing, and
-            emergency lockout service.{" "}
+            <strong>{t("callout.strong")}</strong> {t("callout.body")}{" "}
             <a
               href="https://torontosafes.ca/"
               target="_blank"
               rel="noopener"
               style={{ textDecoration: "underline" }}
             >
-              Visit Toronto Safes &rarr;
+              {t("callout.link")}
             </a>
           </div>
         </div>
@@ -181,9 +160,9 @@ export default function AboutPage() {
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Next Step
+              {t("nextStep.eyebrow")}
             </span>
-            <h2>See how the safes are made.</h2>
+            <h2>{t("nextStep.heading")}</h2>
           </Reveal>
           <div
             style={{
@@ -199,14 +178,14 @@ export default function AboutPage() {
               style={{ background: "var(--navy-950)", color: "#fff" }}
               href="/manufacturing"
             >
-              Manufacturing Process
+              {t("nextStep.manufacturingCta")}
             </Link>
             <Link
               className="btn"
               style={{ border: "1px solid var(--border)", color: "var(--text)" }}
               href="/dealers"
             >
-              Become a Dealer
+              {t("nextStep.dealerCta")}
             </Link>
           </div>
         </div>

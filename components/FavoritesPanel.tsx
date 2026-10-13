@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { useFavorites, removeFavorite } from "@/lib/favorites";
-import { SERIES_CONTENT, type SafeSeries } from "@/lib/safes";
+import { SERIES_STRUCTURAL, SERIES_LIST, type SafeSeries } from "@/lib/safes";
+import { getSeriesContent } from "@/lib/safes-i18n";
 
 function HeartIcon({ filled }: { filled: boolean }) {
   return (
@@ -14,6 +16,8 @@ function HeartIcon({ filled }: { filled: boolean }) {
 }
 
 export default function FavoritesPanel() {
+  const t = useTranslations("favorites");
+  const tp = useTranslations("products");
   const [open, setOpen] = useState(false);
   const favorites = useFavorites();
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -29,30 +33,30 @@ export default function FavoritesPanel() {
   }, [open]);
 
   const items = favorites
-    .map((slug) => SERIES_CONTENT[slug as SafeSeries])
-    .filter((content): content is (typeof SERIES_CONTENT)[SafeSeries] => Boolean(content));
+    .filter((slug): slug is SafeSeries => SERIES_LIST.includes(slug as SafeSeries) && Boolean(SERIES_STRUCTURAL[slug as SafeSeries]))
+    .map((slug) => getSeriesContent(tp, slug as SafeSeries));
 
   return (
     <>
       <button
         type="button"
         className="nav-favorites-trigger"
-        aria-label={`View favorites${items.length ? ` (${items.length})` : ""}`}
+        aria-label={items.length ? `${t("viewFavorites")} (${items.length})` : t("viewFavorites")}
         onClick={() => setOpen(true)}
       >
         <HeartIcon filled={items.length > 0} />
         {items.length > 0 && <span className="nav-favorites-count">{items.length}</span>}
       </button>
       {open && (
-        <div className="search-overlay" role="dialog" aria-modal="true" aria-label="Favorites">
+        <div className="search-overlay" role="dialog" aria-modal="true" aria-label={t("favorites")}>
           <div className="search-backdrop" onClick={() => setOpen(false)} />
           <div className="search-panel favorites-panel">
             <div className="search-field">
               <HeartIcon filled={false} />
               <span className="favorites-panel-title">
-                Favorites{items.length > 0 ? ` (${items.length})` : ""}
+                {t("favorites")}{items.length > 0 ? ` (${items.length})` : ""}
               </span>
-              <button type="button" className="search-close" aria-label="Close favorites" onClick={() => setOpen(false)} ref={closeRef}>
+              <button type="button" className="search-close" aria-label={t("closeFavorites")} onClick={() => setOpen(false)} ref={closeRef}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M6 6l12 12M18 6L6 18" />
                 </svg>
@@ -60,7 +64,7 @@ export default function FavoritesPanel() {
             </div>
             {items.length === 0 ? (
               <p className="product-search-empty">
-                No favorites yet. Tap the heart on any product to save it here.
+                {t("emptyState")}
               </p>
             ) : (
               <ul className="search-results favorites-list">
@@ -73,7 +77,7 @@ export default function FavoritesPanel() {
                     <button
                       type="button"
                       className="favorites-remove"
-                      aria-label={`Remove ${content.label} from favorites`}
+                      aria-label={t("removeFromFavorites", { label: content.label })}
                       onClick={() => removeFavorite(content.slug)}
                     >
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

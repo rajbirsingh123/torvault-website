@@ -1,5 +1,16 @@
-import { SAFE_MODELS, SERIES_CONTENT, SERIES_LIST } from "@/lib/safes";
-import { BLOG_POSTS } from "@/lib/blog";
+import { SAFE_MODELS, SERIES_STRUCTURAL, SERIES_LIST } from "@/lib/safes";
+import { BLOG_POSTS_STRUCTURAL } from "@/lib/blog";
+import enMessages from "@/messages/en.json";
+
+// Site search runs off a module-level, English-only index (built once at
+// import time, not per-request), so it can't read the active locale's
+// translations the way components do — it pulls product/blog copy straight
+// from the English source messages rather than through next-intl.
+const PRODUCTS_EN = enMessages.products;
+const BLOG_EN = enMessages.blog.posts as Record<
+  string,
+  { title: string; category: string; excerpt: string }
+>;
 
 export type SearchItem = {
   title: string;
@@ -74,33 +85,38 @@ const PAGES: SearchItem[] = [
 type ModelSearchItem = SearchItem & { seriesLabel: string; seriesHref: string };
 
 const SERIES_ITEMS: SearchItem[] = SERIES_LIST.map((series) => {
-  const content = SERIES_CONTENT[series];
+  const structural = SERIES_STRUCTURAL[series];
+  const content = PRODUCTS_EN[structural.messageKey];
   return {
     title: content.label,
     description: content.bestFor,
-    href: `/products/${content.slug}`,
+    href: `/products/${structural.slug}`,
     keywords: `${content.label} ${content.badge} ${content.chips.join(" ")} ${series}`,
   };
 });
 
 const MODEL_ITEMS: ModelSearchItem[] = SAFE_MODELS.map((model) => {
-  const content = SERIES_CONTENT[model.series];
+  const structural = SERIES_STRUCTURAL[model.series];
+  const content = PRODUCTS_EN[structural.messageKey];
   return {
     title: model.model,
     description: `${content.label} · ${model.weight.toLocaleString()} lb · ${model.capacity} cu ft`,
-    href: `/products/${content.slug}`,
+    href: `/products/${structural.slug}`,
     keywords: `${model.model} ${content.label} model safe`,
     seriesLabel: content.label,
-    seriesHref: `/products/${content.slug}`,
+    seriesHref: `/products/${structural.slug}`,
   };
 });
 
-const BLOG_ITEMS: SearchItem[] = BLOG_POSTS.map((post) => ({
-  title: post.title,
-  description: post.excerpt,
-  href: `/blog/${post.slug}`,
-  keywords: `blog guide article ${post.category} ${post.title}`,
-}));
+const BLOG_ITEMS: SearchItem[] = BLOG_POSTS_STRUCTURAL.map((post) => {
+  const en = BLOG_EN[post.slug];
+  return {
+    title: en.title,
+    description: en.excerpt,
+    href: `/blog/${post.slug}`,
+    keywords: `blog guide article ${en.category} ${en.title}`,
+  };
+});
 
 export const SEARCH_INDEX: SearchItem[] = [...PAGES, ...SERIES_ITEMS, ...MODEL_ITEMS, ...BLOG_ITEMS];
 

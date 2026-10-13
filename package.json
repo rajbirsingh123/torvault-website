@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@designcodeio/threeui": "^1.2.0",
-    "leaflet": "^1.9.4",
     "next": "16.3.8",
+    "next-intl": "^4.14.9",
     "pdf-lib": "^1.17.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -19,7 +19,6 @@
     "three": "^0.186.1"
   },
   "devDependencies": {
-    "@types/leaflet": "^1.9.22",
     "@types/node": "^20.14.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

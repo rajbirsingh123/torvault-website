@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { useTranslations } from "next-intl";
 import { buildSafeRig } from "./safeModel";
 import NeuralBorder from "./NeuralBorder";
 
@@ -12,23 +13,23 @@ type Chapter = {
   cta?: { label: string; href: string };
 };
 
-function buildChapters(ctaHref?: string): Chapter[] {
+function buildChapters(t: ReturnType<typeof useTranslations>, ctaHref?: string): Chapter[] {
   return [
     {
-      eyebrow: "01 — Manufacturing",
-      title: "Cut, formed, and welded.",
-      body: "Every Torvault body starts as solid cold-rolled steel plate — cut, formed, and welded on our production line to the thickness specified for each line, from 12-gauge RSC bodies to 1.5″ solid TL‑30 construction.",
+      eyebrow: t("ch1Eyebrow"),
+      title: t("ch1Title"),
+      body: t("ch1Body"),
     },
     {
-      eyebrow: "02 — Assembly",
-      title: "Hardplate, bolts, and the wheel.",
-      body: "Composite hardplate is bonded over the boltwork, then the relocking bolts, dial, and locking wheel are fitted and function-tested before the door is ever hung.",
+      eyebrow: t("ch2Eyebrow"),
+      title: t("ch2Title"),
+      body: t("ch2Body"),
     },
     {
-      eyebrow: "03 — Opening",
-      title: "Built to hold. Engineered to last.",
-      body: "Every weld and every bolt is checked before a unit ships — and inspected again once it's hung, so the door opens exactly as specified.",
-      cta: ctaHref ? { label: "See the Full Manufacturing Process", href: ctaHref } : undefined,
+      eyebrow: t("ch3Eyebrow"),
+      title: t("ch3Title"),
+      body: t("ch3Body"),
+      cta: ctaHref ? { label: t("ch3Cta"), href: ctaHref } : undefined,
     },
   ];
 }
@@ -49,10 +50,11 @@ const smoothstep = (a: number, b: number, x: number) => {
  * a separate timeline.
  */
 export default function BuildStory({ ctaHref = "/manufacturing" }: { ctaHref?: string | null } = {}) {
+  const t = useTranslations("buildStory");
   const sectionRef = useRef<HTMLDivElement>(null);
   const canvasHostRef = useRef<HTMLDivElement>(null);
   const chapterRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const CHAPTERS = buildChapters(ctaHref ?? undefined);
+  const CHAPTERS = buildChapters(t, ctaHref ?? undefined);
 
   useEffect(() => {
     const section = sectionRef.current;

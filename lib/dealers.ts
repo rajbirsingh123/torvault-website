@@ -15,6 +15,12 @@ export type Dealer = {
   mapsQuery: string;
   lat: number;
   lon: number;
+  /** Google Business listing details, shown as a quick-reference card. */
+  category?: string;
+  rating?: number;
+  reviewCount?: number;
+  hoursNote?: string;
+  serviceOptions?: string[];
 };
 
 export const DEALER_TAGS = [
@@ -48,5 +54,10 @@ export const dealers: Dealer[] = [
     mapsQuery: "207 Edgeley Blvd, Concord, ON L4K 4B5, Canada",
     lat: 43.7978,
     lon: -79.5325,
+    category: "Safe & Vault Shop",
+    rating: 4.5,
+    reviewCount: 48,
+    hoursNote: "Closes 5 p.m.",
+    serviceOptions: ["In-store shopping", "Curbside pickup", "Delivery"],
   },
 ];

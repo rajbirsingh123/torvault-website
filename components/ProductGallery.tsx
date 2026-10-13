@@ -3,13 +3,15 @@
 import Image from "next/image";
 import Button from "@/components/Button";
 import { useEffect, useRef, useState } from "react";
-import { SERIES_CONTENT, SERIES_LIST, type SafeSeries } from "@/lib/safes";
+import { useTranslations } from "next-intl";
+import { SERIES_LIST, type SafeSeries } from "@/lib/safes";
+import { getSeriesContent } from "@/lib/safes-i18n";
 import { PHOTO_FINISHES, getFinishImages, type PhotoFinish } from "@/lib/gallery";
 
 // per-series overrides for the homepage grid tile image, where a series
 // has its own hero shot instead of the shared graphite/black finish photos
 const TILE_IMAGE_OVERRIDE: Partial<Record<SafeSeries, string>> = {
-  "fire-burglary": "/products/tl30-hero.jpg",
+  "fire-burglary": "/products/fire-burglary-hero.jpg",
   tl15: "/products/tl-black-hero-v2.jpg",
   tl30: "/products/tl-black-hero-v2.jpg",
 };
@@ -21,6 +23,8 @@ const COLORWAYS: Record<Colorway, { label: string; swatch: string; images: { src
   ) as Record<Colorway, { label: string; swatch: string; images: { src: string; alt: string }[] }>;
 
 export default function ProductGallery() {
+  const tp = useTranslations("products");
+  const tc = useTranslations("common");
   const [openSeries, setOpenSeries] = useState<SafeSeries | null>(null);
   const [colorway, setColorway] = useState<Colorway>("graphite");
   const [activeImage, setActiveImage] = useState(0);
@@ -70,7 +74,7 @@ export default function ProductGallery() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openSeries, colorway]);
 
-  const active = openSeries ? SERIES_CONTENT[openSeries] : null;
+  const active = openSeries ? getSeriesContent(tp, openSeries) : null;
   const gallery = COLORWAYS[colorway].images;
   // clamp synchronously at render time — switching finish can shrink the
   // gallery (black has one fewer shot than graphite), and that must never
@@ -85,7 +89,7 @@ export default function ProductGallery() {
     <>
       <div className="qv-grid">
         {SERIES_LIST.map((series) => {
-          const content = SERIES_CONTENT[series];
+          const content = getSeriesContent(tp, series);
           return (
             <button
               key={series}
@@ -95,7 +99,7 @@ export default function ProductGallery() {
               aria-haspopup="dialog"
             >
               <span className="qv-tile-media">
-                <span className={series === "tl15" || series === "tl30" ? "qv-tile-media-inset padded" : "qv-tile-media-inset"}>
+                <span className="qv-tile-media-inset padded">
                   <Image
                     src={
                       TILE_IMAGE_OVERRIDE[series] ??
@@ -104,7 +108,7 @@ export default function ProductGallery() {
                     alt={content.imageAlt}
                     fill
                     sizes="(max-width: 860px) 100vw, 33vw"
-                    style={{ objectFit: series === "tl15" || series === "tl30" ? "contain" : "cover" }}
+                    style={{ objectFit: "contain" }}
                   />
                 </span>
                 <span className="qv-tile-hover">
@@ -114,7 +118,7 @@ export default function ProductGallery() {
                       <path d="M21 21l-4.3-4.3" />
                     </svg>
                   </span>
-                  Quick View
+                  {tc("quickView")}
                 </span>
               </span>
               <span className="qv-tile-body">
@@ -129,7 +133,7 @@ export default function ProductGallery() {
                   ))}
                 </span>
                 <span className="cat-cta" aria-hidden="true">
-                  View Full Specification &rarr;
+                  {tc("viewFullSpecification")} &rarr;
                 </span>
               </span>
             </button>
@@ -237,15 +241,15 @@ export default function ProductGallery() {
               </div>
 
               <p className="qv-best-for">
-                <strong>Best for:</strong> {active.bestFor}
+                <strong>{tc("bestForLabel")}</strong> {active.bestFor}
               </p>
 
               <div className="qv-actions">
                 <Button href={`/products/${active.slug}`} variant="primary">
-                  View Full Specification
+                  {tc("viewFullSpecification")}
                 </Button>
                 <Button href="/dealers" variant="outline">
-                  Talk to the Dealer Team
+                  {tc("talkToDealerTeam")}
                 </Button>
               </div>
             </div>

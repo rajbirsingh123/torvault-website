@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import TiltCard from "@/components/TiltCard";
@@ -10,14 +11,18 @@ import ProductBuyBox from "@/components/ProductBuyBox";
 import Button from "@/components/Button";
 import ProductPdpGallery from "@/components/ProductPdpGallery";
 import {
-  SERIES_CONTENT,
+  SERIES_STRUCTURAL,
   SERIES_LIST,
   modelsBySeries,
   seriesSizeRange,
   type SafeSeries,
 } from "@/lib/safes";
+import { getSeriesContent } from "@/lib/safes-i18n";
+import { buildMetadata, canonicalFor } from "@/lib/seo";
+import { SITE_URL } from "@/lib/nav";
+import type { Locale } from "@/i18n/routing";
 
-type Params = { series: string };
+type Params = { series: string; locale: string };
 
 export function generateStaticParams() {
   return SERIES_LIST.map((series) => ({ series }));
@@ -28,22 +33,18 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const { series } = await params;
-  const content = SERIES_CONTENT[series as SafeSeries];
-  if (!content) return {};
+  const { series, locale } = await params;
+  if (!SERIES_STRUCTURAL[series as SafeSeries]) return {};
+  const tp = await getTranslations({ locale, namespace: "products" });
+  const content = getSeriesContent(tp, series as SafeSeries);
 
-  return {
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: `/products/${content.slug}`,
     title: `${content.label} Safes | Torvault Safe Company`,
     description: content.metaDescription,
-    alternates: { canonical: `/products/${content.slug}` },
-    openGraph: {
-      type: "website",
-      title: `Torvault ${content.label}`,
-      description: content.metaDescription,
-      images: [content.image],
-    },
-    twitter: { card: "summary_large_image" },
-  };
+    image: content.image,
+  });
 }
 
 export default async function ProductDetailPage({
@@ -51,13 +52,21 @@ export default async function ProductDetailPage({
 }: {
   params: Promise<Params>;
 }) {
-  const { series } = await params;
-  const content = SERIES_CONTENT[series as SafeSeries];
-  if (!content) notFound();
+  const { series, locale } = await params;
+  if (!SERIES_STRUCTURAL[series as SafeSeries]) notFound();
+  const tp = await getTranslations("products");
+  const t = await getTranslations("productDetailPage");
+  const tc = await getTranslations("productsCommon");
+  const tcommon = await getTranslations("common");
+  const tNav = await getTranslations("nav");
+  const tListing = await getTranslations("productsPage");
+  const content = getSeriesContent(tp, series as SafeSeries);
 
   const models = modelsBySeries(content.series);
   const range = seriesSizeRange(content.series);
   const otherSeries = SERIES_LIST.filter((s) => s !== content.series);
+
+  const pageUrl = canonicalFor(locale as Locale, `/products/${content.slug}`);
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -72,17 +81,56 @@ export default async function ProductDetailPage({
     })),
   };
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `Torvault ${content.label}`,
+    description: content.metaDescription,
+    image: `${SITE_URL}${content.image}`,
+    url: pageUrl,
+    brand: { "@type": "Brand", name: "Torvault Safe Company" },
+    category: "Safes",
+    manufacturer: { "@type": "Organization", name: "Torvault Safe Company" },
+    additionalProperty: content.specCells.map((cell) => ({
+      "@type": "PropertyValue",
+      name: cell.k,
+      value: cell.v,
+    })),
+    // No `offers`/price block: Torvault sells wholesale-only through
+    // dealers with no published pricing, and an Offer without a price is
+    // an invalid/incomplete structured-data field per Google's guidelines
+    // — omitting it entirely is more correct than faking one.
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: tc("home"), item: canonicalFor(locale as Locale, "/") },
+      { "@type": "ListItem", position: 2, name: tNav("products"), item: canonicalFor(locale as Locale, "/products") },
+      { "@type": "ListItem", position: 3, name: content.label, item: pageUrl },
+    ],
+  };
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="pdp-crumb-bar">
         <div className="wrap breadcrumb">
-          <Link href="/">Home</Link>
+          <Link href="/">{tc("home")}</Link>
           <span>/</span>
-          <Link href="/products">Products</Link>
+          <Link href="/products">{tNav("products")}</Link>
           <span>/</span>
           <span>{content.label}</span>
         </div>
@@ -111,8 +159,8 @@ export default async function ProductDetailPage({
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Overview</span>
-            <h2>Built to a documented standard.</h2>
+            <span className="eyebrow">{t("overviewEyebrow")}</span>
+            <h2>{t("overviewHeading")}</h2>
           </Reveal>
           {content.intro.slice(1).map((paragraph, i) => (
             <p key={i} style={{ maxWidth: "70ch", marginTop: i === 0 ? 0 : 14 }}>
@@ -128,7 +176,7 @@ export default async function ProductDetailPage({
             ))}
           </div>
           <div className="detail-use">
-            <strong>Best for:</strong> {content.bestFor}
+            <strong>{tcommon("bestForLabel")}</strong> {content.bestFor}
           </div>
         </div>
       </section>
@@ -136,8 +184,8 @@ export default async function ProductDetailPage({
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Key Features</span>
-            <h2>What comes standard.</h2>
+            <span className="eyebrow">{t("keyFeaturesEyebrow")}</span>
+            <h2>{t("keyFeaturesHeading")}</h2>
           </Reveal>
           <ul className="feature-list pdp-feature-grid">
             {content.features.map((feature) => (
@@ -151,23 +199,19 @@ export default async function ProductDetailPage({
         <div className="wrap">
           <div className="spec-head">
             <div>
-              <span className="eyebrow">Full Model Lineup</span>
-              <h3>{models.length} sizes, built to order.</h3>
-              <p>
-                Sort by size or weight below, or request a quote on any
-                model &mdash; every {content.label} unit ships in the
-                dimensions listed.
-              </p>
+              <span className="eyebrow">{t("fullLineupEyebrow")}</span>
+              <h3>{t("sizesBuiltToOrder", { count: models.length })}</h3>
+              <p>{t("sortDescription", { label: content.label })}</p>
             </div>
             <div className="spec-stats">
               <span className="spec-stat">
-                <strong>{models.length}</strong> models
+                <strong>{models.length}</strong> {t("modelsLabel")}
               </span>
               <span className="spec-stat">
                 <strong>
                   {range.min.toLocaleString()}&ndash;{range.max.toLocaleString()}
                 </strong>{" "}
-                lbs range
+                {t("lbsRangeLabel")}
               </span>
             </div>
           </div>
@@ -178,12 +222,12 @@ export default async function ProductDetailPage({
       <section>
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Explore the Line</span>
-            <h2>Compare other product types.</h2>
+            <span className="eyebrow">{t("exploreLineEyebrow")}</span>
+            <h2>{t("exploreLineHeading")}</h2>
           </Reveal>
           <div className="cat-grid">
             {otherSeries.map((s, i) => {
-              const other = SERIES_CONTENT[s];
+              const other = getSeriesContent(tp, s);
               return (
                 <TiltCard key={s}>
                   <Reveal as="article" className="cat-card" delay={i * 100}>
@@ -210,13 +254,13 @@ export default async function ProductDetailPage({
                         ))}
                       </div>
                       <span className="cat-cta" aria-hidden="true">
-                        View Product &rarr;
+                        {t("viewProduct")}
                       </span>
                     </div>
                     <Link
                       className="cat-card-link"
                       href={`/products/${other.slug}`}
-                      aria-label={`View ${other.label} product details`}
+                      aria-label={tListing("viewProductDetailsAria", { label: other.label })}
                     />
                   </Reveal>
                 </TiltCard>
@@ -229,8 +273,8 @@ export default async function ProductDetailPage({
       <section id="faq">
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">FAQ</span>
-            <h2>Questions about the {content.label} line.</h2>
+            <span className="eyebrow">{t("faqEyebrow")}</span>
+            <h2>{t("faqHeading", { label: content.label })}</h2>
           </Reveal>
           <FaqAccordion items={content.faqs} />
         </div>
@@ -243,17 +287,14 @@ export default async function ProductDetailPage({
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Not Sure Which Line Fits?
+              {tc("notSureEyebrow")}
             </span>
-            <h2>Talk to a Torvault dealer specialist.</h2>
-            <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Territory and specification sheets are available now for the
-              first round of Canadian dealer onboarding.
-            </p>
+            <h2>{tc("notSureHeading")}</h2>
+            <p style={{ marginLeft: "auto", marginRight: "auto" }}>{tc("notSureBody")}</p>
           </Reveal>
           <div style={{ textAlign: "center" }}>
             <Button href="/dealers" variant="primary">
-              Request Dealer Package
+              {tc("requestDealerPackage")}
             </Button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import NeuralBorder from "@/components/NeuralBorder";
 import { searchSite, type SearchItem } from "@/lib/search-index";
 

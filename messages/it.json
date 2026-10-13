@@ -1,0 +1,1032 @@
+{
+  "nav": {
+    "products": "Prodotti",
+    "certifiedStandard": "Standard Certificato",
+    "about": "Chi siamo",
+    "manufacturing": "Produzione",
+    "support": "Assistenza",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "helpCenter": "Centro assistenza",
+    "contactSupport": "Contatta l'assistenza",
+    "sizeGuides": "Guide su dimensioni e capacità",
+    "shippingInstallation": "Spedizione e installazione",
+    "whereToBuy": "Dove acquistare",
+    "findADealer": "Trova un rivenditore",
+    "becomeADealer": "Diventa rivenditore",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "searchSite": "Cerca nel sito",
+    "viewFavorites": "Visualizza preferiti",
+    "lbs": "lb"
+  },
+  "languageSwitcher": {
+    "label": "Lingua",
+    "ariaLabel": "Scegli la lingua"
+  },
+  "footer": {
+    "tagline": "Casseforti ignifughe e antieffrazione ad alta sicurezza, progettate per il mercato canadese e prodotte in Vietnam.",
+    "productsHeading": "Prodotti",
+    "fireBurglary": "Antincendio e Antieffrazione",
+    "tl15": "TL-15 Alta Sicurezza",
+    "tl30": "TL-30 Alta Sicurezza",
+    "companyHeading": "Azienda",
+    "aboutTorvault": "Chi è Torvault",
+    "manufacturing": "Produzione",
+    "certifiedStandard": "Standard Certificato",
+    "findADealer": "Trova un rivenditore",
+    "becomeADealer": "Diventa rivenditore",
+    "faq": "FAQ",
+    "contactHeading": "Contatti",
+    "backedByHeading": "Sostenuto da",
+    "securityLockSafe": "Security Lock & Safe Inc.",
+    "torontoSafes": "Toronto Safes →",
+    "servingGta": "Al servizio dell'area di Toronto dal 1987",
+    "copyright": "© 2026 Torvault Safe Company. Tutti i diritti riservati.",
+    "motto": "Torvault Safe Company. — Sicurezza senza compromessi"
+  },
+  "common": {
+    "viewFullSpecification": "Visualizza scheda tecnica completa",
+    "talkToDealerTeam": "Parla con il team rivenditori",
+    "getDirections": "Ottieni indicazioni",
+    "applyToBecomeDealer": "Candidati per diventare rivenditore",
+    "compareProductLines": "Confronta le linee di prodotti Torvault",
+    "quickView": "Anteprima rapida",
+    "bestForLabel": "Ideale per:"
+  },
+  "products": {
+    "fireBurglary": {
+      "label": "Antincendio e Antieffrazione",
+      "badge": "Linea Base",
+      "chips": [
+        "Testata in Fabbrica Contro il Fuoco",
+        "Struttura in Acciaio Rinforzato"
+      ],
+      "metaDescription": "Le casseforti Torvault Antincendio e Antieffrazione: testate in fabbrica contro il fuoco, struttura antieffrazione rinforzata, 11 misure realizzate su ordinazione. Schede tecniche e preventivi dei rivenditori disponibili.",
+      "intro": [
+        "La linea base di Torvault abbina una struttura testata in fabbrica contro il fuoco a una costruzione antieffrazione rinforzata, testata contro i più comuni utensili meccanici per un tempo di lavorazione netto di cinque minuti su ogni lato. È progettata per attività in cui la protezione di documenti e contanti è più importante della resistenza a un attacco deciso e attrezzato.",
+        "Una struttura in acciaio a parete singola calibro 12 avvolge una camera ignifuga UL Class 350, mantenendo la temperatura interna sotto i 350°F — la soglia alla quale la carta inizia a carbonizzarsi — per un'ora intera all'interno di un incendio che all'esterno della cassaforte può raggiungere i 1.700°F."
+      ],
+      "specCells": [
+        {
+          "v": "1–Hr / 350°F",
+          "k": "Classificazione Antincendio"
+        },
+        {
+          "v": "Acciaio calibro 12",
+          "k": "Struttura del Corpo"
+        },
+        {
+          "v": "Parete singola",
+          "k": "Tipo di Porta"
+        },
+        {
+          "v": "Combinatore o tastiera",
+          "k": "Chiusura"
+        },
+        {
+          "v": "Testata contro l'effrazione forzata",
+          "k": "Classificazione Antieffrazione"
+        },
+        {
+          "v": "5 min, tutti i lati",
+          "k": "Tempo di Lavorazione Netto"
+        }
+      ],
+      "bestFor": "uffici domestici, retrobottega commerciali e piccole imprese per la custodia di piccola cassa o documenti, dove la protezione antincendio è la priorità e il rischio di effrazione forzata è limitato.",
+      "features": [
+        "Sicurezza Euro Grade I, certificata secondo lo standard europeo EN 1143-1 per la massima resistenza all'effrazione.",
+        "Prodotta secondo il sistema di gestione della qualità ISO 9001:2015.",
+        "Progettata per la resistenza all'effrazione con funzioni di sicurezza avanzate per proteggere i tuoi beni di valore.",
+        "Protezione antincendio di 60 minuti per una sicurezza aggiuntiva.",
+        "Catenacci attivi avanzati a quattro direzioni.",
+        "Il sistema di chiusura europeo di precisione blocca la porta in tutte le direzioni — su, giù, sinistra e destra — per la massima protezione.",
+        "Perni di chiusura in acciaio inossidabile da 25mm per uso intensivo, progettati per resistere ai tentativi di taglio diretto, rafforzando la resistenza contro l'effrazione forzata.",
+        "Costruzione multistrato: materiali barriera compositi avanzati migliorano la resistenza all'effrazione e la durata strutturale.",
+        "Vernice secondo lo standard europeo RAL con rivestimento a 5 strati per una maggiore durata e una finitura professionale.",
+        "Disponibili opzioni di serratura a chiave, a combinazione ed elettronica per soddisfare le tue specifiche esigenze di sicurezza."
+      ],
+      "faqs": [
+        {
+          "question": "Per quanto tempo una cassaforte Torvault Antincendio e Antieffrazione protegge i documenti in caso di incendio?",
+          "answer": "La linea Antincendio e Antieffrazione ha una classificazione UL Class 350: l'interno resta sotto i 350°F — la temperatura alla quale la carta inizia a carbonizzarsi — per un'ora intera, anche quando l'incendio circostante raggiunge i 1.700°F. Quell'ora è verificata da test indipendenti, non una stima interna."
+        },
+        {
+          "question": "La linea Antincendio e Antieffrazione è classificata per la resistenza all'effrazione, o solo per il fuoco?",
+          "answer": "Entrambe. Oltre alla classificazione antincendio UL Class 350, ogni struttura Antincendio e Antieffrazione è testata contro l'effrazione forzata con i più comuni utensili meccanici — leve, martelli, punteruoli — per un tempo di lavorazione netto di cinque minuti su tutti i lati. Non viene testata con lo stesso elenco di utensili di TL-15 o TL-30, motivo per cui Torvault la considera la linea base piuttosto che una linea ad alta sicurezza."
+        },
+        {
+          "question": "Qual è la differenza tra la linea Antincendio e Antieffrazione e la TL-15?",
+          "answer": "Antincendio e Antieffrazione è pensata prima di tutto per il fuoco: una struttura in acciaio a parete singola calibro 12 costruita attorno a una camera ignifuga UL Class 350, con la resistenza all'effrazione forzata come caratteristica secondaria. TL-15 è pensata prima di tutto per l'effrazione: una struttura in acciaio massiccio da 1 pollice con piastra corazzata composita, classificata UL per resistere a un attacco professionale con utensili elettrici per 15 minuti, con la protezione antincendio disponibile come opzione aggiuntiva piuttosto che integrata."
+        },
+        {
+          "question": "Di quale misura di cassaforte Antincendio e Antieffrazione ho bisogno?",
+          "answer": "Dipende da cosa devi custodire e dallo spazio a pavimento disponibile. La linea comprende 11 misure, dalla compatta BF-914 fino al caveau commerciale BF-6831 — usa lo strumento di ricerca delle misure e il diagramma comparativo in questa pagina per confrontare capacità interna e dimensioni esterne con il tuo spazio prima di richiedere un preventivo."
+        },
+        {
+          "question": "Posso avere una cassaforte Antincendio e Antieffrazione con serratura a combinazione invece della tastiera digitale?",
+          "answer": "Sì. Torvault offre opzioni di serratura a chiave, a combinazione (con disco) ed elettronica a tastiera su tutta la linea Antincendio e Antieffrazione, così puoi scegliere in base alle tue preferenze o a qualsiasi requisito normativo che specifichi una serratura meccanica."
+        },
+        {
+          "question": "Una cassaforte Antincendio e Antieffrazione è sufficiente per un ufficio domestico, oppure serve una TL-15?",
+          "answer": "Per uffici domestici, retrobottega commerciali e piccole imprese che devono custodire piccola cassa o documenti, Antincendio e Antieffrazione è la soluzione consigliata da Torvault — privilegia la protezione antincendio dove il rischio di effrazione forzata è limitato. Se devi custodire merce di valore più elevato o hai bisogno di uno standard di resistenza all'effrazione forzata documentato per finalità assicurative, passa alla TL-15."
+        }
+      ]
+    },
+    "tl15": {
+      "label": "TL-15 Alta Sicurezza",
+      "badge": "Più Richiesta",
+      "chips": [
+        "UL TL-15",
+        "Piastra Corazzata Composita"
+      ],
+      "metaDescription": "Le casseforti Torvault TL-15 Alta Sicurezza: porta classificata UL per 15 minuti, piastra corazzata composita, 10 misure realizzate su ordinazione. Schede tecniche e preventivi dei rivenditori disponibili.",
+      "intro": [
+        "La classificazione TL-15 significa che la porta ha resistito a un attacco con un tempo di lavorazione netto di 15 minuti da parte di un tecnico professionista di casseforti, che ha utilizzato utensili manuali comuni, trapani elettrici, punteruoli, martelli e dispositivi a pressione — il cronometro avanza solo mentre un utensile sta effettivamente lavorando sulla cassaforte. È la classificazione a cui sono costruite la maggior parte delle filiali bancarie, farmacie e gioiellerie canadesi.",
+        "Una struttura in acciaio massiccio da 1 pollice è rinforzata da una piastra corazzata composita sopra la serratura e i catenacci, con perni di rinchiusura automatica a molla bidirezionali che bloccano il meccanismo in caso di attacco diretto alla serratura principale."
+      ],
+      "specCells": [
+        {
+          "v": "15 min, porta",
+          "k": "Tempo di Lavorazione Netto"
+        },
+        {
+          "v": "1″ massiccio",
+          "k": "Struttura in Acciaio"
+        },
+        {
+          "v": "Composita",
+          "k": "Piastra Corazzata"
+        },
+        {
+          "v": "Bidirezionali",
+          "k": "Perni di Rinchiusura Automatica"
+        },
+        {
+          "v": "UL Type 1",
+          "k": "Serratura Elettronica"
+        },
+        {
+          "v": "Opzionale",
+          "k": "Protezione Antincendio Aggiuntiva"
+        }
+      ],
+      "bestFor": "filiali bancarie, farmacie che custodiscono sostanze controllate e gioiellerie che necessitano di uno standard di resistenza all'effrazione forzata documentato per la custodia diurna ad alta frequenza di accesso.",
+      "features": [
+        "Costruita secondo i più elevati standard di sicurezza, nell'ambito del sistema di gestione della qualità ISO 9001:2015.",
+        "Progettata per la massima resistenza all'effrazione in ambienti commerciali e ad alto rischio.",
+        "Protezione antincendio di 2 ore per una sicurezza aggiuntiva.",
+        "Catenacci attivi avanzati a quattro direzioni.",
+        "Il sistema di chiusura europeo di precisione blocca la porta in tutte le direzioni — su, giù, sinistra e destra — per la massima protezione.",
+        "Perni di chiusura rotanti in acciaio inossidabile da 30mm per uso intensivo, progettati per resistere ai tentativi di taglio diretto, rafforzando la resistenza contro l'effrazione forzata.",
+        "La costruzione composita ad alta sicurezza garantisce durata strutturale e resistenza all'effrazione.",
+        "Il sistema di rinchiusura in vetro temperato attiva un dispositivo di rinchiusura automatica in caso di manomissione della cassaforte.",
+        "Una piastra rinforzata in acciaio al manganese protegge la serratura e i catenacci dalla perforazione e dall'accesso forzato.",
+        "I fori di ancoraggio pre-forati permettono un'installazione sicura su pavimenti in cemento, impedendo la rimozione non autorizzata.",
+        "Vernice secondo lo standard europeo RAL con rivestimento a 5 strati per una maggiore durata e una finitura elegante.",
+        "Disponibili opzioni di serratura a chiave, a combinazione ed elettronica per soddisfare i tuoi specifici requisiti di sicurezza."
+      ],
+      "faqs": [
+        {
+          "question": "Cosa significa esattamente la classificazione TL-15?",
+          "answer": "TL-15 significa che la porta ha resistito a un attacco con un tempo di lavorazione netto di 15 minuti da parte di un tecnico professionista di casseforti, che ha utilizzato utensili manuali comuni, trapani elettrici, punteruoli, martelli e dispositivi a pressione — il cronometro avanza solo mentre un utensile lavora attivamente sulla cassaforte, non per l'intero tempo che un malintenzionato passa sul posto. È una classificazione UL indipendente, non una categoria di marketing autocertificata."
+        },
+        {
+          "question": "Qual è la differenza tra TL-15 e TL-30?",
+          "answer": "TL-15 classifica solo la porta per un tempo di lavorazione netto di 15 minuti contro utensili manuali ed elettrici. TL-30 raddoppia questo tempo a 30 minuti, aggiunge dischi abrasivi da taglio e seghe elettriche all'elenco degli utensili d'attacco e — a differenza di TL-15 — classifica tutti i sei lati della struttura, non solo la porta. TL-30 passa inoltre da una struttura in acciaio massiccio da 1 pollice a una da 1.5 pollici."
+        },
+        {
+          "question": "Una cassaforte TL-15 include la protezione antincendio?",
+          "answer": "La protezione antincendio è disponibile come opzione aggiuntiva piuttosto che integrata nella specifica base della TL-15, che è incentrata sulla resistenza all'effrazione forzata. Se la protezione antincendio è un requisito insieme alla resistenza all'effrazione, verifica l'opzione antincendio al momento della richiesta del preventivo, oppure confrontala con la linea Torvault Antincendio e Antieffrazione."
+        },
+        {
+          "question": "La TL-15 è sufficiente per una farmacia che custodisce sostanze controllate?",
+          "answer": "Sì — TL-15 è la classificazione a cui sono costruite la maggior parte delle farmacie, filiali bancarie e gioiellerie canadesi per la custodia diurna ad alta frequenza di accesso. Offre uno standard di resistenza all'effrazione forzata documentato, riconosciuto da assicuratori ed enti regolatori, senza la specifica a sei lati della TL-30 generalmente richiesta dalle attività di trasporto valori e dalle operazioni ad alto volume."
+        },
+        {
+          "question": "Quanto è spessa la struttura in acciaio di una cassaforte TL-15?",
+          "answer": "La struttura della TL-15 è in acciaio massiccio da 1 pollice, rinforzata da una piastra corazzata composita sopra la serratura e i catenacci, con perni di rinchiusura automatica a molla bidirezionali che bloccano il meccanismo in caso di attacco diretto alla serratura principale."
+        },
+        {
+          "question": "Le casseforti TL-15 possono essere ancorate al pavimento?",
+          "answer": "Sì. Le unità TL-15 vengono fornite con fori di ancoraggio pre-forati per un'installazione sicura su pavimento in cemento, il che impedisce la rimozione dell'intera cassaforte invece che un attacco sul posto — un punto debole comune che gli assicuratori verificano."
+        }
+      ]
+    },
+    "tl30": {
+      "label": "TL-30 Alta Sicurezza",
+      "badge": "Ammiraglia",
+      "chips": [
+        "UL TL-30",
+        "Resistenza a Sei Lati"
+      ],
+      "metaDescription": "Le casseforti Torvault TL-30 Alta Sicurezza: classificazione UL a sei lati di 30 minuti, struttura in acciaio massiccio da 1.5 pollici, 10 misure realizzate su ordinazione. Schede tecniche e preventivi dei rivenditori disponibili.",
+      "intro": [
+        "TL-30 porta il tempo di lavorazione netto a 30 minuti e aggiunge dischi abrasivi da taglio e seghe elettriche all'elenco degli utensili — e, a differenza delle linee Antincendio e Antieffrazione o TL-15, la classificazione si applica a ogni lato della struttura, non solo alla porta. È la linea di punta di Torvault, pensata per attività in cui una violazione in qualsiasi punto della struttura è un esito inaccettabile.",
+        "Una struttura in acciaio massiccio da 1.5 pollici porta una piastra corazzata composita su tutti i sei lati, una porta da 3.25 pollici e perni di rinchiusura automatica a molla a quattro direzioni. Questa combinazione è la specifica standard per i depositi di trasporto valori, le grandi gioiellerie e le sale contanti ad alto volume."
+      ],
+      "specCells": [
+        {
+          "v": "30 min, 6 lati",
+          "k": "Tempo di Lavorazione Netto"
+        },
+        {
+          "v": "1.5″ massiccio",
+          "k": "Struttura in Acciaio"
+        },
+        {
+          "v": "3.25″",
+          "k": "Spessore della Porta"
+        },
+        {
+          "v": "Quadridirezionali",
+          "k": "Perni di Rinchiusura Automatica"
+        },
+        {
+          "v": "UL Type 1",
+          "k": "Serratura Elettronica"
+        },
+        {
+          "v": "Inclusa",
+          "k": "Resistenza al Cannello"
+        }
+      ],
+      "bestFor": "depositi di trasporto valori, gioiellerie ad alto volume e sale custodia prove o beni di valore che richiedono una classificazione a sei lati piuttosto che una porta rinforzata su una struttura altrimenti standard.",
+      "features": [
+        "Costruita secondo i più elevati standard di sicurezza, nell'ambito del sistema di gestione della qualità ISO 9001:2015.",
+        "Progettata per la massima resistenza all'effrazione in ambienti commerciali e ad alto rischio.",
+        "Protezione antincendio di 2 ore per una sicurezza aggiuntiva.",
+        "Catenacci attivi avanzati a quattro direzioni, estesi su tutti i sei lati della struttura.",
+        "Il sistema di chiusura europeo di precisione blocca la porta in tutte le direzioni — su, giù, sinistra e destra — per la massima protezione.",
+        "Perni di chiusura rotanti in acciaio inossidabile da 30mm per uso intensivo, progettati per resistere ai tentativi di taglio diretto, rafforzando la resistenza contro l'effrazione forzata.",
+        "La costruzione composita ad alta sicurezza si estende su tutti i sei lati per garantire durata strutturale e resistenza all'effrazione.",
+        "Il sistema di rinchiusura in vetro temperato attiva un dispositivo di rinchiusura automatica in caso di manomissione della cassaforte.",
+        "Una piastra rinforzata in acciaio al manganese protegge la serratura e i catenacci dalla perforazione e dall'accesso forzato.",
+        "I fori di ancoraggio pre-forati permettono un'installazione sicura su pavimenti in cemento, impedendo la rimozione non autorizzata.",
+        "Vernice secondo lo standard europeo RAL con rivestimento a 5 strati per una maggiore durata e una finitura elegante.",
+        "Disponibili opzioni di serratura a chiave, a combinazione ed elettronica per soddisfare i tuoi specifici requisiti di sicurezza."
+      ],
+      "faqs": [
+        {
+          "question": "Cosa distingue la TL-30 dalla TL-15?",
+          "answer": "TL-30 raddoppia il tempo di lavorazione netto a 30 minuti, aggiunge dischi abrasivi da taglio e seghe elettriche all'elenco degli utensili d'attacco e classifica tutti i sei lati della struttura invece della sola porta. La struttura in acciaio passa inoltre da 1 pollice a 1.5 pollici massicci, con una porta da 3.25 pollici e perni di rinchiusura automatica a quattro direzioni invece di due."
+        },
+        {
+          "question": "Perché la TL-30 classifica tutti i sei lati invece della sola porta?",
+          "answer": "Una porta rinforzata su una struttura altrimenti standard protegge solo da un attacco in cui il malintenzionato scelga di entrare dal fronte. La piastra corazzata composita e l'acciaio massiccio da 1.5 pollici della TL-30 si estendono su tutti i sei lati proprio per non lasciare alcun lato più debole da attaccare — lo standard richiesto dai depositi di trasporto valori e dalle gioiellerie ad alto volume."
+        },
+        {
+          "question": "Una cassaforte TL-30 include la protezione antincendio?",
+          "answer": "Sì — la linea TL-30 di Torvault include una protezione antincendio di 2 ore oltre alla classificazione antieffrazione a sei lati di 30 minuti, così non devi scegliere tra protezione antincendio e resistenza all'effrazione forzata."
+        },
+        {
+          "question": "Chi ha solitamente bisogno di una cassaforte TL-30?",
+          "answer": "La TL-30 è progettata per depositi di trasporto valori, gioiellerie ad alto volume e sale custodia prove o beni di valore, dove una violazione in qualsiasi punto della struttura — non solo attraverso la porta — è un esito inaccettabile. Se il tuo rischio è limitato all'accesso al banco durante il giorno, la TL-15 è generalmente la soluzione più conveniente."
+        },
+        {
+          "question": "Cosa significa 'tempo di lavorazione netto' per una classificazione TL-30?",
+          "answer": "Il tempo di lavorazione netto è il tempo cumulativo durante il quale un utensile sta effettivamente tagliando, perforando o facendo leva sulla cassaforte durante i test UL — il tempo trascorso a riposizionarsi, cambiare utensile o fermarsi non viene conteggiato. Una classificazione TL-30 di 30 minuti significa che la cassaforte ha resistito a 30 minuti reali di attacco utensile-metallo, verificati in modo indipendente da UL."
+        },
+        {
+          "question": "Le casseforti TL-30 possono essere fissate al pavimento per una sicurezza aggiuntiva?",
+          "answer": "Sì. Le unità TL-30 vengono fornite con fori di ancoraggio pre-forati per un'installazione sicura su pavimento in cemento, impedendo la rimozione dell'intera unità per un attacco altrove — un requisito che molti assicuratori associano ai limiti di copertura per beni di alto valore."
+        }
+      ]
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Torvault Safe Company",
+      "word1": "Sicurezza",
+      "word2": "senza",
+      "word3": "compromessi.",
+      "viewProducts": "Visualizza Prodotti",
+      "scroll": "Scorri"
+    },
+    "trustBar": {
+      "item1": "Standard Testati UL ed ENL43",
+      "item2": "Sostenuto da 40 Anni di Competenza nella Sicurezza",
+      "item3": "Progettato per gli Ambienti più Difficili"
+    },
+    "story": {
+      "eyebrow": "Ingegneria",
+      "heading": "Progettato contro le minacce che contano davvero.",
+      "body": "Protezione antincendio, resistenza all'effrazione forzata e verifica indipendente non sono opzioni su una cassaforte Torvault — sono la base da cui parte ogni linea di prodotti.",
+      "pillar1Title": "Nucleo Ignifugo",
+      "pillar1Body": "Riempimento composito in gesso progettato per mantenere una soglia interna di 350°F ben oltre l'ora certificata, così documenti e dischi sopravvivono a ciò che l'edificio non sopravvive.",
+      "pillar2Title": "Resistenza all'Effrazione Forzata",
+      "pillar2Body": "Piastra corazzata composita, perni di rinchiusura automatica e strutture in acciaio massiccio costruite per resistere a leve, trapani e seghe per un tempo di lavorazione netto documentato — non una categoria di marketing.",
+      "pillar3Title": "Testato in Modo Indipendente",
+      "pillar3Body": "Ogni classificazione è verificata UL e ULC, utensile per utensile, da una terza parte indipendente — lo stesso standard che gli assicuratori utilizzano per stabilire i limiti di copertura."
+    },
+    "productsSection": {
+      "eyebrow": "Prodotti",
+      "heading": "Tre linee. Uno standard.",
+      "body": "Tre linee di prodotti progettate su misura, ciascuna pensata per una minaccia specifica — fuoco, effrazione forzata, o entrambe — invece di una struttura unica con un prezzo più alto."
+    },
+    "certOrbit": {
+      "ulListedK": "Omologata UL",
+      "ulListedV": "Classificazione di Sicurezza",
+      "graphiteFinishK": "Finitura Grafite",
+      "tl15K": "TL‑15",
+      "tl15V": "Resistente all'Effrazione",
+      "blackFinishK": "Finitura Nera",
+      "tl30K": "TL‑30",
+      "tl30V": "Resistente all'Effrazione",
+      "interiorViewK": "Vista Interna",
+      "interiorViewV": "Mensola + Catenacci",
+      "en1143K": "EN 1143‑1",
+      "en1143V": "Grado di Resistenza III",
+      "boltworkDetailK": "Dettaglio Catenacci",
+      "boltworkDetailV": "Chiusura a 3 Punti"
+    },
+    "certified": {
+      "eyebrow": "Standard Certificato",
+      "heading": "Una specifica, non una categoria di marketing.",
+      "body": "Ogni cassaforte Torvault è costruita secondo uno standard di test documentato — test antincendio in fabbrica per Antincendio e Antieffrazione, o test UL indipendenti per TL‑15 e TL‑30 — non solo un'etichetta interna. La nostra pagina Standard Certificato illustra esattamente cosa significa ogni classificazione, come funzionano i test e perché gli assicuratori la utilizzano per stabilire i limiti di copertura.",
+      "cta": "Leggi la Guida Completa allo Standard Certificato"
+    },
+    "faqSection": {
+      "eyebrow": "FAQ",
+      "heading": "Domande frequenti.",
+      "viewAll": "Visualizza Tutte le FAQ →",
+      "q1": "Cosa significa realmente una classificazione di sicurezza UL?",
+      "a1": "UL (Underwriters Laboratories) testa in modo indipendente le casseforti contro utensili reali — leve, trapani, seghe — per un tempo di lavorazione netto stabilito. Una cassaforte TL‑15 resiste a un attacco professionale con utensili comuni per 15 minuti; la TL‑30 per 30. È lo stesso standard che gli assicuratori utilizzano per stabilire i limiti di copertura. Consulta la nostra {certifiedStandardLink} per l'analisi completa.",
+      "a1LinkText": "guida allo Standard Certificato",
+      "q2": "Qual è la differenza tra le casseforti TL-15 e TL-30?",
+      "a2": "Il numero indica il tempo di lavorazione netto — per quanto tempo la porta e i catenacci classificati UL resistono a un attacco professionale con utensili comuni. TL‑15 resiste per 15 minuti, TL‑30 per 30, con una struttura in acciaio massiccio più spessa da 1.5 pollici e piastra corazzata su tutti i sei lati. Contenuti di valore più elevato e limiti assicurativi più alti generalmente richiedono la TL‑30. Confronta le specifiche sulla nostra {productsLink}.",
+      "a2LinkText": "pagina Prodotti",
+      "q3": "Dove posso acquistare una cassaforte Torvault?",
+      "a3": "Torvault vende esclusivamente tramite rivenditori autorizzati in tutto il Canada — non vendiamo direttamente ai consumatori. Usa la nostra pagina {findDealerLink} per trovarne uno vicino a te, oppure consulta il nostro {dealerProgramLink} se sei un rivenditore interessato a offrire la linea.",
+      "a3LinkText1": "Trova un Rivenditore",
+      "a3LinkText2": "Programma Rivenditori",
+      "q4": "Per quanto tempo i miei documenti sopravviveranno in caso di incendio?",
+      "a4": "La nostra linea Antincendio e Antieffrazione ha una classificazione UL Class 350: l'interno resta sotto i 350°F — la temperatura alla quale la carta inizia a carbonizzarsi — per un'ora intera, anche quando l'incendio esterno raggiunge i 1.700°F. Quell'ora è testata, non stimata; è la stessa metodologia del tempo di lavorazione netto che UL utilizza per ogni classificazione che offriamo.",
+      "q5": "Le compagnie assicurative riconoscono le classificazioni di Torvault?",
+      "a5": "Sì. Le nostre classificazioni di sicurezza TL‑15 e TL‑30 sono testate in modo indipendente da UL, non autocertificate internamente — lo standard a cui gli assicuratori fanno riferimento per stabilire i limiti di copertura per contanti, armi da fuoco e documenti. La nostra linea Antincendio e Antieffrazione è testata in fabbrica contro il fuoco. Chiedi al tuo assicuratore quale classificazione richiede la tua polizza prima di scegliere un modello.",
+      "q6": "Quali misure e capacità sono disponibili?",
+      "a6": "Ciascuna delle nostre tre linee comprende un'ampia gamma, da modelli compatti per la casa e l'ufficio a grandi caveau commerciali, così la capacità si adatta alla classificazione di cui hai bisogno invece di imporre un'unica misura di struttura. Consulta le dimensioni interne e il peso di ogni modello sulla {productsLink}."
+    },
+    "testimonials": {
+      "eyebrow": "Recensioni dei Clienti",
+      "heading": "Un marchio di fiducia dal 1987.",
+      "body": "Torvault è sostenuta da Security Lock & Safe Inc. — 40 anni nel settore delle casseforti canadese attraverso Toronto Safes.",
+      "googleReview": "Recensione Google",
+      "quote1": "Competenti, puntuali e un piacere con cui lavorare in generale.",
+      "when1": "10 mesi fa",
+      "quote2": "Uno dei team più cordiali e orientati al servizio clienti.",
+      "when2": "5 anni fa",
+      "quote3": "Kelly e il team sono fenomenali.",
+      "when3": "2 anni fa"
+    },
+    "newsletter": {
+      "eyebrow": "Resta Aggiornato",
+      "heading": "Ricevi aggiornamenti da Torvault.",
+      "body": "Sii il primo a sapere di nuovi modelli di casseforti, consigli di sicurezza e offerte speciali — direttamente da Torvault.",
+      "formNote": "Inserendo il tuo numero di telefono, accetti di ricevere messaggi di marketing da Torvault Safe Company al numero fornito. Il consenso non è condizione d'acquisto. Potrebbero essere applicati costi per messaggi e dati. Rispondi HELP per assistenza o STOP per annullare. Consulta i nostri {termsLink} per maggiori dettagli.",
+      "termsLinkText": "Termini e Condizioni"
+    },
+    "meta": {
+      "title": "Torvault Safe Company | Casseforti ignifughe e alta sicurezza, Canada",
+      "description": "Torvault progetta casseforti ignifughe e antieffrazione omologate UL — dalla protezione testata in fabbrica contro il fuoco alla resistenza agli utensili UL TL-30 — per aziende e rivenditori canadesi."
+    }
+  },
+  "blog": {
+    "readTimeSuffix": "min di lettura",
+    "keepReadingEyebrow": "Continua a Leggere",
+    "keepReadingHeading": "Altro da The Vault.",
+    "readTheGuide": "Leggi la Guida →",
+    "posts": {
+      "understanding-ul-security-ratings": {
+        "title": "Capire le Classificazioni di Sicurezza UL: Cosa Significano Davvero TL-15 e TL-30",
+        "category": "Classificazioni di Sicurezza",
+        "excerpt": "TL-15 e TL-30 non sono categorie di marketing — sono minuti di resistenza testati in modo indipendente contro utensili reali. Ecco cosa misurano davvero questi numeri.",
+        "body": [
+          "L'etichetta \"TL-15\" o \"TL-30\" viene usata spesso nel settore delle casseforti, ma il numero stesso è l'intera specifica — è un tempo di lavorazione netto, il numero di minuti durante i quali UL ha verificato che la porta resiste a un attacco professionale con un elenco definito di utensili prima di essere considerata violata.",
+          "Il tempo di lavorazione netto conta solo i minuti in cui un utensile sta effettivamente tagliando, perforando o facendo leva — non il tempo totale che un malintenzionato passa sul posto a riposizionarsi, cambiare utensile o fare pause. Una classificazione TL-15 significa 15 minuti reali di contatto utensile-metallo; TL-30 significa 30. Questa distinzione è importante, perché è un traguardo molto più difficile da raggiungere di quanto sembri.",
+          "La classificazione specifica anche l'elenco degli utensili. I test TL-15 utilizzano comuni utensili manuali ed elettrici — trapani, punteruoli, martelli, dispositivi a pressione. TL-30 aggiunge a questo elenco dischi abrasivi da taglio e seghe elettriche, motivo per cui passare a una categoria superiore richiede una struttura in acciaio significativamente più spessa, non solo una porta più spessa.",
+          "Un dettaglio che spesso confonde: a meno che una linea non sia esplicitamente classificata per sei lati, la classificazione UL si applica solo alla porta. Le linee Torvault Antincendio e Antieffrazione e TL-15 classificano la porta; TL-30 viene testata e classificata su tutti i sei lati della struttura, lo standard generalmente richiesto dai depositi di trasporto valori e dalle gioiellerie ad alto volume.",
+          "Niente di tutto questo è autocertificato. UL è una terza parte indipendente, ed è lo stesso standard a cui fanno riferimento gli assicuratori per stabilire i limiti di copertura — motivo per cui la classificazione sulla scheda tecnica conta più della finitura della porta."
+        ]
+      },
+      "fire-rated-vs-fireproof": {
+        "title": "Ignifugo vs. \"A Prova di Fuoco\": Cosa Protegge Davvero la Classificazione della Tua Cassaforte",
+        "category": "Protezione Antincendio",
+        "excerpt": "Nessuna cassaforte è davvero a prova di fuoco. Ecco cosa garantisce realmente una classificazione UL Class 350 — e come farla corrispondere al tempo di risposta reale dei vigili del fuoco.",
+        "body": [
+          "\"A prova di fuoco\" non è un vero termine tecnico, e nessun produttore serio dovrebbe usarlo senza una nota esplicativa. Il termine corretto è ignifugo o con classificazione antincendio, e la differenza non è solo semantica — descrive esattamente cosa promette la classificazione e cosa no.",
+          "Una classificazione UL Class 350 significa che l'interno della cassaforte è rimasto sotto i 350°F — la temperatura alla quale la carta inizia a carbonizzarsi — per un periodo documentato, in genere un'ora, mentre l'incendio circostante raggiungeva temperature fino a 1.700°F. È una garanzia di isolamento termico per una durata fissa, non indefinita.",
+          "Quella durata è il numero che conta davvero quando si scelge una cassaforte. Se il tuo edificio si trova in una zona con un tempo di risposta medio dei vigili del fuoco di 10 minuti, una classificazione di 1 ora ti offre un margine enorme. Se stai proteggendo backup di server, pellicole o qualsiasi cosa con una soglia di carbonizzazione/danno più bassa della carta, devi verificare la specifica temperatura interna testata dal produttore, senza semplicemente supporre che l'etichetta \"a prova di fuoco\" la copra.",
+          "Vale anche la pena sapere che le classificazioni antincendio e antieffrazione vengono testate in modo completamente indipendente. Una cassaforte con un'eccellente classificazione antieffrazione forzata non dice nulla sulle sue prestazioni antincendio, e viceversa — verifica che entrambe siano documentate se ti servono entrambe, invece di supporre che una implichi l'altra."
+        ]
+      },
+      "choosing-the-right-safe-size": {
+        "title": "Come Scegliere la Misura Giusta di Cassaforte per la Tua Attività",
+        "category": "Guida all'Acquisto",
+        "excerpt": "Comprarne una troppo piccola significa superarla in un anno; troppo grande spreca spazio a pavimento e budget. Ecco come dimensionare una cassaforte in base a ciò che devi davvero custodire.",
+        "body": [
+          "Dimensionare una cassaforte in base alle misure esterne è l'errore più comune che vediamo — l'impronta esterna di un modello ti dice se si adatta al tuo spazio, ma sono le dimensioni interne a determinare se i tuoi contenuti effettivi ci stanno, e i due valori possono differire di diversi centimetri su ogni asse una volta considerato lo spessore delle pareti e della porta.",
+          "Parti da ciò che devi custodire, non da una misura che hai già visto. Misura la scatola di documenti più alta, il registro più largo, la custodia per armi da fuoco più lunga — qualunque sia l'oggetto singolo più grande — e aggiungi un margine, perché di solito una mensola, un vassoio per contanti o un secondo oggetto condivideranno lo spazio.",
+          "Poi procedi a ritroso partendo dal pavimento. Verifica la portata per piede quadrato del piano su cui poggerà la cassaforte, soprattutto se non è il piano terra, poiché un'unità TL-30 carica può pesare ben oltre le mille libbre. Una cassaforte strutturalmente inadatta al pavimento su cui poggia è un problema che nessuna classificazione può risolvere.",
+          "Vale anche la pena scegliere una categoria superiore rispetto alle tue esigenze attuali piuttosto che una misura esatta, poiché contanti, inventario o documenti tendono a crescere e una cassaforte non è un acquisto che la maggior parte delle attività ripete ogni anno. Detto questo, c'è un costo reale nell'acquistare in eccesso — un caveau a sei cifre per un cassetto di piccola cassa sposta semplicemente l'inefficienza dalla tua mensola alla tua pianta dei locali.",
+          "Se stai valutando questo aspetto per una linea Torvault specifica, lo strumento di ricerca delle misure su ogni pagina prodotto ti permette di inserire cosa deve entrarci e quanto spazio hai a disposizione, filtrando la gamma fino ai modelli che funzionano davvero — e raccomandando il più piccolo tra questi."
+        ]
+      },
+      "anchoring-and-installation-basics": {
+        "title": "Dove Installare la Tua Cassaforte: Ancoraggio, Posizionamento e Portata del Pavimento",
+        "category": "Installazione",
+        "excerpt": "Una cassaforte non ancorata può essere rimossa e attaccata altrove. Ecco cosa verificano i rivenditori prima che un'unità venga fissata al pavimento.",
+        "body": [
+          "Una classificazione UL descrive come una cassaforte resiste a un attacco mentre resta al suo posto. Non dice nulla su cosa succede se un malintenzionato rimuove semplicemente l'intera unità e la lavora altrove in tranquillità — motivo per cui l'ancoraggio non è un accessorio opzionale, ma parte del modello di sicurezza.",
+          "La maggior parte delle linee Torvault viene fornita con fori di ancoraggio pre-forati proprio per questo motivo, pensati per essere fissati a un pavimento in cemento piuttosto che a un sottofondo in legno o a una base di montaggio. Il cemento è lo standard minimo che la maggior parte degli assicuratori e dei rivenditori verifica, perché resiste al distacco forzato della cassaforte insieme agli ancoraggi.",
+          "Il posizionamento conta quasi quanto l'ancoraggio. Una cassaforte visibile dalla vetrina di un negozio pubblicizza ciò che si trova dietro la porta; una bloccata dalla merce o posizionata lontano da un'uscita posteriore elimina sia la tentazione sia la via di estrazione facile. Anche il peso è un fattore qui — conosci la portata del tuo pavimento prima di decidere dove posizionare una cassaforte così pesante, in particolare su qualsiasi piano sopra il livello del terreno.",
+          "Infine, pensa all'accesso durante l'installazione, non solo dopo. Una cassaforte che passa dalla porta ma non dalla curva del corridoio è un errore sorprendentemente comune e costoso — verifica gli spazi liberi per tutto il percorso di consegna, non solo per la posizione finale, prima che un'unità venga spedita."
+        ]
+      },
+      "why-torvault-sells-through-dealers": {
+        "title": "Perché Torvault Vende Solo Tramite Rivenditori — E Perché È Meglio per Te",
+        "category": "Il Nostro Approccio",
+        "excerpt": "Nessuna vendita diretta al consumatore, nessuna concorrenza con chi installa e assiste la tua cassaforte. Ecco il ragionamento dietro il modello di Torvault basato sui rivenditori.",
+        "body": [
+          "Torvault non vende direttamente ai consumatori, e questa è una scelta deliberata, non il limite di un marchio più piccolo. Ogni unità passa attraverso un rivenditore canadese autorizzato — le stesse persone che la consegneranno, installeranno, ancoreranno e assisteranno per tutta la vita della cassaforte.",
+          "L'alternativa è comune in questo settore: un produttore vende online a prezzo al dettaglio mentre fornisce contemporaneamente gli stessi rivenditori che dovrebbero competere con quella vendita. Questo svaluta la rete di rivenditori indipendenti sul prezzo, lasciandoli comunque responsabili del rapporto di assistenza — un pessimo affare per tutti tranne il produttore.",
+          "Vendere solo all'ingrosso con protezione del territorio significa che un rivenditore che adotta Torvault non è in concorrenza con il proprio fornitore. Significa anche che la persona che ti vende una cassaforte Torvault l'ha effettivamente maneggiata, può parlarti delle specifiche di installazione e ancoraggio per il tuo spazio, e ha un collegamento diretto con il produttore se qualcosa necessita attenzione dopo la vendita.",
+          "Questo modello è sostenuto da quasi quattro decenni di Security Lock & Safe Inc. alla guida di Toronto Safes — quindi il programma rivenditori non è un'idea nuova messa alla prova per la prima volta, è lo stesso rapporto di assistenza che il team gestisce nell'area di Toronto dal 1987, estesa ai rivenditori indipendenti nel resto del Canada."
+        ]
+      },
+      "what-to-expect-at-delivery": {
+        "title": "Cosa Aspettarsi alla Consegna della Tua Cassaforte Torvault",
+        "category": "Spedizione e Installazione",
+        "excerpt": "Il giorno della consegna per una cassaforte che pesa centinaia di libbre è diverso da una normale consegna di un pacco. Ecco cosa gestisce il tuo rivenditore e cosa verificare prima che arrivi il camion.",
+        "body": [
+          "Una cassaforte Torvault non arriva come un pacco. Ogni unità viene spedita prima al tuo rivenditore autorizzato, non direttamente a casa tua — il rivenditore coordina la consegna, conferma con te il posizionamento finale e gestisce l'installazione, così la prima volta che vedi la cassaforte è già posizionata e pronta per l'ancoraggio.",
+          "Prima di programmare una data di consegna, il tuo rivenditore esaminerà con te il percorso di accesso: larghezza delle porte, curve dei corridoi, scale e dimensioni dell'ascensore, se applicabile. Questo conta più di quanto sembri — una cassaforte che passa dalla porta d'ingresso ma non da una curva ristretta del corridoio è una delle sorprese di consegna più comuni e costose, ed è completamente evitabile verificando in anticipo gli spazi liberi rispetto alle dimensioni esterne del modello.",
+          "Le unità più grandi — in particolare i modelli TL-30 e qualsiasi cosa nella fascia di oltre 1.000 libbre — spesso richiedono tecnici specializzati o attrezzature specifiche per essere spostate in sicurezza. Il tuo rivenditore organizza questo aspetto come parte della consegna, così non ti ritrovi a gestire da solo il noleggio di attrezzature o la responsabilità civile.",
+          "Una volta che la cassaforte è nella sua posizione finale, l'installazione comprende l'ancoraggio al pavimento tramite i fori di montaggio pre-forati integrati nella struttura — non un'opzione aggiuntiva, ma parte di un'installazione eseguita correttamente. Il tuo rivenditore verificherà che il pavimento possa sostenere il peso dell'unità prima dell'ancoraggio, specialmente su qualsiasi piano sopra il livello del terreno.",
+          "Poiché Torvault vende all'ingrosso tramite rivenditori invece di pubblicare i costi di spedizione online, il prezzo di consegna e installazione viene preventivato insieme all'unità stessa — chiedi al tuo rivenditore di includerlo fin da subito, così non ci saranno sorprese tra il preventivo e il giorno della consegna."
+        ]
+      }
+    },
+    "meta": {
+      "title": "The Vault | Blog di Torvault Safe Company",
+      "description": "Guide sulle classificazioni di sicurezza UL, la protezione antincendio, il dimensionamento e l'installazione — scritte dal team dietro la linea di casseforti ad alta sicurezza di Torvault, venduta prima ai rivenditori."
+    },
+    "hero": {
+      "crumb": "Blog",
+      "eyebrow": "The Vault",
+      "title": "Guide dal team Torvault.",
+      "body": "Classificazioni di sicurezza, protezione antincendio, dimensionamento e installazione — scritte dallo stesso team che vende, assiste e installa casseforti nella Greater Toronto Area dal 1987."
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Chi è Torvault | Sostenuta da 39 Anni di Esperienza nella Sicurezza",
+      "description": "Torvault è un marchio produttore di casseforti ad alta sicurezza di Security Lock & Safe Inc., gestore di Toronto Safes ed esperto di casseforti nell'area di Toronto dal 1987."
+    },
+    "hero": {
+      "crumb": "Chi siamo",
+      "eyebrow": "Chi è Torvault",
+      "title": "Il marchio più resistente, sostenuto da decenni di esperienza.",
+      "body": "Torvault è un marchio di casseforti ad alta sicurezza creato dal team dietro Security Lock & Safe Inc., fornitore di casseforti e porte di caveau nell'area di Toronto dal 1987."
+    },
+    "story": {
+      "eyebrow": "La Nostra Storia",
+      "heading": "Perché abbiamo creato Torvault.",
+      "p1": "Costruita su decenni di esperienza nella sicurezza fisica, Torvault è stata creata per elevare lo standard della protezione ad alta sicurezza.",
+      "p2": "Le nostre fondamenta risalgono al 1987 attraverso Security Lock & Safe Inc., dove decenni di esperienza sul campo nella protezione di attività commerciali, beni di valore e risorse critiche hanno modellato il nostro approccio.",
+      "p3": "Torvault porta avanti quell'eredità in una nuova generazione di casseforti ad alta sicurezza, combinando costruzione robusta, sistemi di chiusura avanzati e un'ingegneria accurata.",
+      "p4": "Crediamo che la sicurezza non debba mai essere compromessa, e ogni cassaforte Torvault è progettata attorno a questo principio."
+    },
+    "timeline": {
+      "eyebrow": "Cronologia",
+      "heading": "Da un banco di fabbro a Concord a una linea nazionale.",
+      "item1Year": "1987",
+      "item1Title": "Fondazione di Security Lock & Safe Inc.",
+      "item1Body": "Fondata a Concord, in Ontario, offrendo vendita e assistenza di casseforti e servizi di fabbro commerciale all'area metropolitana di Toronto.",
+      "item2Year": "1987–2025",
+      "item2Title": "Toronto Safes diventa un nome regionale di fiducia",
+      "item2Body": "Quasi quattro decenni di fornitura e installazione di casseforti e porte di caveau per clienti residenziali, commerciali, industriali e istituzionali — inclusi enti governativi, ospedali e forze dell'ordine — oltre a servizi di emergenza per porte bloccate e di fabbro in tutta l'area di Toronto.",
+      "item3Year": "2026",
+      "item3Title": "Torvault viene lanciata",
+      "item3Body": "Lo stesso team entra nella produzione con una linea testata UL e pensata prima di tutto per i rivenditori, costruita per i rivenditori di casseforti canadesi indipendenti — non per la vendita al dettaglio diretta al consumatore."
+    },
+    "guides": {
+      "eyebrow": "The Vault",
+      "heading": "Guide dal team Torvault.",
+      "viewAll": "Visualizza Tutti gli Articoli →"
+    },
+    "callout": {
+      "strong": "Sostenuta da Security Lock & Safe Inc.",
+      "body": "— con sede a Concord, in Ontario, e operativa come Toronto Safes dal 1987, al servizio di clienti residenziali, commerciali, industriali e istituzionali in tutta l'area di Toronto con vendita, consegna e installazione di casseforti, porte di caveau, servizi di fabbro commerciale ed emergenza per porte bloccate.",
+      "link": "Visita Toronto Safes →"
+    },
+    "nextStep": {
+      "eyebrow": "Prossimo Passo",
+      "heading": "Scopri come vengono prodotte le casseforti.",
+      "manufacturingCta": "Processo di Produzione",
+      "dealerCta": "Diventa Rivenditore"
+    }
+  },
+  "manufacturing": {
+    "meta": {
+      "title": "Produzione | Come Vengono Costruite le Casseforti Torvault — Torvault",
+      "description": "Dalla formatura dell'acciaio ai test di conformità: come Torvault progetta e produce casseforti antincendio e antieffrazione classificate UL per il mercato canadese."
+    },
+    "hero": {
+      "crumb": "Produzione",
+      "eyebrow": "Produzione",
+      "title": "Progettata per il Canada. Costruita per raggiungerlo.",
+      "body": "Le casseforti Torvault sono progettate secondo gli standard canadesi di sicurezza e test antincendio, poi prodotte su larga scala in Vietnam — offrendo ai rivenditori canadesi un'alternativa certificata a un prezzo sostanzialmente diverso rispetto a una produzione esclusivamente nazionale."
+    },
+    "commitments": {
+      "eyebrow": "Impegni di Qualità",
+      "heading": "Su cosa non scendiamo a compromessi.",
+      "item1Title": "Metodologia UL Prima di Tutto",
+      "item1Body": "Le classificazioni sono obiettivi progettuali fin dal primo giorno, non affermazioni aggiunte dopo la produzione.",
+      "item2Title": "Controllo Qualità Documentato in Ogni Fase",
+      "item2Body": "Calibro dell'acciaio, integrità delle saldature, posizionamento della piastra corazzata e funzionamento della serratura vengono verificati prima che un'unità passi alla fase successiva.",
+      "item3Title": "Progettata per il Clima Canadese",
+      "item3Body": "Finitura e componenti sono specificati per l'intervallo di umidità e temperatura in cui i rivenditori canadesi installano effettivamente.",
+      "item4Title": "39 Anni di Riscontri sul Campo",
+      "item4Body": "Costruita dallo stesso team che ogni giorno assiste e installa casseforti — non una fabbrica che indovina ciò di cui i rivenditori hanno bisogno."
+    },
+    "callout": {
+      "strong": "Importazione diretta, senza ricarico intermedio.",
+      "body": "Torvault produce su larga scala in Vietnam e importa direttamente in Canada — lo stesso percorso che ci permette di offrire prezzi all'ingrosso ai rivenditori senza scendere a compromessi sulla metodologia di test UL o sulla specifica dell'acciaio."
+    },
+    "nextStep": {
+      "eyebrow": "Prossimo Passo",
+      "heading": "Scopri a cosa resiste realmente ogni classificazione.",
+      "certifiedCta": "Standard Certificato",
+      "productsCta": "Visualizza Prodotti"
+    }
+  },
+  "certifiedStandard": {
+    "meta": {
+      "title": "Standard Certificato | Classificazioni UL Antincendio e Antieffrazione Spiegate — Torvault",
+      "description": "Cosa significano realmente TL-15, TL-30 e le classificazioni antincendio di fabbrica — metodologia di test, utensili utilizzati, tempo di lavorazione netto e perché gli assicuratori si basano su di esse."
+    },
+    "hero": {
+      "crumb": "Standard Certificato",
+      "eyebrow": "Standard Certificato",
+      "title": "Ogni classificazione, spiegata.",
+      "body": "Le classificazioni UL non sono marketing — sono testate in modo indipendente con utensili reali e un cronometro. Ecco cosa significa ogni classificazione sulla targhetta tecnica di una cassaforte Torvault."
+    },
+    "ulTesting": {
+      "eyebrow": "Come Funzionano i Test UL",
+      "heading": "Tempo di lavorazione netto, non tempo totale trascorso.",
+      "bodyPre": "Underwriters Laboratories (UL) certifica le casseforti facendo attaccare un'unità di produzione da tecnici addestrati — di fatto scassinatori professionisti — con un kit definito di utensili. Il risultato è misurato in",
+      "bodyStrong": "tempo di lavorazione netto",
+      "bodyPost": ": il cronometro avanza solo mentre un utensile sta effettivamente lavorando sulla cassaforte, e si ferma nell'istante in cui viene rimosso. Una cassaforte non supera il test sopravvivendo un'ora in un'officina — lo supera resistendo a una quantità fissa di attacco continuo e concentrato."
+    },
+    "terms": {
+      "entryLabel": "Livello Medio",
+      "entryTitle": "Testata in Fabbrica Contro il Fuoco",
+      "entryBody": "La resistenza all'effrazione di base della linea Torvault Antincendio e Antieffrazione, verificata internamente contro i più comuni utensili meccanici — non una classificazione certificata UL come TL‑15 o TL‑30.",
+      "entryLi1": "5 minuti di tempo di lavorazione netto",
+      "entryLi2": "Testata su tutti i lati, non solo sulla porta",
+      "entryLi3": "Solo comuni utensili manuali meccanici",
+      "entryLi4": "Serratura a combinazione o a tastiera",
+      "tl15Label": "Alta Sicurezza",
+      "tl15Title": "UL TL‑15",
+      "tl15Body": "Classificazione resistente agli utensili, 15 minuti — lo standard dietro la maggior parte delle filiali bancarie e delle farmacie canadesi.",
+      "tl15Li1": "15 minuti di tempo di lavorazione netto, solo porta",
+      "tl15Li2": "Utensili manuali, trapani, punteruoli, martelli",
+      "tl15Li3": "Dispositivi a pressione consentiti",
+      "tl15Li4": "Fino a 200 lb / non è richiesta l'installazione indipendente",
+      "tl30Label": "Massima Sicurezza",
+      "tl30Title": "UL TL‑30",
+      "tl30Body": "La classificazione dietro la linea di punta di Torvault — stesso kit di utensili della TL‑15, più utensili elettrici, su tutti i sei lati.",
+      "tl30Li1": "30 minuti di tempo di lavorazione netto",
+      "tl30Li2": "Testata sulla struttura, non solo sulla porta",
+      "tl30Li3": "Aggiunge dischi abrasivi da taglio e seghe elettriche",
+      "tl30Li4": "Trapani al carburo ad alta velocità, cannelli da taglio"
+    },
+    "fireTesting": {
+      "eyebrow": "Test di Resistenza al Fuoco",
+      "heading": "Cosa sopravvive a una fornace a 1.700°F.",
+      "body": "Il test di resistenza al fuoco è la metodologia standard per le attrezzature di protezione di documenti e dati. Una cassaforte chiusa viene posta all'interno di una fornace industriale che segue una curva controllata di tempo-temperatura, raggiungendo fino a 1.700°F, mentre dei sensori registrano continuamente la temperatura interna. La cassaforte fallisce il test nell'istante in cui l'interno supera la soglia della sua classe — in qualsiasi punto all'interno della camera.",
+      "class350Title": "Class 350",
+      "class350Body": "L'interno resta sotto i 350°F — la temperatura alla quale la carta inizia a carbonizzarsi. Lo standard per la protezione di documenti e contanti.",
+      "class150Title": "Class 150",
+      "class150Body": "L'interno resta sotto i 150°F — richiesto per microfilm e altri supporti sensibili al calore.",
+      "class125Title": "Class 125",
+      "class125Body": "L'interno resta sotto i 125°F — la tolleranza più rigorosa, per supporti digitali, hard disk e nastri di backup.",
+      "durationTitle": "Durata (\"–Hr\")",
+      "durationBodyPre": "Abbinata alla classe, ad es.",
+      "durationBodyStrong": "1–Hr / 350°F",
+      "durationBodyPost": "— per quanto tempo la cassaforte mantiene la sua classificazione all'interno della fornace."
+    },
+    "table": {
+      "eyebrow": "A Confronto",
+      "heading": "Ogni linea di prodotti, in un'unica tabella.",
+      "colProductLine": "Linea di Prodotti",
+      "colRating": "Classificazione",
+      "colNetWorkingTime": "Tempo di Lavorazione Netto",
+      "colToolsResisted": "Utensili Resistiti",
+      "colFireEndurance": "Resistenza al Fuoco",
+      "colSteelBody": "Struttura in Acciaio",
+      "colTypicalUse": "Uso Tipico",
+      "fireBurglaryRow": "Antincendio e Antieffrazione",
+      "fireBurglaryTools": "Comuni utensili manuali",
+      "fireBurglaryUse": "Uffici domestici e commerciali",
+      "tl15Tools": "+ Trapani, punteruoli, martelli",
+      "tl15Use": "Filiali bancarie, farmacie",
+      "tl30Tools": "+ Dischi da taglio, seghe, cannelli",
+      "tl30Use": "Depositi di trasporto valori, gioiellerie"
+    },
+    "insuranceCallout": {
+      "strong": "Perché è importante per l'assicurazione:",
+      "body": "La maggior parte delle polizze canadesi per proprietà commerciali e trasporto valori stabilisce i limiti di copertura direttamente in base alla classificazione UL della cassaforte — una polizza potrebbe limitare la copertura in contanti a $2.500 in un contenitore non classificato contro $50.000+ dietro una struttura UL TL‑30. Prima di specificare una cassaforte per un cliente, verifica la classificazione effettivamente richiesta dal suo assicuratore, non solo ciò che rientra nel budget."
+    },
+    "nextStep": {
+      "eyebrow": "Prossimo Passo",
+      "heading": "Scopri la classificazione sulla cassaforte.",
+      "productsCta": "Visualizza Prodotti",
+      "faqCta": "Leggi le FAQ"
+    }
+  },
+  "faqPage": {
+    "meta": {
+      "title": "FAQ | Torvault Safe Company",
+      "description": "Risposte sulle classificazioni UL delle casseforti, protezione antincendio vs. antieffrazione, il modello di Torvault basato solo sui rivenditori, tempi di consegna e come diventare un rivenditore autorizzato."
+    },
+    "hero": {
+      "crumb": "FAQ",
+      "eyebrow": "FAQ",
+      "title": "Domande frequenti.",
+      "bodyPre": "Classificazioni, approvvigionamento, ordini e come funziona il programma rivenditori — se la tua domanda non è qui, scrivi a"
+    },
+    "groupGeneral": "Generale",
+    "groupRatings": "Classificazioni e Certificazione",
+    "groupOrdering": "Ordini e Rivenditori",
+    "general": {
+      "q1": "Torvault è attualmente una linea di prodotti certificata e disponibile per la spedizione?",
+      "a1": "Torvault è un nuovo marchio in lancio nel 2026. Le specifiche mostrate su questo sito riflettono i nostri obiettivi progettuali e sono indicative, in attesa della certificazione UL finale e della produzione — siamo trasparenti su questo punto invece di suggerire certificazioni che non possediamo ancora. I rivenditori confermati ricevono lo stato di certificazione attuale come parte dell'onboarding.",
+      "q2": "In cosa Torvault è diversa da Toronto Safes?",
+      "a2": "Toronto Safes è un fornitore al dettaglio, che vende direttamente a privati e aziende in tutta l'area di Toronto dal 1987. Torvault è un nuovo marchio produttore della stessa società madre, Security Lock & Safe Inc. — creato per fornire rivenditori di casseforti indipendenti in tutto il Canada all'ingrosso, non per vendere direttamente ai consumatori. Scopri la storia completa sulla nostra {aboutLink}.",
+      "a2LinkText": "pagina Chi siamo",
+      "q3": "Una cassaforte \"a prova di fuoco\" è davvero a prova di fuoco?",
+      "a3Pre": "Nessuna cassaforte è davvero a prova di fuoco — il termine corretto è",
+      "a3Em1": "ignifuga",
+      "a3Mid": "o",
+      "a3Em2": "con classificazione antincendio",
+      "a3Post": ". Una classificazione come \"1–Hr / 350°F\" significa che l'interno è rimasto sotto i 350°F per un'ora all'interno di una fornace che all'esterno della cassaforte può raggiungere i 1.700°F — non che i contenuti siano immuni al fuoco a tempo indefinito. Fai corrispondere la classificazione di durata al tuo tempo di risposta realistico dei vigili del fuoco."
+    },
+    "ratings": {
+      "q1": "Cosa significa realmente una classificazione di sicurezza UL?",
+      "a1": "UL (Underwriters Laboratories) testa in modo indipendente le casseforti contro utensili reali — leve, trapani, seghe, cannelli da taglio — per un tempo di lavorazione netto stabilito (il cronometro avanza solo mentre un utensile sta effettivamente lavorando sulla cassaforte). Una cassaforte TL‑15 resiste a un attacco professionale con utensili comuni per 15 minuti; la TL‑30 per 30, su ogni lato. È lo stesso standard che gli assicuratori utilizzano per stabilire i limiti di copertura. Analisi completa sulla nostra {certifiedStandardLink}.",
+      "a1LinkText": "pagina Standard Certificato",
+      "q2": "Una classificazione antieffrazione più alta significa una migliore protezione antincendio?",
+      "a2": "No — le classificazioni antieffrazione (Antincendio e Antieffrazione, TL‑15, TL‑30) e le classificazioni antincendio (misurate in ore e temperatura interna massima) sono testate in modo completamente indipendente. Una classificazione antieffrazione elevata non dice nulla sulle prestazioni antincendio, e viceversa. Se ti servono entrambe, verifica che la cassaforte abbia una classificazione documentata per ciascuna, non solo per una."
+    },
+    "ordering": {
+      "q1": "Vendete direttamente ai consumatori?",
+      "a1": "No. Torvault vende esclusivamente tramite rivenditori canadesi autorizzati. Se sei un privato o un'azienda che desidera acquistare una cassaforte direttamente, contatta la nostra azienda consociata {torontoSafesLink} oppure chiedici di indicarti un rivenditore nella tua regione.",
+      "q2": "Quali sono i tempi di consegna per il Canada?",
+      "a2": "Torvault è nel suo primo ciclo di assegnazione dei territori per il 2026. I rivenditori confermati ricevono impegni su tempi di consegna e disponibilità di magazzino come parte dell'onboarding — richiedi il pacchetto rivenditori sulla nostra {dealerProgramLink} per i tempi attuali.",
+      "a2LinkText": "pagina Programma Rivenditori",
+      "q3": "Come posso diventare un rivenditore autorizzato Torvault?",
+      "a3": "Scrivi a {email} indicando il nome della tua azienda e la tua regione, oppure consulta l'intero processo di candidatura sulla nostra {dealerProgramLink}. Ti invieremo schede tecniche certificate, prezzi all'ingrosso e disponibilità dei territori.",
+      "q4": "Il territorio è esclusivo per un solo rivenditore?",
+      "a4": "La protezione del territorio fa parte del programma rivenditori — i dettagli e la disponibilità attuale per regione vengono forniti durante l'onboarding, poiché Torvault è ancora nel suo primo ciclo di assegnazione. Contattaci presto per assicurarti la tua area."
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contatta l'Assistenza | Torvault Safe Company",
+      "description": "Contatta Torvault per domande generali, informazioni sul programma rivenditori o preventivi sui prodotti — oppure trova un rivenditore autorizzato per prezzi e installazione nella tua regione."
+    },
+    "hero": {
+      "crumb": "Contatti",
+      "eyebrow": "Contatta l'Assistenza",
+      "title": "Mettiti in contatto.",
+      "body": "Torvault vende esclusivamente tramite rivenditori canadesi autorizzati, quindi di seguito abbiamo indicato esattamente chi contattare — che tu sia un rivenditore, un'azienda che sta valutando un acquisto, o che tu stia cercando assistenza per una cassaforte che già possiedi."
+    },
+    "cards": {
+      "generalTitle": "Richieste Generali",
+      "generalBody": "Domande su Torvault, le nostre linee di prodotti, o qualsiasi cosa non trattata nel Centro assistenza.",
+      "dealerTitle": "Diventa Rivenditore",
+      "dealerBody": "Candidati per offrire Torvault all'ingrosso con protezione del territorio, oppure richiedi informazioni sul programma rivenditori.",
+      "dealerLink": "Dettagli sul Programma Rivenditori →",
+      "quoteTitle": "Prezzi e Richieste di Preventivo",
+      "quoteBody": "Torvault non pubblica prezzi né vende direttamente — ogni preventivo passa attraverso un rivenditore autorizzato in grado di parlarti di consegna e installazione per il tuo spazio.",
+      "quoteLink": "Trova un Rivenditore vicino a te →",
+      "existingTitle": "Sei già un Cliente di Toronto Safes?",
+      "existingBody": "Torvault è prodotta dal team dietro Toronto Safes, il ramo retail di Security Lock & Safe Inc. nell'area di Toronto dal 1987. Le richieste di vendita e assistenza esistenti vanno direttamente a Toronto Safes.",
+      "existingLink": "torontosafes.ca →"
+    },
+    "formSection": {
+      "eyebrow": "Contattaci",
+      "heading": "Lascia il tuo messaggio e ti risponderemo a breve."
+    },
+    "callout": {
+      "strong": "Cerchi prima delle risposte?",
+      "bodyPre": "La maggior parte delle domande su classificazioni, dimensioni e installazione sono già trattate nel nostro",
+      "helpCenter": "Centro assistenza",
+      "and": "e nelle"
+    }
+  },
+  "termsPage": {
+    "meta": {
+      "title": "Termini e Condizioni | Torvault Safe Company",
+      "description": "Termini e condizioni per l'utilizzo di torvaultsafe.com e per le comunicazioni di marketing via email e SMS da parte di Torvault Safe Company."
+    },
+    "hero": {
+      "crumb": "Termini e Condizioni",
+      "eyebrow": "Legale",
+      "title": "Termini e Condizioni.",
+      "bodyPre": "Ultimo aggiornamento: ottobre 2026. Domande? Scrivi a"
+    },
+    "s1Title": "1. Panoramica",
+    "s1Body": "I presenti termini regolano l'utilizzo di torvaultsafe.com e qualsiasi comunicazione via email o SMS a cui ti iscrivi da parte di Torvault Safe Company (“Torvault,” “noi”), un marchio di Security Lock & Safe Inc. Inviando il modulo di iscrizione su questo sito, accetti i termini riportati di seguito.",
+    "s2Title": "2. Contenuto del sito",
+    "s2BodyPre": "Le specifiche, le immagini e i prezzi su questo sito sono forniti a scopo informativo generale e sono soggetti a modifiche senza preavviso. Torvault vende esclusivamente tramite rivenditori canadesi autorizzati; nulla su questo sito costituisce un'offerta di vendita diretta ai consumatori. Consulta le pagine",
+    "s2DealerProgram": "Programma Rivenditori",
+    "s2And": "e",
+    "s2FindDealer": "Trova un Rivenditore",
+    "s2Post": "per le informazioni aggiornate sui rivenditori.",
+    "s3Title": "3. Consenso al marketing via email",
+    "s3Body": "Se fornisci il tuo indirizzo email, acconsenti a ricevere messaggi di marketing da Torvault, inclusi aggiornamenti sui prodotti, novità sul programma rivenditori e promozioni. Puoi revocare il consenso in qualsiasi momento utilizzando il link di annullamento iscrizione incluso in ogni email, oppure scrivendo a",
+    "s4Title": "4. Consenso al marketing via SMS",
+    "s4BodyPre": "Se fornisci il tuo numero di telefono, accetti di ricevere messaggi di testo di marketing ricorrenti da Torvault Safe Company al numero fornito, inviati tramite un sistema automatizzato. Il consenso a ricevere messaggi di testo non è condizione per alcun acquisto. La frequenza dei messaggi varia. Potrebbero essere applicati costi per messaggi e dati. Rispondi",
+    "s4Help": "HELP",
+    "s4ForHelpOr": "per assistenza o",
+    "s4Stop": "STOP",
+    "s4Post": "per annullare in qualsiasi momento; dopo aver inviato STOP, ti invieremo un ultimo messaggio di conferma e non ti invieremo più messaggi.",
+    "s5Title": "5. Privacy",
+    "s5Body": "Utilizziamo le informazioni di contatto che fornisci solo per inviarti le comunicazioni a cui hai aderito e per rispondere alle tue richieste. Non vendiamo le tue informazioni personali a terzi. Puoi richiedere l'accesso, la correzione o l'eliminazione delle tue informazioni in qualsiasi momento scrivendo a",
+    "s6Title": "6. Modifiche ai presenti termini",
+    "s6Body": "Potremmo aggiornare questi termini periodicamente; la data di “ultimo aggiornamento” indicata sopra riflette la revisione più recente. L'uso continuato di questo sito o l'adesione continuata alle nostre comunicazioni dopo una modifica costituisce accettazione dei termini aggiornati.",
+    "s7Title": "7. Contatti",
+    "s7BodyPre": "Security Lock & Safe Inc., operante come Torvault Safe Company. Scrivi a",
+    "s7Or": "oppure chiama"
+  },
+  "supportPage": {
+    "meta": {
+      "title": "Centro Assistenza | Torvault Safe Company",
+      "description": "Trova risposte su classificazioni UL, dimensioni, spedizione e installazione, oppure contatta l'assistenza Torvault e la nostra rete di rivenditori autorizzati."
+    },
+    "hero": {
+      "crumb": "Centro Assistenza",
+      "eyebrow": "Centro Assistenza",
+      "title": "Come possiamo aiutarti?",
+      "bodyPre": "Classificazioni, dimensioni, spedizione e installazione — trova tutto qui sotto, oppure",
+      "contactLink": "contatta l'assistenza",
+      "bodyPost": "direttamente."
+    },
+    "topics": {
+      "faqTitle": "Domande Frequenti",
+      "faqBody": "Risposte su classificazioni UL, il modello basato solo sui rivenditori, protezione antincendio e tempi di consegna.",
+      "sizeTitle": "Guide su Dimensioni e Capacità",
+      "sizeBody": "Come dimensionare una cassaforte in base a ciò che devi davvero custodire — oltre al nostro strumento interattivo di ricerca delle misure.",
+      "shippingTitle": "Spedizione e Installazione",
+      "shippingBody": "Cosa aspettarsi il giorno della consegna, la pianificazione del percorso di accesso e come funziona l'ancoraggio.",
+      "vaultTitle": "The Vault — Guide e Articoli",
+      "vaultBody": "L'intera raccolta di guide Torvault su classificazioni, protezione antincendio e come scegliere la cassaforte giusta.",
+      "dealerTitle": "Trova un Rivenditore",
+      "dealerBody": "Individua un rivenditore Torvault autorizzato per prezzi, consegna e installazione nella tua regione.",
+      "contactTitle": "Contatta l'Assistenza",
+      "contactBody": "Richieste generali, domande sul programma rivenditori e come contattare il team giusto."
+    },
+    "stillNeedHelp": {
+      "eyebrow": "Hai Ancora Bisogno di Aiuto?",
+      "heading": "Parla con una persona, non con una coda di ticket.",
+      "body": "Torvault è sostenuta da Security Lock & Safe Inc. — lo stesso team che risponde al telefono ai clienti di Toronto Safes dal 1987.",
+      "cta": "Contatta l'Assistenza →"
+    }
+  },
+  "dealersPage": {
+    "meta": {
+      "title": "Diventa Rivenditore | Torvault Safe Company",
+      "description": "Torvault sta avviando i primi territori rivenditori in Canada — prezzi all'ingrosso, protezione del territorio e una linea testata UL senza concorrenza diretta al consumatore."
+    },
+    "hero": {
+      "crumb": "Rivenditori",
+      "eyebrow": "Programma Rivenditori",
+      "title": "Ora in fase di avvio per i rivenditori canadesi.",
+      "body": "Torvault sta aprendo i primi territori per rivenditori in tutto il Canada — prezzi all'ingrosso, protezione del territorio e una linea testata UL senza alcuna concorrenza diretta al consumatore da parte nostra."
+    },
+    "lookingToBuyPre": "Vuoi acquistare una cassaforte Torvault, non venderla?",
+    "lookingToBuyLink": "Trova un rivenditore autorizzato vicino a te →",
+    "benefits": {
+      "eyebrow": "Vantaggi del Programma",
+      "heading": "Pensato per proteggere il tuo margine.",
+      "body": "Torvault esiste perché i rivenditori indipendenti meritano un fornitore certificato che non competa con loro al dettaglio. Ogni parte del programma è costruita attorno a questo principio.",
+      "item1Title": "Protezione del Territorio",
+      "item1Body": "I rivenditori avviati ottengono un territorio regionale definito — i dettagli vengono confermati durante la revisione della candidatura.",
+      "item2Title": "Prezzi all'Ingrosso",
+      "item2Body": "Prezzi di importazione diretta dal nostro stabilimento produttivo in Vietnam — senza ricarico da distributori intermedi.",
+      "item3Title": "Nessuna Concorrenza Diretta al Consumatore",
+      "item3Body": "Torvault vende esclusivamente tramite rivenditori. Non pubblichiamo mai prezzi pubblicamente né vendiamo direttamente.",
+      "item4Title": "Schede Tecniche Certificate",
+      "item4Body": "Documentazione secondo la metodologia UL per ogni linea di prodotti, pronta da consegnare a un cliente o a un assicuratore.",
+      "item5Title": "39 Anni di Supporto nel Settore",
+      "item5Body": "Sostenuto dai decenni di esperienza di Security Lock & Safe Inc. in vendita, assistenza e consegna.",
+      "item6Title": "Assegnazione Anticipata dei Territori",
+      "item6Body": "I rivenditori del primo ciclo ottengono priorità su tempi di consegna e disponibilità di magazzino mentre la linea raggiunge la piena produzione."
+    },
+    "steps": {
+      "eyebrow": "Come Funziona",
+      "heading": "Quattro passaggi per l'avvio.",
+      "step1Title": "Richiedi Informazioni",
+      "step1BodyPre": "Scrivi a",
+      "step1BodyPost": "oppure invia il modulo qui sotto con il nome della tua azienda e la tua regione.",
+      "step2Title": "Verifica del Territorio e Compatibilità",
+      "step2Body": "Confermiamo la disponibilità del territorio ed esaminiamo quali linee di prodotti si adattano alla tua tipica base di clienti.",
+      "step3Title": "Accordo Rivenditore",
+      "step3Body": "Prezzi all'ingrosso, condizioni territoriali e impegni sui tempi di consegna sono definiti nel tuo accordo rivenditore.",
+      "step4Title": "Avvio e Primo Ordine",
+      "step4Body": "Riceverai schede tecniche certificate, materiali di marketing e la tempistica del tuo primo ordine."
+    },
+    "snapshot": {
+      "eyebrow": "Panoramica del Lancio",
+      "heading": "Primo ciclo di assegnazione, ora aperto.",
+      "body": "Territori e schede tecniche sono disponibili ora per il primo ciclo di avvio dei rivenditori canadesi.",
+      "cta": "Richiedi il Pacchetto Rivenditore",
+      "stat1Label": "Linee di prodotti al lancio",
+      "stat2Label": "Classificazione antieffrazione massima",
+      "stat3Label": "Focus sui rivenditori canadesi",
+      "stat4Label": "Ciclo di assegnazione territori"
+    },
+    "cta": {
+      "eyebrow": "Mettiti in Contatto",
+      "heading": "Parlaci della tua attività.",
+      "body": "Inviaci il nome della tua azienda, la tua regione e una nota sulla tua attuale linea di prodotti — ti risponderemo con la disponibilità del territorio e un pacchetto di schede tecniche.",
+      "formNotePre": "Inviando il modulo, accetti di essere contattato da Torvault Safe Company riguardo all'avvio come rivenditore. Consulta le nostre",
+      "formNoteLink": "FAQ",
+      "formNotePost": "per saperne di più sul processo di candidatura."
+    }
+  },
+  "findADealerPage": {
+    "meta": {
+      "title": "Trova un Rivenditore | Torvault Safe Company",
+      "description": "Trova un rivenditore autorizzato di casseforti Torvault vicino a te in Canada — showroom, servizi di fabbro e consegna e installazione."
+    },
+    "hero": {
+      "crumb": "Trova un Rivenditore",
+      "eyebrow": "Dove Acquistare",
+      "title": "Trova un rivenditore Torvault vicino a te.",
+      "body": "Torvault vende esclusivamente tramite rivenditori autorizzati — mai direttamente ai consumatori. Cerca qui sotto uno showroom, un fabbro o un partner per la consegna nella tua zona."
+    },
+    "notInArea": {
+      "eyebrow": "Non Ancora nella Tua Zona?",
+      "heading": "Stiamo aprendo nuovi territori proprio ora.",
+      "body": "Torvault è nel suo primo ciclo di avvio dei rivenditori canadesi. Se non c'è ancora un rivenditore autorizzato vicino a te, puoi comunque ottenere schede tecniche certificate ed essere avvisato nel momento in cui un rivenditore aprirà nel tuo territorio.",
+      "cta": "Scopri il Programma Rivenditori →"
+    },
+    "areYouRetailer": {
+      "eyebrow": "Sei un Rivenditore o un Fabbro?",
+      "heading": "Offri una linea certificata, non una categoria di marketing.",
+      "body": "I rivenditori indipendenti ottengono prezzi all'ingrosso, protezione del territorio e nessuna concorrenza diretta al consumatore da parte di Torvault. Unisciti al primo ciclo di assegnazione dei rivenditori canadesi.",
+      "cta": "Candidati per Diventare Rivenditore →"
+    }
+  },
+  "dealerLocator": {
+    "searchPlaceholder": "Cerca per città, provincia o codice postale",
+    "searchAriaLabel": "Cerca un rivenditore Torvault in base alla posizione",
+    "useMyLocation": "Usa la Mia Posizione",
+    "locating": "Localizzazione…",
+    "locationUnavailable": "I servizi di localizzazione non sono disponibili in questo browser.",
+    "locationFailed": "Non siamo riusciti ad accedere alla tua posizione. Prova invece a cercare una città o un codice postale.",
+    "yourLocation": "La tua posizione",
+    "clearSearch": "Cancella ricerca",
+    "emptyTitle": "Nessun rivenditore Torvault corrisponde ancora a questi filtri.",
+    "emptyBody": "Stiamo avviando proprio ora il primo ciclo di rivenditori canadesi — questo elenco crescerà con l'apertura di nuovi territori. Se sei un rivenditore o un fabbro interessato a offrire Torvault, vorremmo sentirti.",
+    "emptyCta": "Candidati per Diventare Rivenditore",
+    "showroom": "Showroom",
+    "locksmithServices": "Servizi di Fabbro",
+    "deliveryInstallation": "Consegna e Installazione"
+  },
+  "buildStory": {
+    "ch1Eyebrow": "01 — Produzione",
+    "ch1Title": "Tagliato, formato e saldato.",
+    "ch1Body": "Ogni struttura Torvault parte da una lastra di acciaio laminato a freddo massiccio — tagliata, formata e saldata sulla nostra linea di produzione allo spessore specificato per ciascuna linea, dalle strutture RSC calibro 12 alla costruzione massiccia TL‑30 da 1.5 pollici.",
+    "ch2Eyebrow": "02 — Assemblaggio",
+    "ch2Title": "Piastra corazzata, perni e la ruota.",
+    "ch2Body": "La piastra corazzata composita viene legata sopra i catenacci, poi i perni di rinchiusura automatica, il combinatore e la ruota di chiusura vengono montati e testati prima che la porta venga mai montata.",
+    "ch3Eyebrow": "03 — Apertura",
+    "ch3Title": "Costruita per resistere. Progettata per durare.",
+    "ch3Body": "Ogni saldatura e ogni perno vengono controllati prima che un'unità venga spedita — e ispezionati nuovamente una volta montata, così la porta si apre esattamente come specificato.",
+    "ch3Cta": "Scopri l'Intero Processo di Produzione"
+  },
+  "aboutStory": {
+    "ch1Eyebrow": "Chi è Torvault",
+    "ch1Title": "Costruita sulla forza, guidata dall'esperienza.",
+    "ch1Body": "Con un'esperienza che risale al 1987, offriamo casseforti ad alta sicurezza per privati, rivenditori, aziende, enti governativi, istituzioni, forze dell'ordine e forze armate — ogni cassaforte è costruita per una qualità senza compromessi e una tranquillità duratura.",
+    "ch2Eyebrow": "01 — Il Nostro Scopo",
+    "ch2Title": "Forza. Esperienza. Fiducia.",
+    "ch2Body": "Torvault è stata fondata con uno scopo chiaro: aiutare le persone a proteggere ciò che conta di più. Sostenuta da decenni di competenza nel settore, portiamo conoscenza pratica a una nuova generazione di casseforti residenziali e commerciali.",
+    "ch3Eyebrow": "02 — Chi Serviamo",
+    "ch3Title": "Protezione per ogni contesto.",
+    "ch3Body": "Dai beni personali di valore e i documenti importanti a contanti, inventario e materiali sensibili — serviamo privati, rivenditori, aziende commerciali e industriali, enti governativi, istituzioni, forze dell'ordine e clienti militari.",
+    "ch4Eyebrow": "03 — La Nostra Competenza",
+    "ch4Title": "Esperienza dietro ogni consiglio.",
+    "ch4Body": "Classificazioni di sicurezza, protezione antincendio, opzioni di serratura e accesso quotidiano influenzano tutti la scelta giusta. Il nostro team aiuta i clienti a comprendere queste differenze, così possono prendere decisioni informate con sicurezza.",
+    "ch5Eyebrow": "04 — Oltre la Vendita",
+    "ch5Title": "Assistenza che dura oltre l'acquisto.",
+    "ch5Body": "Dalla selezione del prodotto alla pianificazione dell'installazione, fino all'assistenza continua, ci impegniamo ad aiutare i clienti a ottenere un valore duraturo dal loro acquisto — guadagnando fiducia attraverso persone competenti e una protezione affidabile.",
+    "ch5Cta": "Leggi la Nostra Storia Completa"
+  },
+  "manufacturingStory": {
+    "ch1Eyebrow": "01 — Progettazione e Ingegneria",
+    "ch1Title": "Specificata prima che un'unica unità venga lavorata.",
+    "ch1Body": "La geometria della struttura, della porta e del sistema di chiusura viene specificata secondo la metodologia di test UL 72 e UL TL prima che un'unica unità venga lavorata — ogni linea di prodotti è progettata per una classificazione obiettivo, non adattata in seguito.",
+    "ch2Eyebrow": "02 — Formatura dell'Acciaio e Costruzione della Struttura",
+    "ch2Title": "Tagliato, formato e saldato.",
+    "ch2Body": "La lastra di acciaio massiccio viene tagliata, formata e saldata nella struttura e nel grezzo della porta allo spessore specificato per ciascuna linea di prodotti — dalle strutture RSC calibro 12 alla costruzione massiccia TL‑30 da 1.5 pollici.",
+    "ch3Eyebrow": "03 — Laminazione della Piastra Corazzata",
+    "ch3Title": "Legata sopra la serratura e i catenacci.",
+    "ch3Body": "La piastra corazzata composita viene legata sopra la serratura e i catenacci — e su tutti i sei lati nelle unità TL‑30 — per contrastare gli attacchi di perforazione e taglio durante i test secondo la metodologia UL.",
+    "ch4Eyebrow": "04 — Assemblaggio del Dispositivo di Rinchiusura e del Sistema di Chiusura",
+    "ch4Title": "Montati e testati funzionalmente.",
+    "ch4Body": "I perni di rinchiusura automatica a molla, i catenacci e il meccanismo di chiusura elettronico o meccanico vengono montati e testati funzionalmente prima che la porta venga montata.",
+    "ch5Eyebrow": "05 — Test di Conformità e Importazione",
+    "ch5Title": "Verificata secondo lo standard classificato.",
+    "ch5Body": "Ogni linea di prodotti viene verificata secondo il proprio standard classificato — resistenza al fuoco, resistenza all'effrazione forzata e funzionamento della serratura — prima dell'inizio della distribuzione in Canada.",
+    "ch6Eyebrow": "06 — Importazione e Distribuzione ai Rivenditori",
+    "ch6Title": "Spedita sigillata. Venduta solo tramite rivenditori.",
+    "ch6Body": "Le unità finite vengono importate direttamente in Canada e spedite ai territori dei rivenditori autorizzati — senza passaggio da distributori intermedi, e senza vendita diretta al consumatore."
+  },
+  "favorites": {
+    "favorites": "Preferiti",
+    "viewFavorites": "Visualizza preferiti",
+    "closeFavorites": "Chiudi preferiti",
+    "emptyState": "Nessun preferito ancora. Tocca il cuore su un prodotto per salvarlo qui.",
+    "removeFromFavorites": "Rimuovi {label} dai preferiti"
+  },
+  "productsCommon": {
+    "home": "Home",
+    "notSureEyebrow": "Non sei sicuro di quale linea fa per te?",
+    "notSureHeading": "Parla con uno specialista rivenditore Torvault.",
+    "notSureBody": "Territori e schede tecniche sono disponibili ora per il primo round di inserimento rivenditori canadesi.",
+    "requestDealerPackage": "Richiedi il pacchetto rivenditore"
+  },
+  "productsPage": {
+    "hero": {
+      "crumb": "Prodotti",
+      "eyebrow": "Prodotti",
+      "title": "Tre linee. Uno standard documentato.",
+      "body": "Torvault debutta in Canada con tre linee di prodotto progettate su misura, ciascuna pensata per una minaccia specifica — incendio, effrazione forzata, o entrambe — e verificata secondo la metodologia di test UL anziché una classificazione di marketing interna."
+    },
+    "sideBySide": {
+      "eyebrow": "Confronto diretto",
+      "heading": "Confronta le linee di prodotto.",
+      "bodyPre": "Ogni valutazione qui sotto è una classificazione UL documentata, non una categoria di marketing. La metodologia di test completa è descritta nella",
+      "certifiedStandardLinkText": "pagina Standard Certificato",
+      "bodyPost": "."
+    },
+    "table": {
+      "colProductLine": "Linea di prodotto",
+      "colRating": "Classificazione",
+      "colNetWorkingTime": "Tempo di lavorazione netto",
+      "colFireEndurance": "Resistenza al fuoco",
+      "colSteelBody": "Corpo in acciaio",
+      "colDoor": "Porta",
+      "colRelocking": "Rinchiusura",
+      "colTypicalUse": "Uso tipico",
+      "row1Rating": "Testata in fabbrica contro il fuoco",
+      "row1Net": "5 min, tutti i lati",
+      "row1Steel": "Acciaio calibro 12",
+      "row1Door": "Parete singola, serratura a combinatore",
+      "row1Use": "Uffici domestici e negozi",
+      "row2Rating": "UL TL‑15",
+      "row2Net": "15 min, solo porta",
+      "row2Steel": "Acciaio massiccio 1″",
+      "row2Door": "Piastra composita rinforzata",
+      "row2Relocking": "Catenaccio a molla bidirezionale",
+      "row2Use": "Filiali bancarie, farmacie",
+      "row3Rating": "UL TL‑30",
+      "row3Net": "30 min, sei lati",
+      "row3Steel": "Acciaio massiccio 1,5″",
+      "row3Door": "Piastra composita, 6 lati",
+      "row3Relocking": "Catenaccio a molla quadridirezionale",
+      "row3Use": "Depositi trasporto valori, gioiellerie"
+    },
+    "viewProductFullSpecs": "Vedi prodotto e scheda completa →",
+    "sizesLabel": "Misure",
+    "viewProductDetailsAria": "Vedi i dettagli del prodotto {label}",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Domande frequenti.",
+    "meta": {
+      "title": "Prodotti Casseforti | Antincendio e Antieffrazione, TL-15, TL-30 — Torvault",
+      "description": "Confronta le tre linee di casseforti Torvault: Antincendio e Antieffrazione (testata in fabbrica), TL-15 Alta Sicurezza e TL-30 Alta Sicurezza — caratteristiche, costruzione e a chi è destinata ogni linea."
+    }
+  },
+  "productDetailPage": {
+    "overviewEyebrow": "Panoramica",
+    "overviewHeading": "Costruita secondo uno standard documentato.",
+    "keyFeaturesEyebrow": "Caratteristiche principali",
+    "keyFeaturesHeading": "Cosa è incluso di serie.",
+    "fullLineupEyebrow": "Gamma completa dei modelli",
+    "sizesBuiltToOrder": "{count} misure, prodotte su ordinazione.",
+    "sortDescription": "Ordina per dimensione o peso qui sotto, oppure richiedi un preventivo per un modello — ogni unità {label} viene spedita nelle dimensioni indicate.",
+    "modelsLabel": "modelli",
+    "lbsRangeLabel": "lb di gamma",
+    "exploreLineEyebrow": "Esplora la linea",
+    "exploreLineHeading": "Confronta altri tipi di prodotto.",
+    "viewProduct": "Vedi prodotto →",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Domande sulla linea {label}."
+  }
+}

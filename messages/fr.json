@@ -1,0 +1,1032 @@
+{
+  "nav": {
+    "products": "Produits",
+    "certifiedStandard": "Norme Certifiée",
+    "about": "À propos",
+    "manufacturing": "Fabrication",
+    "support": "Assistance",
+    "blog": "Blogue",
+    "faq": "FAQ",
+    "helpCenter": "Centre d'aide",
+    "contactSupport": "Contacter l'assistance",
+    "sizeGuides": "Guides de taille et de capacité",
+    "shippingInstallation": "Expédition et installation",
+    "whereToBuy": "Où acheter",
+    "findADealer": "Trouver un concessionnaire",
+    "becomeADealer": "Devenir concessionnaire",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "searchSite": "Rechercher sur le site",
+    "viewFavorites": "Voir les favoris",
+    "lbs": "lb"
+  },
+  "languageSwitcher": {
+    "label": "Langue",
+    "ariaLabel": "Choisir la langue"
+  },
+  "footer": {
+    "tagline": "Coffres-forts ignifuges et anti-effraction haute sécurité, conçus pour le marché canadien et fabriqués au Vietnam.",
+    "productsHeading": "Produits",
+    "fireBurglary": "Incendie et effraction",
+    "tl15": "TL-15 Haute Sécurité",
+    "tl30": "TL-30 Haute Sécurité",
+    "companyHeading": "Entreprise",
+    "aboutTorvault": "À propos de Torvault",
+    "manufacturing": "Fabrication",
+    "certifiedStandard": "Norme Certifiée",
+    "findADealer": "Trouver un concessionnaire",
+    "becomeADealer": "Devenir concessionnaire",
+    "faq": "FAQ",
+    "contactHeading": "Contact",
+    "backedByHeading": "Soutenu par",
+    "securityLockSafe": "Security Lock & Safe Inc.",
+    "torontoSafes": "Toronto Safes →",
+    "servingGta": "Au service du Grand Toronto depuis 1987",
+    "copyright": "© 2026 Torvault Safe Company. Tous droits réservés.",
+    "motto": "Torvault Safe Company. — La sécurité sans compromis"
+  },
+  "common": {
+    "viewFullSpecification": "Voir la fiche technique complète",
+    "talkToDealerTeam": "Parler à l'équipe des concessionnaires",
+    "getDirections": "Obtenir l'itinéraire",
+    "applyToBecomeDealer": "Faire une demande pour devenir concessionnaire",
+    "compareProductLines": "Comparer les gammes de produits Torvault",
+    "quickView": "Aperçu rapide",
+    "bestForLabel": "Idéal pour :"
+  },
+  "products": {
+    "fireBurglary": {
+      "label": "Incendie et effraction",
+      "badge": "Gamme d'entrée",
+      "chips": [
+        "Testé au feu en usine",
+        "Corps en acier renforcé"
+      ],
+      "metaDescription": "Coffres-forts Incendie et effraction Torvault : testés au feu en usine, corps renforcé résistant à l'effraction, 11 formats fabriqués sur commande. Fiches techniques et soumissions de concessionnaires disponibles.",
+      "intro": [
+        "La gamme d'entrée de Torvault associe un corps testé au feu en usine à une construction renforcée résistante à l'effraction, testée contre des outils mécaniques courants pour un temps de travail net de cinq minutes sur chaque face. Elle est conçue pour les activités où la protection des documents et des espèces importe davantage que la résistance à une attaque déterminée et outillée.",
+        "Un corps en acier de calibre 12 à paroi simple enveloppe une chambre ignifuge UL Class 350, maintenant une température interne inférieure à 350°F — le seuil à partir duquel le papier commence à carboniser — pendant une heure complète à l'intérieur d'un incendie pouvant atteindre 1 700°F à l'extérieur du coffre-fort."
+      ],
+      "specCells": [
+        {
+          "v": "1–Hr / 350°F",
+          "k": "Cote de résistance au feu"
+        },
+        {
+          "v": "Acier 12 ga",
+          "k": "Construction du corps"
+        },
+        {
+          "v": "Paroi simple",
+          "k": "Type de porte"
+        },
+        {
+          "v": "Cadran ou clavier",
+          "k": "Verrouillage"
+        },
+        {
+          "v": "Testé contre l'effraction forcée",
+          "k": "Cote de résistance à l'effraction"
+        },
+        {
+          "v": "5 min, tous les côtés",
+          "k": "Temps de travail net"
+        }
+      ],
+      "bestFor": "les bureaux à domicile, les arrière-boutiques de commerces de détail et le rangement de petite caisse ou de documents des petites entreprises, là où la protection incendie est la priorité et où le risque d'effraction forcée est limité.",
+      "features": [
+        "Sécurité Euro Grade I, certifiée selon la norme européenne EN 1143-1 pour une résistance maximale à l'effraction.",
+        "Fabriqué selon le système de gestion de la qualité ISO 9001:2015.",
+        "Conçu pour résister à l'effraction grâce à des caractéristiques de sécurité avancées protégeant vos objets de valeur.",
+        "Protection incendie de 60 minutes pour une sécurité accrue.",
+        "Verrous actifs à quatre directions, de conception avancée.",
+        "Système de verrouillage européen conçu avec précision, sécurisant la porte dans toutes les directions — haut, bas, gauche et droite — pour une protection maximale.",
+        "Verrous en acier inoxydable renforcé de 25mm, conçus pour résister aux tentatives de découpe directe, renforçant la résistance à l'effraction forcée.",
+        "Construction multicouche : des matériaux composites de barrière avancés renforcent la résistance à l'effraction et la durabilité structurelle.",
+        "Peinture aux normes européennes RAL avec un revêtement 5 couches pour une durabilité accrue et une finition professionnelle.",
+        "Options de serrure à clé, de serrure à combinaison et de serrure électronique disponibles pour répondre à vos besoins de sécurité spécifiques."
+      ],
+      "faqs": [
+        {
+          "question": "Combien de temps un coffre-fort Incendie et effraction Torvault protège-t-il les documents en cas d'incendie ?",
+          "answer": "La gamme Incendie et effraction porte la cote UL Class 350 : l'intérieur reste sous 350°F — la température à laquelle le papier commence à carboniser — pendant une heure complète, même si l'incendie environnant atteint jusqu'à 1 700°F. Cette heure est testée de façon indépendante, et non une estimation interne."
+        },
+        {
+          "question": "La gamme Incendie et effraction est-elle homologuée pour la résistance à l'effraction, ou seulement pour l'incendie ?",
+          "answer": "Les deux. En plus de sa cote de résistance au feu UL Class 350, chaque corps Incendie et effraction est testé contre l'effraction forcée avec des outils mécaniques courants — pieds-de-biche, marteaux, poinçons — pour un temps de travail net de cinq minutes sur chaque face. Elle n'est pas testée selon la même liste d'outils que le TL-15 ou le TL-30, c'est pourquoi Torvault la considère comme sa gamme d'entrée plutôt qu'une gamme haute sécurité."
+        },
+        {
+          "question": "Quelle est la différence entre la gamme Incendie et effraction et le TL-15 ?",
+          "answer": "Incendie et effraction privilégie d'abord le feu : un corps en acier de calibre 12 à paroi simple construit autour d'une chambre ignifuge UL Class 350, avec une résistance à l'effraction forcée comme caractéristique secondaire. Le TL-15 privilégie d'abord l'effraction : un corps en acier massif de 1 pouce avec plaque composite renforcée, homologué UL pour résister à une attaque professionnelle avec outils électriques pendant 15 minutes, la protection incendie étant offerte en option plutôt qu'intégrée."
+        },
+        {
+          "question": "De quelle taille de coffre-fort Incendie et effraction ai-je besoin ?",
+          "answer": "Cela dépend de ce que vous entreposez et de l'espace au sol dont vous disposez. La gamme compte 11 formats, du compact BF-914 jusqu'au coffre commercial BF-6831 — utilisez l'outil de recherche de taille et le schéma comparatif de cette page pour comparer la capacité intérieure et l'encombrement avec vos propres dimensions avant de demander une soumission."
+        },
+        {
+          "question": "Puis-je obtenir un coffre-fort Incendie et effraction avec une serrure à cadran plutôt qu'un clavier numérique ?",
+          "answer": "Oui. Torvault offre des options de serrure à clé, de serrure à combinaison (cadran) et de clavier électronique dans toute la gamme Incendie et effraction, afin de répondre à votre préférence ou à toute exigence de conformité imposant une serrure mécanique."
+        },
+        {
+          "question": "Un coffre-fort Incendie et effraction suffit-il pour un bureau à domicile, ou ai-je besoin d'un TL-15 ?",
+          "answer": "Pour les bureaux à domicile, les arrière-boutiques de commerces de détail et le rangement de petite caisse ou de documents des petites entreprises, Incendie et effraction est le choix recommandé par Torvault — il privilégie la protection incendie là où le risque d'effraction forcée est limité. Si vous entreposez des marchandises de plus grande valeur ou avez besoin d'une norme d'effraction forcée documentée à des fins d'assurance, optez pour le TL-15."
+        }
+      ]
+    },
+    "tl15": {
+      "label": "TL-15 Haute Sécurité",
+      "badge": "Le plus demandé",
+      "chips": [
+        "UL TL-15",
+        "Plaque composite renforcée"
+      ],
+      "metaDescription": "Coffres-forts TL-15 Haute Sécurité Torvault : porte homologuée UL 15 minutes, plaque composite renforcée, 10 formats fabriqués sur commande. Fiches techniques et soumissions de concessionnaires disponibles.",
+      "intro": [
+        "La cote TL-15 signifie que la porte a résisté à une attaque d'un temps de travail net de 15 minutes menée par un technicien professionnel en coffres-forts utilisant des outils à main courants, des perceuses électriques, des poinçons, des marteaux et des dispositifs d'application de pression — le chronomètre ne tourne que lorsqu'un outil travaille réellement le coffre-fort. C'est la cote à laquelle la plupart des succursales bancaires, pharmacies et comptoirs de bijouterie canadiens sont construits.",
+        "Un corps en acier massif de 1 pouce est renforcé par une plaque composite au-dessus de la serrure et du système de verrous, avec des verrous de reverrouillage à ressort bidirectionnels qui bloquent le mécanisme si la serrure principale est attaquée directement."
+      ],
+      "specCells": [
+        {
+          "v": "15 min, porte",
+          "k": "Temps de travail net"
+        },
+        {
+          "v": "1″ massif",
+          "k": "Corps en acier"
+        },
+        {
+          "v": "Composite",
+          "k": "Plaque renforcée"
+        },
+        {
+          "v": "2 directions",
+          "k": "Verrous de reverrouillage"
+        },
+        {
+          "v": "UL Type 1",
+          "k": "Serrure électronique"
+        },
+        {
+          "v": "En option",
+          "k": "Ajout protection incendie"
+        }
+      ],
+      "bestFor": "les succursales bancaires, les pharmacies détenant des substances contrôlées et les comptoirs de bijouterie qui ont besoin d'une norme d'effraction forcée documentée pour un entreposage diurne à accès fréquent.",
+      "features": [
+        "Fabriqué selon les normes de sécurité les plus élevées, sous le système de gestion de la qualité ISO 9001:2015.",
+        "Conçu pour une résistance maximale à l'effraction dans les environnements commerciaux et à haut risque.",
+        "Protection incendie de 2 heures pour une sécurité accrue.",
+        "Verrous actifs à quatre directions, de conception avancée.",
+        "Système de verrouillage européen conçu avec précision, sécurisant la porte dans toutes les directions — haut, bas, gauche et droite — pour une protection maximale.",
+        "Verrous rotatifs en acier inoxydable renforcé de 30mm, conçus pour résister aux tentatives de découpe directe, renforçant la résistance à l'effraction forcée.",
+        "La construction composite haute sécurité assure la durabilité structurelle et la résistance à l'effraction.",
+        "Le système de reverrouillage à verre trempé déclenche un reverrouillage automatique en cas de tentative de sabotage du coffre-fort.",
+        "Une plaque en acier au manganèse renforcée protège la serrure et le système de verrous contre le perçage et l'accès forcé.",
+        "Des trous d'ancrage pré-percés permettent une installation sécurisée sur des planchers en béton, empêchant tout retrait non autorisé.",
+        "Peinture aux normes européennes RAL avec un revêtement 5 couches pour une durabilité accrue et une finition élégante.",
+        "Options de serrure à clé, de serrure à combinaison et de serrure électronique disponibles pour répondre à vos exigences de sécurité spécifiques."
+      ],
+      "faqs": [
+        {
+          "question": "Que signifie réellement la cote TL-15 ?",
+          "answer": "TL-15 signifie que la porte a résisté à une attaque d'un temps de travail net de 15 minutes menée par un technicien professionnel en coffres-forts utilisant des outils à main courants, des perceuses électriques, des poinçons, des marteaux et des dispositifs d'application de pression — le chronomètre ne tourne que lorsqu'un outil travaille activement le coffre-fort, et non pendant tout le temps que l'attaquant passe sur les lieux. C'est une cote UL indépendante, et non un niveau marketing autocertifié."
+        },
+        {
+          "question": "Quelle est la différence entre le TL-15 et le TL-30 ?",
+          "answer": "Le TL-15 évalue uniquement la porte pour un temps de travail net de 15 minutes contre des outils à main et des outils électriques. Le TL-30 double ce temps à 30 minutes, ajoute des disques abrasifs et des scies électriques à la liste des outils d'attaque et — contrairement au TL-15 — évalue les six côtés du corps, pas seulement la porte. Le TL-30 passe également d'un corps en acier massif de 1 pouce à 1,5 pouce."
+        },
+        {
+          "question": "Un coffre-fort TL-15 inclut-il une protection incendie ?",
+          "answer": "La protection incendie est offerte en option plutôt qu'intégrée à la spécification de base du TL-15, qui se concentre sur la résistance à l'effraction forcée. Si la protection incendie est requise en plus de la résistance à l'effraction, confirmez l'ajout de protection incendie au moment de votre demande de soumission, ou comparez avec la gamme Incendie et effraction de Torvault."
+        },
+        {
+          "question": "Le TL-15 est-il suffisant pour une pharmacie qui entrepose des substances contrôlées ?",
+          "answer": "Oui — le TL-15 est la cote à laquelle la plupart des pharmacies, succursales bancaires et comptoirs de bijouterie canadiens sont construits pour un entreposage diurne à accès fréquent. Il vous donne une norme d'effraction forcée documentée que les assureurs et les organismes de réglementation reconnaissent, sans la spécification six côtés du TL-30 que requièrent habituellement le transport de fonds et les opérations à fort volume."
+        },
+        {
+          "question": "Quelle est l'épaisseur du corps en acier d'un coffre-fort TL-15 ?",
+          "answer": "Le corps du TL-15 est en acier massif de 1 pouce, renforcé par une plaque composite au-dessus de la serrure et du système de verrous, avec des verrous de reverrouillage à ressort bidirectionnels qui bloquent le mécanisme si la serrure principale est attaquée directement."
+        },
+        {
+          "question": "Les coffres-forts TL-15 peuvent-ils être ancrés au sol ?",
+          "answer": "Oui. Les unités TL-15 sont livrées avec des trous d'ancrage pré-percés pour une installation sécurisée sur un plancher en béton, ce qui empêche le retrait du coffre-fort entier plutôt qu'une attaque sur place — un point de défaillance courant que les assureurs vérifient."
+        }
+      ]
+    },
+    "tl30": {
+      "label": "TL-30 Haute Sécurité",
+      "badge": "Produit phare",
+      "chips": [
+        "UL TL-30",
+        "Résistance six côtés"
+      ],
+      "metaDescription": "Coffres-forts TL-30 Haute Sécurité Torvault : cote UL 30 minutes sur six côtés, corps en acier massif de 1,5 pouce, 10 formats fabriqués sur commande. Fiches techniques et soumissions de concessionnaires disponibles.",
+      "intro": [
+        "Le TL-30 porte le temps de travail net à 30 minutes et ajoute des disques abrasifs et des scies électriques à la liste des outils — et contrairement aux gammes Incendie et effraction ou TL-15, la cote s'applique à tous les côtés du corps, pas seulement à la porte. C'est la gamme phare de Torvault, conçue pour les activités où une brèche n'importe où sur le coffre est un résultat inacceptable.",
+        "Un corps en acier massif de 1,5 pouce porte une plaque composite sur les six côtés, une porte de 3,25 pouces et des verrous de reverrouillage à ressort à quatre directions. Cette combinaison constitue la spécification standard pour les dépôts de transport de fonds, les grands bijoutiers et les salles de caisse à fort volume."
+      ],
+      "specCells": [
+        {
+          "v": "30 min, 6 côtés",
+          "k": "Temps de travail net"
+        },
+        {
+          "v": "1,5″ massif",
+          "k": "Corps en acier"
+        },
+        {
+          "v": "3,25″",
+          "k": "Épaisseur de la porte"
+        },
+        {
+          "v": "4 directions",
+          "k": "Verrous de reverrouillage"
+        },
+        {
+          "v": "UL Type 1",
+          "k": "Serrure électronique"
+        },
+        {
+          "v": "Inclus",
+          "k": "Résistance au chalumeau"
+        }
+      ],
+      "bestFor": "les dépôts de transport de fonds, les bijoutiers à fort volume et les salles de pièces à conviction ou d'objets de valeur qui exigent une cote six côtés plutôt qu'une porte renforcée sur un corps par ailleurs standard.",
+      "features": [
+        "Fabriqué selon les normes de sécurité les plus élevées, sous le système de gestion de la qualité ISO 9001:2015.",
+        "Conçu pour une résistance maximale à l'effraction dans les environnements commerciaux et à haut risque.",
+        "Protection incendie de 2 heures pour une sécurité accrue.",
+        "Verrous actifs à quatre directions, de conception avancée, prolongés sur les six côtés du corps.",
+        "Système de verrouillage européen conçu avec précision, sécurisant la porte dans toutes les directions — haut, bas, gauche et droite — pour une protection maximale.",
+        "Verrous rotatifs en acier inoxydable renforcé de 30mm, conçus pour résister aux tentatives de découpe directe, renforçant la résistance à l'effraction forcée.",
+        "La construction composite haute sécurité s'étend sur les six côtés pour la durabilité structurelle et la résistance à l'effraction.",
+        "Le système de reverrouillage à verre trempé déclenche un reverrouillage automatique en cas de tentative de sabotage du coffre-fort.",
+        "Une plaque en acier au manganèse renforcée protège la serrure et le système de verrous contre le perçage et l'accès forcé.",
+        "Des trous d'ancrage pré-percés permettent une installation sécurisée sur des planchers en béton, empêchant tout retrait non autorisé.",
+        "Peinture aux normes européennes RAL avec un revêtement 5 couches pour une durabilité accrue et une finition élégante.",
+        "Options de serrure à clé, de serrure à combinaison et de serrure électronique disponibles pour répondre à vos exigences de sécurité spécifiques."
+      ],
+      "faqs": [
+        {
+          "question": "Qu'est-ce qui différencie le TL-30 du TL-15 ?",
+          "answer": "Le TL-30 double le temps de travail net à 30 minutes, ajoute des disques abrasifs et des scies électriques à la liste des outils d'attaque, et évalue les six côtés du corps au lieu de seulement la porte. Le corps en acier passe également de 1 pouce à 1,5 pouce massif, avec une porte de 3,25 pouces et des verrous de reverrouillage à quatre directions au lieu de deux."
+        },
+        {
+          "question": "Pourquoi le TL-30 évalue-t-il les six côtés plutôt que seulement la porte ?",
+          "answer": "Une porte renforcée sur un corps par ailleurs standard ne protège que contre une attaque où l'attaquant choisit de passer par l'avant. La plaque composite et l'acier massif de 1,5 pouce du TL-30 s'étendent sur les six côtés précisément pour qu'il n'y ait aucun côté plus faible à cibler — la norme qu'exigent les dépôts de transport de fonds et les bijoutiers à fort volume."
+        },
+        {
+          "question": "Un coffre-fort TL-30 inclut-il une protection incendie ?",
+          "answer": "Oui — la gamme TL-30 de Torvault inclut une protection incendie de 2 heures en plus de sa cote d'effraction six côtés de 30 minutes, afin que vous n'ayez pas à choisir entre la résistance au feu et la résistance à l'effraction forcée."
+        },
+        {
+          "question": "Qui a généralement besoin d'un coffre-fort TL-30 ?",
+          "answer": "Le TL-30 est conçu pour les dépôts de transport de fonds, les bijoutiers à fort volume et les salles de pièces à conviction ou d'objets de valeur où une brèche n'importe où sur le coffre — pas seulement par la porte — est un résultat inacceptable. Si votre risque se limite à un accès au comptoir pendant la journée, le TL-15 offre généralement le meilleur rapport qualité-prix."
+        },
+        {
+          "question": "Que signifie le « temps de travail net » pour une cote TL-30 ?",
+          "answer": "Le temps de travail net est le temps cumulé pendant lequel un outil découpe, perce ou force activement le coffre-fort lors des tests UL — le temps passé à se repositionner, à changer d'outil ou à faire une pause ne compte pas. Une cote TL-30 de 30 minutes signifie que le coffre-fort a résisté à 30 minutes réelles de temps d'attaque outil contre métal, vérifiées de façon indépendante par UL."
+        },
+        {
+          "question": "Les coffres-forts TL-30 peuvent-ils être boulonnés pour une sécurité accrue ?",
+          "answer": "Oui. Les unités TL-30 sont livrées avec des trous d'ancrage pré-percés pour une installation sécurisée sur un plancher en béton, empêchant le retrait de l'unité entière pour être attaquée ailleurs — une exigence que de nombreux assureurs associent aux limites de couverture pour les biens de grande valeur."
+        }
+      ]
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Torvault Safe Company",
+      "word1": "Sécurité",
+      "word2": "sans",
+      "word3": "compromis.",
+      "viewProducts": "Voir les produits",
+      "scroll": "Défiler"
+    },
+    "trustBar": {
+      "item1": "Normes testées UL et ENL43",
+      "item2": "Soutenu par 40 ans d'expertise en sécurité",
+      "item3": "Conçu pour les environnements les plus exigeants"
+    },
+    "story": {
+      "eyebrow": "Ingénierie",
+      "heading": "Conçu contre les menaces qui comptent.",
+      "body": "La protection incendie, la résistance à l'effraction forcée et la vérification indépendante ne sont pas des options sur un coffre-fort Torvault — elles constituent la base sur laquelle chaque gamme de produits est construite.",
+      "pillar1Title": "Noyau ignifuge",
+      "pillar1Body": "Un remplissage composite au gypse conçu pour maintenir un plafond interne de 350°F bien au-delà de l'heure homologuée, afin que documents et disques survivent à ce que le bâtiment ne survit pas.",
+      "pillar2Title": "Résistance à l'effraction forcée",
+      "pillar2Body": "Plaque composite renforcée, verrous de reverrouillage et corps en acier massif conçus pour résister aux pieds-de-biche, aux perceuses et aux scies pendant un temps de travail net documenté — pas un simple niveau marketing.",
+      "pillar3Title": "Testé de façon indépendante",
+      "pillar3Body": "Chaque cote est vérifiée UL et ULC, outil par outil, par un tiers indépendant — la même norme que les assureurs utilisent pour établir les limites de couverture."
+    },
+    "productsSection": {
+      "eyebrow": "Produits",
+      "heading": "Trois gammes. Une seule norme.",
+      "body": "Trois gammes de produits conçues sur mesure, chacune pensée autour d'une menace précise — l'incendie, l'effraction forcée, ou les deux — plutôt qu'un corps universel assorti d'un prix plus élevé."
+    },
+    "certOrbit": {
+      "ulListedK": "Homologué UL",
+      "ulListedV": "Cote de sécurité",
+      "graphiteFinishK": "Finition graphite",
+      "tl15K": "TL‑15",
+      "tl15V": "Résistant à l'effraction",
+      "blackFinishK": "Finition noire",
+      "tl30K": "TL‑30",
+      "tl30V": "Résistant à l'effraction",
+      "interiorViewK": "Vue intérieure",
+      "interiorViewV": "Tablette et système de verrous",
+      "en1143K": "EN 1143‑1",
+      "en1143V": "Grade de résistance III",
+      "boltworkDetailK": "Détail du système de verrous",
+      "boltworkDetailV": "Verrouillage à 3 points"
+    },
+    "certified": {
+      "eyebrow": "Norme Certifiée",
+      "heading": "Une spécification, pas un niveau marketing.",
+      "body": "Chaque coffre-fort Torvault est fabriqué selon une norme de test documentée — tests au feu en usine pour Incendie et effraction, ou tests UL indépendants pour les TL‑15 et TL‑30 — et non une simple étiquette interne. Notre page Norme Certifiée détaille exactement ce que signifie chaque cote, comment fonctionnent les tests, et pourquoi les assureurs s'en servent pour établir les limites de couverture.",
+      "cta": "Lire le guide complet de la Norme Certifiée"
+    },
+    "faqSection": {
+      "eyebrow": "FAQ",
+      "heading": "Questions fréquemment posées.",
+      "viewAll": "Voir toutes les FAQ →",
+      "q1": "Que signifie réellement une cote de sécurité UL ?",
+      "a1": "UL (Underwriters Laboratories) teste les coffres-forts de façon indépendante contre de vrais outils — pieds-de-biche, perceuses, scies — pendant un temps de travail net déterminé. Un coffre-fort TL‑15 résiste à une attaque professionnelle avec des outils courants pendant 15 minutes; le TL‑30, pendant 30. C'est la même norme que les assureurs utilisent pour établir les limites de couverture. Consultez notre {certifiedStandardLink} pour le détail complet.",
+      "a1LinkText": "guide de la Norme Certifiée",
+      "q2": "Quelle est la différence entre les coffres-forts TL-15 et TL-30 ?",
+      "a2": "Le chiffre correspond au temps de travail net — la durée pendant laquelle la porte et le système de verrous homologués UL résistent à une attaque professionnelle avec des outils courants. Le TL‑15 tient 15 minutes, le TL‑30, 30 minutes, avec un corps en acier massif plus épais de 1,5″ et une plaque composite renforcée sur les six côtés. Un contenu de plus grande valeur et des limites d'assurance plus élevées exigent généralement le TL‑30. Comparez les fiches techniques sur notre {productsLink}.",
+      "a2LinkText": "page Produits",
+      "q3": "Où puis-je acheter un coffre-fort Torvault ?",
+      "a3": "Torvault vend exclusivement par l'entremise de concessionnaires autorisés à travers le Canada — nous ne vendons pas directement aux consommateurs. Utilisez notre page {findDealerLink} pour en trouver un près de vous, ou consultez notre {dealerProgramLink} si vous êtes un détaillant intéressé à offrir la gamme.",
+      "a3LinkText1": "Trouver un concessionnaire",
+      "a3LinkText2": "Programme de concessionnaires",
+      "q4": "Combien de temps mes documents survivront-ils à un incendie ?",
+      "a4": "Notre gamme Incendie et effraction porte la cote UL Class 350 : l'intérieur reste sous 350°F — la température à laquelle le papier commence à carboniser — pendant une heure complète, même si l'incendie extérieur atteint jusqu'à 1 700°F. Cette heure est testée, non estimée; c'est la même méthodologie de temps de travail net qu'utilise UL pour chacune des cotes que nous offrons.",
+      "q5": "Les compagnies d'assurance reconnaissent-elles les cotes de Torvault ?",
+      "a5": "Oui. Nos cotes de sécurité TL‑15 et TL‑30 sont testées de façon indépendante par UL, et non autocertifiées en interne — la norme à laquelle les assureurs se réfèrent pour établir les limites de couverture pour les espèces, les armes à feu et les documents. Notre gamme Incendie et effraction est testée au feu en usine. Demandez à votre assureur quelle cote votre police exige avant de choisir un modèle.",
+      "q6": "Quelles tailles et capacités sont disponibles ?",
+      "a6": "Chacune de nos trois gammes couvre un large éventail, des modèles compacts pour la maison et le bureau jusqu'aux grands coffres commerciaux, afin que la capacité s'adapte à la cote dont vous avez besoin plutôt que d'imposer une seule taille de corps. Parcourez les dimensions intérieures et le poids de chaque modèle sur la {productsLink}."
+    },
+    "testimonials": {
+      "eyebrow": "Avis clients",
+      "heading": "Une confiance établie depuis 1987.",
+      "body": "Torvault est soutenu par Security Lock & Safe Inc. — 40 ans dans l'industrie canadienne du coffre-fort par l'entremise de Toronto Safes.",
+      "googleReview": "Avis Google",
+      "quote1": "Compétents, ponctuels, et un plaisir à chaque échange.",
+      "when1": "Il y a 10 mois",
+      "quote2": "Une des équipes les plus accueillantes et les plus orientées vers le service à la clientèle.",
+      "when2": "Il y a 5 ans",
+      "quote3": "Kelly et son équipe sont exceptionnelles.",
+      "when3": "Il y a 2 ans"
+    },
+    "newsletter": {
+      "eyebrow": "Restez informé",
+      "heading": "Recevez les actualités de Torvault.",
+      "body": "Soyez les premiers informés des nouveaux modèles de coffres-forts, des conseils de sécurité et des offres spéciales — directement de Torvault.",
+      "formNote": "En indiquant votre numéro de téléphone, vous consentez à recevoir des messages marketing de Torvault Safe Company au numéro fourni. Le consentement n'est pas une condition d'achat. Des frais de messagerie et de données peuvent s'appliquer. Répondez HELP pour obtenir de l'aide ou STOP pour vous désabonner. Consultez nos {termsLink} pour plus de détails.",
+      "termsLinkText": "Modalités et conditions"
+    },
+    "meta": {
+      "title": "Torvault Safe Company | Coffres-forts ignifuges et haute sécurité, Canada",
+      "description": "Torvault conçoit des coffres-forts ignifuges et anti-effraction homologués UL — de la protection testée au feu en usine à la résistance aux outils UL TL-30 — pour les entreprises et concessionnaires canadiens."
+    }
+  },
+  "blog": {
+    "readTimeSuffix": "min de lecture",
+    "keepReadingEyebrow": "Poursuivre la lecture",
+    "keepReadingHeading": "Plus d'articles du Coffre.",
+    "readTheGuide": "Lire le guide →",
+    "posts": {
+      "understanding-ul-security-ratings": {
+        "title": "Comprendre les cotes de sécurité UL : ce que signifient réellement le TL-15 et le TL-30",
+        "category": "Cotes de sécurité",
+        "excerpt": "Le TL-15 et le TL-30 ne sont pas des niveaux marketing — ce sont des minutes de résistance testées de façon indépendante contre de vrais outils. Voici ce que ces chiffres mesurent réellement.",
+        "body": [
+          "L'étiquette « TL-15 » ou « TL-30 » est beaucoup utilisée dans l'industrie du coffre-fort, mais le chiffre lui-même constitue toute la spécification — il s'agit d'un temps de travail net, le nombre de minutes pendant lesquelles UL a vérifié que la porte résiste à une attaque professionnelle menée avec une liste définie d'outils avant d'être considérée comme percée.",
+          "Le temps de travail net ne compte que les minutes pendant lesquelles un outil découpe, perce ou force réellement — pas le temps total que l'attaquant passe sur les lieux à se repositionner, à changer d'outil ou à faire une pause. Une cote TL-15 signifie 15 minutes réelles de contact outil-métal; le TL-30, 30 minutes. Cette distinction compte, car c'est une barre beaucoup plus difficile à franchir qu'il n'y paraît.",
+          "La cote précise également la liste des outils. Les tests du TL-15 utilisent des outils à main et électriques courants — perceuses, poinçons, marteaux, dispositifs d'application de pression. Le TL-30 ajoute à cette liste des disques de découpe abrasifs et des scies électriques, ce qui explique pourquoi passer à un niveau supérieur exige un corps en acier nettement plus épais, et non seulement une porte plus épaisse.",
+          "Un détail qui prête souvent à confusion : à moins qu'une gamme ne soit explicitement homologuée pour six côtés, la cote UL s'applique seulement à la porte. Les gammes Incendie et effraction et TL-15 de Torvault évaluent la porte; le TL-30 est testé et homologué sur les six côtés du corps, soit la norme qu'exigent habituellement les dépôts de transport de fonds et les bijoutiers à fort volume.",
+          "Rien de tout cela n'est autocertifié. UL est un tiers indépendant, et c'est la même norme à laquelle se réfèrent les assureurs pour établir les limites de couverture — c'est exactement pourquoi la cote indiquée sur la fiche technique compte davantage que la finition de la porte."
+        ]
+      },
+      "fire-rated-vs-fireproof": {
+        "title": "Ignifuge contre « à l'épreuve du feu » : ce que la cote de votre coffre-fort protège réellement",
+        "category": "Protection incendie",
+        "excerpt": "Aucun coffre-fort n'est véritablement à l'épreuve du feu. Voici ce qu'une cote UL Class 350 garantit réellement — et comment l'arrimer au temps de réponse réel de votre service d'incendie.",
+        "body": [
+          "« À l'épreuve du feu » n'est pas un véritable terme d'ingénierie, et aucun fabricant sérieux ne devrait l'utiliser sans nuance. Le terme exact est ignifuge ou homologué contre le feu, et la différence n'est pas que sémantique — elle décrit précisément ce que la cote garantit et ce qu'elle ne garantit pas.",
+          "Une cote UL Class 350 signifie que l'intérieur du coffre-fort est resté sous 350°F — la température à laquelle le papier commence à carboniser — pendant une période documentée, habituellement une heure, alors que l'incendie environnant atteignait des températures allant jusqu'à 1 700°F. C'est une garantie d'isolation thermique pour une durée fixe, non indéfinie.",
+          "Cette durée est le chiffre qui compte réellement lorsque vous choisissez un coffre-fort. Si votre bâtiment se trouve dans un secteur où le temps de réponse moyen du service d'incendie est de 10 minutes, une cote d'une heure vous donne une marge considérable. Si vous protégez des sauvegardes de serveur, des pellicules ou tout autre élément dont le seuil de dommage est plus bas que celui du papier, vous devez vérifier la température intérieure précise à laquelle le fabricant a testé le produit, plutôt que de présumer que « à l'épreuve du feu » couvre cette situation.",
+          "Il est également utile de savoir que les cotes incendie et les cotes d'effraction sont testées de façon complètement indépendante. Un coffre-fort avec une excellente cote d'effraction forcée ne dit rien de sa performance au feu, et vice-versa — confirmez que les deux sont documentées si vous en avez besoin, plutôt que de présumer que l'une implique l'autre."
+        ]
+      },
+      "choosing-the-right-safe-size": {
+        "title": "Comment choisir la bonne taille de coffre-fort pour votre entreprise",
+        "category": "Guide d'achat",
+        "excerpt": "Acheter trop petit signifie le dépasser en un an; trop grand gaspille l'espace au sol et le budget. Voici comment dimensionner un coffre-fort selon ce que vous devez réellement entreposer.",
+        "body": [
+          "Dimensionner un coffre-fort selon ses dimensions extérieures est l'erreur la plus courante que nous observons — l'encombrement extérieur d'un modèle vous indique s'il entre dans votre espace, mais ce sont les dimensions intérieures qui déterminent si votre contenu réel y entre, et les deux chiffres peuvent différer de plusieurs pouces sur chaque axe une fois l'épaisseur des parois et de la porte prise en compte.",
+          "Commencez par ce que vous entreposez, et non par une taille que vous avez déjà vue. Mesurez la boîte de documents la plus haute, le registre le plus large, l'étui d'arme à feu le plus long — bref, le plus grand article unique — et ajoutez une marge, car une tablette, un plateau à monnaie ou un deuxième article partagera habituellement l'espace.",
+          "Partez ensuite de votre plancher. Vérifiez la capacité de charge par pied carré de l'étage où se trouvera le coffre-fort, surtout au-dessus du rez-de-chaussée, car une unité TL-30 chargée peut peser bien plus d'un millier de livres. Un coffre-fort structurellement inadapté au plancher sur lequel il repose est un problème qu'aucune cote ne résout.",
+          "Il est également utile de viser un niveau au-dessus de vos besoins actuels plutôt qu'un ajustement exact, car les espèces, l'inventaire ou les documents ont tendance à augmenter, et un coffre-fort n'est pas un achat que la plupart des entreprises répètent chaque année. Cela dit, il y a un coût réel à surdimensionner — un coffre à six chiffres pour un tiroir de petite caisse ne fait que déplacer l'inefficacité de votre tablette à votre plan d'aménagement.",
+          "Si vous faites cet exercice pour une gamme Torvault précise, l'outil de recherche de taille sur chaque page produit vous permet d'indiquer ce qui doit entrer et l'espace dont vous disposez, et il filtrera la gamme pour ne garder que les modèles qui conviennent réellement — et recommandera le plus petit d'entre eux."
+        ]
+      },
+      "anchoring-and-installation-basics": {
+        "title": "Où installer votre coffre-fort : ancrage, emplacement et charge au sol",
+        "category": "Installation",
+        "excerpt": "Un coffre-fort non ancré peut être retiré et attaqué ailleurs. Voici ce que les concessionnaires vérifient avant même de boulonner une unité.",
+        "body": [
+          "Une cote UL décrit comment un coffre-fort résiste à une attaque tant qu'il reste en place. Elle ne dit rien de ce qui se passe si un attaquant retire simplement l'unité entière pour la travailler dans un endroit tranquille — c'est pourquoi l'ancrage n'est pas un accessoire optionnel, il fait partie du modèle de sécurité.",
+          "La plupart des gammes Torvault sont livrées avec des trous d'ancrage pré-percés précisément pour cette raison, destinés à être boulonnés dans un plancher de béton plutôt que dans un sous-plancher de bois ou une plaque de montage. Le béton est la base minimale que la plupart des assureurs et des concessionnaires vérifient, car il résiste à ce que le coffre-fort soit arraché avec ses ancrages.",
+          "L'emplacement compte presque autant que l'ancrage. Un coffre-fort visible depuis la vitrine d'un commerce annonce ce qui se trouve derrière la porte; un coffre-fort masqué par l'inventaire ou éloigné d'une sortie arrière élimine à la fois la tentation et la voie d'extraction facile. Le poids est aussi un facteur ici — connaissez la capacité de charge de votre plancher avant de décider où placer un coffre-fort aussi lourd, en particulier à tout étage au-dessus du rez-de-chaussée.",
+          "Enfin, pensez à l'accès pendant l'installation, pas seulement après. Un coffre-fort qui passe la porte mais pas le virage du couloir est une erreur étonnamment fréquente et coûteuse — confirmez les dégagements pour tout le trajet de livraison, pas seulement l'emplacement final, avant l'expédition d'une unité."
+        ]
+      },
+      "why-torvault-sells-through-dealers": {
+        "title": "Pourquoi Torvault vend uniquement par l'entremise de concessionnaires — et pourquoi c'est mieux pour vous",
+        "category": "Notre approche",
+        "excerpt": "Aucune vente directe au consommateur, aucune concurrence avec les personnes qui installent et entretiennent votre coffre-fort. Voici la logique derrière le modèle axé sur les concessionnaires de Torvault.",
+        "body": [
+          "Torvault ne vend pas directement aux consommateurs, et il s'agit d'un choix délibéré plutôt que d'une limite propre à une marque plus modeste. Chaque unité passe par un concessionnaire canadien autorisé — les mêmes personnes qui la livreront, l'installeront, l'ancreront et en assureront l'entretien pendant toute la durée de vie du coffre-fort.",
+          "L'alternative est courante dans cette industrie : un fabricant vend en ligne à prix de détail tout en approvisionnant les mêmes concessionnaires censés rivaliser avec cette offre. Cela mine le réseau de concessionnaires indépendants sur le prix tout en leur laissant la responsabilité de la relation de service, ce qui est une mauvaise affaire pour tous sauf le fabricant.",
+          "Vendre uniquement en gros avec une protection de territoire signifie qu'un concessionnaire qui adopte Torvault ne se retrouve pas à concurrencer son propre fournisseur. Cela signifie aussi que la personne qui vous vend un coffre-fort Torvault en a réellement manipulé un, peut parler des particularités d'installation et d'ancrage pour votre espace, et dispose d'une ligne directe vers le fabricant si quelque chose nécessite une attention après la vente.",
+          "Ce modèle s'appuie sur presque quatre décennies d'exploitation de Toronto Safes par Security Lock & Safe Inc. — le programme de concessionnaires n'est donc pas une nouvelle idée mise à l'essai pour la première fois, c'est la même relation de service que l'équipe entretient dans le Grand Toronto depuis 1987, étendue aux concessionnaires indépendants dans le reste du Canada."
+        ]
+      },
+      "what-to-expect-at-delivery": {
+        "title": "Ce à quoi s'attendre lors de la livraison de votre coffre-fort Torvault",
+        "category": "Expédition et installation",
+        "excerpt": "Le jour de livraison d'un coffre-fort de plusieurs centaines de livres ne ressemble pas à la livraison d'un colis standard. Voici ce que votre concessionnaire prend en charge, et ce qu'il faut confirmer avant l'arrivée du camion.",
+        "body": [
+          "Un coffre-fort Torvault n'arrive pas comme un colis. Chaque unité est d'abord expédiée à votre concessionnaire autorisé, et non directement à votre porte — le concessionnaire coordonne la livraison, confirme avec vous l'emplacement final et s'occupe de l'installation, de sorte que la première fois que vous voyez le coffre-fort, il est déjà positionné et prêt à être ancré.",
+          "Avant la fixation d'une date de livraison, votre concessionnaire passera en revue le trajet d'accès avec vous : largeurs de porte, virages de couloir, escaliers et dimensions d'ascenseur, le cas échéant. Cela compte plus qu'il n'y paraît — un coffre-fort qui passe la porte d'entrée mais pas un virage de couloir serré est l'une des surprises de livraison les plus courantes et les plus coûteuses, et elle est entièrement évitable en confirmant les dégagements par rapport aux dimensions extérieures du modèle à l'avance.",
+          "Les unités plus grandes — en particulier les modèles TL-30 et tout ce qui dépasse 1 000 lb — nécessitent souvent des gréeurs professionnels ou de l'équipement spécialisé pour être déplacées en toute sécurité. Votre concessionnaire organise cela dans le cadre de la livraison, afin que vous n'ayez pas à gérer seul la location d'équipement ou la responsabilité civile.",
+          "Une fois le coffre-fort dans sa position finale, l'installation comprend son ancrage au plancher par les trous de montage pré-percés intégrés au corps — non pas un ajout optionnel, mais une partie d'une installation correctement effectuée. Votre concessionnaire confirmera que le plancher peut supporter le poids de l'unité avant l'ancrage, surtout à tout étage au-dessus du rez-de-chaussée.",
+          "Puisque Torvault vend en gros par l'entremise de concessionnaires plutôt que d'afficher les frais d'expédition en ligne, le prix de la livraison et de l'installation est inclus dans la soumission de l'unité elle-même — demandez à votre concessionnaire de l'inclure dès le départ afin d'éviter toute surprise entre la soumission et le jour de la livraison."
+        ]
+      }
+    },
+    "meta": {
+      "title": "The Vault | Blogue de Torvault Safe Company",
+      "description": "Guides sur les cotes de sécurité UL, la protection incendie, le dimensionnement et l'installation — rédigés par l'équipe derrière la gamme de coffres-forts haute sécurité de Torvault, vendue d'abord aux concessionnaires."
+    },
+    "hero": {
+      "crumb": "Blogue",
+      "eyebrow": "The Vault",
+      "title": "Guides de l'équipe Torvault.",
+      "body": "Cotes de sécurité, protection incendie, dimensionnement et installation — rédigés par la même équipe qui vend, entretient et installe des coffres-forts dans le Grand Toronto depuis 1987."
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À propos de Torvault | Soutenu par 39 ans d'expérience en sécurité",
+      "description": "Torvault est une marque de fabrication de coffres-forts haute sécurité de Security Lock & Safe Inc., exploitant de Toronto Safes et expert en coffres-forts du Grand Toronto depuis 1987."
+    },
+    "hero": {
+      "crumb": "À propos",
+      "eyebrow": "À propos de Torvault",
+      "title": "La marque la plus robuste, soutenue par des décennies d'expérience.",
+      "body": "Torvault est une marque de coffres-forts haute sécurité créée par l'équipe derrière Security Lock & Safe Inc., fournisseur de coffres-forts et de portes de chambre forte dans le Grand Toronto depuis 1987."
+    },
+    "story": {
+      "eyebrow": "Notre histoire",
+      "heading": "Pourquoi nous avons créé Torvault.",
+      "p1": "Fondée sur des décennies d'expérience en sécurité physique, Torvault a été créée pour élever la norme de protection haute sécurité.",
+      "p2": "Nos origines remontent à 1987 par l'entremise de Security Lock & Safe Inc., où des décennies d'expérience concrète dans la protection des entreprises, des objets de valeur et des actifs essentiels ont façonné notre approche.",
+      "p3": "Torvault poursuit cet héritage avec une nouvelle génération de coffres-forts haute sécurité, alliant construction robuste, systèmes de verrouillage avancés et ingénierie réfléchie.",
+      "p4": "Nous croyons que la sécurité ne devrait jamais être compromise, et chaque coffre-fort Torvault est conçu selon ce principe."
+    },
+    "timeline": {
+      "eyebrow": "Chronologie",
+      "heading": "D'un comptoir de serrurier à Concord à une gamme nationale.",
+      "item1Year": "1987",
+      "item1Title": "Fondation de Security Lock & Safe Inc.",
+      "item1Body": "Établie à Concord, en Ontario, offrant la vente et l'entretien de coffres-forts ainsi que des services de serrurerie commerciale au Grand Toronto.",
+      "item2Year": "1987–2025",
+      "item2Title": "Toronto Safes devient un nom régional de confiance",
+      "item2Body": "Près de quatre décennies à fournir et installer des coffres-forts et des portes de chambre forte pour une clientèle résidentielle, commerciale, industrielle et institutionnelle — y compris des comptes gouvernementaux, hospitaliers et policiers — en plus de services de déverrouillage d'urgence et de serrurerie partout dans le Grand Toronto.",
+      "item3Year": "2026",
+      "item3Title": "Lancement de Torvault",
+      "item3Body": "La même équipe se lance dans la fabrication avec une gamme testée UL, axée sur les concessionnaires, conçue pour les concessionnaires de coffres-forts indépendants canadiens — et non pour la vente directe au détail."
+    },
+    "guides": {
+      "eyebrow": "Le Coffre",
+      "heading": "Guides de l'équipe Torvault.",
+      "viewAll": "Voir tous les articles →"
+    },
+    "callout": {
+      "strong": "Soutenu par Security Lock & Safe Inc.",
+      "body": "— basée à Concord, en Ontario, et exploitée sous le nom de Toronto Safes depuis 1987, au service d'une clientèle résidentielle, commerciale, industrielle et institutionnelle dans le Grand Toronto avec la vente, la livraison et l'installation de coffres-forts, des portes de chambre forte, de la serrurerie commerciale et un service de déverrouillage d'urgence.",
+      "link": "Visiter Toronto Safes →"
+    },
+    "nextStep": {
+      "eyebrow": "Prochaine étape",
+      "heading": "Découvrez comment les coffres-forts sont fabriqués.",
+      "manufacturingCta": "Processus de fabrication",
+      "dealerCta": "Devenir concessionnaire"
+    }
+  },
+  "manufacturing": {
+    "meta": {
+      "title": "Fabrication | Comment les coffres-forts Torvault sont fabriqués — Torvault",
+      "description": "De la mise en forme de l'acier aux essais de conformité : comment Torvault conçoit et fabrique des coffres-forts ignifuges et anti-effraction homologués UL pour le marché canadien."
+    },
+    "hero": {
+      "crumb": "Fabrication",
+      "eyebrow": "Fabrication",
+      "title": "Conçu pour le Canada. Fabriqué pour s'y rendre.",
+      "body": "Les coffres-forts Torvault sont conçus selon les normes canadiennes de sécurité et d'essais au feu, puis fabriqués à grande échelle au Vietnam — offrant aux concessionnaires canadiens une solution certifiée à un prix nettement différent d'une production exclusivement nationale."
+    },
+    "commitments": {
+      "eyebrow": "Engagements qualité",
+      "heading": "Ce sur quoi nous ne faisons aucun compromis.",
+      "item1Title": "La méthodologie UL avant tout",
+      "item1Body": "Les cotes sont des objectifs d'ingénierie dès le départ, et non des allégations ajoutées après la production.",
+      "item2Title": "Assurance qualité documentée à chaque étape",
+      "item2Body": "Le calibre de l'acier, l'intégrité des soudures, le positionnement de la plaque composite et le fonctionnement de la serrure sont vérifiés avant qu'une unité passe à l'étape suivante.",
+      "item3Title": "Conçu pour le climat canadien",
+      "item3Body": "La finition et la quincaillerie sont spécifiées pour la plage d'humidité et de température dans laquelle les concessionnaires canadiens installent réellement les produits.",
+      "item4Title": "39 ans de rétroaction du terrain",
+      "item4Body": "Fabriqué par la même équipe qui entretient et installe des coffres-forts au quotidien — et non une usine qui devine les besoins des concessionnaires."
+    },
+    "callout": {
+      "strong": "Importation directe, aucune marge d'intermédiaire.",
+      "body": "Torvault fabrique à grande échelle au Vietnam et importe directement vers le Canada — la même voie qui nous permet d'offrir des prix de gros aux concessionnaires sans compromettre la méthodologie des essais UL ou les spécifications de l'acier."
+    },
+    "nextStep": {
+      "eyebrow": "Prochaine étape",
+      "heading": "Découvrez ce que chaque cote résiste réellement.",
+      "certifiedCta": "Norme Certifiée",
+      "productsCta": "Voir les produits"
+    }
+  },
+  "certifiedStandard": {
+    "meta": {
+      "title": "Norme Certifiée | Les cotes UL incendie et effraction expliquées — Torvault",
+      "description": "Ce que signifient réellement les cotes TL-15, TL-30 et les cotes de résistance au feu testées en usine — méthodologie des essais, outils utilisés, temps de travail net, et pourquoi les assureurs s'y fient."
+    },
+    "hero": {
+      "crumb": "Norme Certifiée",
+      "eyebrow": "Norme Certifiée",
+      "title": "Chaque cote, expliquée.",
+      "body": "Les cotes UL ne relèvent pas du marketing — elles sont testées de façon indépendante avec de vrais outils et un chronomètre. Voici ce que signifie chaque classification sur une plaque signalétique Torvault."
+    },
+    "ulTesting": {
+      "eyebrow": "Comment fonctionnent les essais UL",
+      "heading": "Le temps de travail net, pas le temps réel écoulé.",
+      "bodyPre": "Underwriters Laboratories (UL) certifie les coffres-forts en faisant attaquer une unité de production par des techniciens formés — en pratique, des crocheteurs professionnels — avec un ensemble défini d'outils. Le résultat est mesuré en",
+      "bodyStrong": "temps de travail net",
+      "bodyPost": ": le chronomètre ne tourne que lorsqu'un outil travaille activement le coffre-fort, et s'arrête à l'instant où il est retiré. Un coffre-fort ne réussit pas en survivant une heure dans un atelier — il réussit en résistant à une quantité fixe d'attaque continue et ciblée."
+    },
+    "terms": {
+      "entryLabel": "Niveau moyen",
+      "entryTitle": "Testé au feu en usine",
+      "entryBody": "La résistance de base à l'effraction de la gamme Incendie et effraction de Torvault, vérifiée en interne contre des outils mécaniques courants — et non une classification certifiée UL comme le TL‑15 ou le TL‑30.",
+      "entryLi1": "5 minutes de temps de travail net",
+      "entryLi2": "Testé sur tous les côtés, pas seulement la porte",
+      "entryLi3": "Outils mécaniques à main courants seulement",
+      "entryLi4": "Serrure à combinaison ou à clavier",
+      "tl15Label": "Haute sécurité",
+      "tl15Title": "UL TL‑15",
+      "tl15Body": "Cote résistante aux outils, de 15 minutes — la norme derrière la plupart des succursales bancaires et des coffres-forts de pharmacie canadiens.",
+      "tl15Li1": "15 minutes de temps de travail net, porte seulement",
+      "tl15Li2": "Outils à main, perceuses, poinçons, marteaux",
+      "tl15Li3": "Dispositifs d'application de pression permis",
+      "tl15Li4": "Jusqu'à 200 lb / installation autonome non requise",
+      "tl30Label": "Sécurité maximale",
+      "tl30Title": "UL TL‑30",
+      "tl30Body": "La cote derrière la gamme phare de Torvault — même ensemble d'outils que le TL‑15, plus des outils électriques, sur les six côtés.",
+      "tl30Li1": "30 minutes de temps de travail net",
+      "tl30Li2": "Testé sur le corps, pas seulement la porte",
+      "tl30Li3": "Ajoute des disques de découpe abrasifs et des scies électriques",
+      "tl30Li4": "Perceuses au carbure à haute vitesse, chalumeaux découpeurs"
+    },
+    "fireTesting": {
+      "eyebrow": "Essais d'endurance au feu",
+      "heading": "Ce qui survit à un four de 1 700°F.",
+      "body": "Les essais d'endurance au feu constituent la méthodologie normalisée pour l'équipement de protection des documents et des données. Un coffre-fort verrouillé est placé à l'intérieur d'un four industriel qui suit une courbe temps-température contrôlée atteignant jusqu'à 1 700°F, tandis que des capteurs enregistrent en continu la température intérieure. Le coffre-fort échoue à l'instant où l'intérieur dépasse le seuil de sa classe — peu importe l'endroit à l'intérieur de la chambre.",
+      "class350Title": "Class 350",
+      "class350Body": "L'intérieur reste sous 350°F — la température à laquelle le papier commence à carboniser. La norme pour la protection des documents et des espèces.",
+      "class150Title": "Class 150",
+      "class150Body": "L'intérieur reste sous 150°F — requis pour les microfilms et autres supports sensibles à la chaleur.",
+      "class125Title": "Class 125",
+      "class125Body": "L'intérieur reste sous 125°F — la tolérance la plus stricte, pour les supports numériques, les disques durs et les bandes de sauvegarde.",
+      "durationTitle": "Durée (« –Hr »)",
+      "durationBodyPre": "Associée à la classe, par ex.",
+      "durationBodyStrong": "1–Hr / 350°F",
+      "durationBodyPost": "— pendant combien de temps le coffre-fort maintient sa cote de classe à l'intérieur du four."
+    },
+    "table": {
+      "eyebrow": "Côte à côte",
+      "heading": "Toutes les gammes, un seul tableau.",
+      "colProductLine": "Gamme de produits",
+      "colRating": "Cote",
+      "colNetWorkingTime": "Temps de travail net",
+      "colToolsResisted": "Outils résistés",
+      "colFireEndurance": "Endurance au feu",
+      "colSteelBody": "Corps en acier",
+      "colTypicalUse": "Utilisation typique",
+      "fireBurglaryRow": "Incendie et effraction",
+      "fireBurglaryTools": "Outils à main courants",
+      "fireBurglaryUse": "Bureaux résidentiels et commerciaux",
+      "tl15Tools": "+ Perceuses, poinçons, marteaux",
+      "tl15Use": "Succursales bancaires, pharmacies",
+      "tl30Tools": "+ Disques de découpe, scies, chalumeaux",
+      "tl30Use": "Dépôts de transport de fonds, bijoutiers"
+    },
+    "insuranceCallout": {
+      "strong": "Pourquoi c'est important pour l'assurance :",
+      "body": "La plupart des polices d'assurance de biens commerciaux et de transport de fonds au Canada fixent les limites de couverture directement en fonction de la cote UL d'un coffre-fort — une police pourrait limiter la couverture en espèces à 2 500 $ dans un contenant non homologué contre 50 000 $ et plus derrière un corps UL TL‑30. Avant de recommander un coffre-fort à un client, confirmez la cote que son assureur exige réellement, et non seulement ce qui respecte le budget."
+    },
+    "nextStep": {
+      "eyebrow": "Prochaine étape",
+      "heading": "Découvrez la cote sur le coffre-fort.",
+      "productsCta": "Voir les produits",
+      "faqCta": "Lire la FAQ"
+    }
+  },
+  "faqPage": {
+    "meta": {
+      "title": "FAQ | Torvault Safe Company",
+      "description": "Réponses sur les cotes de sécurité UL, la protection incendie contre l'effraction, le modèle de Torvault axé exclusivement sur les concessionnaires, les délais de livraison et la façon de devenir concessionnaire autorisé."
+    },
+    "hero": {
+      "crumb": "FAQ",
+      "eyebrow": "FAQ",
+      "title": "Questions fréquemment posées.",
+      "bodyPre": "Cotes, approvisionnement, commandes et fonctionnement du programme de concessionnaires — si votre question n'y figure pas, écrivez à"
+    },
+    "groupGeneral": "Généralités",
+    "groupRatings": "Cotes et certification",
+    "groupOrdering": "Commandes et concessionnaires",
+    "general": {
+      "q1": "Torvault est-elle actuellement une gamme de produits certifiée et expédiée ?",
+      "a1": "Torvault est une nouvelle marque dont le lancement est prévu en 2026. Les spécifications présentées sur ce site reflètent nos objectifs d'ingénierie et sont fournies à titre indicatif en attendant la certification UL finale et le début de la production — nous sommes transparents à ce sujet plutôt que de laisser croire à des certifications que nous ne détenons pas encore. Les concessionnaires confirmés reçoivent le statut de certification à jour dans le cadre de leur intégration.",
+      "q2": "En quoi Torvault diffère-t-elle de Toronto Safes ?",
+      "a2": "Toronto Safes est un fournisseur de détail qui vend directement aux particuliers et aux entreprises du Grand Toronto depuis 1987. Torvault est une nouvelle marque de fabrication de la même société mère, Security Lock & Safe Inc. — créée pour approvisionner en gros les concessionnaires de coffres-forts indépendants à travers le Canada, et non pour vendre directement aux consommateurs. Consultez l'histoire complète sur notre {aboutLink}.",
+      "a2LinkText": "page À propos",
+      "q3": "Un coffre-fort « à l'épreuve du feu » est-il réellement à l'épreuve du feu ?",
+      "a3Pre": "Aucun coffre-fort n'est véritablement à l'épreuve du feu — le terme exact est",
+      "a3Em1": "ignifuge",
+      "a3Mid": "ou",
+      "a3Em2": "homologué contre le feu",
+      "a3Post": ". Une cote comme « 1–Hr / 350°F » signifie que l'intérieur est resté sous 350°F pendant une heure à l'intérieur d'un four pouvant atteindre 1 700°F à l'extérieur du coffre-fort — et non que le contenu est à l'abri du feu indéfiniment. Arrimez la cote de durée au temps de réponse réaliste de votre service d'incendie."
+    },
+    "ratings": {
+      "q1": "Que signifie réellement une cote de sécurité UL ?",
+      "a1": "UL (Underwriters Laboratories) teste les coffres-forts de façon indépendante contre de vrais outils — pieds-de-biche, perceuses, scies, chalumeaux découpeurs — pendant un temps de travail net déterminé (le chronomètre ne tourne que lorsqu'un outil travaille activement le coffre-fort). Un coffre-fort TL‑15 résiste à une attaque professionnelle avec des outils courants pendant 15 minutes; le TL‑30, pendant 30, sur chaque côté. C'est la même norme que les assureurs utilisent pour établir les limites de couverture. Détail complet sur notre {certifiedStandardLink}.",
+      "a1LinkText": "page Norme Certifiée",
+      "q2": "Une cote d'effraction plus élevée signifie-t-elle une meilleure protection incendie ?",
+      "a2": "Non — les cotes d'effraction (Incendie et effraction, TL‑15, TL‑30) et les cotes incendie (mesurées en heures et en température intérieure maximale) sont testées de façon complètement indépendante. Une cote d'effraction élevée ne dit rien de la performance au feu, et vice-versa. Si vous avez besoin des deux, confirmez que le coffre-fort porte une cote documentée pour chacune, et non une seule."
+    },
+    "ordering": {
+      "q1": "Vendez-vous directement aux consommateurs ?",
+      "a1": "Non. Torvault vend exclusivement par l'entremise de concessionnaires canadiens autorisés. Si vous êtes un particulier ou une entreprise souhaitant acheter un coffre-fort directement, communiquez avec notre société sœur {torontoSafesLink} ou demandez-nous une recommandation de concessionnaire dans votre région.",
+      "q2": "Quels sont les délais de livraison au Canada ?",
+      "a2": "Torvault est dans sa première ronde d'attribution de territoires pour 2026. Les concessionnaires confirmés reçoivent des engagements sur les délais et les stocks dans le cadre de leur intégration — demandez la trousse de concessionnaire sur notre {dealerProgramLink} pour connaître les délais actuels.",
+      "a2LinkText": "page Programme de concessionnaires",
+      "q3": "Comment devenir concessionnaire autorisé Torvault ?",
+      "a3": "Écrivez à {email} avec le nom de votre entreprise et votre région, ou consultez le processus de demande complet sur notre {dealerProgramLink}. Nous vous enverrons les fiches techniques certifiées, les prix de gros et la disponibilité des territoires.",
+      "q4": "Le territoire est-il exclusif à un seul concessionnaire ?",
+      "a4": "La protection de territoire fait partie du programme de concessionnaires — les détails et la disponibilité actuelle par région sont fournis lors de l'intégration, puisque Torvault est encore dans sa première ronde d'attribution. Communiquez avec nous rapidement pour sécuriser votre secteur."
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contacter l'assistance | Torvault Safe Company",
+      "description": "Communiquez avec Torvault pour des demandes générales, des questions sur le programme de concessionnaires ou des soumissions de produits — ou trouvez un concessionnaire autorisé pour l'établissement des prix et l'installation dans votre région."
+    },
+    "hero": {
+      "crumb": "Contact",
+      "eyebrow": "Contacter l'assistance",
+      "title": "Communiquez avec nous.",
+      "body": "Torvault vend exclusivement par l'entremise de concessionnaires canadiens autorisés, c'est pourquoi nous avons indiqué précisément qui contacter ci-dessous — que vous soyez concessionnaire, une entreprise qui envisage un achat, ou que vous cherchiez de l'aide pour un coffre-fort que vous possédez déjà."
+    },
+    "cards": {
+      "generalTitle": "Demandes générales",
+      "generalBody": "Questions sur Torvault, nos gammes de produits, ou tout ce qui n'est pas couvert dans le Centre d'aide.",
+      "dealerTitle": "Devenir concessionnaire",
+      "dealerBody": "Faites une demande pour offrir Torvault à prix de gros avec protection de territoire, ou renseignez-vous sur le programme de concessionnaires.",
+      "dealerLink": "Détails du programme de concessionnaires →",
+      "quoteTitle": "Demandes de prix et de soumission",
+      "quoteBody": "Torvault ne publie pas ses prix et ne vend pas directement — chaque soumission passe par un concessionnaire autorisé qui peut vous renseigner sur la livraison et l'installation pour votre espace.",
+      "quoteLink": "Trouver un concessionnaire près de vous →",
+      "existingTitle": "Déjà client de Toronto Safes ?",
+      "existingBody": "Torvault est fabriqué par l'équipe derrière Toronto Safes, la division de détail de Security Lock & Safe Inc. dans le Grand Toronto depuis 1987. Les demandes de vente et de service existantes doivent être adressées directement à Toronto Safes.",
+      "existingLink": "torontosafes.ca →"
+    },
+    "formSection": {
+      "eyebrow": "Contactez-nous",
+      "heading": "Laissez-nous votre message et nous vous répondrons rapidement."
+    },
+    "callout": {
+      "strong": "Vous cherchez d'abord des réponses ?",
+      "bodyPre": "La plupart des questions sur les cotes, les dimensions et l'installation sont déjà couvertes dans notre",
+      "helpCenter": "Centre d'aide",
+      "and": "et notre"
+    }
+  },
+  "termsPage": {
+    "meta": {
+      "title": "Modalités et conditions | Torvault Safe Company",
+      "description": "Modalités et conditions d'utilisation de torvaultsafe.com et des communications marketing par courriel et par SMS de Torvault Safe Company."
+    },
+    "hero": {
+      "crumb": "Modalités et conditions",
+      "eyebrow": "Mentions légales",
+      "title": "Modalités et conditions.",
+      "bodyPre": "Dernière mise à jour en octobre 2026. Des questions ? Écrivez à"
+    },
+    "s1Title": "1. Aperçu général",
+    "s1Body": "Les présentes modalités régissent votre utilisation de torvaultsafe.com ainsi que toute communication par courriel ou par SMS à laquelle vous consentez de la part de Torvault Safe Company (« Torvault », « nous »), une marque de Security Lock & Safe Inc. En soumettant le formulaire d'inscription sur ce site, vous acceptez les modalités énoncées ci-dessous.",
+    "s2Title": "2. Contenu du site",
+    "s2BodyPre": "Les spécifications, les images et les prix figurant sur ce site sont fournis à titre d'information générale et peuvent être modifiés sans préavis. Torvault vend exclusivement par l'entremise de concessionnaires canadiens autorisés; rien sur ce site ne constitue une offre de vente directe aux consommateurs. Consultez nos",
+    "s2DealerProgram": "Programme de concessionnaires",
+    "s2And": "et",
+    "s2FindDealer": "Trouver un concessionnaire",
+    "s2Post": "pages pour obtenir les renseignements à jour sur les concessionnaires.",
+    "s3Title": "3. Consentement au marketing par courriel",
+    "s3Body": "Si vous fournissez votre adresse courriel, vous consentez à recevoir des messages marketing de Torvault, y compris des mises à jour de produits, des nouvelles du programme de concessionnaires et des promotions. Vous pouvez retirer votre consentement à tout moment en utilisant le lien de désabonnement inclus dans chaque courriel, ou en écrivant à",
+    "s4Title": "4. Consentement au marketing par SMS",
+    "s4BodyPre": "Si vous fournissez votre numéro de téléphone, vous acceptez de recevoir des messages texte marketing récurrents de Torvault Safe Company au numéro fourni, envoyés à l'aide d'un système automatisé. Le consentement à recevoir des messages texte n'est pas une condition d'achat. La fréquence des messages varie. Des frais de messagerie et de données peuvent s'appliquer. Répondez",
+    "s4Help": "HELP",
+    "s4ForHelpOr": "pour obtenir de l'aide ou",
+    "s4Stop": "STOP",
+    "s4Post": "pour vous désabonner à tout moment; après l'envoi de STOP, nous vous enverrons un dernier message de confirmation et ne vous enverrons plus aucun autre message.",
+    "s5Title": "5. Confidentialité",
+    "s5Body": "Nous utilisons les coordonnées que vous fournissez uniquement pour vous envoyer les communications auxquelles vous avez consenti et pour répondre à vos demandes. Nous ne vendons pas vos renseignements personnels à des tiers. Vous pouvez demander l'accès à vos renseignements, leur correction ou leur suppression à tout moment en écrivant à",
+    "s6Title": "6. Modifications des présentes modalités",
+    "s6Body": "Nous pouvons mettre à jour les présentes modalités de temps à autre; la date de « dernière mise à jour » ci-dessus reflète la révision la plus récente. La poursuite de l'utilisation de ce site ou le maintien de votre consentement à nos communications après une modification constitue une acceptation des modalités mises à jour.",
+    "s7Title": "7. Contact",
+    "s7BodyPre": "Security Lock & Safe Inc., exploitée sous le nom de Torvault Safe Company. Écrivez à",
+    "s7Or": "ou appelez"
+  },
+  "supportPage": {
+    "meta": {
+      "title": "Centre d'aide | Torvault Safe Company",
+      "description": "Trouvez des réponses sur les cotes UL, les dimensions, l'expédition et l'installation, ou communiquez avec l'assistance Torvault et notre réseau de concessionnaires autorisés."
+    },
+    "hero": {
+      "crumb": "Centre d'aide",
+      "eyebrow": "Centre d'aide",
+      "title": "Comment pouvons-nous vous aider ?",
+      "bodyPre": "Cotes, dimensions, expédition et installation — trouvez l'information ci-dessous, ou",
+      "contactLink": "contactez l'assistance",
+      "bodyPost": "directement."
+    },
+    "topics": {
+      "faqTitle": "Questions fréquemment posées",
+      "faqBody": "Réponses sur les cotes UL, le modèle axé exclusivement sur les concessionnaires, la protection incendie et les délais de livraison.",
+      "sizeTitle": "Guides de taille et de capacité",
+      "sizeBody": "Comment dimensionner un coffre-fort selon ce que vous devez réellement entreposer — ainsi que notre outil interactif de recherche de taille.",
+      "shippingTitle": "Expédition et installation",
+      "shippingBody": "Ce à quoi s'attendre le jour de la livraison, la planification du trajet d'accès, et le fonctionnement de l'ancrage.",
+      "vaultTitle": "Le Coffre — Guides et articles",
+      "vaultBody": "La bibliothèque complète des guides Torvault sur les cotes, la protection incendie et le choix du bon coffre-fort.",
+      "dealerTitle": "Trouver un concessionnaire",
+      "dealerBody": "Repérez un concessionnaire Torvault autorisé pour les prix, la livraison et l'installation dans votre région.",
+      "contactTitle": "Contacter l'assistance",
+      "contactBody": "Demandes générales, questions sur le programme de concessionnaires et comment joindre la bonne équipe."
+    },
+    "stillNeedHelp": {
+      "eyebrow": "Besoin d'aide supplémentaire ?",
+      "heading": "Parlez à une personne, pas à une file de billets.",
+      "body": "Torvault est soutenu par Security Lock & Safe Inc. — la même équipe qui répond au téléphone pour les clients de Toronto Safes depuis 1987.",
+      "cta": "Contacter l'assistance →"
+    }
+  },
+  "dealersPage": {
+    "meta": {
+      "title": "Devenir concessionnaire | Torvault Safe Company",
+      "description": "Torvault intègre ses premiers territoires de concessionnaires canadiens — prix de gros, protection de territoire et une gamme testée UL, sans concurrence de vente directe au consommateur."
+    },
+    "hero": {
+      "crumb": "Concessionnaires",
+      "eyebrow": "Programme de concessionnaires",
+      "title": "Intégration des concessionnaires canadiens en cours.",
+      "body": "Torvault ouvre ses premiers territoires de concessionnaires à travers le Canada — prix de gros, protection de territoire et une gamme testée UL, sans aucune concurrence de notre part en vente directe au consommateur."
+    },
+    "lookingToBuyPre": "Vous souhaitez acheter un coffre-fort Torvault, et non en vendre un ?",
+    "lookingToBuyLink": "Trouver un concessionnaire autorisé près de vous →",
+    "benefits": {
+      "eyebrow": "Avantages du programme",
+      "heading": "Conçu pour protéger votre marge.",
+      "body": "Torvault existe parce que les concessionnaires indépendants méritent un fournisseur certifié qui ne les concurrence pas au détail. Chaque volet du programme est conçu autour de ce principe.",
+      "item1Title": "Protection de territoire",
+      "item1Body": "Les concessionnaires intégrés obtiennent un territoire régional défini — les détails sont confirmés lors de l'examen de la demande.",
+      "item2Title": "Prix de gros",
+      "item2Body": "Prix d'importation directe depuis notre installation de production au Vietnam — aucune marge de distributeur intermédiaire.",
+      "item3Title": "Aucune concurrence de vente directe au consommateur",
+      "item3Body": "Torvault vend exclusivement par l'entremise de concessionnaires. Nous n'affichons jamais nos prix publiquement et ne vendons jamais directement.",
+      "item4Title": "Fiches techniques certifiées",
+      "item4Body": "Documentation de méthodologie UL pour chaque gamme de produits, prête à remettre à un client ou à un assureur.",
+      "item5Title": "39 ans de soutien dans l'industrie",
+      "item5Body": "Soutenu par des décennies d'expérience de Security Lock & Safe Inc. en matière de vente, de service et de livraison.",
+      "item6Title": "Attribution anticipée de territoire",
+      "item6Body": "Les concessionnaires de la première ronde bénéficient d'une priorité sur les délais et les stocks à mesure que la gamme atteint sa pleine production."
+    },
+    "steps": {
+      "eyebrow": "Comment ça fonctionne",
+      "heading": "Quatre étapes pour l'intégration.",
+      "step1Title": "Renseignez-vous",
+      "step1BodyPre": "Écrivez à",
+      "step1BodyPost": "ou soumettez le formulaire ci-dessous avec le nom de votre entreprise et votre région.",
+      "step2Title": "Examen du territoire et de l'adéquation",
+      "step2Body": "Nous confirmons la disponibilité du territoire et passons en revue les gammes de produits qui correspondent à votre clientèle habituelle.",
+      "step3Title": "Entente de concessionnaire",
+      "step3Body": "Les prix de gros, les modalités du territoire et les engagements sur les délais sont précisés dans votre entente de concessionnaire.",
+      "step4Title": "Intégration et première commande",
+      "step4Body": "Vous recevez les fiches techniques certifiées, les outils marketing et l'échéancier de votre première commande."
+    },
+    "snapshot": {
+      "eyebrow": "Aperçu du lancement",
+      "heading": "Première ronde d'attribution, ouverte dès maintenant.",
+      "body": "Les territoires et les fiches techniques sont disponibles dès maintenant pour la première ronde d'intégration des concessionnaires canadiens.",
+      "cta": "Demander la trousse de concessionnaire",
+      "stat1Label": "Gammes de produits au lancement",
+      "stat2Label": "Cote d'effraction la plus élevée",
+      "stat3Label": "Priorité aux concessionnaires canadiens",
+      "stat4Label": "Ronde d'attribution de territoire"
+    },
+    "cta": {
+      "eyebrow": "Communiquez avec nous",
+      "heading": "Parlez-nous de votre entreprise.",
+      "body": "Envoyez-nous le nom de votre entreprise, votre région et une note sur votre gamme de produits actuelle — nous reviendrons vers vous avec la disponibilité des territoires et une trousse technique.",
+      "formNotePre": "En soumettant ce formulaire, vous acceptez d'être contacté par Torvault Safe Company concernant l'intégration des concessionnaires. Consultez notre",
+      "formNoteLink": "FAQ",
+      "formNotePost": "pour en savoir plus sur le processus de demande."
+    }
+  },
+  "findADealerPage": {
+    "meta": {
+      "title": "Trouver un concessionnaire | Torvault Safe Company",
+      "description": "Trouvez un concessionnaire de coffres-forts Torvault autorisé près de vous au Canada — salles d'exposition, services de serrurerie, et livraison et installation."
+    },
+    "hero": {
+      "crumb": "Trouver un concessionnaire",
+      "eyebrow": "Où acheter",
+      "title": "Trouvez un concessionnaire Torvault près de vous.",
+      "body": "Torvault vend exclusivement par l'entremise de concessionnaires autorisés — jamais directement aux consommateurs. Faites une recherche ci-dessous pour trouver une salle d'exposition, un serrurier ou un partenaire de livraison dans votre secteur."
+    },
+    "notInArea": {
+      "eyebrow": "Pas encore dans votre secteur ?",
+      "heading": "Nous ouvrons de nouveaux territoires dès maintenant.",
+      "body": "Torvault est dans sa première ronde d'intégration de concessionnaires canadiens. S'il n'y a pas encore de concessionnaire autorisé près de vous, vous pouvez quand même obtenir les fiches techniques certifiées et être avisé dès qu'un concessionnaire ouvre dans votre territoire.",
+      "cta": "Découvrir le programme de concessionnaires →"
+    },
+    "areYouRetailer": {
+      "eyebrow": "Êtes-vous détaillant ou serrurier ?",
+      "heading": "Offrez une gamme certifiée, pas un simple niveau marketing.",
+      "body": "Les concessionnaires indépendants bénéficient de prix de gros, d'une protection de territoire et d'aucune concurrence de vente directe au consommateur de la part de Torvault. Joignez la première ronde d'intégration des concessionnaires canadiens.",
+      "cta": "Faire une demande pour devenir concessionnaire →"
+    }
+  },
+  "dealerLocator": {
+    "searchPlaceholder": "Rechercher par ville, province ou code postal",
+    "searchAriaLabel": "Rechercher un concessionnaire Torvault par emplacement",
+    "useMyLocation": "Utiliser ma position",
+    "locating": "Localisation en cours…",
+    "locationUnavailable": "Les services de localisation ne sont pas disponibles dans ce navigateur.",
+    "locationFailed": "Nous n'avons pas pu accéder à votre position. Essayez plutôt de rechercher une ville ou un code postal.",
+    "yourLocation": "Votre position",
+    "clearSearch": "Effacer la recherche",
+    "emptyTitle": "Aucun concessionnaire Torvault ne correspond encore à ces filtres.",
+    "emptyBody": "Nous intégrons actuellement notre première ronde de concessionnaires canadiens — cette liste s'allongera à mesure que de nouveaux territoires ouvriront. Si vous êtes détaillant ou serrurier et intéressé à offrir Torvault, nous aimerions avoir de vos nouvelles.",
+    "emptyCta": "Faire une demande pour devenir concessionnaire",
+    "showroom": "Salle d'exposition",
+    "locksmithServices": "Services de serrurerie",
+    "deliveryInstallation": "Livraison et installation"
+  },
+  "buildStory": {
+    "ch1Eyebrow": "01 — Fabrication",
+    "ch1Title": "Coupé, formé et soudé.",
+    "ch1Body": "Chaque corps Torvault commence comme une plaque d'acier massif laminé à froid — coupée, formée et soudée sur notre chaîne de production à l'épaisseur spécifiée pour chaque gamme, des corps RSC de calibre 12 à la construction massive de 1,5″ du TL‑30.",
+    "ch2Eyebrow": "02 — Assemblage",
+    "ch2Title": "Plaque composite, verrous et la roue.",
+    "ch2Body": "La plaque composite est fixée par-dessus le système de verrous, puis les verrous de reverrouillage, le cadran et la roue de verrouillage sont installés et testés fonctionnellement avant même que la porte ne soit posée.",
+    "ch3Eyebrow": "03 — Ouverture",
+    "ch3Title": "Fabriqué pour tenir. Conçu pour durer.",
+    "ch3Body": "Chaque soudure et chaque verrou sont vérifiés avant l'expédition d'une unité — puis inspectés à nouveau une fois la porte posée, afin qu'elle s'ouvre exactement comme prévu.",
+    "ch3Cta": "Voir le processus de fabrication complet"
+  },
+  "aboutStory": {
+    "ch1Eyebrow": "À propos de Torvault",
+    "ch1Title": "Fondé sur la force, guidé par l'expertise.",
+    "ch1Body": "Avec une expérience remontant à 1987, nous livrons des coffres-forts haute sécurité pour les propriétaires, les détaillants, les entreprises, les organismes gouvernementaux, les institutions, les forces de l'ordre et l'armée — chaque coffre-fort étant conçu pour une qualité sans compromis et une tranquillité d'esprit durable.",
+    "ch2Eyebrow": "01 — Notre mission",
+    "ch2Title": "Force. Expérience. Confiance.",
+    "ch2Body": "Torvault a été fondée avec une mission claire : aider les gens à protéger ce qui compte le plus. Soutenus par des décennies d'expertise dans l'industrie, nous apportons un savoir-faire concret à une nouvelle génération de coffres-forts résidentiels et commerciaux.",
+    "ch3Eyebrow": "02 — Qui nous servons",
+    "ch3Title": "Une protection pour chaque contexte.",
+    "ch3Body": "Des objets de valeur personnels et des documents importants aux espèces, à l'inventaire et aux matériaux sensibles — nous servons les propriétaires, les détaillants, les entreprises commerciales et industrielles, les organismes gouvernementaux, les institutions, les forces de l'ordre et les clients militaires.",
+    "ch4Eyebrow": "03 — Notre expertise",
+    "ch4Title": "De l'expérience derrière chaque recommandation.",
+    "ch4Body": "Les cotes de sécurité, la protection incendie, les options de serrure et l'accès au quotidien influencent tous le bon choix. Notre équipe aide les clients à comprendre ces différences afin qu'ils puissent prendre des décisions éclairées en toute confiance.",
+    "ch5Eyebrow": "04 — Au-delà de la vente",
+    "ch5Title": "Un soutien qui dépasse l'achat.",
+    "ch5Body": "De la sélection du produit et la planification de l'installation jusqu'au service continu, nous nous engageons à aider les clients à tirer une valeur durable de leur achat — en gagnant leur confiance grâce à des gens compétents et une protection fiable.",
+    "ch5Cta": "Lire notre histoire complète"
+  },
+  "manufacturingStory": {
+    "ch1Eyebrow": "01 — Conception et ingénierie",
+    "ch1Title": "Spécifié avant même qu'une seule unité ne soit outillée.",
+    "ch1Body": "La géométrie du corps, de la porte et du verrouillage est spécifiée selon la méthodologie d'essai UL 72 et UL TL avant même qu'une seule unité ne soit outillée — chaque gamme de produits est conçue selon une cote cible, et non adaptée après coup.",
+    "ch2Eyebrow": "02 — Formage de l'acier et construction du corps",
+    "ch2Title": "Coupé, formé et soudé.",
+    "ch2Body": "La plaque d'acier massif est coupée, formée et soudée pour former l'ébauche du corps et de la porte à l'épaisseur spécifiée pour chaque gamme de produits — des corps RSC de calibre 12 à la construction massive de 1,5″ du TL‑30.",
+    "ch3Eyebrow": "03 — Laminage de la plaque composite",
+    "ch3Title": "Fixée par-dessus la serrure et le système de verrous.",
+    "ch3Body": "La plaque composite est fixée par-dessus la serrure et le système de verrous — et sur les six côtés pour les unités TL‑30 — afin de contrer les attaques par perçage et par découpe lors des essais selon la méthodologie UL.",
+    "ch4Eyebrow": "04 — Assemblage du reverrouilleur et du système de verrouillage",
+    "ch4Title": "Installé et testé fonctionnellement.",
+    "ch4Body": "Les verrous de reverrouillage à ressort, le système de verrous et le mécanisme de verrouillage électronique ou mécanique sont installés et testés fonctionnellement avant la pose de la porte.",
+    "ch5Eyebrow": "05 — Essais de conformité et d'importation",
+    "ch5Title": "Vérifié selon la norme homologuée.",
+    "ch5Body": "Chaque gamme de produits est vérifiée selon sa norme homologuée — endurance au feu, résistance à l'effraction forcée et fonctionnement de la serrure — avant le début de la distribution au Canada.",
+    "ch6Eyebrow": "06 — Importation et distribution aux concessionnaires",
+    "ch6Title": "Expédié scellé. Vendu uniquement par des concessionnaires.",
+    "ch6Body": "Les unités finies sont importées directement au Canada et expédiées vers les territoires des concessionnaires autorisés — sans étape de distributeur intermédiaire, et sans vente directe au consommateur."
+  },
+  "favorites": {
+    "favorites": "Favoris",
+    "viewFavorites": "Voir les favoris",
+    "closeFavorites": "Fermer les favoris",
+    "emptyState": "Aucun favori pour le moment. Touchez le cœur sur un produit pour l'enregistrer ici.",
+    "removeFromFavorites": "Retirer {label} des favoris"
+  },
+  "productsCommon": {
+    "home": "Accueil",
+    "notSureEyebrow": "Vous hésitez entre nos gammes ?",
+    "notSureHeading": "Parlez à un spécialiste concessionnaire Torvault.",
+    "notSureBody": "Les territoires et fiches techniques sont disponibles dès maintenant pour la première vague d'intégration de concessionnaires canadiens.",
+    "requestDealerPackage": "Demander la trousse concessionnaire"
+  },
+  "productsPage": {
+    "hero": {
+      "crumb": "Produits",
+      "eyebrow": "Produits",
+      "title": "Trois gammes. Une norme documentée.",
+      "body": "Torvault lance au Canada trois gammes de produits conçues sur mesure, chacune pensée pour une menace précise — le feu, l'effraction forcée, ou les deux — et vérifiée selon la méthodologie d'essai UL plutôt qu'une appellation marketing maison."
+    },
+    "sideBySide": {
+      "eyebrow": "Côte à côte",
+      "heading": "Comparez les gammes de produits.",
+      "bodyPre": "Chaque cote ci-dessous est une classification UL documentée — pas une appellation marketing. La méthodologie d'essai complète est détaillée sur la",
+      "certifiedStandardLinkText": "page Norme Certifiée",
+      "bodyPost": "."
+    },
+    "table": {
+      "colProductLine": "Gamme de produits",
+      "colRating": "Cote",
+      "colNetWorkingTime": "Temps de travail net",
+      "colFireEndurance": "Endurance au feu",
+      "colSteelBody": "Corps en acier",
+      "colDoor": "Porte",
+      "colRelocking": "Reverrouillage",
+      "colTypicalUse": "Utilisation typique",
+      "row1Rating": "Testé au feu en usine",
+      "row1Net": "5 min, tous les côtés",
+      "row1Steel": "Acier 12 ga",
+      "row1Door": "Paroi simple, serrure à cadran",
+      "row1Use": "Bureaux à domicile et commerces",
+      "row2Rating": "UL TL‑15",
+      "row2Net": "15 min, porte seulement",
+      "row2Steel": "Acier massif 1″",
+      "row2Door": "Plaque composite renforcée",
+      "row2Relocking": "Verrou à ressort bidirectionnel",
+      "row2Use": "Succursales bancaires, pharmacies",
+      "row3Rating": "UL TL‑30",
+      "row3Net": "30 min, six côtés",
+      "row3Steel": "Acier massif 1,5″",
+      "row3Door": "Plaque composite, 6 côtés",
+      "row3Relocking": "Verrou à ressort quadridirectionnel",
+      "row3Use": "Dépôts de transport de fonds, bijoutiers"
+    },
+    "viewProductFullSpecs": "Voir le produit et la fiche complète →",
+    "sizesLabel": "Formats",
+    "viewProductDetailsAria": "Voir les détails du produit {label}",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Questions fréquemment posées.",
+    "meta": {
+      "title": "Coffres-forts | Incendie et effraction, TL-15, TL-30 — Torvault",
+      "description": "Comparez les trois gammes de coffres-forts Torvault : Incendie et effraction (testé au feu en usine), TL-15 Haute Sécurité et TL-30 Haute Sécurité — caractéristiques, construction et usage recommandé pour chaque gamme."
+    }
+  },
+  "productDetailPage": {
+    "overviewEyebrow": "Aperçu",
+    "overviewHeading": "Conçu selon une norme documentée.",
+    "keyFeaturesEyebrow": "Caractéristiques clés",
+    "keyFeaturesHeading": "Ce qui est inclus de série.",
+    "fullLineupEyebrow": "Gamme complète de modèles",
+    "sizesBuiltToOrder": "{count} formats, fabriqués sur commande.",
+    "sortDescription": "Triez par taille ou par poids ci-dessous, ou demandez une soumission pour un modèle — chaque unité {label} est expédiée selon les dimensions indiquées.",
+    "modelsLabel": "modèles",
+    "lbsRangeLabel": "lb de plage",
+    "exploreLineEyebrow": "Explorer la gamme",
+    "exploreLineHeading": "Comparez les autres types de produits.",
+    "viewProduct": "Voir le produit →",
+    "faqEyebrow": "FAQ",
+    "faqHeading": "Questions sur la gamme {label}."
+  }
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import HeroVideo from "@/components/HeroVideo";
 import BuildStory from "@/components/BuildStory";
 import AboutStory from "@/components/AboutStory";
@@ -13,244 +13,224 @@ import CertSeal from "@/components/CertSeal";
 import Button from "@/components/Button";
 import NeuralButton from "@/components/NeuralButton";
 import NeuralBorder from "@/components/NeuralBorder";
+import { interpolateNodes } from "@/lib/richText";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
 
 type CertOrbitItem =
   | { type: "seal"; glyph: string; k: string; v: string }
   | { type: "photo"; src: string; alt: string; k: string; v: string };
 
-const CERT_ORBIT: CertOrbitItem[] = [
-  { type: "seal", glyph: "UL", k: "UL Listed", v: "Security Rated" },
-  {
-    type: "photo",
-    src: "/products/graphite/01-torvault-front-closed.jpg",
-    alt: "Torvault safe, graphite finish",
-    k: "Graphite Finish",
-    v: "BF‑914",
-  },
-  { type: "seal", glyph: "15", k: "TL‑15", v: "Burglary Resistant" },
-  {
-    type: "photo",
-    src: "/products/black/01-torvault-black-front-closed.jpg",
-    alt: "Torvault safe, black finish",
-    k: "Black Finish",
-    v: "BF‑914",
-  },
-  { type: "seal", glyph: "30", k: "TL‑30", v: "Burglary Resistant" },
-  {
-    type: "photo",
-    src: "/products/graphite/02-torvault-front-open.jpg",
-    alt: "Torvault safe interior, shelf and boltwork",
-    k: "Interior View",
-    v: "Shelf + Boltwork",
-  },
-  { type: "seal", glyph: "III", k: "EN 1143‑1", v: "Resistance Grade III" },
-  {
-    type: "photo",
-    src: "/products/black/05-torvault-black-interior-detail.jpg",
-    alt: "Torvault boltwork detail, black finish",
-    k: "Boltwork Detail",
-    v: "3‑Point Locking",
-  },
-];
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
+  return buildMetadata({
+    locale: locale as Locale,
+    pathname: "/",
+    title: t("meta.title"),
+    description: t("meta.description"),
+    image: "/hero-safe.jpg",
+  });
+}
 
-type Testimonial = { name: string; quote: string; when: string };
+export default async function HomePage() {
+  const t = await getTranslations("home");
 
-/**
- * Torvault sells wholesale-only (no direct-to-consumer sales), so it has no
- * reviews of its own yet. These are real, publicly posted Google reviews for
- * Toronto Safes — the retail arm of Security Lock & Safe Inc., the same
- * parent company backing Torvault — shortened to brief attributed excerpts.
- * Source: https://www.google.com/maps/place/?q=place_id:ChIJ5TUrYaMvK4gRFIZT3vaOY2Q
- */
-const TESTIMONIALS: Testimonial[] = [
-  {
-    name: "Chris Kay",
-    quote: "Knowledgeable, punctual, and an overall delight to deal with.",
-    when: "10 months ago",
-  },
-  {
-    name: "Jack C.",
-    quote: "One of the most friendly, customer-service-oriented staff.",
-    when: "5 years ago",
-  },
-  {
-    name: "Al F.",
-    quote: "Kelly and the team are phenomenal.",
-    when: "2 years ago",
-  },
-];
+  const STORY_PILLARS = [
+    {
+      title: t("story.pillar1Title"),
+      body: t("story.pillar1Body"),
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z" />
+        </svg>
+      ),
+    },
+    {
+      title: t("story.pillar2Title"),
+      body: t("story.pillar2Body"),
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+      ),
+    },
+    {
+      title: t("story.pillar3Title"),
+      body: t("story.pillar3Body"),
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3.85 8.62a4 4 0 014.78-4.77 4 4 0 016.74 0 4 4 0 014.78 4.78 4 4 0 010 6.74 4 4 0 01-4.78 4.78 4 4 0 01-6.74 0 4 4 0 01-4.78-4.78 4 4 0 010-6.75z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+      ),
+    },
+  ];
 
-type StoryPillar = { title: string; body: string; icon: ReactNode };
+  const CERT_ORBIT: CertOrbitItem[] = [
+    { type: "seal", glyph: "UL", k: t("certOrbit.ulListedK"), v: t("certOrbit.ulListedV") },
+    {
+      type: "photo",
+      src: "/products/graphite/01-torvault-front-closed.jpg",
+      alt: "Torvault safe, graphite finish",
+      k: t("certOrbit.graphiteFinishK"),
+      v: "BF‑914",
+    },
+    { type: "seal", glyph: "15", k: t("certOrbit.tl15K"), v: t("certOrbit.tl15V") },
+    {
+      type: "photo",
+      src: "/products/black/01-torvault-black-front-closed.jpg",
+      alt: "Torvault safe, black finish",
+      k: t("certOrbit.blackFinishK"),
+      v: "BF‑914",
+    },
+    { type: "seal", glyph: "30", k: t("certOrbit.tl30K"), v: t("certOrbit.tl30V") },
+    {
+      type: "photo",
+      src: "/products/graphite/02-torvault-front-open.jpg",
+      alt: "Torvault safe interior, shelf and boltwork",
+      k: t("certOrbit.interiorViewK"),
+      v: t("certOrbit.interiorViewV"),
+    },
+    { type: "seal", glyph: "III", k: t("certOrbit.en1143K"), v: t("certOrbit.en1143V") },
+    {
+      type: "photo",
+      src: "/products/black/05-torvault-black-interior-detail.jpg",
+      alt: "Torvault boltwork detail, black finish",
+      k: t("certOrbit.boltworkDetailK"),
+      v: t("certOrbit.boltworkDetailV"),
+    },
+  ];
 
-const STORY_PILLARS: StoryPillar[] = [
-  {
-    title: "Fire-Rated Core",
-    body: "Gypsum composite fill engineered to hold an internal 350°F ceiling well past the rated hour, so documents and drives survive what the building doesn’t.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Forced-Entry Resistance",
-    body: "Composite hardplate, relocking bolts, and solid steel bodies built to resist prybars, drills, and saws for a documented net working time — not a marketing tier.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Independently Tested",
-    body: "Every rating is UL & ULC verified, tool-by-tool, by a third party — the same standard insurers use to set coverage limits.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3.85 8.62a4 4 0 014.78-4.77 4 4 0 016.74 0 4 4 0 014.78 4.78 4 4 0 010 6.74 4 4 0 01-4.78 4.78 4 4 0 01-6.74 0 4 4 0 01-4.78-4.78 4 4 0 010-6.75z" />
-        <path d="M9 12l2 2 4-4" />
-      </svg>
-    ),
-  },
-];
+  const TESTIMONIALS = [
+    { name: "Chris Kay", quote: t("testimonials.quote1"), when: t("testimonials.when1") },
+    { name: "Jack C.", quote: t("testimonials.quote2"), when: t("testimonials.when2") },
+    { name: "Al F.", quote: t("testimonials.quote3"), when: t("testimonials.when3") },
+  ];
 
-export const metadata: Metadata = {
-  title: "Torvault Safe Company | Fire & High-Security Safes, Canada",
-  description:
-    "Torvault engineers UL-rated fire and burglary safes — from factory fire-tested protection to UL TL-30 tool resistance — for Canadian businesses and dealers.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    title: "Torvault Safe Company | The Line That Doesn't Move",
-    description:
-      "UL-rated fire and burglary safes engineered for Canadian businesses — Fire & Burglary, TL-15, and TL-30 High Security product lines.",
-    images: ["/hero-safe.jpg"],
-  },
-  twitter: { card: "summary_large_image" },
-};
+  const homeFaqs = [
+    {
+      question: t("faqSection.q1"),
+      answer: interpolateNodes(t.raw("faqSection.a1"), {
+        certifiedStandardLink: (
+          <Link href="/certified-standard" style={{ textDecoration: "underline" }}>
+            {t("faqSection.a1LinkText")}
+          </Link>
+        ),
+      }),
+    },
+    {
+      question: t("faqSection.q2"),
+      answer: interpolateNodes(t.raw("faqSection.a2"), {
+        productsLink: (
+          <Link href="/products" style={{ textDecoration: "underline" }}>
+            {t("faqSection.a2LinkText")}
+          </Link>
+        ),
+      }),
+    },
+    {
+      question: t("faqSection.q3"),
+      answer: interpolateNodes(t.raw("faqSection.a3"), {
+        findDealerLink: (
+          <Link href="/find-a-dealer" style={{ textDecoration: "underline" }}>
+            {t("faqSection.a3LinkText1")}
+          </Link>
+        ),
+        dealerProgramLink: (
+          <Link href="/dealers" style={{ textDecoration: "underline" }}>
+            {t("faqSection.a3LinkText2")}
+          </Link>
+        ),
+      }),
+    },
+    { question: t("faqSection.q4"), answer: t("faqSection.a4") },
+    { question: t("faqSection.q5"), answer: t("faqSection.a5") },
+    {
+      question: t("faqSection.q6"),
+      answer: interpolateNodes(t.raw("faqSection.a6"), {
+        productsLink: (
+          <Link href="/products" style={{ textDecoration: "underline" }}>
+            {t("faqSection.a2LinkText")}
+          </Link>
+        ),
+      }),
+    },
+  ];
 
-const homeFaqs = [
-  {
-    question: "What does a UL security rating actually mean?",
-    answer: (
-      <>
-        UL (Underwriters Laboratories) independently tests safes against real
-        tools &mdash; prybars, drills, saws &mdash; for a set net working
-        time. A TL&#8209;15 safe resists a professional attack with common
-        tools for 15 minutes; TL&#8209;30 for 30. It&rsquo;s the same
-        standard insurers use to set coverage limits. See our{" "}
-        <Link href="/certified-standard" style={{ textDecoration: "underline" }}>
-          Certified Standard guide
-        </Link>{" "}
-        for the full breakdown.
-      </>
-    ),
-  },
-  {
-    question: "What's the difference between TL-15 and TL-30 safes?",
-    answer: (
-      <>
-        The number is net working time &mdash; how long the UL-rated door and
-        boltwork resist a professional attack with common tools. TL&#8209;15
-        holds for 15 minutes, TL&#8209;30 for 30, with a thicker 1.5&Prime;
-        solid steel body and hardplate across all six sides. Higher-value
-        contents and higher insurance limits generally call for TL&#8209;30.
-        Compare specs on our{" "}
-        <Link href="/products" style={{ textDecoration: "underline" }}>
-          Products page
-        </Link>
-        .
-      </>
-    ),
-  },
-  {
-    question: "Where can I buy a Torvault safe?",
-    answer: (
-      <>
-        Torvault sells exclusively through authorized dealers across
-        Canada &mdash; we don&rsquo;t sell direct to consumers. Use our{" "}
-        <Link href="/find-a-dealer" style={{ textDecoration: "underline" }}>
-          Find a Dealer
-        </Link>{" "}
-        page to locate one near you, or see our{" "}
-        <Link href="/dealers" style={{ textDecoration: "underline" }}>
-          Dealer Program
-        </Link>{" "}
-        if you&rsquo;re a retailer interested in carrying the line.
-      </>
-    ),
-  },
-  {
-    question: "How long will my documents survive in a fire?",
-    answer: (
-      <>
-        Our Fire &amp; Burglary line carries a UL Class 350 rating: the
-        interior stays below 350&deg;F &mdash; the temperature paper starts
-        to char &mdash; for a full hour, even while the fire outside reaches
-        up to 1,700&deg;F. That hour is tested, not estimated; it&rsquo;s the
-        same net-working-time methodology UL uses across every rating we
-        carry.
-      </>
-    ),
-  },
-  {
-    question: "Do insurance companies recognize Torvault's ratings?",
-    answer: (
-      <>
-        Yes. Our TL&#8209;15 and TL&#8209;30 security ratings are
-        independently tested by UL, not self-certified in-house &mdash; the
-        standard insurers reference when setting coverage limits for cash,
-        firearms, and documents. Our Fire &amp; Burglary line is factory
-        fire-tested. Ask your insurer which rating your policy requires
-        before choosing a model.
-      </>
-    ),
-  },
-  {
-    question: "What sizes and capacities are available?",
-    answer: (
-      <>
-        Each of our three lines spans a wide range, from compact
-        home-and-office models up to large commercial vaults, so capacity
-        scales with the rating you need rather than forcing a single body
-        size. Browse interior dimensions and weight for every model on the{" "}
-        <Link href="/products" style={{ textDecoration: "underline" }}>
-          Products page
-        </Link>
-        .
-      </>
-    ),
-  },
-];
+  // Plain-text duplicate of homeFaqs for FAQPage structured data — JSON-LD
+  // needs a string, not the JSX produced by interpolateNodes, so link
+  // placeholders are swapped for their visible link text instead of left
+  // as raw `{token}` markers.
+  const plainAnswer = (raw: string, links: Record<string, string>) =>
+    raw.replace(/\{([a-zA-Z0-9]+)\}/g, (_, key) => links[key] ?? "");
 
-export default function HomePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        q: t("faqSection.q1"),
+        a: plainAnswer(t.raw("faqSection.a1"), { certifiedStandardLink: t("faqSection.a1LinkText") }),
+      },
+      {
+        q: t("faqSection.q2"),
+        a: plainAnswer(t.raw("faqSection.a2"), { productsLink: t("faqSection.a2LinkText") }),
+      },
+      {
+        q: t("faqSection.q3"),
+        a: plainAnswer(t.raw("faqSection.a3"), {
+          findDealerLink: t("faqSection.a3LinkText1"),
+          dealerProgramLink: t("faqSection.a3LinkText2"),
+        }),
+      },
+      { q: t("faqSection.q4"), a: t("faqSection.a4") },
+      { q: t("faqSection.q5"), a: t("faqSection.a5") },
+      {
+        q: t("faqSection.q6"),
+        a: plainAnswer(t.raw("faqSection.a6"), { productsLink: t("faqSection.a2LinkText") }),
+      },
+    ].map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+
   return (
     <main id="top">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="hero">
         <HeroVideo />
         <div className="wrap hero-grid">
-          <span className="eyebrow hero-kicker">
-            Torvault Safe Company
-          </span>
+          <span className="eyebrow hero-kicker">{t("hero.kicker")}</span>
           <h1 className="hero-headline">
             <span className="word-mask">
               <span className="word" style={{ "--wi": 0 } as React.CSSProperties}>
-                Security
+                {t("hero.word1")}
               </span>
             </span>{" "}
             <span className="word-mask">
               <span className="word" style={{ "--wi": 1 } as React.CSSProperties}>
-                without
+                {t("hero.word2")}
               </span>
             </span>{" "}
             <span className="word-mask">
               <span className="word" style={{ "--wi": 2 } as React.CSSProperties}>
-                compromise.
+                {t("hero.word3")}
               </span>
             </span>
           </h1>
           <div className="hero-ctas">
             <NeuralButton href="/products" accent="gold">
-              View Products
+              {t("hero.viewProducts")}
               <svg
                 className="neural-btn-arrow"
                 viewBox="0 0 24 24"
@@ -267,7 +247,7 @@ export default function HomePage() {
           </div>
         </div>
         <span className="hero-scroll-cue" aria-hidden="true">
-          Scroll
+          {t("hero.scroll")}
         </span>
       </section>
 
@@ -279,7 +259,7 @@ export default function HomePage() {
                 <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z" />
               </svg>
             </span>
-            <span>UL &amp; ENL43 Tested Standards</span>
+            <span>{t("trustBar.item1")}</span>
           </NeuralButton>
           <NeuralButton accent="ice" className="trust-pill">
             <span className="trust-item-icon">
@@ -288,7 +268,7 @@ export default function HomePage() {
                 <path d="M8.5 12.5L7 21l5-2.5 5 2.5-1.5-8.5" />
               </svg>
             </span>
-            <span>Backed by 40 Years of Security Expertise</span>
+            <span>{t("trustBar.item2")}</span>
           </NeuralButton>
           <NeuralButton accent="ice" className="trust-pill">
             <span className="trust-item-icon">
@@ -299,7 +279,7 @@ export default function HomePage() {
                 <path d="M20 19v1a3 3 0 01-3 3h-3" />
               </svg>
             </span>
-            <span>Engineered for the Toughest Environment</span>
+            <span>{t("trustBar.item3")}</span>
           </NeuralButton>
         </div>
       </section>
@@ -307,13 +287,9 @@ export default function HomePage() {
       <section className="story-strip">
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Engineering</span>
-            <h2>Engineered against the threats that matter.</h2>
-            <p>
-              Fire protection, forced-entry resistance, and independent
-              verification aren&rsquo;t options on a Torvault safe &mdash;
-              they&rsquo;re the baseline every product line is built from.
-            </p>
+            <span className="eyebrow">{t("story.eyebrow")}</span>
+            <h2>{t("story.heading")}</h2>
+            <p>{t("story.body")}</p>
           </Reveal>
           <div className="story-grid">
             {STORY_PILLARS.map((pillar, i) => (
@@ -331,13 +307,9 @@ export default function HomePage() {
       <section id="products">
         <div className="wrap">
           <Reveal className="section-head">
-            <span className="eyebrow">Products</span>
-            <h2>Three lines. One standard.</h2>
-            <p>
-              Three purpose-built product lines, each engineered around a
-              specific threat &mdash; fire, forced entry, or both &mdash;
-              rather than a one-size body with a bigger price tag.
-            </p>
+            <span className="eyebrow">{t("productsSection.eyebrow")}</span>
+            <h2>{t("productsSection.heading")}</h2>
+            <p>{t("productsSection.body")}</p>
           </Reveal>
 
           <ProductGallery />
@@ -353,17 +325,10 @@ export default function HomePage() {
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Certified Standard
+              {t("certified.eyebrow")}
             </span>
-            <h2>Specification, not a marketing tier.</h2>
-            <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Every Torvault safe is built to a documented testing standard
-              &mdash; factory fire testing on Fire &amp; Burglary, or
-              independent UL testing on TL&#8209;15 and TL&#8209;30 &mdash;
-              not an in-house label alone. Our Certified Standard page breaks
-              down exactly what each rating means, how testing works, and why
-              insurers use it to set coverage limits.
-            </p>
+            <h2>{t("certified.heading")}</h2>
+            <p style={{ marginLeft: "auto", marginRight: "auto" }}>{t("certified.body")}</p>
           </Reveal>
 
           <Reveal className="cert-marquee-wrap" delay={100}>
@@ -392,7 +357,7 @@ export default function HomePage() {
 
           <Reveal delay={150} style={{ textAlign: "center", marginTop: 36 }}>
             <Button href="/certified-standard" variant="primary">
-              Read the Full Certified Standard Guide
+              {t("certified.cta")}
             </Button>
           </Reveal>
         </div>
@@ -407,16 +372,16 @@ export default function HomePage() {
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              FAQ
+              {t("faqSection.eyebrow")}
             </span>
-            <h2>Frequently asked questions.</h2>
+            <h2>{t("faqSection.heading")}</h2>
           </Reveal>
           <Reveal delay={100}>
             <FaqAccordion items={homeFaqs} />
           </Reveal>
           <p style={{ textAlign: "center", marginTop: 36 }}>
             <Link className="cat-cta" href="/faq">
-              View All FAQs &rarr;
+              {t("faqSection.viewAll")}
             </Link>
           </p>
         </div>
@@ -429,22 +394,21 @@ export default function HomePage() {
             style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
-              Customer Reviews
+              {t("testimonials.eyebrow")}
             </span>
-            <h2>Trusted since 1987.</h2>
-            <p style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Torvault is backed by Security Lock &amp; Safe Inc. &mdash; 40
-              years in the Canadian safe industry through Toronto Safes.
-            </p>
+            <h2>{t("testimonials.heading")}</h2>
+            <p style={{ marginLeft: "auto", marginRight: "auto" }}>{t("testimonials.body")}</p>
           </Reveal>
 
           <div className="notebook-grid">
-            {TESTIMONIALS.map((t, i) => (
-              <Reveal as="article" className="notebook-note" delay={i * 120} key={t.name}>
+            {TESTIMONIALS.map((item, i) => (
+              <Reveal as="article" className="notebook-note" delay={i * 120} key={item.name}>
                 <span className="notebook-note-pin" aria-hidden="true" />
-                <p className="notebook-note-quote">&ldquo;{t.quote}&rdquo;</p>
-                <p className="notebook-note-sig">{t.name}</p>
-                <span className="notebook-note-source">Google Review &middot; {t.when}</span>
+                <p className="notebook-note-quote">&ldquo;{item.quote}&rdquo;</p>
+                <p className="notebook-note-sig">{item.name}</p>
+                <span className="notebook-note-source">
+                  {t("testimonials.googleReview")} &middot; {item.when}
+                </span>
               </Reveal>
             ))}
           </div>
@@ -458,23 +422,19 @@ export default function HomePage() {
               className="eyebrow"
               style={{ justifyContent: "center", color: "var(--brass-600)" }}
             >
-              Stay Updated
+              {t("newsletter.eyebrow")}
             </span>
-            <h2>Get updates from Torvault.</h2>
-            <p>
-              Be the first to know about new safe models, security tips, and
-              special offers &mdash; straight from Torvault.
-            </p>
+            <h2>{t("newsletter.heading")}</h2>
+            <p>{t("newsletter.body")}</p>
             <NewsletterForm />
             <p className="form-note">
-              By entering your phone number, you agree to receive marketing
-              messages from Torvault Safe Company at the number provided.
-              Consent is not a condition of purchase. Message and data rates
-              may apply. Reply HELP for help or STOP to cancel. See our{" "}
-              <Link href="/terms" style={{ textDecoration: "underline" }}>
-                Terms &amp; Conditions
-              </Link>{" "}
-              for details.
+              {interpolateNodes(t.raw("newsletter.formNote"), {
+                termsLink: (
+                  <Link href="/terms" style={{ textDecoration: "underline" }}>
+                    {t("newsletter.termsLinkText")}
+                  </Link>
+                ),
+              })}
             </p>
           </Reveal>
         </div>

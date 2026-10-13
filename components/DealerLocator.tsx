@@ -1,15 +1,30 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { dealers, DEALER_TAGS, TAG_STYLES, type Dealer } from "@/lib/dealers";
 import { searchPlaces, distanceKm, formatDistanceKm, type GeoPoint } from "@/lib/geo";
 import DealerMap from "@/components/DealerMap";
+
+const TAG_KEY: Record<string, string> = {
+  Showroom: "showroom",
+  "Locksmith Services": "locksmithServices",
+  "Delivery & Installation": "deliveryInstallation",
+};
 
 function CheckIcon() {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M3 8.5l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function StarIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M8 .9l2.1 4.6 5 .6-3.7 3.5.9 5-4.3-2.4-4.3 2.4.9-5L.9 6.1l5-.6L8 .9z" />
     </svg>
   );
 }
@@ -23,19 +38,29 @@ function PinIcon() {
   );
 }
 
-function TagPill({ tag }: { tag: string }) {
+function TagPill({ tag, label }: { tag: string; label: string }) {
   const style = TAG_STYLES[tag];
   return (
     <span
       className="dealer-tag"
       style={style ? { background: style.bg, color: style.text } : undefined}
     >
-      {tag}
+      {label}
     </span>
   );
 }
 
-function DealerCard({ dealer, distance }: { dealer: Dealer; distance?: number }) {
+function DealerCard({
+  dealer,
+  distance,
+  t,
+  tc,
+}: {
+  dealer: Dealer;
+  distance?: number;
+  t: ReturnType<typeof useTranslations>;
+  tc: ReturnType<typeof useTranslations>;
+}) {
   return (
     <article className="dealer-card">
       <div className="dealer-card-type">
@@ -48,9 +73,25 @@ function DealerCard({ dealer, distance }: { dealer: Dealer; distance?: number })
           <h3>{dealer.name}</h3>
           {distance !== undefined && <span className="dealer-distance">{formatDistanceKm(distance)}</span>}
         </div>
+        {(dealer.category || dealer.rating !== undefined) && (
+          <div className="dealer-card-google">
+            {dealer.category && <span>{dealer.category}</span>}
+            {dealer.rating !== undefined && (
+              <span className="dealer-card-rating">
+                <StarIcon />
+                {dealer.rating.toFixed(1)}
+                {dealer.reviewCount !== undefined && <span>&nbsp;({dealer.reviewCount})</span>}
+              </span>
+            )}
+            {dealer.hoursNote && <span>{dealer.hoursNote}</span>}
+          </div>
+        )}
+        {dealer.serviceOptions && dealer.serviceOptions.length > 0 && (
+          <p className="dealer-card-services">{dealer.serviceOptions.join(" · ")}</p>
+        )}
         <div className="dealer-card-tags">
           {dealer.tags.map((tag) => (
-            <TagPill key={tag} tag={tag} />
+            <TagPill key={tag} tag={tag} label={TAG_KEY[tag] ? t(TAG_KEY[tag]) : tag} />
           ))}
         </div>
         {dealer.description && <p className="dealer-card-desc">{dealer.description}</p>}
@@ -70,7 +111,7 @@ function DealerCard({ dealer, distance }: { dealer: Dealer; distance?: number })
           target="_blank"
           rel="noopener noreferrer"
         >
-          Get Directions
+          {tc("getDirections")}
         </a>
       </div>
     </article>
@@ -78,6 +119,8 @@ function DealerCard({ dealer, distance }: { dealer: Dealer; distance?: number })
 }
 
 export default function DealerLocator() {
+  const t = useTranslations("dealerLocator");
+  const tc = useTranslations("common");
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<GeoPoint[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -151,7 +194,7 @@ export default function DealerLocator() {
 
   function useMyLocation() {
     if (!navigator.geolocation) {
-      setLocationError("Location services aren't available in this browser.");
+      setLocationError(t("locationUnavailable"));
       return;
     }
     setLocating(true);
@@ -159,12 +202,12 @@ export default function DealerLocator() {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         skipNextFetch.current = true;
-        setQuery("Your location");
-        setLocation({ label: "Your location", lat: pos.coords.latitude, lon: pos.coords.longitude });
+        setQuery(t("yourLocation"));
+        setLocation({ label: t("yourLocation"), lat: pos.coords.latitude, lon: pos.coords.longitude });
         setLocating(false);
       },
       () => {
-        setLocationError("We couldn't access your location. Try searching a city or postal code instead.");
+        setLocationError(t("locationFailed"));
         setLocating(false);
       },
       { timeout: 10000 }
@@ -190,18 +233,18 @@ export default function DealerLocator() {
             <input
               type="text"
               className="locator-search"
-              placeholder="Search by city, province, or postal code"
+              placeholder={t("searchPlaceholder")}
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
                 setLocation(null);
               }}
               onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
-              aria-label="Search for a Torvault dealer by location"
+              aria-label={t("searchAriaLabel")}
               autoComplete="off"
             />
             {query && (
-              <button type="button" className="locator-search-clear" aria-label="Clear search" onClick={clearLocation}>
+              <button type="button" className="locator-search-clear" aria-label={t("clearSearch")} onClick={clearLocation}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M6 6l12 12M18 6L6 18" />
                 </svg>
@@ -221,7 +264,7 @@ export default function DealerLocator() {
             </ul>
           )}
           {showSuggestions && isSearching && suggestions.length === 0 && (
-            <div className="locator-suggestions-status">Searching&hellip;</div>
+            <div className="locator-suggestions-status">&hellip;</div>
           )}
         </div>
         <button type="button" className="locator-use-location" onClick={useMyLocation} disabled={locating}>
@@ -229,9 +272,9 @@ export default function DealerLocator() {
             <circle cx="12" cy="12" r="3" />
             <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
           </svg>
-          {locating ? "Locating…" : "Use My Location"}
+          {locating ? t("locating") : t("useMyLocation")}
         </button>
-        <div className="locator-filters" role="group" aria-label="Filter by service">
+        <div className="locator-filters" role="group" aria-label={t("searchAriaLabel")}>
           {DEALER_TAGS.map((tag) => {
             const active = activeTags.includes(tag);
             const style = TAG_STYLES[tag];
@@ -247,7 +290,7 @@ export default function DealerLocator() {
                 <span className="filter-chip-box" style={style ? { color: style.bg } : undefined}>
                   {active && <CheckIcon />}
                 </span>
-                {tag}
+                {TAG_KEY[tag] ? t(TAG_KEY[tag]) : tag}
               </button>
             );
           })}
@@ -260,22 +303,17 @@ export default function DealerLocator() {
         <div className="locator-layout">
           <div className="dealer-list">
             {results.map(({ dealer, distance }) => (
-              <DealerCard key={dealer.id} dealer={dealer} distance={distance} />
+              <DealerCard key={dealer.id} dealer={dealer} distance={distance} t={t} tc={tc} />
             ))}
           </div>
           <DealerMap dealers={results.map((r) => r.dealer)} searchedLocation={location} />
         </div>
       ) : (
         <div className="dealer-empty">
-          <h3>No Torvault dealers match those filters yet.</h3>
-          <p>
-            We&rsquo;re onboarding our first round of Canadian dealers right
-            now &mdash; this list will grow as new territories open. If
-            you&rsquo;re a retailer or locksmith interested in carrying
-            Torvault, we&rsquo;d like to hear from you.
-          </p>
+          <h3>{t("emptyTitle")}</h3>
+          <p>{t("emptyBody")}</p>
           <Link className="btn btn-primary" href="/dealers">
-            Apply to Become a Dealer
+            {t("emptyCta")}
           </Link>
         </div>
       )}
