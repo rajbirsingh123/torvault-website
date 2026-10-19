@@ -1,6 +1,7 @@
 {
   "nav": {
     "products": "Prodotti",
+    "company": "Azienda",
     "certifiedStandard": "Standard Certificato",
     "about": "Chi siamo",
     "manufacturing": "Produzione",
@@ -461,8 +462,7 @@
         "body": [
           "Una cassaforte Torvault non arriva come un pacco. Ogni unità viene spedita prima al tuo rivenditore autorizzato, non direttamente a casa tua — il rivenditore coordina la consegna, conferma con te il posizionamento finale e gestisce l'installazione, così la prima volta che vedi la cassaforte è già posizionata e pronta per l'ancoraggio.",
           "Prima di programmare una data di consegna, il tuo rivenditore esaminerà con te il percorso di accesso: larghezza delle porte, curve dei corridoi, scale e dimensioni dell'ascensore, se applicabile. Questo conta più di quanto sembri — una cassaforte che passa dalla porta d'ingresso ma non da una curva ristretta del corridoio è una delle sorprese di consegna più comuni e costose, ed è completamente evitabile verificando in anticipo gli spazi liberi rispetto alle dimensioni esterne del modello.",
-          "Le unità più grandi — in particolare i modelli TL-30 e qualsiasi cosa nella fascia di oltre 1.000 libbre — spesso richiedono tecnici specializzati o attrezzature specifiche per essere spostate in sicurezza. Il tuo rivenditore organizza questo aspetto come parte della consegna, così non ti ritrovi a gestire da solo il noleggio di attrezzature o la responsabilità civile.",
-          "Una volta che la cassaforte è nella sua posizione finale, l'installazione comprende l'ancoraggio al pavimento tramite i fori di montaggio pre-forati integrati nella struttura — non un'opzione aggiuntiva, ma parte di un'installazione eseguita correttamente. Il tuo rivenditore verificherà che il pavimento possa sostenere il peso dell'unità prima dell'ancoraggio, specialmente su qualsiasi piano sopra il livello del terreno.",
+          "Una volta che la cassaforte è nella sua posizione finale, l'installazione può includere l'ancoraggio al pavimento tramite i fori di montaggio pre-forati integrati nella struttura — un passaggio facoltativo che alcuni clienti scelgono per maggiore sicurezza, non un requisito dell'installazione. Se scegli di ancorarla, il tuo rivenditore verificherà prima che il pavimento possa sostenere il peso dell'unità, specialmente su qualsiasi piano sopra il livello del terreno.",
           "Poiché Torvault vende all'ingrosso tramite rivenditori invece di pubblicare i costi di spedizione online, il prezzo di consegna e installazione viene preventivato insieme all'unità stessa — chiedi al tuo rivenditore di includerlo fin da subito, così non ci saranno sorprese tra il preventivo e il giorno della consegna."
         ]
       }
@@ -575,27 +575,27 @@
     "ulTesting": {
       "eyebrow": "Come Funzionano i Test UL",
       "heading": "Tempo di lavorazione netto, non tempo totale trascorso.",
-      "bodyPre": "Underwriters Laboratories (UL) certifica le casseforti facendo attaccare un'unità di produzione da tecnici addestrati — di fatto scassinatori professionisti — con un kit definito di utensili. Il risultato è misurato in",
+      "bodyPre": "Underwriters Laboratories (UL) certifica le casseforti facendo attaccare un'unità di produzione da tecnici addestrati — di fatto scassinatori professionisti — con un kit definito di utensili, lo stesso approccio seguito dallo standard europeo EN 1143‑1. Il risultato è misurato in",
       "bodyStrong": "tempo di lavorazione netto",
       "bodyPost": ": il cronometro avanza solo mentre un utensile sta effettivamente lavorando sulla cassaforte, e si ferma nell'istante in cui viene rimosso. Una cassaforte non supera il test sopravvivendo un'ora in un'officina — lo supera resistendo a una quantità fissa di attacco continuo e concentrato."
     },
     "terms": {
       "entryLabel": "Livello Medio",
-      "entryTitle": "Testata in Fabbrica Contro il Fuoco",
+      "entryTitle": "Torvault Antincendio e Antieffrazione",
       "entryBody": "La resistenza all'effrazione di base della linea Torvault Antincendio e Antieffrazione, verificata internamente contro i più comuni utensili meccanici — non una classificazione certificata UL come TL‑15 o TL‑30.",
       "entryLi1": "5 minuti di tempo di lavorazione netto",
       "entryLi2": "Testata su tutti i lati, non solo sulla porta",
       "entryLi3": "Solo comuni utensili manuali meccanici",
       "entryLi4": "Serratura a combinazione o a tastiera",
       "tl15Label": "Alta Sicurezza",
-      "tl15Title": "UL TL‑15",
+      "tl15Title": "Torvault UL TL‑15",
       "tl15Body": "Classificazione resistente agli utensili, 15 minuti — lo standard dietro la maggior parte delle filiali bancarie e delle farmacie canadesi.",
       "tl15Li1": "15 minuti di tempo di lavorazione netto, solo porta",
       "tl15Li2": "Utensili manuali, trapani, punteruoli, martelli",
       "tl15Li3": "Dispositivi a pressione consentiti",
       "tl15Li4": "Fino a 200 lb / non è richiesta l'installazione indipendente",
       "tl30Label": "Massima Sicurezza",
-      "tl30Title": "UL TL‑30",
+      "tl30Title": "Torvault UL TL‑30",
       "tl30Body": "La classificazione dietro la linea di punta di Torvault — stesso kit di utensili della TL‑15, più utensili elettrici, su tutti i sei lati.",
       "tl30Li1": "30 minuti di tempo di lavorazione netto",
       "tl30Li2": "Testata sulla struttura, non solo sulla porta",

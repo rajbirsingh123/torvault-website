@@ -128,8 +128,14 @@ export default async function CertifiedStandardPage() {
             </div>
             <div className="icon-item">
               <span className="ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M12 2c2 4-2 5-2 8a2 2 0 004 0c1 2 0 4-2 6-3-1-5-4-5-7 0-3 2-5 5-7z" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <line x1="10" y1="5" x2="10" y2="19" />
+                  <line x1="14" y1="5" x2="14" y2="19" />
+                  <circle cx="7" cy="9" r="0.9" fill="currentColor" stroke="none" />
+                  <circle cx="7" cy="15" r="0.9" fill="currentColor" stroke="none" />
+                  <circle cx="17" cy="9" r="0.9" fill="currentColor" stroke="none" />
+                  <circle cx="17" cy="15" r="0.9" fill="currentColor" stroke="none" />
                 </svg>
               </span>
               <h4>{t("fireTesting.class150Title")}</h4>
@@ -137,8 +143,11 @@ export default async function CertifiedStandardPage() {
             </div>
             <div className="icon-item">
               <span className="ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M12 2c2 4-2 5-2 8a2 2 0 004 0c1 2 0 4-2 6-3-1-5-4-5-7 0-3 2-5 5-7z" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="22" y1="12" x2="2" y2="12" />
+                  <path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z" />
+                  <line x1="6" y1="16" x2="6.01" y2="16" />
+                  <line x1="10" y1="16" x2="10.01" y2="16" />
                 </svg>
               </span>
               <h4>{t("fireTesting.class125Title")}</h4>

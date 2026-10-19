@@ -1,6 +1,7 @@
 {
   "nav": {
     "products": "Products",
+    "company": "Company",
     "certifiedStandard": "Certified Standard",
     "about": "About",
     "manufacturing": "Manufacturing",
@@ -461,8 +462,7 @@
         "body": [
           "A Torvault safe doesn't arrive the way a parcel does. Every unit ships to your authorized dealer first, not directly to your door — the dealer coordinates delivery, confirms the final placement with you, and handles the install, so the first time you see the safe it's already positioned and ready to anchor.",
           "Before a delivery date is scheduled, your dealer will walk through the access path with you: doorway widths, hallway turns, stairs, and elevator dimensions if applicable. This matters more than it sounds — a safe that clears the front door but not a tight hallway turn is one of the most common and expensive delivery surprises, and it's entirely avoidable by confirming clearances against the model's outside dimensions ahead of time.",
-          "Larger units — particularly TL-30 models and anything in the 1,000+ lb range — often require professional riggers or specialized equipment to move safely. Your dealer arranges this as part of the delivery, so you're not left managing equipment rental or liability on your own.",
-          "Once the safe is in its final position, installation includes anchoring it to the floor through the pre-drilled mounting holes built into the body — not an optional add-on, but part of a correctly completed install. Your dealer will confirm the floor can support the unit's weight before anchoring, especially on any level above grade.",
+          "Once the safe is in its final position, installation can include anchoring it to the floor through the pre-drilled mounting holes built into the body — an optional step some customers choose for extra security, not a requirement of the install. If you do anchor, your dealer will confirm the floor can support the unit's weight first, especially on any level above grade.",
           "Because Torvault sells wholesale through dealers rather than listing shipping costs online, delivery and installation pricing is quoted alongside the unit itself — ask your dealer to include it up front so there are no surprises between quote and delivery day."
         ]
       }
@@ -575,27 +575,27 @@
     "ulTesting": {
       "eyebrow": "How UL Testing Works",
       "heading": "Net working time, not wall-clock time.",
-      "bodyPre": "Underwriters Laboratories (UL) certifies safes by having trained technicians — effectively professional safecrackers — attack a production unit with a defined kit of tools. The result is measured in",
+      "bodyPre": "Underwriters Laboratories (UL) certifies safes by having trained technicians — effectively professional safecrackers — attack a production unit with a defined kit of tools, the same approach followed by the European EN 1143‑1 standard. The result is measured in",
       "bodyStrong": "net working time",
       "bodyPost": ": the clock only runs while a tool is actively working the safe, and stops the instant it's removed. A safe doesn't pass by surviving an hour in a workshop — it passes by resisting a fixed amount of continuous, focused attack."
     },
     "terms": {
       "entryLabel": "Medium Level",
-      "entryTitle": "Factory Fire Tested",
+      "entryTitle": "Torvault Fire & Burglary",
       "entryBody": "Torvault's Fire & Burglary line's baseline burglary resistance, verified in-house against common mechanical tools — not a UL-certified classification like TL‑15 or TL‑30.",
       "entryLi1": "5 minutes net working time",
       "entryLi2": "Tested on all sides, not just the door",
       "entryLi3": "Common mechanical hand tools only",
       "entryLi4": "Combination or keypad lock",
       "tl15Label": "High Security",
-      "tl15Title": "UL TL‑15",
+      "tl15Title": "Torvault UL TL‑15",
       "tl15Body": "Tool-resistant, 15-minute rating — the standard behind most Canadian bank branches and pharmacy safes.",
       "tl15Li1": "15 minutes net working time, door only",
       "tl15Li2": "Hand tools, drills, punches, hammers",
       "tl15Li3": "Pressure-applying devices permitted",
       "tl15Li4": "Up to 200 lbs / freestanding not required",
       "tl30Label": "Maximum Security",
-      "tl30Title": "UL TL‑30",
+      "tl30Title": "Torvault UL TL‑30",
       "tl30Body": "The rating behind Torvault's flagship line — same tool kit as TL‑15, plus power tools, on all six sides.",
       "tl30Li1": "30 minutes net working time",
       "tl30Li2": "Tested on the body, not just the door",

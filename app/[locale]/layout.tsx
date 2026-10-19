@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans, Caveat } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Caveat, Noto_Sans_Arabic } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import Topbar from "@/components/Topbar";
+import { routing, RTL_LOCALES } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/SeoJsonLd";
@@ -28,6 +27,13 @@ const caveat = Caveat({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-caveat",
+  display: "swap",
+});
+
+const notoSansArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-noto-arabic",
   display: "swap",
 });
 
@@ -56,14 +62,18 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
+  const dir = RTL_LOCALES.has(locale) ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} className={`${inter.variable} ${jakarta.variable} ${caveat.variable}`}>
+    <html
+      lang={locale}
+      dir={dir}
+      className={`${inter.variable} ${jakarta.variable} ${caveat.variable} ${notoSansArabic.variable}`}
+    >
       <body>
         <OrganizationJsonLd />
         <WebSiteJsonLd locale={locale} />
         <NextIntlClientProvider>
-          <Topbar />
           <Header />
           {children}
           <Footer />

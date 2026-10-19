@@ -1,6 +1,7 @@
 {
   "nav": {
     "products": "Produits",
+    "company": "Entreprise",
     "certifiedStandard": "Norme Certifiée",
     "about": "À propos",
     "manufacturing": "Fabrication",
@@ -461,8 +462,7 @@
         "body": [
           "Un coffre-fort Torvault n'arrive pas comme un colis. Chaque unité est d'abord expédiée à votre concessionnaire autorisé, et non directement à votre porte — le concessionnaire coordonne la livraison, confirme avec vous l'emplacement final et s'occupe de l'installation, de sorte que la première fois que vous voyez le coffre-fort, il est déjà positionné et prêt à être ancré.",
           "Avant la fixation d'une date de livraison, votre concessionnaire passera en revue le trajet d'accès avec vous : largeurs de porte, virages de couloir, escaliers et dimensions d'ascenseur, le cas échéant. Cela compte plus qu'il n'y paraît — un coffre-fort qui passe la porte d'entrée mais pas un virage de couloir serré est l'une des surprises de livraison les plus courantes et les plus coûteuses, et elle est entièrement évitable en confirmant les dégagements par rapport aux dimensions extérieures du modèle à l'avance.",
-          "Les unités plus grandes — en particulier les modèles TL-30 et tout ce qui dépasse 1 000 lb — nécessitent souvent des gréeurs professionnels ou de l'équipement spécialisé pour être déplacées en toute sécurité. Votre concessionnaire organise cela dans le cadre de la livraison, afin que vous n'ayez pas à gérer seul la location d'équipement ou la responsabilité civile.",
-          "Une fois le coffre-fort dans sa position finale, l'installation comprend son ancrage au plancher par les trous de montage pré-percés intégrés au corps — non pas un ajout optionnel, mais une partie d'une installation correctement effectuée. Votre concessionnaire confirmera que le plancher peut supporter le poids de l'unité avant l'ancrage, surtout à tout étage au-dessus du rez-de-chaussée.",
+          "Une fois le coffre-fort dans sa position finale, l'installation peut inclure son ancrage au plancher par les trous de montage pré-percés intégrés au corps — une étape optionnelle que certains clients choisissent pour une sécurité accrue, et non une exigence de l'installation. Si vous optez pour l'ancrage, votre concessionnaire confirmera d'abord que le plancher peut supporter le poids de l'unité, surtout à tout étage au-dessus du rez-de-chaussée.",
           "Puisque Torvault vend en gros par l'entremise de concessionnaires plutôt que d'afficher les frais d'expédition en ligne, le prix de la livraison et de l'installation est inclus dans la soumission de l'unité elle-même — demandez à votre concessionnaire de l'inclure dès le départ afin d'éviter toute surprise entre la soumission et le jour de la livraison."
         ]
       }
@@ -575,27 +575,27 @@
     "ulTesting": {
       "eyebrow": "Comment fonctionnent les essais UL",
       "heading": "Le temps de travail net, pas le temps réel écoulé.",
-      "bodyPre": "Underwriters Laboratories (UL) certifie les coffres-forts en faisant attaquer une unité de production par des techniciens formés — en pratique, des crocheteurs professionnels — avec un ensemble défini d'outils. Le résultat est mesuré en",
+      "bodyPre": "Underwriters Laboratories (UL) certifie les coffres-forts en faisant attaquer une unité de production par des techniciens formés — en pratique, des crocheteurs professionnels — avec un ensemble défini d'outils, la même approche que suit la norme européenne EN 1143‑1. Le résultat est mesuré en",
       "bodyStrong": "temps de travail net",
       "bodyPost": ": le chronomètre ne tourne que lorsqu'un outil travaille activement le coffre-fort, et s'arrête à l'instant où il est retiré. Un coffre-fort ne réussit pas en survivant une heure dans un atelier — il réussit en résistant à une quantité fixe d'attaque continue et ciblée."
     },
     "terms": {
       "entryLabel": "Niveau moyen",
-      "entryTitle": "Testé au feu en usine",
+      "entryTitle": "Torvault Incendie et effraction",
       "entryBody": "La résistance de base à l'effraction de la gamme Incendie et effraction de Torvault, vérifiée en interne contre des outils mécaniques courants — et non une classification certifiée UL comme le TL‑15 ou le TL‑30.",
       "entryLi1": "5 minutes de temps de travail net",
       "entryLi2": "Testé sur tous les côtés, pas seulement la porte",
       "entryLi3": "Outils mécaniques à main courants seulement",
       "entryLi4": "Serrure à combinaison ou à clavier",
       "tl15Label": "Haute sécurité",
-      "tl15Title": "UL TL‑15",
+      "tl15Title": "Torvault UL TL‑15",
       "tl15Body": "Cote résistante aux outils, de 15 minutes — la norme derrière la plupart des succursales bancaires et des coffres-forts de pharmacie canadiens.",
       "tl15Li1": "15 minutes de temps de travail net, porte seulement",
       "tl15Li2": "Outils à main, perceuses, poinçons, marteaux",
       "tl15Li3": "Dispositifs d'application de pression permis",
       "tl15Li4": "Jusqu'à 200 lb / installation autonome non requise",
       "tl30Label": "Sécurité maximale",
-      "tl30Title": "UL TL‑30",
+      "tl30Title": "Torvault UL TL‑30",
       "tl30Body": "La cote derrière la gamme phare de Torvault — même ensemble d'outils que le TL‑15, plus des outils électriques, sur les six côtés.",
       "tl30Li1": "30 minutes de temps de travail net",
       "tl30Li2": "Testé sur le corps, pas seulement la porte",

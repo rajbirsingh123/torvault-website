@@ -7,6 +7,7 @@ const OG_LOCALE: Record<Locale, string> = {
   fr: "fr_CA",
   zh: "zh_CN",
   it: "it_IT",
+  ar: "ar_AR",
 };
 
 /**

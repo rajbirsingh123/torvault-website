@@ -13,8 +13,13 @@ export type NavLink = {
 
 export const NAV_LINKS: NavLink[] = [
   { href: "/products", labelKey: "products", mega: true },
-  { href: "/certified-standard", labelKey: "certifiedStandard" },
-  { href: "/about", labelKey: "about" },
+  {
+    labelKey: "company",
+    children: [
+      { href: "/certified-standard", labelKey: "certifiedStandard" },
+      { href: "/about", labelKey: "about" },
+    ],
+  },
   { href: "/manufacturing", labelKey: "manufacturing" },
   {
     labelKey: "support",
